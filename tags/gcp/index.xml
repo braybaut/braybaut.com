@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gcp on Hello Friend NG</title>
-    <link>https://braybaut.com/tags/gcp/</link>
+    <link>/tags/gcp/</link>
     <description>Recent content in Gcp on Hello Friend NG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Feb 2019 21:44:10 +0000</lastBuildDate>
     
-	<atom:link href="https://braybaut.com/tags/gcp/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/gcp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Creando un cluster de kubernetes en GCP con terraform</title>
-      <link>https://braybaut.com/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</link>
+      <link>/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</link>
       <pubDate>Sun, 03 Feb 2019 21:44:10 +0000</pubDate>
       
-      <guid>https://braybaut.com/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</guid>
+      <guid>/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?ssl=1&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-924&#34; src=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?resize=648%2C220&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;648&#34; height=&#34;220&#34; srcset=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?w=750&amp;ssl=1 750w, https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?resize=300%2C102&amp;ssl=1 300w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
