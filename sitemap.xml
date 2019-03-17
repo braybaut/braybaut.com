@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://braybaut.com/parseando-json-con-golang-y-las-naves-de-spacex/</loc>
+    <lastmod>2019-02-10T21:52:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</loc>
+    <lastmod>2019-02-03T21:44:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/utilizando-traefik-como-dinamic-reverse-proxy-en-docker-swarm-sobre-aws/</loc>
+    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/traefik-load-balancer-y-reverse-proxy-para-microservicios/</loc>
+    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/howto-instalando-rocket-chat-en-docker/</loc>
+    <lastmod>2017-03-07T06:54:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/autentificacion-ldap-vtiger-crm-6-4/</loc>
+    <lastmod>2016-01-19T01:43:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/howto-como-crear-un-contenedor-de-datos-en-docker/</loc>
+    <lastmod>2016-01-13T17:40:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/sobre-mi/</loc>
+    <lastmod>2016-01-13T16:07:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</loc>
+    <lastmod>2016-01-12T04:40:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/howto-actualizando-fedora-22-a-fedora-23/</loc>
+    <lastmod>2015-11-04T16:45:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/compilando-spice-xpi-en-ubuntu/</loc>
+    <lastmod>2015-05-20T01:33:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/introduccion-vpn-full-mesh-con-tinc-y-configuracion-en-raspberry-pi/</loc>
+    <lastmod>2014-03-24T06:18:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/caracteristicas-mas-destacables-que-formaran-parte-del-kernel-linux-3-11/</loc>
+    <lastmod>2013-07-12T17:42:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/aprenda-a-pensar-como-un-programador-con-python-pdf/</loc>
+    <lastmod>2013-07-04T22:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/la-estacion-espacial-migra-sus-servidores-a-linux/</loc>
+    <lastmod>2013-05-11T20:23:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/retomando-labores/</loc>
+    <lastmod>2013-03-30T21:34:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/prueba-manjarolinux-desde-el-navegador/</loc>
+    <lastmod>2012-12-06T20:19:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/crea-una-imagen-iso-desde-un-cd-o-dvd-en-ubuntu/</loc>
+    <lastmod>2012-11-05T18:12:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/descarga-ubuntu-quantal-quetzal-12-10/</loc>
+    <lastmod>2012-10-18T21:35:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/primeros-pasos-con-ubuntu-12-04-2-edicion-pdf/</loc>
+    <lastmod>2012-10-03T02:58:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/</loc>
+    <lastmod>2019-02-10T21:52:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/amazon/</loc>
+    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/autentificaci%C3%B3n/</loc>
+    <lastmod>2016-01-19T01:43:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/aws/</loc>
+    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/bash/</loc>
+    <lastmod>2016-01-12T04:40:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/centos/</loc>
+    <lastmod>2017-03-07T06:54:30+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/container/</loc>
+    <lastmod>2016-01-13T17:40:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/contenedor-de-datos/</loc>
+    <lastmod>2016-01-13T17:40:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/contenedores/</loc>
+    <lastmod>2016-01-13T17:40:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/crm/</loc>
+    <lastmod>2016-01-19T01:43:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/data-container/</loc>
+    <lastmod>2016-01-13T17:40:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/devops/</loc>
+    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/docker/</loc>
+    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/docker-compose/</loc>
+    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/dockercompose/</loc>
+    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/dockerswarm/</loc>
+    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/gcp/</loc>
+    <lastmod>2019-02-03T21:44:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/github/</loc>
+    <lastmod>2016-01-12T04:40:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/go/</loc>
+    <lastmod>2019-02-10T21:52:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/golang/</loc>
+    <lastmod>2019-02-10T21:52:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/json/</loc>
+    <lastmod>2019-02-10T21:52:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/kubernetes/</loc>
+    <lastmod>2019-02-03T21:44:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/ldap/</loc>
+    <lastmod>2016-01-19T01:43:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/linux/</loc>
+    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/load-balancer/</loc>
+    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/microservicios/</loc>
+    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/opensource/</loc>
+    <lastmod>2017-03-07T06:54:30+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/persistencia/</loc>
+    <lastmod>2016-01-13T17:40:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/posts/</loc>
+    <lastmod>2019-02-10T21:52:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/reverse-proxy/</loc>
+    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/reverseproxy/</loc>
+    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/rocket.chat/</loc>
+    <lastmod>2017-03-07T06:54:30+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/rocketchat/</loc>
+    <lastmod>2017-03-07T06:54:30+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/script/</loc>
+    <lastmod>2016-01-12T04:40:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/spacex/</loc>
+    <lastmod>2019-02-10T21:52:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/</loc>
+    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/traefik/</loc>
+    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/tutoriales/</loc>
+    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/volume-container/</loc>
+    <lastmod>2016-01-13T17:40:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/vtiger/</loc>
+    <lastmod>2016-01-19T01:43:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/vtiger-6.0/</loc>
+    <lastmod>2016-01-19T01:43:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/vtiger-6.4/</loc>
+    <lastmod>2016-01-19T01:43:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://braybaut.com/tags/vtiger-crm/</loc>
+    <lastmod>2016-01-19T01:43:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

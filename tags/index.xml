@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on </title>
+    <link>https://braybaut.com/tags/</link>
+    <description>Recent content in Tags on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 22 Dec 2017 01:20:18 +0000</lastBuildDate>
+    
+	<atom:link href="https://braybaut.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Amazon</title>
+      <link>https://braybaut.com/tags/amazon/</link>
+      <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
+      
+      <guid>https://braybaut.com/tags/amazon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Autentificación</title>
+      <link>https://braybaut.com/tags/autentificaci%C3%B3n/</link>
+      <pubDate>Tue, 19 Jan 2016 01:43:11 +0000</pubDate>
+      
+      <guid>https://braybaut.com/tags/autentificaci%C3%B3n/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws</title>
+      <link>https://braybaut.com/tags/aws/</link>
+      <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
+      
+      <guid>https://braybaut.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bash</title>
+      <link>https://braybaut.com/tags/bash/</link>
+      <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
+      
+      <guid>https://braybaut.com/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Centos</title>
+      <link>https://braybaut.com/tags/centos/</link>
+      <pubDate>Tue, 07 Mar 2017 06:54:30 +0000</pubDate>
+      
+      <guid>https://braybaut.com/tags/centos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Container</title>
+      <link>https://braybaut.com/tags/container/</link>
+      <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
+      
+      <guid>https://braybaut.com/tags/container/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contenedor De Datos</title>
+      <link>https://braybaut.com/tags/contenedor-de-datos/</link>
+      <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
+      
+      <guid>https://braybaut.com/tags/contenedor-de-datos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contenedores</title>
+      <link>https://braybaut.com/tags/contenedores/</link>
+      <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
+      
+      <guid>https://braybaut.com/tags/contenedores/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Crm</title>
+      <link>https://braybaut.com/tags/crm/</link>
+      <pubDate>Tue, 19 Jan 2016 01:43:11 +0000</pubDate>
+      
+      <guid>https://braybaut.com/tags/crm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Container</title>
+      <link>https://braybaut.com/tags/data-container/</link>
+      <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
+      
+      <guid>https://braybaut.com/tags/data-container/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
