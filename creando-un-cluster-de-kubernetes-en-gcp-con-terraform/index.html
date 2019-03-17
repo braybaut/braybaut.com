@@ -14,14 +14,14 @@ Pero hoy no vamos a hablar de AWS, hoy vamos a hablar de GCP, una nube muy poder
 Conectandonos a Google Cloud platform: Para conectarnos a GCP solo necesitamos determinar:
  Credentials : En este caso tenemos que generar un account service y usar el archivo json que se genera con los permisos necesarios Project : Determinamos el proyecto en GCP en el cual vamos a trabajar region : Determinamos la región por el cual vamos a trabajar.  Despues de determinar los valores mencionados anteriormente, los seteamos en el siguiente archivo.
 " />
-<meta name="keywords" content="linux, container, docker, cloud, aws, golan, programming, DevOps" />
+<meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/" />
+<link rel="canonical" href="https://braybaut.com/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/" />
 
 
 <title>
     
-    Creando un cluster de kubernetes en GCP con terraform ::  
+    Creando un cluster de kubernetes en GCP con terraform :: Hello Friend NG 
     
 </title>
 
@@ -33,20 +33,16 @@ Conectandonos a Google Cloud platform: Para conectarnos a GCP solo necesitamos d
     type="text/css">
 
 
-<link rel="stylesheet" href="/scss/main.min.2cb2cfcb2d25c14d702e06c24f9c05a189f6cbc9ef31f0a235fd739b411a5a1b.css">
+<link rel="stylesheet" href="https://braybaut.com/scss/main.min.2cb2cfcb2d25c14d702e06c24f9c05a189f6cbc9ef31f0a235fd739b411a5a1b.css">
 
 
 
-<link rel="stylesheet" type="text/css" href="css/custom.css">
-
-
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
-<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="https://braybaut.com/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://braybaut.com/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://braybaut.com/favicon-16x16.png">
+<link rel="manifest" href="https://braybaut.com/site.webmanifest">
+<link rel="mask-icon" href="https://braybaut.com/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="https://braybaut.com/favicon.ico">
 <meta name="theme-color" content="#252627">
 <meta itemprop="name" content="Creando un cluster de kubernetes en GCP con terraform">
 <meta itemprop="description" content="
@@ -79,9 +75,7 @@ Despues de determinar los valores mencionados anteriormente, los seteamos en el 
 
 
 <meta itemprop="keywords" content="GCP,Kubernetes," />
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content=""/>
-
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Creando un cluster de kubernetes en GCP con terraform"/>
 <meta name="twitter:description" content="
 
@@ -124,11 +118,11 @@ Despues de determinar los valores mencionados anteriormente, los seteamos en el 
         <div class="container">
             <header class="header">
     <span class="header__inner">
-        <a href="/" style="text-decoration: none;">
+        <a href="https://braybaut.com/" style="text-decoration: none;">
     <div class="logo">
         
             <span class="logo__mark">></span>
-            <span class="logo__text">$ cd /home/Braybaut</span>
+            <span class="logo__text">$ cd /home/braybaut</span>
             <span class="logo__cursor"></span>
         
     </div>
@@ -138,7 +132,7 @@ Despues de determinar los valores mencionados anteriormente, los seteamos en el 
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="about">About</a></li><li><a href="posts/">Posts</a></li>
+    <ul class="menu__inner"><li><a href="https://braybaut.com/about">About</a></li><li><a href="https://braybaut.com/posts">Blog</a></li>
     </ul>
 </nav>
 
@@ -171,7 +165,7 @@ Despues de determinar los valores mencionados anteriormente, los seteamos en el 
         </div>
 
         <article>
-            <h2 class="post-title"><a href="/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/">Creando un cluster de kubernetes en GCP con terraform</a></h2>
+            <h2 class="post-title"><a href="https://braybaut.com/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/">Creando un cluster de kubernetes en GCP con terraform</a></h2>
 
             
 
@@ -351,7 +345,7 @@ default = "stack-kubernetes"
 
         <div class="post-info">
   				<p>
-  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="tags/gcp">GCP</a></span><span class="tag"><a href="tags/kubernetes">Kubernetes</a></span>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://braybaut.com/tags/gcp">GCP</a></span><span class="tag"><a href="https://braybaut.com/tags/kubernetes">Kubernetes</a></span>
   				</p>
   			</div>
 
@@ -366,10 +360,10 @@ default = "stack-kubernetes"
         <div class="footer__content">
             <span>&copy; 2019</span>
             
-                <span><a href="">Braybaut</a></span>
+                <span><a href="https://braybaut.com">Braybaut</a></span>
             
             <span></span>
-            <span> <a href="posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            <span> <a href="https://braybaut.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
         </div>
     </div>
     <div class="footer__inner">
@@ -394,7 +388,7 @@ default = "stack-kubernetes"
 
 
 
-<script type="text/javascript" src="/js/bundle.4b80fbbfab88198dcef181b034822e60a3e68b1c128d1dc05392a32943a18ec2f866fbcd9ce31dcf84134397161647ad605ea5c25ecf12e5fcf9d28b47e64bb5.js" integrity="sha512-S4D7v6uIGY3O8YGwNIIuYKPmixwSjR3AU5KjKUOhjsL4ZvvNnOMdz4QTQ5cWFketYF6lwl7PEuX8&#43;dKLR&#43;ZLtQ=="></script>
+<script type="text/javascript" src="https://braybaut.com/js/bundle.4b80fbbfab88198dcef181b034822e60a3e68b1c128d1dc05392a32943a18ec2f866fbcd9ce31dcf84134397161647ad605ea5c25ecf12e5fcf9d28b47e64bb5.js" integrity="sha512-S4D7v6uIGY3O8YGwNIIuYKPmixwSjR3AU5KjKUOhjsL4ZvvNnOMdz4QTQ5cWFketYF6lwl7PEuX8&#43;dKLR&#43;ZLtQ=="></script>
 
 
 
