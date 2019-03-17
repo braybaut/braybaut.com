@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Braybaut</title>
+    <link>/about/</link>
+    <description>Recent content in Abouts on Braybaut</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 17 Mar 2019 14:05:50 -0500</lastBuildDate>
+    
+	<atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About me</title>
+      <link>/about/about/</link>
+      <pubDate>Sun, 17 Mar 2019 14:05:50 -0500</pubDate>
+      
+      <guid>/about/about/</guid>
+      <description>My name is Brayan Bautista and I am living in Bogotá Colombia. I&amp;rsquo;m a System Engineering and am working as a Cloud and DevOps Engineer at Globant where I help customers to desing architectures to make scalables infrastructures and creating workflows to deploy in production environments with zero downtime.
+I&amp;rsquo;m also Container and OpenSource Enthusiast, I really enjoy writing about anything that might help other engineers out with topics i can see in my daily basis, I&amp;rsquo;m interested in anything about containers, serverless and distributed systems, I really enjoy learning new languages and tools that can help in my career path, I also enjoy participate as a speaker at local meetups that promote the OpenSource.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/testing/</loc>
+    <lastmod>2019-03-17T15:26:05-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/about/</loc>
+    <lastmod>2019-03-17T14:05:50-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/parseando-json-con-golang-y-las-naves-de-spacex/</loc>
     <lastmod>2019-02-10T21:52:53+00:00</lastmod>
   </url>
@@ -58,6 +68,12 @@
   </url>
   
   <url>
+    <loc>/about/</loc>
+    <lastmod>2019-03-17T14:05:50-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/amazon/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
@@ -83,7 +99,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-02-10T21:52:53+00:00</lastmod>
+    <lastmod>2019-03-17T15:26:05-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -227,7 +243,7 @@
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2019-02-10T21:52:53+00:00</lastmod>
+    <lastmod>2019-03-17T15:26:05-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -282,6 +298,12 @@
   <url>
     <loc>/tags/tutoriales/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/untagged/</loc>
+    <lastmod>2019-03-17T15:26:05-05:00</lastmod>
     <priority>0</priority>
   </url>
   
