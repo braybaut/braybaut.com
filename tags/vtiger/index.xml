@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vtiger on </title>
-    <link>https://braybaut.com/tags/vtiger/</link>
+    <link>/tags/vtiger/</link>
     <description>Recent content in Vtiger on </description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 19 Jan 2016 01:43:11 +0000</lastBuildDate>
     
-	<atom:link href="https://braybaut.com/tags/vtiger/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/vtiger/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Autentificación LDAP Vtiger CRM 6</title>
-      <link>https://braybaut.com/autentificacion-ldap-vtiger-crm-6-4/</link>
+      <link>/autentificacion-ldap-vtiger-crm-6-4/</link>
       <pubDate>Tue, 19 Jan 2016 01:43:11 +0000</pubDate>
       
-      <guid>https://braybaut.com/autentificacion-ldap-vtiger-crm-6-4/</guid>
+      <guid>/autentificacion-ldap-vtiger-crm-6-4/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?ssl=1&#34; rel=&#34;attachment wp-att-641&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-641&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=648%2C195&amp;#038;ssl=1&#34; alt=&#34;Vtiger-Logo-1&#34; width=&#34;648&#34; height=&#34;195&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?w=3546&amp;ssl=1 3546w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=300%2C90&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=768%2C231&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=1024%2C308&amp;ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=750%2C226&amp;ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?w=1296&amp;ssl=1 1296w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?w=1944&amp;ssl=1 1944w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Vtiger es un CRM de código abierto muy potente que trata de acercarse  a grandes crms como salesforce y SugarCRM, pero en esta ocasión veremos como autentificarlo hacia LDAP.&lt;/p&gt;
