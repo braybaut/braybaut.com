@@ -6,10 +6,20 @@
     <description>Recent content on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Feb 2019 21:52:53 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Mar 2019 14:05:50 -0500</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About me</title>
+      <link>/about/</link>
+      <pubDate>Sun, 17 Mar 2019 14:05:50 -0500</pubDate>
+      
+      <guid>/about/</guid>
+      <description>My name is Brayan Bautista and I am living in Bogotá Colombia. I&amp;rsquo;m a System Engineering and am working as a Cloud and DevOps Engineer at Globant where I help customers to desing architectures to make scalables infrastructures and creating workflows to deploy in production environments with zero downtime.
+I&amp;rsquo;m also Container and OpenSource Enthusiast, I really enjoy writing about anything that might help other engineers out with topics i can see in my daily basis, I&amp;rsquo;m interested in anything about containers, serverless and distributed systems, I really enjoy learning new languages and tools that can help in my career path, I also enjoy participate as a speaker at local meetups that promote the OpenSource.</description>
+    </item>
     
     <item>
       <title>Parseando JSON con Golang y las naves de spaceX</title>
@@ -169,15 +179,6 @@
       <guid>/posts/compilando-spice-xpi-en-ubuntu./</guid>
       <description>Tenia olvidado mi blog personal, desde que ingrese a la universidad, el tiempo empleado en el blog bajo muchisimo pero bueno ya poco a poco estoy sacando tiempo para el blog.
  En SEAQ somos Partner de Red Hat en Colombia y constantemente debemos tener acceso remoto a los guests que corren en Red Hat Enterprise Virtualization RHEV, para poder tener acceso remoto a estos guests, se requiere de spice-xpi, Un complemento para firefox que nos permite iniciar el acceso remoto a los guest.</description>
-    </item>
-    
-    <item>
-      <title>Introducción Vpn Full Mesh con Tinc y configuración en Raspberry Pi</title>
-      <link>/posts/introducci%C3%B3n-vpn-full-mesh-con-tinc-y-configuraci%C3%B3n-en-raspberry-pi/</link>
-      <pubDate>Mon, 24 Mar 2014 06:18:00 +0000</pubDate>
-      
-      <guid>/posts/introducci%C3%B3n-vpn-full-mesh-con-tinc-y-configuraci%C3%B3n-en-raspberry-pi/</guid>
-      <description>http://platform.twitter.com/widgets.js   &amp;lt;div class=&amp;quot;separator&amp;quot; style=&amp;quot;clear:both;text-align:center;&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;https://braybaut.files.wordpress.com/2014/03/8000d-tinclogo1.png?w=648&amp;quot; style=&amp;quot;margin-left:1em;margin-right:1em;&amp;quot;&amp;gt;&amp;lt;img border=&amp;quot;0&amp;quot; src=&amp;quot;https://braybaut.files.wordpress.com/2014/03/8000d-tinclogo1.png?w=648&amp;quot; data-recalc-dims=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;p&amp;gt; Con tinc Podemos crear una &amp;lt;b&amp;gt;VPN &amp;lt;/b&amp;gt;tipo full mesh(&amp;lt;i&amp;gt;Nodos conectados entre s&amp;lt;/i&amp;gt;i), Estableciendo la comunicación de todos los host conectados a cada nodo. Cabe aclarar que cada nodo es el servidor donde esta configurado tinc. &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; Tinc esta lanzada bajo licencia GPL que en pocas palabras podemos decir que es &amp;lt;b&amp;gt;Software Libre =D&amp;lt;/b&amp;gt;, este maravilloso protocolo nos ofrece unas caracteristicas que son: &amp;lt;/p&amp;gt; &amp;lt;ul style=&amp;quot;text-align:left;&amp;quot;&amp;gt; &amp;lt;li&amp;gt; Encryptation, Authenticatión and compressión: Comprime los paquetes antes de enviarlos, encripta los datos para que uestra información viaje segura en este medio tan inseguro como lo es la internet, ofrece la autentificación para que los nodos desconocidos no se puedan conectar a nuestra red.</description>
     </item>
     
   </channel>
