@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tinc on Braybaut</title>
+    <link>/categories/tinc/</link>
+    <description>Recent content in Tinc on Braybaut</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Mar 2014 06:18:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/tinc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introducción Vpn Full Mesh con Tinc y configuración en Raspberry Pi</title>
+      <link>/posts/introducci%C3%B3n-vpn-full-mesh-con-tinc-y-configuraci%C3%B3n-en-raspberry-pi/</link>
+      <pubDate>Mon, 24 Mar 2014 06:18:00 +0000</pubDate>
+      
+      <guid>/posts/introducci%C3%B3n-vpn-full-mesh-con-tinc-y-configuraci%C3%B3n-en-raspberry-pi/</guid>
+      <description>http://platform.twitter.com/widgets.js   &amp;lt;div class=&amp;quot;separator&amp;quot; style=&amp;quot;clear:both;text-align:center;&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;https://braybaut.files.wordpress.com/2014/03/8000d-tinclogo1.png?w=648&amp;quot; style=&amp;quot;margin-left:1em;margin-right:1em;&amp;quot;&amp;gt;&amp;lt;img border=&amp;quot;0&amp;quot; src=&amp;quot;https://braybaut.files.wordpress.com/2014/03/8000d-tinclogo1.png?w=648&amp;quot; data-recalc-dims=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;p&amp;gt; Con tinc Podemos crear una &amp;lt;b&amp;gt;VPN &amp;lt;/b&amp;gt;tipo full mesh(&amp;lt;i&amp;gt;Nodos conectados entre s&amp;lt;/i&amp;gt;i), Estableciendo la comunicación de todos los host conectados a cada nodo. Cabe aclarar que cada nodo es el servidor donde esta configurado tinc. &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; Tinc esta lanzada bajo licencia GPL que en pocas palabras podemos decir que es &amp;lt;b&amp;gt;Software Libre =D&amp;lt;/b&amp;gt;, este maravilloso protocolo nos ofrece unas caracteristicas que son: &amp;lt;/p&amp;gt; &amp;lt;ul style=&amp;quot;text-align:left;&amp;quot;&amp;gt; &amp;lt;li&amp;gt; Encryptation, Authenticatión and compressión: Comprime los paquetes antes de enviarlos, encripta los datos para que uestra información viaje segura en este medio tan inseguro como lo es la internet, ofrece la autentificación para que los nodos desconocidos no se puedan conectar a nuestra red.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="braybaut">
+<meta name="description"
+    content="
+ Terraform, es una de las herramientas mas potentes de hashicorp y hoy en día es usada por grandes compañías para mantener infraestructura en la nube.
+Terraform destaca porque podemos trabajar con múltiples providers al mismo tiempo, ¿ que quiere decir esto ? que le podemos decir a terraform que cuando se cree una nueva instancia en GCP al mismo tiempo genere un registro DNS en route53 en AWS, esto de una manera muy sencilla.
+Pero hoy no vamos a hablar de AWS, hoy vamos a hablar de GCP, una nube muy poderosa que tiene características muy interesantes para tener en cuenta y en este caso, construiremos un cluster de Kubernetes en GCP usando terraform.
+Conectandonos a Google Cloud platform: Para conectarnos a GCP solo necesitamos determinar:
+ Credentials : En este caso tenemos que generar un account service y usar el archivo json que se genera con los permisos necesarios Project : Determinamos el proyecto en GCP en el cual vamos a trabajar region : Determinamos la región por el cual vamos a trabajar.  Despues de determinar los valores mencionados anteriormente, los seteamos en el siguiente archivo.
+" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/" />
+
+
+<title>
+    
+    Creando un cluster de kubernetes en GCP con terraform :: Braybaut 
+    
+</title>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro" rel="stylesheet"
+    type="text/css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+<link rel="stylesheet" href="/scss/main.min.2cb2cfcb2d25c14d702e06c24f9c05a189f6cbc9ef31f0a235fd739b411a5a1b.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627">
+<meta itemprop="name" content="Creando un cluster de kubernetes en GCP con terraform">
+<meta itemprop="description" content="
+
+ 
+
+Terraform, es una de las herramientas mas potentes de hashicorp y hoy en día es usada por grandes compañías para mantener infraestructura en la nube.
+
+Terraform destaca porque podemos trabajar con múltiples providers al mismo tiempo, ¿ que quiere decir esto ? que le podemos decir a terraform que cuando se cree una nueva instancia en GCP al mismo tiempo  genere un registro DNS en route53 en AWS, esto de una manera muy sencilla.
+
+Pero hoy no vamos a hablar de AWS, hoy vamos a hablar de GCP, una nube muy poderosa que tiene características muy interesantes para tener en cuenta y en este caso, construiremos un cluster de Kubernetes en GCP usando terraform.
+
+Conectandonos a Google Cloud platform:
+
+Para conectarnos a GCP solo necesitamos determinar:
+
+
+Credentials : En este caso tenemos que generar un account service y usar el archivo json que se genera con los permisos necesarios
+Project  : Determinamos el proyecto en GCP en el cual vamos a trabajar
+region : Determinamos la región por el cual vamos a trabajar.
+
+
+Despues de determinar los valores mencionados anteriormente, los seteamos en el siguiente archivo.">
+
+
+<meta itemprop="datePublished" content="2019-02-03T21:44:10&#43;00:00" />
+<meta itemprop="dateModified" content="2019-02-03T21:44:10&#43;00:00" />
+<meta itemprop="wordCount" content="724">
+
+
+
+<meta itemprop="keywords" content="GCP,Kubernetes," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Creando un cluster de kubernetes en GCP con terraform"/>
+<meta name="twitter:description" content="
+
+ 
+
+Terraform, es una de las herramientas mas potentes de hashicorp y hoy en día es usada por grandes compañías para mantener infraestructura en la nube.
+
+Terraform destaca porque podemos trabajar con múltiples providers al mismo tiempo, ¿ que quiere decir esto ? que le podemos decir a terraform que cuando se cree una nueva instancia en GCP al mismo tiempo  genere un registro DNS en route53 en AWS, esto de una manera muy sencilla.
+
+Pero hoy no vamos a hablar de AWS, hoy vamos a hablar de GCP, una nube muy poderosa que tiene características muy interesantes para tener en cuenta y en este caso, construiremos un cluster de Kubernetes en GCP usando terraform.
+
+Conectandonos a Google Cloud platform:
+
+Para conectarnos a GCP solo necesitamos determinar:
+
+
+Credentials : En este caso tenemos que generar un account service y usar el archivo json que se genera con los permisos necesarios
+Project  : Determinamos el proyecto en GCP en el cual vamos a trabajar
+region : Determinamos la región por el cual vamos a trabajar.
+
+
+Despues de determinar los valores mencionados anteriormente, los seteamos en el siguiente archivo."/>
+
+
+
+<meta property="article:section" content="Uncategorized" />
+
+<meta property="article:published_time" content="2019-02-03 21:44:10 &#43;0000 &#43;0000" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /home/braybaut</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/about">About</a></li><li><a href="/posts">Archive</a></li><li><a href="/archive">Blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/">Creando un cluster de kubernetes en GCP con terraform</a></h2>
+
+            
+
+            <div class="post-content">
+                <p><a href="https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-924" src="https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?resize=648%2C220&#038;ssl=1" alt="" width="648" height="220" srcset="https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?w=750&ssl=1 750w, https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?resize=300%2C102&ssl=1 300w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p> </p>
+
+<p>Terraform, es una de las herramientas mas potentes de hashicorp y hoy en día es usada por grandes compañías para mantener infraestructura en la nube.</p>
+
+<p>Terraform destaca porque podemos trabajar con múltiples providers al mismo tiempo, ¿ que quiere decir esto ? que le podemos decir a terraform que cuando se cree una nueva instancia en GCP al mismo tiempo  genere un registro DNS en route53 en AWS, esto de una manera muy sencilla.</p>
+
+<p>Pero hoy no vamos a hablar de AWS, hoy vamos a hablar de GCP, una nube muy poderosa que tiene características muy interesantes para tener en cuenta y en este caso, construiremos un cluster de Kubernetes en GCP usando terraform.</p>
+
+<h3 id="conectandonos-a-google-cloud-platform">Conectandonos a Google Cloud platform:</h3>
+
+<p>Para conectarnos a GCP solo necesitamos determinar:</p>
+
+<ul>
+<li><strong>Credentials</strong> : En este caso tenemos que generar un account service y usar el archivo json que se genera con los permisos necesarios</li>
+<li><strong>Project</strong>  : Determinamos el proyecto en GCP en el cual vamos a trabajar</li>
+<li><strong>region</strong> : Determinamos la región por el cual vamos a trabajar.</li>
+</ul>
+
+<p>Despues de determinar los valores mencionados anteriormente, los seteamos en el siguiente archivo.</p>
+
+<p><strong>variables.tf</strong></p>
+
+<p>En este archivo determinaremos las variables que vamos a necesitar</p>
+
+<pre class="lang:default decode:true"> // General Variables 
+
+variable "credentials" { 
+type = "string" 
+default = "../key.json" 
+description = "Json Credentials file to connect GCP" 
+} 
+
+variable "linux_admin_username" { 
+type = "string" 
+description = "User name for authentication to the Kubernetes linux agent virtual machines in the cluster." 
+default = "glb-events" 
+} 
+
+variable "linux_admin_password" { 
+type ="string" 
+default = "MySecretPassTest123." 
+description = "The password for the Linux admin account." 
+} 
+
+// GCP Variables 
+variable "gcp_cluster_count" { 
+type = "string" 
+description = "Count of cluster instances to start." 
+default = "1" 
+} 
+variable "project" {
+  type = "string" 
+  default = "MyProjectID"
+} 
+
+variable "cluster_name" { 
+type = "string" 
+description = "Cluster name for the GCP Cluster." 
+default = "stack-kubernetes" 
+}</pre>
+
+<p>Despues seteamos el siguiente archivo el cual vamos a llamar las variables escritas en el archivo variables.tf,  en este archivo le diremos a terraform que trabajaremos con el provider de <strong>Google Cloud Platform</strong></p>
+
+<p><strong>main.tf</strong></p>
+
+<pre class="lang:default decode:true ">provider "google" {
+  credentials = "${file(var.credentials)}"
+  project     = "${var.project}"
+  region      = "us-west1"
+}</pre>
+
+<p>Ahora escribimos el siguiente archivo, en este archivo creamos el cluster de Kubernetes y definiremos diferentes atributos necesarios:</p>
+
+<p><strong>kubernetes.tf</strong></p>
+
+<pre class="lang:default decode:true">resource "google_container_cluster" "gcp_kubernetes" {                                                                                                                                                            
+   name               = "${var.cluster_name}"                                                                                                                                                                      
+   zone               = "us-west1-a"                                                                                                                                                                               
+   initial_node_count = "${var.gcp_cluster_count}"                                                                                                                                                                 
+                                                                                                                                                                                                                   
+   additional_zones = [                                                                                                                                                                                            
+     "us-west1-b",                                                                                                                                                                                                 
+     "us-west1-c",                                                                                                                                                                                                 
+   ]                                                                                                                                                                                                               
+                                                                                                                                                                                                                   
+   master_auth {                                                                                                                                                                                                   
+     username = "${var.linux_admin_username}"                                                                                                                                                                      
+     password = "${var.linux_admin_password}}"                                                                                                                                                                     
+   }                                                                                                                                                                                                               
+                                                                                                                                                                                                                   
+   node_config {                                                                                                                                                                                                   
+     oauth_scopes = [                                                                                                                                                                                              
+       "https://www.googleapis.com/auth/compute",                                                                                                                                                                  
+       "https://www.googleapis.com/auth/devstorage.read_only",                                                                                                                                                     
+       "https://www.googleapis.com/auth/logging.write",                                                                                                                                                            
+       "https://www.googleapis.com/auth/monitoring",                                                                                                                                                               
+     ]                                                                                                                                                                                                             
+                                                                                                                                                                                                                   
+     labels {                                                                                                                                                                                                      
+       this-is-for = "dev-cluster"                                                                                                                                                                                 
+     }                                                                                                                                                                                                             
+                                                                                                                                                                                                                   
+     tags = ["dev", "work"]                                                                                                                                                                                        
+   }                                                                                                                                                                                                               
+ }                                                                                                                                                                                                                 
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                                   
+     ## Connect to cluster after creating it                                                                                                                                                                       
+                                                                                                                                                                                                                   
+ resource "null_resource" "connect-cluster" {                                                                                                                                                                      
+ depends_on = ["google_container_cluster.gcp_kubernetes"]                                                                                                                                                          
+ provisioner "local-exec" {                                                                                                                                                                                        
+     command = "gcloud container clusters get-credentials ${var.cluster_name} --zone us-west1-a --project academy-193615"                                                                                          
+     interpreter = ["bash", "-c"]                                                                                                                                                                                  
+ }                                                                                                                                                                                                                 
+ }</pre>
+
+<p>Una breve descripción de algunos atributos:</p>
+
+<p><strong>name: </strong> Nombre del cluster que estamos creando, este valor lo definimos anteriormente en <strong>variables.tf</strong></p>
+
+<p><strong>initial_node_count: </strong> numero de instancias que se desplegaran por zonas, en este caso se desplegara una instancia por cada zona que definimos.</p>
+
+<p><strong>oauth_scopes: </strong> Scopes necesarios para el buen funcionamiento de kubernetes y acceso a otros recursos.</p>
+
+<p> </p>
+
+<p>Por ultimo, en este archivo se encuentra un recurso un poco particular ya que es un recurso tipo &#8220;null_resource&#8221; este recurso nos permite ejecutar comandos</p>
+
+<pre class="lang:default decode:true ">command = "gcloud container clusters get-credentials ${var.cluster_name} --zone us-west1-a --project academy-193615"</pre>
+
+<p>Concluire que si ya hemos trabajado en GCP ya hemos realizado el join de gcloud de nuestra CLI asi que me saltare ese paso.</p>
+
+<p>Con este comando le decimos a gcloud que establezcla la conexión de manera local a nuestro stack de kubernetes, asi que si queremos correr algun comando de kubectl hacia nuestro stack podemos hacerlo de manera local sin ningun inconveniente.</p>
+
+<p>Ahora que todo esta listo, ejecutamos el siguiente comando para que terraform verifique los recursos a crear.</p>
+
+<p><strong>terraform plan</strong></p>
+
+<p>Si todo sale bien, se debe observar lo siguiente:</p>
+
+<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-19-50.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-931" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-19-50.png?resize=648%2C671&#038;ssl=1" alt="" width="648" height="671" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-19-50.png?w=906&ssl=1 906w, https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-19-50.png?resize=290%2C300&ssl=1 290w, https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-19-50.png?resize=768%2C795&ssl=1 768w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Terraform verifica los recursos escritos en los archivos tf y su estado, en este momento el estado del cluster es que no esta creado y terraform, procedera a crearla. Para crear los recursos ejecutamos el siguiente comando:</p>
+
+<p><strong>terraform apply</strong></p>
+
+<p>Si los recursos se crearon satisfactoriamente, tendremos un output parecido a este:</p>
+
+<p><a href="https://i0.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-45-20.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-932" src="https://i0.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-45-20.png?resize=648%2C60&#038;ssl=1" alt="" width="648" height="60" srcset="https://i0.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-45-20.png?w=951&ssl=1 951w, https://i0.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-45-20.png?resize=300%2C28&ssl=1 300w, https://i0.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-45-20.png?resize=768%2C71&ssl=1 768w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Verificamos los nodos de nuestro cluster:</p>
+
+<p><strong>kubect get nodes</strong></p>
+
+<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-47-46.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-933" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-47-46.png?resize=648%2C51&#038;ssl=1" alt="" width="648" height="51" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-47-46.png?w=877&ssl=1 877w, https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-47-46.png?resize=300%2C24&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-47-46.png?resize=768%2C60&ssl=1 768w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p><a href="https://i2.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-52-46.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-935" src="https://i2.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-52-46.png?resize=648%2C203&#038;ssl=1" alt="" width="648" height="203" srcset="https://i2.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-52-46.png?w=923&ssl=1 923w, https://i2.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-52-46.png?resize=300%2C94&ssl=1 300w, https://i2.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-52-46.png?resize=768%2C240&ssl=1 768w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>De este modo desplegamos un stack de Kubernetes en GCP en segundos, listo para desplegar nuestros servicios.</p>
+
+<p>Mas información:</p>
+
+<p><a href="https://www.terraform.io/docs/" target="_blank">https://www.terraform.io/docs/</a></p>
+
+<p><a href="https://kubernetes.io/docs/home/" target="_blank">https://kubernetes.io/docs/home/</a></p>
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  				<p>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="tags/gcp">GCP</a></span><span class="tag"><a href="tags/kubernetes">Kubernetes</a></span>
+  				</p>
+  			</div>
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2019</span>
+            
+                <span><a href="">Braybaut</a></span>
+            
+            <span></span>
+            <span> <a href="posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+
+<script type="text/javascript" src="/js/bundle.4b80fbbfab88198dcef181b034822e60a3e68b1c128d1dc05392a32943a18ec2f866fbcd9ce31dcf84134397161647ad605ea5c25ecf12e5fcf9d28b47e64bb5.js" integrity="sha512-S4D7v6uIGY3O8YGwNIIuYKPmixwSjR3AU5KjKUOhjsL4ZvvNnOMdz4QTQ5cWFketYF6lwl7PEuX8&#43;dKLR&#43;ZLtQ=="></script>
+
+
+
+    </body>
+</html>

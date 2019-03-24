@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Uncategorized on Braybaut</title>
+    <link>/categories/uncategorized/</link>
+    <description>Recent content in Uncategorized on Braybaut</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Feb 2019 21:44:10 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Creando un cluster de kubernetes en GCP con terraform</title>
+      <link>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</link>
+      <pubDate>Sun, 03 Feb 2019 21:44:10 +0000</pubDate>
+      
+      <guid>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?ssl=1&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-924&#34; src=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?resize=648%2C220&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;648&#34; height=&#34;220&#34; srcset=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?w=750&amp;ssl=1 750w, https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?resize=300%2C102&amp;ssl=1 300w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Terraform, es una de las herramientas mas potentes de hashicorp y hoy en día es usada por grandes compañías para mantener infraestructura en la nube.&lt;/p&gt;
+
+&lt;p&gt;Terraform destaca porque podemos trabajar con múltiples providers al mismo tiempo, ¿ que quiere decir esto ? que le podemos decir a terraform que cuando se cree una nueva instancia en GCP al mismo tiempo  genere un registro DNS en route53 en AWS, esto de una manera muy sencilla.&lt;/p&gt;
+
+&lt;p&gt;Pero hoy no vamos a hablar de AWS, hoy vamos a hablar de GCP, una nube muy poderosa que tiene características muy interesantes para tener en cuenta y en este caso, construiremos un cluster de Kubernetes en GCP usando terraform.&lt;/p&gt;
+
+&lt;h3 id=&#34;conectandonos-a-google-cloud-platform&#34;&gt;Conectandonos a Google Cloud platform:&lt;/h3&gt;
+
+&lt;p&gt;Para conectarnos a GCP solo necesitamos determinar:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Credentials&lt;/strong&gt; : En este caso tenemos que generar un account service y usar el archivo json que se genera con los permisos necesarios&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Project&lt;/strong&gt;  : Determinamos el proyecto en GCP en el cual vamos a trabajar&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;region&lt;/strong&gt; : Determinamos la región por el cual vamos a trabajar.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Despues de determinar los valores mencionados anteriormente, los seteamos en el siguiente archivo.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Traefik: Load Balancer y Reverse Proxy para Docker</title>
+      <link>/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</link>
+      <pubDate>Wed, 25 Oct 2017 22:25:26 +0000</pubDate>
+      
+      <guid>/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</guid>
+      <description>&lt;p&gt;[&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;aligncenter size-full wp-image-868&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=648%2C354&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;648&#34; height=&#34;354&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?w=1921&amp;ssl=1 1921w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=300%2C164&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=768%2C420&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=1024%2C560&amp;ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=750%2C410&amp;ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?w=1296&amp;ssl=1 1296w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;]&lt;a href=&#34;https://braybaut.com/wp-content/uploads/2017/10/architecture.png&#34; target=&#34;_blank&#34;&gt;1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Cuando trabajamos con docker en ambientes productivos, la mayoría de casos usamos tecnologías para orquestar y poder ofrecer alta disponibilidad sobre nuestros micro servicios, debido a esto, nosotros corremos multiples aplicaciones sobre un mismo host que haga parte de nuestro stack de orquestación. Para que estas aplicaciones puedan ser consumidas sin necesidad de exponer un puerto, necesitamos un reverse proxy para poder consumir estos servicios desde un único puerto.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Traefik &lt;/strong&gt;es un reverse proxy  y load balancer compatible con docker escrito en Go, creado especialmente para micro servicios, Traefik soporta diferentes Backends como: &lt;strong&gt;(Docker, docker Swarm, Kubernetes, Rancher, Amazon ECS y muchos mas )&lt;/strong&gt; su configuración es bastante sencilla y cuenta con un Dashboard donde podemos visualizar nuestros Micro servicios.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Docker: Ingresar al bash de un contenedor iniciado | Script</title>
+      <link>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</link>
+      <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
+      
+      <guid>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?ssl=1&#34; rel=&#34;attachment wp-att-611&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-611&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=648%2C220&amp;#038;ssl=1&#34; alt=&#34;docker&#34; width=&#34;648&#34; height=&#34;220&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?w=792&amp;ssl=1 792w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=300%2C102&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=768%2C261&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=750%2C255&amp;ssl=1 750w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ultimamente he trabajado mucho con docker y en el maravilloso recorrido que he tenido con docker se me presento un problema gigante,  inicio el contenedor con su servicio pero por X o Y motivo quiero ingresar al bash y el &amp;#8220;docker attach&amp;#8221; no funciona porque el docker no lo inicie con /bin/bash&lt;/p&gt;
+
+&lt;p&gt;Una solución es abrir el puerto 22 e ingresar por ssh, pero no es la gracia trabajar de esta manera ya que estamos con container. Navegando por la red encontré un comando un poco largo para poder ingresar al bash del container y un compañero de la compañía donde trabajo también me paso uno parecido, pero me pareció algo fastidioso usar un comando largo para ingresar al bash entonces me tome la tarea de crear un script para que me facilite esta tarea, se los mostrare:&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

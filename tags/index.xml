@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Braybaut</title>
-    <link>/tags.html</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -13,91 +13,91 @@
     
     <item>
       <title>Amazon</title>
-      <link>/tags/amazon.html</link>
+      <link>/tags/amazon/</link>
       <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
       
-      <guid>/tags/amazon.html</guid>
+      <guid>/tags/amazon/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Autentificación</title>
-      <link>/tags/autentificaci%C3%B3n.html</link>
+      <link>/tags/autentificaci%C3%B3n/</link>
       <pubDate>Tue, 19 Jan 2016 01:43:11 +0000</pubDate>
       
-      <guid>/tags/autentificaci%C3%B3n.html</guid>
+      <guid>/tags/autentificaci%C3%B3n/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Aws</title>
-      <link>/tags/aws.html</link>
+      <link>/tags/aws/</link>
       <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
       
-      <guid>/tags/aws.html</guid>
+      <guid>/tags/aws/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bash</title>
-      <link>/tags/bash.html</link>
+      <link>/tags/bash/</link>
       <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
       
-      <guid>/tags/bash.html</guid>
+      <guid>/tags/bash/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Centos</title>
-      <link>/tags/centos.html</link>
+      <link>/tags/centos/</link>
       <pubDate>Tue, 07 Mar 2017 06:54:30 +0000</pubDate>
       
-      <guid>/tags/centos.html</guid>
+      <guid>/tags/centos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Container</title>
-      <link>/tags/container.html</link>
+      <link>/tags/container/</link>
       <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
       
-      <guid>/tags/container.html</guid>
+      <guid>/tags/container/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contenedor De Datos</title>
-      <link>/tags/contenedor-de-datos.html</link>
+      <link>/tags/contenedor-de-datos/</link>
       <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
       
-      <guid>/tags/contenedor-de-datos.html</guid>
+      <guid>/tags/contenedor-de-datos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contenedores</title>
-      <link>/tags/contenedores.html</link>
+      <link>/tags/contenedores/</link>
       <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
       
-      <guid>/tags/contenedores.html</guid>
+      <guid>/tags/contenedores/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Crm</title>
-      <link>/tags/crm.html</link>
+      <link>/tags/crm/</link>
       <pubDate>Tue, 19 Jan 2016 01:43:11 +0000</pubDate>
       
-      <guid>/tags/crm.html</guid>
+      <guid>/tags/crm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Container</title>
-      <link>/tags/data-container.html</link>
+      <link>/tags/data-container/</link>
       <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
       
-      <guid>/tags/data-container.html</guid>
+      <guid>/tags/data-container/</guid>
       <description></description>
     </item>
     
