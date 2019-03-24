@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rocket.chat on Braybaut</title>
-    <link>/tags/rocket.chat/</link>
+    <link>https://practical-colden-971ce7.netlify.com/tags/rocket.chat/</link>
     <description>Recent content in Rocket.chat on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 07 Mar 2017 06:54:30 +0000</lastBuildDate>
     
-	<atom:link href="/tags/rocket.chat/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://practical-colden-971ce7.netlify.com/tags/rocket.chat/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Howto: Instalando Rocket.Chat en Docker</title>
-      <link>/posts/howto-instalando-rocket.chat-en-docker/</link>
+      <link>https://practical-colden-971ce7.netlify.com/posts/howto-instalando-rocket.chat-en-docker/</link>
       <pubDate>Tue, 07 Mar 2017 06:54:30 +0000</pubDate>
       
-      <guid>/posts/howto-instalando-rocket.chat-en-docker/</guid>
+      <guid>https://practical-colden-971ce7.netlify.com/posts/howto-instalando-rocket.chat-en-docker/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?ssl=1&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-824&#34; src=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?resize=546%2C126&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;546&#34; height=&#34;126&#34; srcset=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?w=546&amp;ssl=1 546w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?resize=300%2C69&amp;ssl=1 300w&#34; sizes=&#34;(max-width: 546px) 100vw, 546px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Rocket.chat para mi es una de las mejores plataformas de chat &lt;strong&gt;OpenSource&lt;/strong&gt; que existen, es muy flexible a la hora de adaptarlo y lo mejor, tiene cliente para toda las plataformas.&lt;/p&gt;
