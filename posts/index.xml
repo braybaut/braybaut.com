@@ -11,10 +11,10 @@
         
         <item>
             <title>Parseando JSON con Golang y las naves de spaceX</title>
-            <link>/posts/parseando-json-con-golang-y-las-naves-de-spacex.html</link>
+            <link>/posts/2019-02-10-parseando-json-con-golang-y-las-naves-de-spacex.html</link>
             <pubDate>Sun, 10 Feb 2019 21:52:53 +0000</pubDate>
             
-            <guid>/posts/parseando-json-con-golang-y-las-naves-de-spacex.html</guid>
+            <guid>/posts/2019-02-10-parseando-json-con-golang-y-las-naves-de-spacex.html</guid>
             <description>&lt;figure class=&#34;wp-block-image&#34;&gt;&lt;img src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=648%2C365&amp;#038;ssl=1&#34; alt=&#34;&#34; class=&#34;wp-image-974&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?w=1280&amp;ssl=1 1280w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/figure&gt; 
 
 &lt;p&gt;Golang se ha convertido en uno de mis lenguajes favoritos y hoy escribiré de como podemos usar go para poder consumir la API de spaceX y obtener información de las naves lanzadas al espacio&lt;/p&gt;
@@ -309,10 +309,10 @@ Details:  SpaceX's first flight of 2019 will be the eighth and final launch of i
         
         <item>
             <title>Creando un cluster de kubernetes en GCP con terraform</title>
-            <link>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform.html</link>
+            <link>/posts/2019-02-03-creando-un-cluster-de-kubernetes-en-gcp-con-terraform.html</link>
             <pubDate>Sun, 03 Feb 2019 21:44:10 +0000</pubDate>
             
-            <guid>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform.html</guid>
+            <guid>/posts/2019-02-03-creando-un-cluster-de-kubernetes-en-gcp-con-terraform.html</guid>
             <description>&lt;p&gt;&lt;a href=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?ssl=1&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-924&#34; src=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?resize=648%2C220&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;648&#34; height=&#34;220&#34; srcset=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?w=750&amp;ssl=1 750w, https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?resize=300%2C102&amp;ssl=1 300w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
@@ -506,10 +506,10 @@ default = "stack-kubernetes"
         
         <item>
             <title>Utilizando Traefik como Dynamic Reverse Proxy en Docker Swarm sobre  AWS</title>
-            <link>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws.html</link>
+            <link>/posts/2017-12-22-utilizando-traefik-como-dinamic-reverse-proxy-en-docker-swarm-sobre-aws.html</link>
             <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
             
-            <guid>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws.html</guid>
+            <guid>/posts/2017-12-22-utilizando-traefik-como-dinamic-reverse-proxy-en-docker-swarm-sobre-aws.html</guid>
             <description>&lt;p&gt;&lt;a href=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?ssl=1&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-890&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=648%2C354&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;648&#34; height=&#34;354&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?w=1921&amp;ssl=1 1921w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=300%2C164&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=768%2C420&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=1024%2C560&amp;ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=750%2C410&amp;ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=1140%2C624&amp;ssl=1 1140w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?w=1296&amp;ssl=1 1296w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Traefik es una herramienta muy potente gracias a que soporta varios providers como backend, en este caso usaremos traefik para que nos sirva como &lt;strong&gt;Dynamic Reverse Proxy&lt;/strong&gt; sobre un cluster de &lt;strong&gt;Docker Swarm&lt;/strong&gt; en &lt;strong&gt;Amazon Web Services&lt;/strong&gt;.&lt;/p&gt;
@@ -684,10 +684,10 @@ sudo chkconfig docker on</pre>
         
         <item>
             <title>Traefik: Load Balancer y Reverse Proxy para Docker</title>
-            <link>/posts/traefik-load-balancer-y-reverse-proxy-para-docker.html</link>
+            <link>/posts/2017-10-25-traefik-load-balancer-y-reverse-proxy-para-microservicios.html</link>
             <pubDate>Wed, 25 Oct 2017 22:25:26 +0000</pubDate>
             
-            <guid>/posts/traefik-load-balancer-y-reverse-proxy-para-docker.html</guid>
+            <guid>/posts/2017-10-25-traefik-load-balancer-y-reverse-proxy-para-microservicios.html</guid>
             <description>&lt;p&gt;[&lt;/p&gt;
 
 &lt;p&gt;&lt;img class=&#34;aligncenter size-full wp-image-868&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=648%2C354&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;648&#34; height=&#34;354&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?w=1921&amp;ssl=1 1921w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=300%2C164&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=768%2C420&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=1024%2C560&amp;ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=750%2C410&amp;ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?w=1296&amp;ssl=1 1296w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;]&lt;a href=&#34;https://braybaut.com/wp-content/uploads/2017/10/architecture.png&#34; target=&#34;_blank&#34;&gt;1&lt;/a&gt;&lt;/p&gt;
@@ -812,10 +812,10 @@ machine2:
         
         <item>
             <title>Howto: Instalando Rocket.Chat en Docker</title>
-            <link>/posts/howto-instalando-rocket.chat-en-docker.html</link>
+            <link>/posts/2017-03-07-howto-instalando-rocket-chat-en-docker.html</link>
             <pubDate>Tue, 07 Mar 2017 06:54:30 +0000</pubDate>
             
-            <guid>/posts/howto-instalando-rocket.chat-en-docker.html</guid>
+            <guid>/posts/2017-03-07-howto-instalando-rocket-chat-en-docker.html</guid>
             <description>&lt;p&gt;&lt;a href=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?ssl=1&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-824&#34; src=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?resize=546%2C126&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;546&#34; height=&#34;126&#34; srcset=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?w=546&amp;ssl=1 546w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?resize=300%2C69&amp;ssl=1 300w&#34; sizes=&#34;(max-width: 546px) 100vw, 546px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Rocket.chat para mi es una de las mejores plataformas de chat &lt;strong&gt;OpenSource&lt;/strong&gt; que existen, es muy flexible a la hora de adaptarlo y lo mejor, tiene cliente para toda las plataformas.&lt;/p&gt;
@@ -995,10 +995,10 @@ firewall-cmd --add-port=3000/tcp --permanent</pre>
         
         <item>
             <title>Autentificación LDAP Vtiger CRM 6</title>
-            <link>/posts/autentificaci%C3%B3n-ldap-vtiger-crm-6.html</link>
+            <link>/posts/2016-01-19-autentificacion-ldap-vtiger-crm-6-4.html</link>
             <pubDate>Tue, 19 Jan 2016 01:43:11 +0000</pubDate>
             
-            <guid>/posts/autentificaci%C3%B3n-ldap-vtiger-crm-6.html</guid>
+            <guid>/posts/2016-01-19-autentificacion-ldap-vtiger-crm-6-4.html</guid>
             <description>&lt;p&gt;&lt;a href=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?ssl=1&#34; rel=&#34;attachment wp-att-641&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-641&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=648%2C195&amp;#038;ssl=1&#34; alt=&#34;Vtiger-Logo-1&#34; width=&#34;648&#34; height=&#34;195&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?w=3546&amp;ssl=1 3546w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=300%2C90&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=768%2C231&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=1024%2C308&amp;ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=750%2C226&amp;ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?w=1296&amp;ssl=1 1296w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?w=1944&amp;ssl=1 1944w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Vtiger es un CRM de código abierto muy potente que trata de acercarse  a grandes crms como salesforce y SugarCRM, pero en esta ocasión veremos como autentificarlo hacia LDAP.&lt;/p&gt;
@@ -1092,10 +1092,10 @@ require_once 'include/ldap/ldap.php';</pre>
         
         <item>
             <title>Howto: como crear un contenedor de datos en docker</title>
-            <link>/posts/howto-como-crear-un-contenedor-de-datos-en-docker.html</link>
+            <link>/posts/2016-01-13-howto-como-crear-un-contenedor-de-datos-en-docker.html</link>
             <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
             
-            <guid>/posts/howto-como-crear-un-contenedor-de-datos-en-docker.html</guid>
+            <guid>/posts/2016-01-13-howto-como-crear-un-contenedor-de-datos-en-docker.html</guid>
             <description>&lt;p&gt;&lt;a href=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?ssl=1&#34; rel=&#34;attachment wp-att-611&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-611&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=648%2C220&amp;#038;ssl=1&#34; alt=&#34;docker&#34; width=&#34;648&#34; height=&#34;220&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?w=792&amp;ssl=1 792w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=300%2C102&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=768%2C261&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=750%2C255&amp;ssl=1 750w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;los contenedores no son persistentes en sus datos al ser ejecutados, esto quiere decir que al terminar una ejecución de un contenedor este pierde sus datos.&lt;/p&gt;
@@ -1133,10 +1133,10 @@ require_once 'include/ldap/ldap.php';</pre>
         
         <item>
             <title>Docker: Ingresar al bash de un contenedor iniciado | Script</title>
-            <link>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script.html</link>
+            <link>/posts/2016-01-12-docker-ingresar-al-bash-de-un-contenedor-iniciado-script.html</link>
             <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
             
-            <guid>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script.html</guid>
+            <guid>/posts/2016-01-12-docker-ingresar-al-bash-de-un-contenedor-iniciado-script.html</guid>
             <description>&lt;p&gt;&lt;a href=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?ssl=1&#34; rel=&#34;attachment wp-att-611&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-611&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=648%2C220&amp;#038;ssl=1&#34; alt=&#34;docker&#34; width=&#34;648&#34; height=&#34;220&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?w=792&amp;ssl=1 792w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=300%2C102&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=768%2C261&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=750%2C255&amp;ssl=1 750w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Ultimamente he trabajado mucho con docker y en el maravilloso recorrido que he tenido con docker se me presento un problema gigante,  inicio el contenedor con su servicio pero por X o Y motivo quiero ingresar al bash y el &amp;#8220;docker attach&amp;#8221; no funciona porque el docker no lo inicie con /bin/bash&lt;/p&gt;
@@ -1187,10 +1187,10 @@ ct=$CONTAINER && sudo nsenter --target $(docker inspect --format {{.State.Pid}} 
         
         <item>
             <title>Compilando Spice-xpi en Ubuntu.</title>
-            <link>/posts/compilando-spice-xpi-en-ubuntu..html</link>
+            <link>/posts/2015-05-20-compilando-spice-xpi-en-ubuntu.html</link>
             <pubDate>Wed, 20 May 2015 01:33:00 +0000</pubDate>
             
-            <guid>/posts/compilando-spice-xpi-en-ubuntu..html</guid>
+            <guid>/posts/2015-05-20-compilando-spice-xpi-en-ubuntu.html</guid>
             <description>Tenia olvidado mi blog personal, desde que ingrese a la universidad, el tiempo empleado en el blog bajo muchisimo pero bueno ya poco a poco estoy sacando tiempo para el blog.
  En SEAQ somos Partner de Red Hat en Colombia y constantemente debemos tener acceso remoto a los guests que corren en Red Hat Enterprise Virtualization RHEV, para poder tener acceso remoto a estos guests, se requiere de spice-xpi, Un complemento para firefox que nos permite iniciar el acceso remoto a los guest.</description>
             <content type="html"><![CDATA[<div dir="ltr" style="text-align:left;">
@@ -1346,10 +1346,10 @@ ct=$CONTAINER && sudo nsenter --target $(docker inspect --format {{.State.Pid}} 
         
         <item>
             <title>Introducción Vpn Full Mesh con Tinc y configuración en Raspberry Pi</title>
-            <link>/posts/introducci%C3%B3n-vpn-full-mesh-con-tinc-y-configuraci%C3%B3n-en-raspberry-pi.html</link>
+            <link>/posts/2014-03-24-introduccion-vpn-full-mesh-con-tinc-y-configuracion-en-raspberry-pi.html</link>
             <pubDate>Mon, 24 Mar 2014 06:18:00 +0000</pubDate>
             
-            <guid>/posts/introducci%C3%B3n-vpn-full-mesh-con-tinc-y-configuraci%C3%B3n-en-raspberry-pi.html</guid>
+            <guid>/posts/2014-03-24-introduccion-vpn-full-mesh-con-tinc-y-configuracion-en-raspberry-pi.html</guid>
             <description>http://platform.twitter.com/widgets.js   &amp;lt;div class=&amp;quot;separator&amp;quot; style=&amp;quot;clear:both;text-align:center;&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;https://braybaut.files.wordpress.com/2014/03/8000d-tinclogo1.png?w=648&amp;quot; style=&amp;quot;margin-left:1em;margin-right:1em;&amp;quot;&amp;gt;&amp;lt;img border=&amp;quot;0&amp;quot; src=&amp;quot;https://braybaut.files.wordpress.com/2014/03/8000d-tinclogo1.png?w=648&amp;quot; data-recalc-dims=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;p&amp;gt; Con tinc Podemos crear una &amp;lt;b&amp;gt;VPN &amp;lt;/b&amp;gt;tipo full mesh(&amp;lt;i&amp;gt;Nodos conectados entre s&amp;lt;/i&amp;gt;i), Estableciendo la comunicación de todos los host conectados a cada nodo. Cabe aclarar que cada nodo es el servidor donde esta configurado tinc. &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; Tinc esta lanzada bajo licencia GPL que en pocas palabras podemos decir que es &amp;lt;b&amp;gt;Software Libre =D&amp;lt;/b&amp;gt;, este maravilloso protocolo nos ofrece unas caracteristicas que son: &amp;lt;/p&amp;gt; &amp;lt;ul style=&amp;quot;text-align:left;&amp;quot;&amp;gt; &amp;lt;li&amp;gt; Encryptation, Authenticatión and compressión: Comprime los paquetes antes de enviarlos, encripta los datos para que uestra información viaje segura en este medio tan inseguro como lo es la internet, ofrece la autentificación para que los nodos desconocidos no se puedan conectar a nuestra red.</description>
             <content type="html"><![CDATA[<div dir="ltr" style="text-align:left;">
   <div dir="ltr" style="text-align:left;">
