@@ -1,0 +1,1588 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Braybaut</title>
+        <link>/posts.html</link>
+        <description>Recent content in Posts on Braybaut</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 10 Feb 2019 21:52:53 +0000</lastBuildDate>
+        <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Parseando JSON con Golang y las naves de spaceX</title>
+            <link>/posts/parseando-json-con-golang-y-las-naves-de-spacex.html</link>
+            <pubDate>Sun, 10 Feb 2019 21:52:53 +0000</pubDate>
+            
+            <guid>/posts/parseando-json-con-golang-y-las-naves-de-spacex.html</guid>
+            <description>&lt;figure class=&#34;wp-block-image&#34;&gt;&lt;img src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=648%2C365&amp;#038;ssl=1&#34; alt=&#34;&#34; class=&#34;wp-image-974&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?w=1280&amp;ssl=1 1280w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/figure&gt; 
+
+&lt;p&gt;Golang se ha convertido en uno de mis lenguajes favoritos y hoy escribiré de como podemos usar go para poder consumir la API de spaceX y obtener información de las naves lanzadas al espacio&lt;/p&gt;
+
+&lt;p&gt;Soy admirador total de &lt;a href=&#34;https://en.wikipedia.org/wiki/Elon_Musk&#34; target=&#34;_blank&#34;&gt;Elon musk&lt;/a&gt; y de todas sus compañías, una de ellas es &lt;a href=&#34;https://www.spacex.com/&#34; target=&#34;_blank&#34;&gt;spaceX&lt;/a&gt;, una compañía dedicada al transporte aeroespacial y hoy por medio de Golang vamos a obtener información de su ultima nave lanzada al espacio.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<figure class="wp-block-image"><img src="https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=648%2C365&#038;ssl=1" alt="" class="wp-image-974" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=1024%2C576&ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=300%2C169&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=768%2C432&ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?w=1280&ssl=1 1280w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></figure> 
+
+<p>Golang se ha convertido en uno de mis lenguajes favoritos y hoy escribiré de como podemos usar go para poder consumir la API de spaceX y obtener información de las naves lanzadas al espacio</p>
+
+<p>Soy admirador total de <a href="https://en.wikipedia.org/wiki/Elon_Musk" target="_blank">Elon musk</a> y de todas sus compañías, una de ellas es <a href="https://www.spacex.com/" target="_blank">spaceX</a>, una compañía dedicada al transporte aeroespacial y hoy por medio de Golang vamos a obtener información de su ultima nave lanzada al espacio.</p>
+
+<p>SpaceX provee una API para obtener toda la información de las naves lanzadas al espacio:</p>
+
+<pre class="wp-block-code"><code>curl -x https://api.spacexdata.com/v3/launches/latest | jq . </code></pre>
+
+<p>Con esta API podemos obtener los siguientes datos:</p>
+
+<pre class="wp-block-code"><code>{
+  "flight_number": 74,
+  "mission_name": "Iridium NEXT Mission 8",
+  "mission_id": [
+    "F3364BF"
+  ],
+  "launch_year": "2019",
+  "launch_date_unix": 1547220660,
+  "launch_date_utc": "2019-01-11T15:31:00.000Z",
+  "launch_date_local": "2019-01-11T07:31:00-08:00",
+  "is_tentative": false,
+  "tentative_max_precision": "hour",
+  "tbd": false,
+  "launch_window": 0,
+  "rocket": {
+    "rocket_id": "falcon9",
+    "rocket_name": "Falcon 9",
+    "rocket_type": "FT",
+    "first_stage": {
+      "cores": [
+        {
+          "core_serial": "B1049",
+          "flight": 2,
+          "block": 5,
+          "gridfins": true,
+          "legs": true,
+          "reused": true,
+          "land_success": true,
+          "landing_intent": true,
+          "landing_type": "ASDS",
+          "landing_vehicle": "JRTI"
+        }
+      ]
+    },
+    "second_stage": {
+      "block": 5,
+      "payloads": [
+        {
+          "payload_id": "Iridium NEXT 8",
+          "norad_id": [
+            43922,
+            43923,
+            43924,
+            43925,
+            43926,
+            43927,
+            43928,
+            43929,
+            43930,
+            43931
+          ],
+          "reused": false,
+          "customers": [
+            "Iridium Communications"
+          ],
+          "nationality": "United States",
+          "manufacturer": "Thales Alenia Space",
+          "payload_type": "Satellite",
+          "payload_mass_kg": 9600,
+          "payload_mass_lbs": 21164.38,
+          "orbit": "PO",
+          "orbit_params": {
+            "reference_system": "geocentric",
+            "regime": "low-earth",
+            "longitude": null,
+            "semi_major_axis_km": 6997.303,
+            "eccentricity": 0.0011185,
+            "periapsis_km": 611.342,
+            "apoapsis_km": 626.995,
+            "inclination_deg": 86.6809,
+            "period_min": 97.085,
+            "lifespan_years": 15,
+            "epoch": "2019-01-14T19:01:22.000Z",
+            "mean_motion": 14.83223805,
+            "raan": 46.2409,
+            "arg_of_pericenter": 203.1527,
+            "mean_anomaly": 156.9184
+          }
+        }
+      ]
+    },
+    "fairings": {
+      "reused": false,
+      "recovery_attempt": false,
+      "recovered": null,
+      "ship": null
+    }
+  },
+  "ships": [
+    "JRTI-2",
+    "NRCQUEST",
+    "PACIFICFREEDOM"
+  ],
+  "telemetry": {
+    "flight_club": "https://www.flightclub.io/result?code=IRD8"
+  },
+  "launch_site": {
+    "site_id": "vafb_slc_4e",
+    "site_name": "VAFB SLC 4E",
+    "site_name_long": "Vandenberg Air Force Base Space Launch Complex 4E"
+  },
+  "launch_success": true,
+  "links": {
+    "mission_patch": "https://images2.imgbox.com/80/ae/1JL1ZzXD_o.png",
+    "mission_patch_small": "https://images2.imgbox.com/11/f0/xPDcIpmS_o.png",
+    "reddit_campaign": "https://www.reddit.com/r/spacex/comments/a699fh/iridium_next_constellation_mission_8_launch/",
+    "reddit_launch": "https://www.reddit.com/r/spacex/comments/aemq2i/rspacex_iridium_next_8_official_launch_discussion/",
+    "reddit_recovery": "https://www.reddit.com/r/spacex/comments/aewp4r/iridium_8_recovery_thread/",
+    "reddit_media": "https://www.reddit.com/r/spacex/comments/aeoxve/rspacex_iridium_next_8_media_thread_videos_images/",
+    "presskit": "https://www.spacex.com/sites/spacex/files/iridium8presskit.pdf",
+    "article_link": "https://spaceflightnow.com/2019/01/11/spacex-begins-2019-with-eighth-and-final-for-upgraded-iridium-network/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Iridium_satellite_constellation#Next-generation_constellation",
+    "video_link": "https://youtu.be/VshdafZvwrg",
+    "youtube_id": "VshdafZvwrg",
+    "flickr_images": [
+      "https://farm5.staticflickr.com/4866/39745612523_14270b4b9d_o.jpg",
+      "https://farm8.staticflickr.com/7833/39745612923_21aa442350_o.jpg",
+      "https://farm5.staticflickr.com/4881/39745613173_e99b09c000_o.jpg",
+      "https://farm8.staticflickr.com/7882/39745613513_6cdd4581af_o.jpg",
+      "https://farm8.staticflickr.com/7807/39745613733_1a7b70e54a_o.jpg",
+      "https://farm5.staticflickr.com/4891/39745614053_43855205bc_o.jpg"
+    ]
+  },
+  "details": "SpaceX's first flight of 2019 will be the eighth and final launch of its planned Iridium flights. Delivering 10 satellites to low earth orbit, this brings the total up to 75 and completes the Iridium NEXT constellation. This mission launches from SLC-4E at Vandenberg AFB. The booster is expected to land on JRTI.",
+  "upcoming": false,
+  "static_fire_date_utc": "2019-01-06T13:51:00.000Z",
+  "static_fire_date_unix": 1546782660,
+  "timeline": null
+}</code></pre>
+
+<p>Pero no queremos toda la información que nos da el API, solo queremos saber, estos tres valores: Number Flight, mission Name y description. para esto, usaremos Go y consumiremos la API.</p>
+
+<h3 id="pre-requisitos"><strong>Pre-requisitos</strong></h3>
+
+<ul>
+<li>Instalar Go desde <a href="https://golang.org/dl/" target="_blank">https://golang.org/dl/</a></li>
+<li>Chequear la instalación de Go con <strong>go version&nbsp;</strong>//&nbsp;Yo&nbsp;estoy&nbsp;utilizando&nbsp;la&nbsp;version&nbsp;1.9.1</li>
+<li>Para este caso utilizare librerías estándares de Go, ya que tiene los componentes de HTTP y JSON necesarios.</li>
+<li>Pueden utilizar el editor de texto que quieran, yo utilizo vim con el plugin <a href="https://github.com/fatih/vim-go" target="_blank">go-vim</a></li>
+</ul>
+
+<p class="has-medium-font-size">
+  <strong>Comencemos:</strong>
+</p>
+
+<p>creamos un archivo llamado <strong>spaceX.go y</strong> escribimos las lineas básicas de nuestro archivo:</p>
+
+<pre class="wp-block-code"><code>package main 
+
+func main() {
+
+}</code></pre>
+
+<p>podemos ejecutar nuestro archivo como <strong>go run spaceX.go</strong> o <strong>go build ./spaceX.go</strong></p>
+
+<p>Ahora crearemos el request hacia la API y parsearemos el output para tener los valores que necesitamos:, para eso necesitamos los siguientes librerías</p>
+
+<pre class="wp-block-code"><code> import (                                                                                                                                                                                         
+     "encoding/json"                                                                                                                                                                              
+     "fmt"                                                                                                                                                                                        
+     "io/ioutil"                                                                                                                                                                                  
+     "log"                                                                                                                                                                                        
+     "net/http"                                                                                                                                                                                   
+     "time"                                                                                                                                                                                       
+ )   </code></pre>
+
+<p>Tambien necesitamos escribir una estructura donde se extraera el texto del JSON, el nombre de las propiedades de la estructura deben iniciar con una letra mayúscula, para que puedan ser referenciadas como publicas</p>
+
+<pre class="wp-block-code"><code> type ship struct {                                                                                                                                                                               
+     Flight_number int    `json:"flight_number"`                                                                                                                                                  
+     Mission_name  string `json:"mission_name"`                                                                                                                                                   
+     Details       string `json:"details"`                                                                                                                                                        
+ }   </code></pre>
+
+<p>Realizamos el request y leemos la data con <strong>ioutil.ReadAll</strong></p>
+
+<pre class="wp-block-code"><code>     url := "https://api.spacexdata.com/v3/launches/latest"                                                                                                                                       
+     spaceX := http.Client{                                                                                                                                                                       
+         Timeout: time.Second * 2,                                                                                                                                                                
+     }                                                                                                                                                                                            
+                                                                                                                                                                                                  
+     req, err := http.NewRequest(http.MethodGet, url, nil)                                                                                                                                        
+     if err != nil {                                                                                                                                                                              
+         log.Fatal(err)                                                                                                                                                                           
+     }                                                                                                                                                                                            
+                                                                                                                                                                                                  
+     res, getErr := spaceX.Do(req)                                                                                                                                                                
+     if getErr != nil {                                                                                                                                                                           
+         log.Fatal(getErr)                                                                                                                                                                        
+     }                                                                                                                                                                                            
+                                                                                                                                                                                                  
+     body, readErr := ioutil.ReadAll(res.Body)                                                                                                                                                    
+     if readErr != nil {                                                                                                                                                                          
+         log.Fatal(readErr)                                                                                                                                                                       
+     }                                                                                                                                                                                            </code></pre>
+
+<p>Instanciamos ship1 con base a la estructura ship que escribimos anteriormente, posteriormente usamos json.Unmarshal para encodear la data y almacenarla en el objeto que instanciamos</p>
+
+<pre class="wp-block-code"><code>     ship1 := ship{}                                                                                                                                                                              
+     jsonErr := json.Unmarshal(body, &ship1)                                                                                                                                                      
+     if jsonErr != nil {                                                                                                                                                                          
+         log.Fatal(jsonErr)                                                                                                                                                                       
+     }                                                                                                                                                                                            
+     </code></pre>
+
+<p>Por ultimo el resultado final que queremos mostrar:</p>
+
+<pre class="wp-block-code"><code>fmt.Println("Flight Number: ", ship1.Flight_number)                                                                                                                                          
+fmt.Println("Mission Name: ", ship1.Mission_name)                                                                                                                                            
+fmt.Println("Details: ", ship1.Details) </code></pre>
+
+<p>Nuestro código debe quedar algo asi:</p>
+
+<pre class="wp-block-code"><code>package main                                                                                                                                                                                     
+                                                                                                                                                                                                  
+ import (                                                                                                                                                                                         
+     "encoding/json"                                                                                                                                                                              
+     "fmt"                                                                                                                                                                                        
+     "io/ioutil"                                                                                                                                                                                  
+     "log"                                                                                                                                                                                        
+     "net/http"                                                                                                                                                                                   
+     "time"                                                                                                                                                                                       
+ )                                                                                                                                                                                                
+                                                                                                                                                                                                  
+ type ship struct {                                                                                                                                                                               
+     Flight_number int    `json:"flight_number"`                                                                                                                                                  
+     Mission_name  string `json:"mission_name"`                                                                                                                                                   
+     Details       string `json:"details"`                                                                                                                                                        
+ }                                                                                                                                                                                                
+                                                                                                                                                                                                  
+ func main() {                                                                                                                                                                                    
+                                                                                                                                                                                                  
+     url := "https://api.spacexdata.com/v3/launches/latest"                                                                                                                                       
+     spaceX := http.Client{                                                                                                                                                                       
+         Timeout: time.Second * 2,                                                                                                                                                                
+     }                                                                                                                                                                                            
+                                                                                                                                                                                                  
+     req, err := http.NewRequest(http.MethodGet, url, nil)                                                                                                                                        
+     if err != nil {                                                                                                                                                                              
+         log.Fatal(err)                                                                                                                                                                           
+     }                                                                                                                                                                                            
+                                                                                                                                                                                                  
+     res, getErr := spaceX.Do(req)                                                                                                                                                                
+     if getErr != nil {                                                                                                                                                                           
+         log.Fatal(getErr)                                                                                                                                                                        
+     }                                                                                                                                                                                            
+                                                                                                                                                                                                  
+     body, readErr := ioutil.ReadAll(res.Body)                                                                                                                                                    
+     if readErr != nil {                                                                                                                                                                          
+         log.Fatal(readErr)                                                                                                                                                                       
+     }                                                                                                                                                                                            
+     ship1 := ship{}                                                                                                                                                                              
+     jsonErr := json.Unmarshal(body, &ship1)                                                                                                                                                      
+     if jsonErr != nil {                                                                                                                                                                          
+         log.Fatal(jsonErr)                                                                                                                                                                       
+     }                                                                                                                                                                                            
+     fmt.Println("Flight Number: ", ship1.Flight_number)                                                                                                                                          
+     fmt.Println("Mission Name: ", ship1.Mission_name)                                                                                                                                            
+     fmt.Println("Details: ", ship1.Details)                                                                                                                                                                           
+ } </code></pre>
+
+<p>Guardamos y ejecutamos y debemos obtener un output como este:</p>
+
+<pre class="wp-block-code"><code>Flight Number:  74
+Mission Name:  Iridium NEXT Mission 8
+Details:  SpaceX's first flight of 2019 will be the eighth and final launch of its planned Iridium flights. Delivering 10 satellites to low earth orbit, this brings the total up to 75 and completes the Iridium NEXT constellation. This mission launches from SLC-4E at Vandenberg AFB. The booster is expected to land on JRTI.
+</code></pre>
+
+<p>Con esto, logramos escribir con Go un HTTP Client que realiza un Request para consumir la API de spaceX y obtener un poco de información de la ultima nave lanzada al espacio.</p>
+
+<p>Mas información</p>
+
+<p><a href="https://golang.org/doc/" target="_blank">https://golang.org/doc/</a></p>]]></content>
+        </item>
+        
+        <item>
+            <title>Creando un cluster de kubernetes en GCP con terraform</title>
+            <link>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform.html</link>
+            <pubDate>Sun, 03 Feb 2019 21:44:10 +0000</pubDate>
+            
+            <guid>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform.html</guid>
+            <description>&lt;p&gt;&lt;a href=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?ssl=1&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-924&#34; src=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?resize=648%2C220&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;648&#34; height=&#34;220&#34; srcset=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?w=750&amp;ssl=1 750w, https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?resize=300%2C102&amp;ssl=1 300w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Terraform, es una de las herramientas mas potentes de hashicorp y hoy en día es usada por grandes compañías para mantener infraestructura en la nube.&lt;/p&gt;
+
+&lt;p&gt;Terraform destaca porque podemos trabajar con múltiples providers al mismo tiempo, ¿ que quiere decir esto ? que le podemos decir a terraform que cuando se cree una nueva instancia en GCP al mismo tiempo  genere un registro DNS en route53 en AWS, esto de una manera muy sencilla.&lt;/p&gt;
+
+&lt;p&gt;Pero hoy no vamos a hablar de AWS, hoy vamos a hablar de GCP, una nube muy poderosa que tiene características muy interesantes para tener en cuenta y en este caso, construiremos un cluster de Kubernetes en GCP usando terraform.&lt;/p&gt;
+
+&lt;h3 id=&#34;conectandonos-a-google-cloud-platform&#34;&gt;Conectandonos a Google Cloud platform:&lt;/h3&gt;
+
+&lt;p&gt;Para conectarnos a GCP solo necesitamos determinar:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Credentials&lt;/strong&gt; : En este caso tenemos que generar un account service y usar el archivo json que se genera con los permisos necesarios&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Project&lt;/strong&gt;  : Determinamos el proyecto en GCP en el cual vamos a trabajar&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;region&lt;/strong&gt; : Determinamos la región por el cual vamos a trabajar.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Despues de determinar los valores mencionados anteriormente, los seteamos en el siguiente archivo.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p><a href="https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-924" src="https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?resize=648%2C220&#038;ssl=1" alt="" width="648" height="220" srcset="https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?w=750&ssl=1 750w, https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?resize=300%2C102&ssl=1 300w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p> </p>
+
+<p>Terraform, es una de las herramientas mas potentes de hashicorp y hoy en día es usada por grandes compañías para mantener infraestructura en la nube.</p>
+
+<p>Terraform destaca porque podemos trabajar con múltiples providers al mismo tiempo, ¿ que quiere decir esto ? que le podemos decir a terraform que cuando se cree una nueva instancia en GCP al mismo tiempo  genere un registro DNS en route53 en AWS, esto de una manera muy sencilla.</p>
+
+<p>Pero hoy no vamos a hablar de AWS, hoy vamos a hablar de GCP, una nube muy poderosa que tiene características muy interesantes para tener en cuenta y en este caso, construiremos un cluster de Kubernetes en GCP usando terraform.</p>
+
+<h3 id="conectandonos-a-google-cloud-platform">Conectandonos a Google Cloud platform:</h3>
+
+<p>Para conectarnos a GCP solo necesitamos determinar:</p>
+
+<ul>
+<li><strong>Credentials</strong> : En este caso tenemos que generar un account service y usar el archivo json que se genera con los permisos necesarios</li>
+<li><strong>Project</strong>  : Determinamos el proyecto en GCP en el cual vamos a trabajar</li>
+<li><strong>region</strong> : Determinamos la región por el cual vamos a trabajar.</li>
+</ul>
+
+<p>Despues de determinar los valores mencionados anteriormente, los seteamos en el siguiente archivo.</p>
+
+<p><strong>variables.tf</strong></p>
+
+<p>En este archivo determinaremos las variables que vamos a necesitar</p>
+
+<pre class="lang:default decode:true"> // General Variables 
+
+variable "credentials" { 
+type = "string" 
+default = "../key.json" 
+description = "Json Credentials file to connect GCP" 
+} 
+
+variable "linux_admin_username" { 
+type = "string" 
+description = "User name for authentication to the Kubernetes linux agent virtual machines in the cluster." 
+default = "glb-events" 
+} 
+
+variable "linux_admin_password" { 
+type ="string" 
+default = "MySecretPassTest123." 
+description = "The password for the Linux admin account." 
+} 
+
+// GCP Variables 
+variable "gcp_cluster_count" { 
+type = "string" 
+description = "Count of cluster instances to start." 
+default = "1" 
+} 
+variable "project" {
+  type = "string" 
+  default = "MyProjectID"
+} 
+
+variable "cluster_name" { 
+type = "string" 
+description = "Cluster name for the GCP Cluster." 
+default = "stack-kubernetes" 
+}</pre>
+
+<p>Despues seteamos el siguiente archivo el cual vamos a llamar las variables escritas en el archivo variables.tf,  en este archivo le diremos a terraform que trabajaremos con el provider de <strong>Google Cloud Platform</strong></p>
+
+<p><strong>main.tf</strong></p>
+
+<pre class="lang:default decode:true ">provider "google" {
+  credentials = "${file(var.credentials)}"
+  project     = "${var.project}"
+  region      = "us-west1"
+}</pre>
+
+<p>Ahora escribimos el siguiente archivo, en este archivo creamos el cluster de Kubernetes y definiremos diferentes atributos necesarios:</p>
+
+<p><strong>kubernetes.tf</strong></p>
+
+<pre class="lang:default decode:true">resource "google_container_cluster" "gcp_kubernetes" {                                                                                                                                                            
+   name               = "${var.cluster_name}"                                                                                                                                                                      
+   zone               = "us-west1-a"                                                                                                                                                                               
+   initial_node_count = "${var.gcp_cluster_count}"                                                                                                                                                                 
+                                                                                                                                                                                                                   
+   additional_zones = [                                                                                                                                                                                            
+     "us-west1-b",                                                                                                                                                                                                 
+     "us-west1-c",                                                                                                                                                                                                 
+   ]                                                                                                                                                                                                               
+                                                                                                                                                                                                                   
+   master_auth {                                                                                                                                                                                                   
+     username = "${var.linux_admin_username}"                                                                                                                                                                      
+     password = "${var.linux_admin_password}}"                                                                                                                                                                     
+   }                                                                                                                                                                                                               
+                                                                                                                                                                                                                   
+   node_config {                                                                                                                                                                                                   
+     oauth_scopes = [                                                                                                                                                                                              
+       "https://www.googleapis.com/auth/compute",                                                                                                                                                                  
+       "https://www.googleapis.com/auth/devstorage.read_only",                                                                                                                                                     
+       "https://www.googleapis.com/auth/logging.write",                                                                                                                                                            
+       "https://www.googleapis.com/auth/monitoring",                                                                                                                                                               
+     ]                                                                                                                                                                                                             
+                                                                                                                                                                                                                   
+     labels {                                                                                                                                                                                                      
+       this-is-for = "dev-cluster"                                                                                                                                                                                 
+     }                                                                                                                                                                                                             
+                                                                                                                                                                                                                   
+     tags = ["dev", "work"]                                                                                                                                                                                        
+   }                                                                                                                                                                                                               
+ }                                                                                                                                                                                                                 
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                                   
+     ## Connect to cluster after creating it                                                                                                                                                                       
+                                                                                                                                                                                                                   
+ resource "null_resource" "connect-cluster" {                                                                                                                                                                      
+ depends_on = ["google_container_cluster.gcp_kubernetes"]                                                                                                                                                          
+ provisioner "local-exec" {                                                                                                                                                                                        
+     command = "gcloud container clusters get-credentials ${var.cluster_name} --zone us-west1-a --project academy-193615"                                                                                          
+     interpreter = ["bash", "-c"]                                                                                                                                                                                  
+ }                                                                                                                                                                                                                 
+ }</pre>
+
+<p>Una breve descripción de algunos atributos:</p>
+
+<p><strong>name: </strong> Nombre del cluster que estamos creando, este valor lo definimos anteriormente en <strong>variables.tf</strong></p>
+
+<p><strong>initial_node_count: </strong> numero de instancias que se desplegaran por zonas, en este caso se desplegara una instancia por cada zona que definimos.</p>
+
+<p><strong>oauth_scopes: </strong> Scopes necesarios para el buen funcionamiento de kubernetes y acceso a otros recursos.</p>
+
+<p> </p>
+
+<p>Por ultimo, en este archivo se encuentra un recurso un poco particular ya que es un recurso tipo &#8220;null_resource&#8221; este recurso nos permite ejecutar comandos</p>
+
+<pre class="lang:default decode:true ">command = "gcloud container clusters get-credentials ${var.cluster_name} --zone us-west1-a --project academy-193615"</pre>
+
+<p>Concluire que si ya hemos trabajado en GCP ya hemos realizado el join de gcloud de nuestra CLI asi que me saltare ese paso.</p>
+
+<p>Con este comando le decimos a gcloud que establezcla la conexión de manera local a nuestro stack de kubernetes, asi que si queremos correr algun comando de kubectl hacia nuestro stack podemos hacerlo de manera local sin ningun inconveniente.</p>
+
+<p>Ahora que todo esta listo, ejecutamos el siguiente comando para que terraform verifique los recursos a crear.</p>
+
+<p><strong>terraform plan</strong></p>
+
+<p>Si todo sale bien, se debe observar lo siguiente:</p>
+
+<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-19-50.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-931" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-19-50.png?resize=648%2C671&#038;ssl=1" alt="" width="648" height="671" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-19-50.png?w=906&ssl=1 906w, https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-19-50.png?resize=290%2C300&ssl=1 290w, https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-19-50.png?resize=768%2C795&ssl=1 768w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Terraform verifica los recursos escritos en los archivos tf y su estado, en este momento el estado del cluster es que no esta creado y terraform, procedera a crearla. Para crear los recursos ejecutamos el siguiente comando:</p>
+
+<p><strong>terraform apply</strong></p>
+
+<p>Si los recursos se crearon satisfactoriamente, tendremos un output parecido a este:</p>
+
+<p><a href="https://i0.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-45-20.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-932" src="https://i0.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-45-20.png?resize=648%2C60&#038;ssl=1" alt="" width="648" height="60" srcset="https://i0.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-45-20.png?w=951&ssl=1 951w, https://i0.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-45-20.png?resize=300%2C28&ssl=1 300w, https://i0.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-45-20.png?resize=768%2C71&ssl=1 768w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Verificamos los nodos de nuestro cluster:</p>
+
+<p><strong>kubect get nodes</strong></p>
+
+<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-47-46.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-933" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-47-46.png?resize=648%2C51&#038;ssl=1" alt="" width="648" height="51" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-47-46.png?w=877&ssl=1 877w, https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-47-46.png?resize=300%2C24&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-47-46.png?resize=768%2C60&ssl=1 768w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p><a href="https://i2.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-52-46.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-935" src="https://i2.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-52-46.png?resize=648%2C203&#038;ssl=1" alt="" width="648" height="203" srcset="https://i2.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-52-46.png?w=923&ssl=1 923w, https://i2.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-52-46.png?resize=300%2C94&ssl=1 300w, https://i2.wp.com/braybaut.com/wp-content/uploads/2018/07/Screenshot-from-2018-07-06-19-52-46.png?resize=768%2C240&ssl=1 768w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>De este modo desplegamos un stack de Kubernetes en GCP en segundos, listo para desplegar nuestros servicios.</p>
+
+<p>Mas información:</p>
+
+<p><a href="https://www.terraform.io/docs/" target="_blank">https://www.terraform.io/docs/</a></p>
+
+<p><a href="https://kubernetes.io/docs/home/" target="_blank">https://kubernetes.io/docs/home/</a></p>]]></content>
+        </item>
+        
+        <item>
+            <title>Utilizando Traefik como Dynamic Reverse Proxy en Docker Swarm sobre  AWS</title>
+            <link>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws.html</link>
+            <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
+            
+            <guid>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws.html</guid>
+            <description>&lt;p&gt;&lt;a href=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?ssl=1&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-890&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=648%2C354&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;648&#34; height=&#34;354&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?w=1921&amp;ssl=1 1921w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=300%2C164&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=768%2C420&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=1024%2C560&amp;ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=750%2C410&amp;ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=1140%2C624&amp;ssl=1 1140w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?w=1296&amp;ssl=1 1296w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Traefik es una herramienta muy potente gracias a que soporta varios providers como backend, en este caso usaremos traefik para que nos sirva como &lt;strong&gt;Dynamic Reverse Proxy&lt;/strong&gt; sobre un cluster de &lt;strong&gt;Docker Swarm&lt;/strong&gt; en &lt;strong&gt;Amazon Web Services&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;componentes&#34;&gt;Componentes:&lt;/h3&gt;
+
+&lt;h4 id=&#34;3-instancias-1-manager-y-2-worker&#34;&gt;3 Instancias (1 Manager  y 2 worker):&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Manager: &lt;/strong&gt;Esta instancia sera la que controlara todo el cluster, en ella desplegaremos traefik y los servicios que no son worker, esta instancia estará sobre una subnet , la cual llamaremos &lt;strong&gt;&amp;#8220;subnet frontend&amp;#8221; &lt;/strong&gt;y tendrá su respectivo Secure Group&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Worker: &lt;/strong&gt;las instancias llamadas workers son dichas instancias donde correran nuestros servicios desplegados en AWS, sin tener en cuenta los servicios de &amp;#8220;management&amp;#8221; que podemos desplegar en la subnet de frontend, aquí desplegaremos los servicios que necesitemos como un web server, un micro servicio, etc, estas dos instancias estarán sobre otra subnet, la cual la llamaremos &lt;strong&gt;&amp;#8220;subnet backend&amp;#8221;&lt;/strong&gt; y tendrá su respectivo Secure Group&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-890" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=648%2C354&#038;ssl=1" alt="" width="648" height="354" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?w=1921&ssl=1 1921w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=300%2C164&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=768%2C420&ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=1024%2C560&ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=750%2C410&ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=1140%2C624&ssl=1 1140w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?w=1296&ssl=1 1296w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Traefik es una herramienta muy potente gracias a que soporta varios providers como backend, en este caso usaremos traefik para que nos sirva como <strong>Dynamic Reverse Proxy</strong> sobre un cluster de <strong>Docker Swarm</strong> en <strong>Amazon Web Services</strong>.</p>
+
+<h3 id="componentes">Componentes:</h3>
+
+<h4 id="3-instancias-1-manager-y-2-worker">3 Instancias (1 Manager  y 2 worker):</h4>
+
+<p><strong>Manager: </strong>Esta instancia sera la que controlara todo el cluster, en ella desplegaremos traefik y los servicios que no son worker, esta instancia estará sobre una subnet , la cual llamaremos <strong>&#8220;subnet frontend&#8221; </strong>y tendrá su respectivo Secure Group</p>
+
+<p><strong>Worker: </strong>las instancias llamadas workers son dichas instancias donde correran nuestros servicios desplegados en AWS, sin tener en cuenta los servicios de &#8220;management&#8221; que podemos desplegar en la subnet de frontend, aquí desplegaremos los servicios que necesitemos como un web server, un micro servicio, etc, estas dos instancias estarán sobre otra subnet, la cual la llamaremos <strong>&#8220;subnet backend&#8221;</strong> y tendrá su respectivo Secure Group</p>
+
+<p>Es necesario abrir estos puertos entre los  secure group frontend y backend para permitir la comunicación del cluster</p>
+
+<ul>
+<li>2377/tcp</li>
+<li>7946/tcp-udp</li>
+<li>4789/udp</li>
+</ul>
+
+<p>Ya teniendo en cuenta los componentes, iniciemos:</p>
+
+<h3 id="instalación-de-docker-y-despliegue-de-docker-swarm">Instalación de Docker y despliegue de Docker Swarm</h3>
+
+<p>Voy a concluir que ya se tiene desplegadas las instancias en cada subnet y se utilizo la ami de amazon linux, para instalar docker y dejarlo corriendo sin problemas es necesario ejecutar los siguientes comandos en las 3 instancias <strong>( Manager  y workers )</strong></p>
+
+<pre class="theme:github font:consolas font-size:15 line-height:18 lang:default decode:true">sudo yum install docker
+sudo service docker start
+sudo chkconfig docker on</pre>
+
+<p>Con estos comandos, docker ya esta instalado, ahora si, vamos a crear un cluster de Docker Swarm</p>
+
+<h3 id="inicializando-el-cluster">Inicializando el Cluster</h3>
+
+<p>Ejecutaremos este comando en la instancia &#8220;Manager&#8221; para inicializar el Swarm Cluster y obtener el token</p>
+
+<pre class="theme:github font:consolas font-size:15 line-height:18 lang:default decode:true ">docker swarm init</pre>
+
+<p>Obtendremos un output parecido a este:</p>
+
+<p><a href="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-02-42.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-900" src="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-02-42.png?resize=648%2C87&#038;ssl=1" alt="" width="648" height="87" srcset="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-02-42.png?w=1474&ssl=1 1474w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-02-42.png?resize=300%2C40&ssl=1 300w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-02-42.png?resize=768%2C103&ssl=1 768w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-02-42.png?resize=1024%2C138&ssl=1 1024w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-02-42.png?w=1296&ssl=1 1296w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>El output nos genera un token, este token lo usamos para unir los worker al cluster, ahora ejecutamos el siguiente comando en cada worker ( cambiando la ip de su respectiva instancia )</p>
+
+<pre class="font-size:15 line-height:18 lang:default decode:true">docker swarm join --token TOKEN-GENERADO \
+--listen-addr ip-worker \
+--advertise-addr ip-worker ip-manager:2377</pre>
+
+<p>En cada worker cambiar:</p>
+
+<p><strong>ip-worker:  la ip del worker</strong></p>
+
+<p>Después de ejecutar el comando anterior tendremos un output el cual nos dice que el nodo ingreso al cluster como worker:</p>
+
+<p><strong>&#8220;This node joined a swarm as a worker.&#8221;</strong></p>
+
+<p>Para verificar que docker Swarm pueda ver los nodos ejecutamos el siguiente comando en el manager para ver los nodos:</p>
+
+<pre class="theme:github font:consolas font-size:15 line-height:18 lang:default decode:true ">docker node ls</pre>
+
+<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-15-33.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-904" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-15-33.png?resize=648%2C117&#038;ssl=1" alt="" width="648" height="117" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-15-33.png?w=1385&ssl=1 1385w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-15-33.png?resize=300%2C54&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-15-33.png?resize=768%2C139&ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-15-33.png?resize=1024%2C186&ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-15-33.png?w=1296&ssl=1 1296w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Finalmente, creamos una red tipo overlay para nuestro cluster, ejecutamos el siguiente comando desde el manager:</p>
+
+<pre class="theme:github font:consolas lang:default decode:true">docker network create --driver=overlay traefik-net</pre>
+
+<h3 id="desplegando-traefik-en-nuestro-swarm-cluster">Desplegando Traefik en nuestro Swarm Cluster</h3>
+
+<p>Ya que tenemos listo nuestro Swarm Cluster, desde nuestro Manager vamos a desplegar nuestro Traefik, el cual se encargara de recibir todos los request y enviarlo a su respectivo container.</p>
+
+<pre class="theme:github font:consolas font-size:15 line-height:18 lang:default decode:true">docker service create \
+    --name traefik \
+    --constraint=node.role==manager \
+    --publish 80:80 --publish 8080:8080 \
+    --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
+    --network traefik-net \
+    traefik \
+    --docker \
+    --docker.swarmmode \
+    --docker.domain=traefik \
+    --docker.watch \
+    --web</pre>
+
+<p>Con el comando anterior, le decimos a docker que nos despliegue un nuevo servicio llamado traefik, nos publique el puerto 80 para recibir los request y el puerto 8080 para acceder al dashboard, tambien se especifica la red a utilizar, se especifica que es un servicio <strong>&#8220;manager&#8221;</strong> y  por ultimo los diferentes parámetros de docker swarm.</p>
+
+<p>SI el comando anterior no genera ningun error, podemos ejecutar el siguiente comando para observar si el servicio fue desplegado.</p>
+
+<pre class="theme:github font:consolas font-size:15 line-height:18 lang:default decode:true">docker service ls</pre>
+
+<p><a href="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-28-59.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-907" src="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-28-59.png?resize=648%2C58&#038;ssl=1" alt="" width="648" height="58" srcset="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-28-59.png?w=1841&ssl=1 1841w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-28-59.png?resize=300%2C27&ssl=1 300w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-28-59.png?resize=768%2C69&ssl=1 768w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-28-59.png?resize=1024%2C92&ssl=1 1024w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-28-59.png?w=1296&ssl=1 1296w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Como se observa en la imagen, vemos que se encuentra el servicio traefik desplegado y a la escucha de request por el puerto 80</p>
+
+<h3 id="desplegando-nuestras-aplicaciones">Desplegando nuestras aplicaciones</h3>
+
+<p>Ya que tenemos nuestro Traefik funcionando en nuestro Swarm Cluster, podemos desplegar nuestras aplicaciones para que traefik haga balanceo del trafico, en este caso, volveré a usar la imagen de katacoda <strong>docker-http-server</strong></p>
+
+<pre class="theme:github font:consolas font-size:15 line-height:18 lang:default decode:true">docker service create \
+    --name app01 \
+    --constraint node.role==worker \
+    --label traefik.port=80 \
+    --network traefik-net \
+    --label traefik.frontend.rule=Host:app01.braybaut.com \
+    --label traefik.backend=app01 \
+    katacoda/docker-http-server</pre>
+
+<p>En el despliegue del servicio app01 utilizamos varios label, los mas importantes son <strong>traefik.port=80 </strong>el cual le decimos a traefik el puerto a usar y <strong>traefik.frontend.rule=Host:app01.braybaut.co </strong>con este label, le decimos a traefik que todo el trafico que llegue a <strong>app01.braybaut.com </strong>debe ser redireccionado a los container que hagan parte de ese servicio <strong>app01</strong></p>
+
+<p>Desplegamos otro servicio el cual sera <strong>app02 </strong>y el endpoint sera: <strong>app02.braybaut.com</strong></p>
+
+<pre class="theme:github font:consolas lang:default decode:true ">docker service create \
+    --name app02 \
+    --constraint node.role==worker \
+    --label traefik.port=80 \
+    --network traefik-net \
+    --label traefik.frontend.rule=Host:app02.braybaut.com \
+    --label traefik.backend=app02 \
+    katacoda/docker-http-server</pre>
+
+<p>Observamos los servicios desplegados:</p>
+
+<p><a href="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-46-02.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-908" src="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-46-02.png?resize=648%2C67&#038;ssl=1" alt="" width="648" height="67" srcset="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-46-02.png?w=1789&ssl=1 1789w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-46-02.png?resize=300%2C31&ssl=1 300w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-46-02.png?resize=768%2C79&ssl=1 768w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-46-02.png?resize=1024%2C105&ssl=1 1024w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-46-02.png?w=1296&ssl=1 1296w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Observamos que tenemos nuestro traefik y  nuestras dos apps (app01 y app02)</p>
+
+<p>Con esto, logramos desplegar dos apps en nuestro Swarm Cluster, ahora, podemos acceder desde nuestro balanceador a nuestras dos Apps.</p>
+
+<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-48-44.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-909" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-48-44.png?resize=648%2C66&#038;ssl=1" alt="" width="648" height="66" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-48-44.png?w=1065&ssl=1 1065w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-48-44.png?resize=300%2C31&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-48-44.png?resize=768%2C79&ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-48-44.png?resize=1024%2C105&ssl=1 1024w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Con los anteriores Request, observamos que app01 se esta ejecutando en el contenedor d066207b1e23  y el app02 corre en el contenedor 80f164e6b5de</p>
+
+<p>Cada contenedor se encuentra en una worker diferente:</p>
+
+<p><a href="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-53-16.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-910" src="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-53-16.png?resize=588%2C637&#038;ssl=1" alt="" width="588" height="637" srcset="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-53-16.png?w=588&ssl=1 588w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-53-16.png?resize=277%2C300&ssl=1 277w" sizes="(max-width: 588px) 100vw, 588px" data-recalc-dims="1" /></a></p>
+
+<p>Podemos escalar  nuestros servicios y observar como funciona el balanceo de nuestro traefik:</p>
+
+<p>Escalamos app01 a 4 containers</p>
+
+<pre class="theme:github font:consolas font-size:15 line-height:18 lang:default decode:true">docker service scale app01=4
+</pre>
+
+<p>Realizamos peticiones a nuestro app con el endpoint app01.braybaut.com</p>
+
+<p><a href="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-56-11.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-911" src="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-56-11.png?resize=648%2C157&#038;ssl=1" alt="" width="648" height="157" srcset="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-56-11.png?w=1077&ssl=1 1077w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-56-11.png?resize=300%2C73&ssl=1 300w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-56-11.png?resize=768%2C186&ssl=1 768w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-56-11.png?resize=1024%2C248&ssl=1 1024w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Como se observa en la imagen, en cada request responde un container diferente, esto quiere decir que traefik realiza el balanceo del trafico de una manera correcta.</p>
+
+<p>Vemos que nuestro servicio se encuentra escalado:</p>
+
+<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-57-26.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-912" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-57-26.png?resize=592%2C639&#038;ssl=1" alt="" width="592" height="639" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-57-26.png?w=592&ssl=1 592w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-57-26.png?resize=278%2C300&ssl=1 278w" sizes="(max-width: 592px) 100vw, 592px" data-recalc-dims="1" /></a></p>
+
+<p>Esto es todo, traefik balancea nuestro trafico de una manera dinámica, sin importar el momento en que nuestro servicio escale, traefik sera capas de reconocer los nuevos container y balancear dicho trafico.</p>
+
+<p>Mas información:</p>
+
+<p><a href="https://docs.docker.com/engine/swarm/" target="_blank">https://docs.docker.com/engine/swarm/</a></p>
+
+<p><a href="https://docs.docker.com/engine/swarm/" target="_blank">https://docs.traefik.io/</a></p>]]></content>
+        </item>
+        
+        <item>
+            <title>Traefik: Load Balancer y Reverse Proxy para Docker</title>
+            <link>/posts/traefik-load-balancer-y-reverse-proxy-para-docker.html</link>
+            <pubDate>Wed, 25 Oct 2017 22:25:26 +0000</pubDate>
+            
+            <guid>/posts/traefik-load-balancer-y-reverse-proxy-para-docker.html</guid>
+            <description>&lt;p&gt;[&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;aligncenter size-full wp-image-868&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=648%2C354&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;648&#34; height=&#34;354&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?w=1921&amp;ssl=1 1921w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=300%2C164&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=768%2C420&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=1024%2C560&amp;ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=750%2C410&amp;ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?w=1296&amp;ssl=1 1296w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;]&lt;a href=&#34;https://braybaut.com/wp-content/uploads/2017/10/architecture.png&#34; target=&#34;_blank&#34;&gt;1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Cuando trabajamos con docker en ambientes productivos, la mayoría de casos usamos tecnologías para orquestar y poder ofrecer alta disponibilidad sobre nuestros micro servicios, debido a esto, nosotros corremos multiples aplicaciones sobre un mismo host que haga parte de nuestro stack de orquestación. Para que estas aplicaciones puedan ser consumidas sin necesidad de exponer un puerto, necesitamos un reverse proxy para poder consumir estos servicios desde un único puerto.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Traefik &lt;/strong&gt;es un reverse proxy  y load balancer compatible con docker escrito en Go, creado especialmente para micro servicios, Traefik soporta diferentes Backends como: &lt;strong&gt;(Docker, docker Swarm, Kubernetes, Rancher, Amazon ECS y muchos mas )&lt;/strong&gt; su configuración es bastante sencilla y cuenta con un Dashboard donde podemos visualizar nuestros Micro servicios.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>[</p>
+
+<p><img class="aligncenter size-full wp-image-868" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=648%2C354&#038;ssl=1" alt="" width="648" height="354" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?w=1921&ssl=1 1921w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=300%2C164&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=768%2C420&ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=1024%2C560&ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=750%2C410&ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?w=1296&ssl=1 1296w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" />]<a href="https://braybaut.com/wp-content/uploads/2017/10/architecture.png" target="_blank">1</a></p>
+
+<p>Cuando trabajamos con docker en ambientes productivos, la mayoría de casos usamos tecnologías para orquestar y poder ofrecer alta disponibilidad sobre nuestros micro servicios, debido a esto, nosotros corremos multiples aplicaciones sobre un mismo host que haga parte de nuestro stack de orquestación. Para que estas aplicaciones puedan ser consumidas sin necesidad de exponer un puerto, necesitamos un reverse proxy para poder consumir estos servicios desde un único puerto.</p>
+
+<p><strong>Traefik </strong>es un reverse proxy  y load balancer compatible con docker escrito en Go, creado especialmente para micro servicios, Traefik soporta diferentes Backends como: <strong>(Docker, docker Swarm, Kubernetes, Rancher, Amazon ECS y muchos mas )</strong> su configuración es bastante sencilla y cuenta con un Dashboard donde podemos visualizar nuestros Micro servicios.</p>
+
+<h2 id="demo"><strong>Demo:</strong></h2>
+
+<p>&nbsp;</p>
+
+<p>En este caso desplegare dos web servers  en docker que van a ser manejados por traefik.</p>
+
+<p><strong>Web Server 1:</strong> blog1.braybaut.com</p>
+
+<p><strong>Web Server 2 :</strong> blog2.braybaut.com</p>
+
+<p><strong>docker-compose.yml:</strong></p>
+
+<p>&nbsp;</p>
+
+<pre class="lang:yaml decode:true" title="docker-compose.yml">traefik:
+  image: traefik
+  command: --web --docker --docker.domain=docker.localhost --logLevel=DEBUG
+  ports:
+    - "80:80"
+    - "8080:8080"
+    - "443:443"
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - /dev/null:/traefik.toml
+
+
+machine1:
+  image: katacoda/docker-http-server
+  labels:
+    - "traefik.backend=blog1"
+    - "traefik.frontend.rule=Host:blog1.braybaut.com"
+
+machine2:
+  image: katacoda/docker-http-server:v2
+  labels:
+    - "traefik.backend=blog2"
+    - "traefik.frontend.rule=Host:blog2.braybaut.com"
+</pre>
+
+<p>Este docker-compose es muy fácil de interpretar, en el despliegue del container de  traefik el usa el docker.sock para permitir que traefik escuche los eventos del daemon de Docker, re configurarse cuando los containers se inician y se detienen y para utilizar algunos meta datos que este daemon pueda ofrecer, como por ejemplo el nombre de los containers. Para los web Servers use la imagen de Kataconda el cual es ideal para este ejemplo, estos containers usan varios label lo cual permiten cambiar su configuración para el uso de traefik</p>
+
+<p>Algunos label:</p>
+
+<ul>
+<li>traefik.port</li>
+<li>traefik.protoco</li>
+<li>traefik.weight</li>
+<li>traefik.frontend.rule</li>
+<li>traefik.docker.network</li>
+<li>traefik.backend</li>
+</ul>
+
+<p>En el caso de <strong>traefik.frontend.rule</strong> especificamos el dominio por el cual nos llegara la petición desde el frontend, en este caso: blog1.braybaut.com y blog2.braybaut.com</p>
+
+<p>Despues de definir el docker-compose, despliegamos los container mencionados en el yaml file:</p>
+
+<pre class="lang:zsh decode:true ">docker-compose up -d</pre>
+
+<p>Si los containers se desplegaron sin inconvenientes, tendremos este output:</p>
+
+<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-44-17.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-873" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-44-17.png?resize=505%2C103&#038;ssl=1" alt="" width="505" height="103" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-44-17.png?w=505&ssl=1 505w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-44-17.png?resize=300%2C61&ssl=1 300w" sizes="(max-width: 505px) 100vw, 505px" data-recalc-dims="1" /></a></p>
+
+<p>Ahora, podemos hacer peticiones con curl a blog1.braybaut.com y blog2.braybaut.com y nos debe responder cada container.</p>
+
+<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-47-00.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-876" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-47-00.png?resize=648%2C88&#038;ssl=1" alt="" width="648" height="88" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-47-00.png?w=805&ssl=1 805w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-47-00.png?resize=300%2C41&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-47-00.png?resize=768%2C104&ssl=1 768w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Como observamos vemos que cada peticion  me responde con el ID de su respectivo container** 873c9508bef7   8f3c982a1949</p>
+
+<p>**</p>
+
+<h3 id="toc_1">**</h3>
+
+<p>Escalando nuestro **<strong>Micro servicio:</strong></p>
+
+<p>Como mencione al inicio de esta publicación, traefik también es un <strong>load Balancer</strong> y maneja diferentes técnicas de balanceo, ya que estamos usando docker compose para este ejemplo, escalare un web server <strong>Machine1</strong>.</p>
+
+<pre class="lang:default decode:true ">docker-compose scale machine1=2</pre>
+
+<p><a href="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-52-13.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-877" src="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-52-13.png?resize=585%2C149&#038;ssl=1" alt="" width="585" height="149" srcset="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-52-13.png?w=585&ssl=1 585w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-52-13.png?resize=300%2C76&ssl=1 300w" sizes="(max-width: 585px) 100vw, 585px" data-recalc-dims="1" /></a></p>
+
+<p>Micro servicio escalado, ahora debemos tener dos containers de este micro servicio <strong>&#8220;machine1&#8221;</strong> en ejecución:</p>
+
+<p><a href="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-55-18.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-878" src="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-55-18.png?resize=648%2C75&#038;ssl=1" alt="" width="648" height="75" srcset="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-55-18.png?w=1217&ssl=1 1217w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-55-18.png?resize=300%2C35&ssl=1 300w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-55-18.png?resize=768%2C88&ssl=1 768w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-55-18.png?resize=1024%2C118&ssl=1 1024w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Ahora, como nuestro traefik esta balanceando el trafico de este servicio <strong>machine1 </strong>por medio del domain <strong>blog1.braybaut.com </strong>al volver a realizar una petición por curl nos debe responder cada contenedor:</p>
+
+<p><a href="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-03-49.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-879" src="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-03-49.png?resize=648%2C107&#038;ssl=1" alt="" width="648" height="107" srcset="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-03-49.png?w=665&ssl=1 665w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-03-49.png?resize=300%2C50&ssl=1 300w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Como observamos, por cada petición a <strong>blog1.braybaut.com</strong> nos va a responder un container diferente:  <strong>cebaede35153  cad89564505e  </strong> Con esto, logramos un load balancer automático cuando necesitemos hacer scaling de nuestros micro servicios.</p>
+
+<p>No olvidar que tenemos un Dashboard donde podemos ver nuestros Micro servicios manejados por Traefik:</p>
+
+<p>&#8220;Podemos acceder a este Dashboard por el puerto 8080&#8221;</p>
+
+<p><a href="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-09-46.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-880" src="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-09-46.png?resize=648%2C321&#038;ssl=1" alt="" width="648" height="321" srcset="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-09-46.png?w=1302&ssl=1 1302w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-09-46.png?resize=300%2C148&ssl=1 300w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-09-46.png?resize=768%2C380&ssl=1 768w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-09-46.png?resize=1024%2C506&ssl=1 1024w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Próximamente escribiré como usar traefik usando Amazon ECS  y Docker Swarm como Backend.</p>
+
+<p>Mas información:</p>
+
+<p><a href="https://traefik.io/" target="_blank">https://traefik.io/</a></p>
+
+<p><a href="https://docs.traefik.io/" target="_blank">https://docs.traefik.io/</a></p>
+
+<p>&nbsp;</p>]]></content>
+        </item>
+        
+        <item>
+            <title>Howto: Instalando Rocket.Chat en Docker</title>
+            <link>/posts/howto-instalando-rocket.chat-en-docker.html</link>
+            <pubDate>Tue, 07 Mar 2017 06:54:30 +0000</pubDate>
+            
+            <guid>/posts/howto-instalando-rocket.chat-en-docker.html</guid>
+            <description>&lt;p&gt;&lt;a href=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?ssl=1&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-824&#34; src=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?resize=546%2C126&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;546&#34; height=&#34;126&#34; srcset=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?w=546&amp;ssl=1 546w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?resize=300%2C69&amp;ssl=1 300w&#34; sizes=&#34;(max-width: 546px) 100vw, 546px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Rocket.chat para mi es una de las mejores plataformas de chat &lt;strong&gt;OpenSource&lt;/strong&gt; que existen, es muy flexible a la hora de adaptarlo y lo mejor, tiene cliente para toda las plataformas.&lt;/p&gt;
+
+&lt;p&gt;En este caso, realizaremos la instalación de Rocket.chat en &lt;strong&gt;docker&lt;/strong&gt;, por el cual no importara la distribución linux que utilicemos, pero en este caso utilizare Centos 7 como host de mis contenedores para hacer el despliegue.&lt;/p&gt;
+
+&lt;h2 id=&#34;instalación&#34;&gt;Instalación:&lt;/h2&gt;
+
+&lt;p&gt;Vamos a usar varios contenedores y para lograr la comunicación entre ellos, se usara &lt;strong&gt;Docker Compose&lt;/strong&gt;, el cual nos permite hacer despliegues de servicios el cual involucra varios contenedores.&lt;/p&gt;
+
+&lt;h3 id=&#34;docker&#34;&gt;Docker:&lt;/h3&gt;
+
+&lt;p&gt;Instalamos docker usando el script que se encuentra en su pagina oficial.&lt;/p&gt;
+
+&lt;pre class=&#34;lang:default decode:true&#34;&gt;wget -qO- https://get.docker.com/ | sh&lt;/pre&gt;
+
+&lt;p&gt;Al finalizar el proceso usamos systemctl para subir el servicio y dejarlo habilitado para que inicie cuando se inicie el servidor.&lt;/p&gt;
+
+&lt;pre class=&#34;lang:default decode:true&#34;&gt;systemctl start enable&lt;/pre&gt;
+
+&lt;pre class=&#34;lang:default decode:true &#34;&gt;systemcl enable docker&lt;/pre&gt;</description>
+            <content type="html"><![CDATA[<p><a href="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-824" src="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?resize=546%2C126&#038;ssl=1" alt="" width="546" height="126" srcset="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?w=546&ssl=1 546w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?resize=300%2C69&ssl=1 300w" sizes="(max-width: 546px) 100vw, 546px" data-recalc-dims="1" /></a></p>
+
+<p>Rocket.chat para mi es una de las mejores plataformas de chat <strong>OpenSource</strong> que existen, es muy flexible a la hora de adaptarlo y lo mejor, tiene cliente para toda las plataformas.</p>
+
+<p>En este caso, realizaremos la instalación de Rocket.chat en <strong>docker</strong>, por el cual no importara la distribución linux que utilicemos, pero en este caso utilizare Centos 7 como host de mis contenedores para hacer el despliegue.</p>
+
+<h2 id="instalación">Instalación:</h2>
+
+<p>Vamos a usar varios contenedores y para lograr la comunicación entre ellos, se usara <strong>Docker Compose</strong>, el cual nos permite hacer despliegues de servicios el cual involucra varios contenedores.</p>
+
+<h3 id="docker">Docker:</h3>
+
+<p>Instalamos docker usando el script que se encuentra en su pagina oficial.</p>
+
+<pre class="lang:default decode:true">wget -qO- https://get.docker.com/ | sh</pre>
+
+<p>Al finalizar el proceso usamos systemctl para subir el servicio y dejarlo habilitado para que inicie cuando se inicie el servidor.</p>
+
+<pre class="lang:default decode:true">systemctl start enable</pre>
+
+<pre class="lang:default decode:true ">systemcl enable docker</pre>
+
+<h3 id="docker-compose">Docker Compose:</h3>
+
+<p>Hacemos uso de la ultima versión estable de docker compose que se encuentra en  github y dejamos el script en <strong>/usr/local/bin/docker-compose</strong></p>
+
+<pre class="lang:default decode:true ">curl -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose</pre>
+
+<p>Aplicamos permisos de ejecución:</p>
+
+<pre class="lang:default decode:true ">chmod +x /usr/local/bin/docker-compose 
+</pre>
+
+<p>Verificamos la versión de docker-compose para mirar que se instalo la versión correcta:</p>
+
+<pre class="lang:default decode:true ">docker-compose --version</pre>
+
+<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-06-23-48-00.png?ssl=1" target="_blank"><img class="size-full wp-image-851 aligncenter" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-06-23-48-00.png?resize=488%2C66&#038;ssl=1" alt="" width="488" height="66" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-06-23-48-00.png?w=488&ssl=1 488w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-06-23-48-00.png?resize=300%2C41&ssl=1 300w" sizes="(max-width: 488px) 100vw, 488px" data-recalc-dims="1" /></a></p>
+
+<p>Ya que tenemos docker y docker-compose instalado, vamos a preparar el <strong>docker-compose.yml</strong> necesario para el despliegue de los contenedores y los directorios locales donde se almacenara la data.</p>
+
+<h3 id="creando-los-directorios-locales">Creando los directorios locales :</h3>
+
+<pre class="lang:default decode:true ">mkdir -p /opt/rocket.chat/data/runtime/db
+mkdir -p /opt/rocket.chat/data/dump</pre>
+
+<h3 id="creando-el-docker-compose-yaml">Creando el docker-compose.yaml</h3>
+
+<p>Creamos y editamos el archivo docker-compose.yml</p>
+
+<pre class="lang:default decode:true">vim /opt/rocket.chat/docker-compose.yml</pre>
+
+<p>&nbsp;</p>
+
+<pre class="lang:default decode:true">db:
+  image: mongo
+  volumes:
+    - ./data/runtime/db:/data/db
+    - ./data/dump:/dump
+  command: mongod --smallfiles
+
+rocketchat:
+  image: rocketchat/rocket.chat:latest
+  environment:
+    - MONGO_URL=mongodb://db:27017/rocketchat
+    - ROOT_URL=http://chat.braybaut.com
+    - Accounts_UseDNSDomainCheck=True
+  links:
+    - db:db
+  ports:
+    - 3000:3000
+
+hubot:
+  image: rocketchat/hubot-rocketchat:v0.1.4
+  environment:
+    - ROCKETCHAT_URL=192.168.0.26:3000
+    - ROCKETCHAT_ROOM=GENERAL
+    - ROCKETCHAT_USER=Botname
+    - ROCKETCHAT_PASSWORD=BotPassw0rd
+    - BOT_NAME=Botname
+    - EXTERNAL_SCRIPTS=hubot-help,hubot-seen,hubot-links,hubot-greetings
+  links:
+    - rocketchat:rocketchat
+#Esto se utiliza para exponer el puerto de hubot para las notificaciones del host en el puerto 3001 para hubot-jenkins-notifier
+  ports:
+    - 3001:8080</pre>
+
+<p>Editar los siguientes parámetros:</p>
+
+<p><strong>ROOT_URL:</strong> El FQDN de nuestro host en este caso usare el dominio <strong>chat.braybaut.com // <em>En mi caso no voy a exponer el chat a internet, por el cual, este dominio es interno.</em></strong></p>
+
+<p><strong>ROCKETCHAT_URL:</strong> Debemos usar la IP de nuestro host donde van a correr los contenedores que componen rocket.chat</p>
+
+<p><strong>ROCKETCHAT_USER, ROCKETCHAT_PASSWORD y BOT_NAME:</strong> son valores que ya van a criterio de ustedes</p>
+
+<h3 id="reglas-de-firewall">Reglas de Firewall</h3>
+
+<p>Ya para terminar, aplicamos una regla de firewall para abrir el puerto 3000 el cual es el que utilizamos para acceder a rocket.chat</p>
+
+<pre class="lang:default decode:true ">firewall-cmd --add-port=3000/tcp
+firewall-cmd --add-port=3000/tcp --permanent</pre>
+
+<h3 id="descargando-imágenes-y-desplegando-contenedores">Descargando imágenes y desplegando contenedores</h3>
+
+<p>Por ultimo, vamos a correr el archivo docker-compose.yml, en este archivo el bajara los 3 docker image necesarios y posteriormente iniciara un contenedor para cada uno, los docker image que se descargaran son: <strong>mongodb, rocket.chat (ultima versión) y hubot.</strong></p>
+
+<p>Despues de bajar las imágenes docker-compose creara los contenedores y aplicara las configuraciones que se encuentran en el archivo docker-compose.yml.</p>
+
+<p>Ingresamos al directorio:</p>
+
+<pre class="lang:default decode:true ">cd /opt/rocket.chat/
+</pre>
+
+<p>Ejecutamos Docker compose:</p>
+
+<pre class="lang:default decode:true ">docker-compose up</pre>
+
+<p>La primera vez que se ejecute docker-compose se demorara un poco, debido a que debe descargar los docker image, cuando se vuelva a ejecutar docker-compose la ejecución de los contenedores sera breve debido a que los docker image ya existen.</p>
+
+<p>Después de ejecutar el comando anterior y nos aparezca la siguiente imagen quiere decir que el proceso de despliegue y ejecución a terminado y podemos acceder a nuestro rocket.chat.</p>
+
+<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-00-47-52.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-853" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-00-47-52.png?resize=582%2C223&#038;ssl=1" alt="" width="582" height="223" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-00-47-52.png?w=582&ssl=1 582w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-00-47-52.png?resize=300%2C115&ssl=1 300w" sizes="(max-width: 582px) 100vw, 582px" data-recalc-dims="1" /></a></p>
+
+<p>Verificamos que los contenedores estén corriendo:</p>
+
+<pre class="lang:default decode:true ">docker ps -a</pre>
+
+<p><a href="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-35-10.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-855" src="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-35-10.png?resize=648%2C70&#038;ssl=1" alt="" width="648" height="70" srcset="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-35-10.png?w=1264&ssl=1 1264w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-35-10.png?resize=300%2C33&ssl=1 300w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-35-10.png?resize=768%2C83&ssl=1 768w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-35-10.png?resize=1024%2C111&ssl=1 1024w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Ingresamos al navegador para ingresar al chat:</p>
+
+<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-36-40.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-857" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-36-40.png?resize=648%2C312&#038;ssl=1" alt="" width="648" height="312" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-36-40.png?w=1278&ssl=1 1278w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-36-40.png?resize=300%2C144&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-36-40.png?resize=768%2C370&ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-36-40.png?resize=1024%2C493&ssl=1 1024w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Con esto ya terminamos y comprobamos que nuestro Rocket.chat esta corriendo sin ningún inconveniente y lo mejor, en contenedores con persistencia de data.</p>
+
+<p>Próximamente escribiré un articulo el cual explicare como subir estos contenedores usando <strong>systemctl.</strong></p>
+
+<p>Mas información:</p>
+
+<p>[<strong><a href="https://rocket.chat/" target="_blank">https://rocket.chat/</a></strong>][6]</p>
+
+<p>[<strong><a href="https://github.com/RocketChat/Rocket.Chat" target="_blank">https://github.com/RocketChat/Rocket.Chat</a></strong>][7]</p>
+
+<p>[<strong><a href="https://hub.docker.com/u/rocketchat/" target="_blank">https://hub.docker.com/u/rocketchat/</a></strong>][8]</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>[6]: <a href="http://Pagina" target="_blank">http://Pagina</a> oficial de Rocket.Chat
+ [7]: <a href="http://Github" target="_blank">http://Github</a> de Rocket.Chat.
+ [8]: <a href="http://Repositorio" target="_blank">http://Repositorio</a> de Docker Image de Rocket.Chat</p>]]></content>
+        </item>
+        
+        <item>
+            <title>Autentificación LDAP Vtiger CRM 6</title>
+            <link>/posts/autentificaci%C3%B3n-ldap-vtiger-crm-6.html</link>
+            <pubDate>Tue, 19 Jan 2016 01:43:11 +0000</pubDate>
+            
+            <guid>/posts/autentificaci%C3%B3n-ldap-vtiger-crm-6.html</guid>
+            <description>&lt;p&gt;&lt;a href=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?ssl=1&#34; rel=&#34;attachment wp-att-641&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-641&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=648%2C195&amp;#038;ssl=1&#34; alt=&#34;Vtiger-Logo-1&#34; width=&#34;648&#34; height=&#34;195&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?w=3546&amp;ssl=1 3546w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=300%2C90&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=768%2C231&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=1024%2C308&amp;ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=750%2C226&amp;ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?w=1296&amp;ssl=1 1296w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?w=1944&amp;ssl=1 1944w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Vtiger es un CRM de código abierto muy potente que trata de acercarse  a grandes crms como salesforce y SugarCRM, pero en esta ocasión veremos como autentificarlo hacia LDAP.&lt;/p&gt;
+
+&lt;p&gt;Con un gran compañero de la compañía &lt;a href=&#34;https://twitter.com/Gabo_fdc?s=09&#34; target=&#34;_blank&#34;&gt;Gabo&lt;/a&gt;, logramos hacer la autentificación continuación describo los pasos para lograrla.&lt;/p&gt;
+
+&lt;p&gt;Para lograr la autentificación debemos usar los archivos de autentificación de Vtiger de 5.x,  estos archivos los encuentran en github.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/braybaut/ldap-vtiger&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/braybaut/ldap-vtiger&#34; target=&#34;_blank&#34;&gt;https://github.com/braybaut/ldap-vtiger&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?ssl=1" rel="attachment wp-att-641"><img class="aligncenter size-full wp-image-641" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=648%2C195&#038;ssl=1" alt="Vtiger-Logo-1" width="648" height="195" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?w=3546&ssl=1 3546w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=300%2C90&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=768%2C231&ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=1024%2C308&ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=750%2C226&ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?w=1296&ssl=1 1296w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?w=1944&ssl=1 1944w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Vtiger es un CRM de código abierto muy potente que trata de acercarse  a grandes crms como salesforce y SugarCRM, pero en esta ocasión veremos como autentificarlo hacia LDAP.</p>
+
+<p>Con un gran compañero de la compañía <a href="https://twitter.com/Gabo_fdc?s=09" target="_blank">Gabo</a>, logramos hacer la autentificación continuación describo los pasos para lograrla.</p>
+
+<p>Para lograr la autentificación debemos usar los archivos de autentificación de Vtiger de 5.x,  estos archivos los encuentran en github.</p>
+
+<p><a href="https://github.com/braybaut/ldap-vtiger" target="_blank"><a href="https://github.com/braybaut/ldap-vtiger" target="_blank">https://github.com/braybaut/ldap-vtiger</a></a></p>
+
+<p>Los archivos Ldap.php y config.ldap.php deben quedar en la siguiente ruta:</p>
+
+<pre class="lang:default decode:true">/var/www/html/vtigercrm/include/ldap/</pre>
+
+<p><strong>Nota: debe editar el archivo Config.ldap.php y adicionar la configuración de su servidor LDAP</strong></p>
+
+<p><em>la ruta puede variar dependiendo de donde tenga ubicado los archivos de  vtiger.</em></p>
+
+<p>A continuación debemos hacer unos cambios en el archivo:</p>
+
+<pre class="lang:default decode:true">/var/www/html/vtigercrm/modules/Users/Users.php</pre>
+
+<p>Este archivo es el encargado de hacer la autentificación de los usuarios, aquí lo que vamos  hacer es llamar  los archivos <strong>Ldap.php y Config.ldap.php</strong> para que lea las variables y posteriormente lograr la autentificación, igualmente haremos un cambio en una función para que no se presenten problemas.</p>
+
+<p>Adicionar las siguientes dos lineas al final de los require once , aproximadamente en la linea 41:</p>
+
+<pre class="lang:default decode:true">require_once 'include/ldap/config.ldap.php';
+require_once 'include/ldap/ldap.php';</pre>
+
+<p>La función dologin la cual es:</p>
+
+<pre class="lang:default decode:true">function doLogin($user_password) {
+        global $AUTHCFG;
+        $usr_name = $this-&gt;column_fields["user_name"];
+
+        switch (strtoupper($AUTHCFG['authType'])) {
+            case 'LDAP':
+                $this-&gt;log-&gt;debug("Using LDAP authentication");
+                require_once('modules/Users/authTypes/LDAP.php');
+                $result = ldapAuthenticate($this-&gt;column_fields["user_name"], $user_password);
+                if ($result == NULL) {
+                    return false;
+                } else {
+                    return true;
+                }
+                break;
+</pre>
+
+<p>Debe ser cambiada por esta:</p>
+
+<pre class="lang:default decode:true">function doLogin($user_password) {
+        global $AUTHCFG;
+        $usr_name = $this-&gt;column_fields["user_name"];
+
+        // Allow the 'admin' always to log in independent from the LDAP server
+        $usr_list = $AUTHCFG['sql_accounts'];
+
+        if (in_array(strtolower($usr_name), $usr_list))
+            $AUTHCFG['authType'] = 'SQL';
+
+        //SEAN TSANG PATCH START - User must exists in database first
+        $query = "SELECT * from $this-&gt;table_name where user_name=?";
+               $result = $this-&gt;db-&gt;requirePsSingleResult($query, array($usr_name), false);
+              if (empty($result)) return false;
+        //SEAN TSANG PATCH END------------------------------------------
+
+        switch (strtoupper($AUTHCFG['authType'])) {
+            case 'LDAP':
+                $this-&gt;log-&gt;debug("Using LDAP authentication");
+                require_once('include/ldap/Ldap.php');
+                return ldapAuthenticate($this-&gt;column_fields["user_name"], $user_password);
+</pre>
+
+<p>Después de estos cambios la autentificación desde LDAP debe funcionar.</p>
+
+<p>Importante:</p>
+
+<p>Automáticamente el no autentificara con los usuarios que esten el el servidor LDAP, Para que funcione debe crear los usuarios en vtiger con  usuario, contraseña, correo electrónico, etc  <strong>(NO IMPORTA LA CONTRASEÑA QUE ASIGNE AL CREAR LA CUENTA,  AL AUTENTIFICARSE CON UN USUARIO, VTIGER BUSCARA LA CONTRASEÑA EN EL SERVIDOR LDAP Y NO USARA LA QUE USTED ASIGNO, EL USERNAME DEL USUARIO DE VTIGER DEBE SER EL MISMO USERNAME DEL USUARIO EN LDAP)</strong></p>
+
+<p>PD: Funciona para todas las versiones de 6.X tanto para 6.0 como para 6.4</p>]]></content>
+        </item>
+        
+        <item>
+            <title>Howto: como crear un contenedor de datos en docker</title>
+            <link>/posts/howto-como-crear-un-contenedor-de-datos-en-docker.html</link>
+            <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
+            
+            <guid>/posts/howto-como-crear-un-contenedor-de-datos-en-docker.html</guid>
+            <description>&lt;p&gt;&lt;a href=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?ssl=1&#34; rel=&#34;attachment wp-att-611&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-611&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=648%2C220&amp;#038;ssl=1&#34; alt=&#34;docker&#34; width=&#34;648&#34; height=&#34;220&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?w=792&amp;ssl=1 792w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=300%2C102&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=768%2C261&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=750%2C255&amp;ssl=1 750w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;los contenedores no son persistentes en sus datos al ser ejecutados, esto quiere decir que al terminar una ejecución de un contenedor este pierde sus datos.&lt;/p&gt;
+
+&lt;p&gt;Existen varias practicas para realizar la persistencia de los datos, en esta ocasión usaremos un contenedor de datos ( data container) para hacer la persistencia.&lt;/p&gt;
+
+&lt;p&gt;Este contenedor solo guardara la información que se requiere sea persistente, no es necesario que este iniciado ya que  lo podemos compartir sin necesidad  de que este ejecutado.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?ssl=1" rel="attachment wp-att-611"><img class="aligncenter size-full wp-image-611" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=648%2C220&#038;ssl=1" alt="docker" width="648" height="220" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?w=792&ssl=1 792w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=300%2C102&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=768%2C261&ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=750%2C255&ssl=1 750w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>los contenedores no son persistentes en sus datos al ser ejecutados, esto quiere decir que al terminar una ejecución de un contenedor este pierde sus datos.</p>
+
+<p>Existen varias practicas para realizar la persistencia de los datos, en esta ocasión usaremos un contenedor de datos ( data container) para hacer la persistencia.</p>
+
+<p>Este contenedor solo guardara la información que se requiere sea persistente, no es necesario que este iniciado ya que  lo podemos compartir sin necesidad  de que este ejecutado.</p>
+
+<p>Un ejemplo para crear un contenedor que guardara los datos de la ruta</p>
+
+<p><strong>/var/www/html/ </strong> para un servidor web con apache:</p>
+
+<pre class="lang:default decode:true" title="Creando un contenedor de datos">docker run -v /var/www/html --name data-apache httpd true
+</pre>
+
+<p>Podemos usar <strong>docker ps -a</strong> para observar  si el contenedor fue creado.</p>
+
+<p>Ahora para poner usar el contenedor de datos lo que hacemos es crear un nuevo contenedor usando como volumen el contenedor <strong>&#8220;data-apache&#8221;</strong></p>
+
+<pre class="lang:default decode:true">docker run -dt --name apache --volumes-from data-apache --restart=always  httpd</pre>
+
+<p>Con el comando anterior iniciamos un contenedor usando los volumenes del contenedor <strong>&#8220;data-apache&#8221;</strong> de esta manera así borremos el contenedor <strong>&#8220;apache&#8221;</strong> los datos se conservaran  y solo tenemos que iniciar otro contenedor indicando el contenedor de datos.</p>
+
+<p>Mas información <a href="https://docs.docker.com/engine/userguide/dockervolumes/" target="_blank">aqui</a>.</p>
+
+<p>&nbsp;</p>]]></content>
+        </item>
+        
+        <item>
+            <title>Docker: Ingresar al bash de un contenedor iniciado | Script</title>
+            <link>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script.html</link>
+            <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
+            
+            <guid>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script.html</guid>
+            <description>&lt;p&gt;&lt;a href=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?ssl=1&#34; rel=&#34;attachment wp-att-611&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-611&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=648%2C220&amp;#038;ssl=1&#34; alt=&#34;docker&#34; width=&#34;648&#34; height=&#34;220&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?w=792&amp;ssl=1 792w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=300%2C102&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=768%2C261&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=750%2C255&amp;ssl=1 750w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ultimamente he trabajado mucho con docker y en el maravilloso recorrido que he tenido con docker se me presento un problema gigante,  inicio el contenedor con su servicio pero por X o Y motivo quiero ingresar al bash y el &amp;#8220;docker attach&amp;#8221; no funciona porque el docker no lo inicie con /bin/bash&lt;/p&gt;
+
+&lt;p&gt;Una solución es abrir el puerto 22 e ingresar por ssh, pero no es la gracia trabajar de esta manera ya que estamos con container. Navegando por la red encontré un comando un poco largo para poder ingresar al bash del container y un compañero de la compañía donde trabajo también me paso uno parecido, pero me pareció algo fastidioso usar un comando largo para ingresar al bash entonces me tome la tarea de crear un script para que me facilite esta tarea, se los mostrare:&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?ssl=1" rel="attachment wp-att-611"><img class="aligncenter size-full wp-image-611" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=648%2C220&#038;ssl=1" alt="docker" width="648" height="220" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?w=792&ssl=1 792w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=300%2C102&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=768%2C261&ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=750%2C255&ssl=1 750w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+
+<p>Ultimamente he trabajado mucho con docker y en el maravilloso recorrido que he tenido con docker se me presento un problema gigante,  inicio el contenedor con su servicio pero por X o Y motivo quiero ingresar al bash y el &#8220;docker attach&#8221; no funciona porque el docker no lo inicie con /bin/bash</p>
+
+<p>Una solución es abrir el puerto 22 e ingresar por ssh, pero no es la gracia trabajar de esta manera ya que estamos con container. Navegando por la red encontré un comando un poco largo para poder ingresar al bash del container y un compañero de la compañía donde trabajo también me paso uno parecido, pero me pareció algo fastidioso usar un comando largo para ingresar al bash entonces me tome la tarea de crear un script para que me facilite esta tarea, se los mostrare:</p>
+
+<pre class="theme:sublime-text lang:default decode:true" title="Login container">clear
+
+##Show container and Id 
+echo "runing container"
+echo 
+
+docker ps -a | grep Up |  awk ' { print $1,"   " $NF}'
+
+
+
+echo 
+echo 
+## Insert Id or name of container  
+
+echo "Insert id or name of Container to login bash"
+read CONTAINER
+
+##LOGIN TO CONTAINER 
+
+ct=$CONTAINER && sudo nsenter --target $(docker inspect --format {{.State.Pid}} $ct) --moun --uts --ipc --net --pid
+</pre>
+
+<p>El proyecto se encuentra en github, le hare algunas mejoras para que sea aun mas automatizado, pero sera mas adelante.</p>
+
+<p><a href="https://github.com/braybaut/LoginDocker" target="_blank"><a href="https://github.com/braybaut/LoginDocker" target="_blank">https://github.com/braybaut/LoginDocker</a></a></p>
+
+<p>Al correr el script este les mostrara el Id y el nombre de los contenedores que estan corriendo, despues deben escribir el id o el nombre del contenedor al cual quieren ingresar al bash</p>
+
+<p>Ejemplo:</p>
+
+<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Captura-de-pantalla-de-2016-01-11-23-27-04.png?ssl=1" rel="attachment wp-att-616"><img class="aligncenter size-full wp-image-616" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Captura-de-pantalla-de-2016-01-11-23-27-04.png?resize=374%2C171&#038;ssl=1" alt="Ejemplo-docker" width="374" height="171" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Captura-de-pantalla-de-2016-01-11-23-27-04.png?w=374&ssl=1 374w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Captura-de-pantalla-de-2016-01-11-23-27-04.png?resize=300%2C137&ssl=1 300w" sizes="(max-width: 374px) 100vw, 374px" data-recalc-dims="1" /></a></p>
+
+<p>Lo ideal es dejar el script en <strong>/usr/bin/</strong> para que podamos llamarlo desde cualquier ubicación en nuestra consola.</p>
+
+<p>Eso es todo algo sencillo que realmente nos facilitara la vida.</p>]]></content>
+        </item>
+        
+        <item>
+            <title>Compilando Spice-xpi en Ubuntu.</title>
+            <link>/posts/compilando-spice-xpi-en-ubuntu..html</link>
+            <pubDate>Wed, 20 May 2015 01:33:00 +0000</pubDate>
+            
+            <guid>/posts/compilando-spice-xpi-en-ubuntu..html</guid>
+            <description>Tenia olvidado mi blog personal, desde que ingrese a la universidad, el tiempo empleado en el blog bajo muchisimo pero bueno ya poco a poco estoy sacando tiempo para el blog.
+ En SEAQ somos Partner de Red Hat en Colombia y constantemente debemos tener acceso remoto a los guests que corren en Red Hat Enterprise Virtualization RHEV, para poder tener acceso remoto a estos guests, se requiere de spice-xpi, Un complemento para firefox que nos permite iniciar el acceso remoto a los guest.</description>
+            <content type="html"><![CDATA[<div dir="ltr" style="text-align:left;">
+  Tenia olvidado mi blog personal, desde que ingrese a la universidad, el tiempo empleado en el blog bajo muchisimo pero bueno ya poco a poco estoy sacando tiempo para el blog.</p> 
+  
+  <p>
+    <span class="fullpost">En <a href="http://www.seaq.co/" target="_blank">SEAQ</a> somos Partner de <a href="http://www.redhat.com/en" target="_blank">Red Hat</a> en Colombia y constantemente  debemos tener acceso remoto a los guests que corren en Red Hat Enterprise Virtualization RHEV, para poder tener acceso remoto a estos guests, se requiere de <b>spice-xpi, </b>Un complemento para firefox que nos permite  iniciar el acceso remoto a los guest.</span>
+  </p>
+  
+  <p>
+    <span class="fullpost">Spice-xpi no se encuentra en los repositorios de debian y mucho menos en los de ubuntu, como es un producto de Red Hat, este esta oficialmente soportado para Red Hat y Fedora (Distribuciones basadas en empaquetamiento RPM)</span>
+  </p>
+  
+  <p>
+    <span class="fullpost">Iniciemos&#8230;.</p> 
+    
+    <p>
+      En Launchpad exististia un PPA pero este desaparecio, la opción que tenemos ahora es compilarlo desde el codigo de fuente, a continuación describo los pasos a seguir:</span>
+    </p>
+    
+    <p>
+      <span class="fullpost">1) Instalación de Dependencias:</span><br /><span class="fullpost"><br /></span><span class="fullpost">spice-xpi  Requiere de estos paquetes para su perfecta compilación:</span>
+    </p>
+    
+    <blockquote>
+      <p>
+        <span class="fullpost"><code>sudo apt-get install browser-plugin-spice debhelper autotools-dev autoconf automake libtool liblog4cpp5-dev firefox-dev libnspr4-dev libglib2.0-dev pkg-config zip spice-client </code></span>
+      </p>
+    </blockquote>
+    
+    <p>
+      <a name='more'></a>
+    </p>
+    
+    <p>
+      2) Bajamos las fuentes de spice-xpi:
+    </p>
+    
+    <blockquote>
+      <p>
+        <code>http://archive.ubuntu.com/ubuntu/pool/universe/s/spice-xpi/spice-xpi_2.8.90-1ubuntu1.debian.tar.gz</code>
+      </p>
+    </blockquote>
+    
+    <p>
+      3) Instalación:
+    </p>
+    
+    <p>
+        Descomprimimos
+    </p>
+    
+    <p>
+       
+    </p>
+    
+    <blockquote>
+      <p>
+        <code>tar -xvf spice-xpi_2.8.90.orig.tar.bz2</code>
+      </p>
+    </blockquote>
+    
+    <p>
+       Ingresamos al directorio y empezamos  =D
+    </p>
+    
+    <p>
+         Empezamos a configurar el paquete del sistema, este puede demorar un poco
+    </p>
+    
+    <blockquote>
+      <p>
+        <code> ./configure</code>
+      </p>
+    </blockquote>
+    
+    <p>
+       Compiamos =D
+    </p>
+    
+    <blockquote>
+      <p>
+        <code> make</code>
+      </p>
+    </blockquote>
+    
+    <p>
+         Chequeamos que no tengamos problemas
+    </p>
+    
+    <blockquote>
+      <p>
+        <code>make check</code>
+      </p>
+    </blockquote>
+    
+    <p>
+         Instalamos archivos de datos y configuración 
+    </p>
+    
+    <blockquote>
+      <p>
+        <code>make install</code>
+      </p>
+    </blockquote>
+    
+    <p>
+       -Compilación Terminada =D
+    </p>
+    
+    <p>
+      Listo al finalizar estos pasos y no presentar ningun inconveniente, reiniciamos firefox y observamos si spice-xpi quedo instalado.
+    </p>
+    
+    <div class="separator" style="clear:both;text-align:center;">
+      <a href="https://braybaut.files.wordpress.com/2015/05/64aa6-seleccic3b3n_037.png" style="margin-left:1em;margin-right:1em;"><img border="0" height="172" src="https://braybaut.files.wordpress.com/2015/05/1c39e-seleccic3b3n_037.png?resize=640%2C172" width="640" data-recalc-dims="1" /> </a>
+    </div>
+    
+
+<pre><code>&lt;p&gt;
+   Ahora vamos a la Interfaz de RHEV y visualizamos una guest:
+&lt;/p&gt;
+
+&lt;div class=&quot;separator&quot; style=&quot;clear:both;text-align:center;&quot;&gt;
+  &lt;a href=&quot;https://braybaut.files.wordpress.com/2015/05/07724-seleccic3b3n_038.png?w=648&quot; style=&quot;margin-left:1em;margin-right:1em;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://braybaut.files.wordpress.com/2015/05/07724-seleccic3b3n_038.png?w=648&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+  Excelente =D
+&lt;/p&gt;
+
+&lt;p&gt;
+  PD: En el tar.bz2 que se descargo anteriormente existe un archivo de texto llamado INSTALL, leanlo por si tienen problemas  ó dudas en la compilación.
+&lt;/p&gt;
+
+&lt;p&gt;
+      
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;span class=&quot;fullpost&quot;&gt; &lt;!-- AddThis Button BEGIN --&gt;&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;div class=&quot;addthis_toolbox addthis_default_style &quot;&gt;
+  &lt;span class=&quot;fullpost&quot;&gt;&lt;a class=&quot;addthis_button_facebook_like&quot; href=&quot;https://www.blogger.com/null&quot;&gt;&lt;/a&gt;&lt;a class=&quot;addthis_button_tweet&quot; href=&quot;https://www.blogger.com/null&quot;&gt;&lt;/a&gt;&lt;a class=&quot;addthis_counter addthis_pill_style&quot; href=&quot;https://www.blogger.com/null&quot;&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+  &lt;span class=&quot;fullpost&quot;&gt;&lt;a href=&quot;http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4dcde18b394a19ad&quot;&gt;http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4dcde18b394a19ad&lt;/a&gt;&lt;!-- AddThis Button END --&gt;&lt;/span&gt;&lt;/div&gt;
+</code></pre>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Introducción Vpn Full Mesh con Tinc y configuración en Raspberry Pi</title>
+            <link>/posts/introducci%C3%B3n-vpn-full-mesh-con-tinc-y-configuraci%C3%B3n-en-raspberry-pi.html</link>
+            <pubDate>Mon, 24 Mar 2014 06:18:00 +0000</pubDate>
+            
+            <guid>/posts/introducci%C3%B3n-vpn-full-mesh-con-tinc-y-configuraci%C3%B3n-en-raspberry-pi.html</guid>
+            <description>http://platform.twitter.com/widgets.js   &amp;lt;div class=&amp;quot;separator&amp;quot; style=&amp;quot;clear:both;text-align:center;&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;https://braybaut.files.wordpress.com/2014/03/8000d-tinclogo1.png?w=648&amp;quot; style=&amp;quot;margin-left:1em;margin-right:1em;&amp;quot;&amp;gt;&amp;lt;img border=&amp;quot;0&amp;quot; src=&amp;quot;https://braybaut.files.wordpress.com/2014/03/8000d-tinclogo1.png?w=648&amp;quot; data-recalc-dims=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;p&amp;gt; Con tinc Podemos crear una &amp;lt;b&amp;gt;VPN &amp;lt;/b&amp;gt;tipo full mesh(&amp;lt;i&amp;gt;Nodos conectados entre s&amp;lt;/i&amp;gt;i), Estableciendo la comunicación de todos los host conectados a cada nodo. Cabe aclarar que cada nodo es el servidor donde esta configurado tinc. &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; Tinc esta lanzada bajo licencia GPL que en pocas palabras podemos decir que es &amp;lt;b&amp;gt;Software Libre =D&amp;lt;/b&amp;gt;, este maravilloso protocolo nos ofrece unas caracteristicas que son: &amp;lt;/p&amp;gt; &amp;lt;ul style=&amp;quot;text-align:left;&amp;quot;&amp;gt; &amp;lt;li&amp;gt; Encryptation, Authenticatión and compressión: Comprime los paquetes antes de enviarlos, encripta los datos para que uestra información viaje segura en este medio tan inseguro como lo es la internet, ofrece la autentificación para que los nodos desconocidos no se puedan conectar a nuestra red.</description>
+            <content type="html"><![CDATA[<div dir="ltr" style="text-align:left;">
+  <div dir="ltr" style="text-align:left;">
+    <div dir="ltr" style="text-align:left;">
+      <div dir="ltr" style="text-align:left;">
+        <div dir="ltr" style="text-align:left;">
+          <div dir="ltr" style="text-align:left;">
+            <div dir="ltr" style="text-align:left;">
+              <div dir="ltr" style="text-align:left;">
+                <a href="http://platform.twitter.com/widgets.js">http://platform.twitter.com/widgets.js</a> </p> 
+                
+                <div class="separator" style="clear:both;text-align:center;">
+                </div>
+                
+
+<pre><code>            &lt;div class=&quot;separator&quot; style=&quot;clear:both;text-align:center;&quot;&gt;
+              &lt;a href=&quot;https://braybaut.files.wordpress.com/2014/03/8000d-tinclogo1.png?w=648&quot; style=&quot;margin-left:1em;margin-right:1em;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://braybaut.files.wordpress.com/2014/03/8000d-tinclogo1.png?w=648&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;
+            &lt;/div&gt;
+
+            &lt;p&gt;
+              Con tinc Podemos crear una &lt;b&gt;VPN &lt;/b&gt;tipo full mesh(&lt;i&gt;Nodos conectados entre s&lt;/i&gt;i),  Estableciendo la comunicación de todos los host conectados a cada nodo. Cabe aclarar que cada nodo es el servidor donde esta configurado tinc.
+            &lt;/p&gt;
+
+            &lt;p&gt;
+              Tinc esta lanzada bajo licencia GPL que en pocas palabras podemos decir que es &lt;b&gt;Software Libre =D&lt;/b&gt;, este maravilloso protocolo nos ofrece unas caracteristicas que son:
+            &lt;/p&gt;
+
+            &lt;ul style=&quot;text-align:left;&quot;&gt;
+              &lt;li&gt;
+                Encryptation, Authenticatión and compressión: Comprime los paquetes antes de enviarlos, encripta los datos para que uestra información viaje segura en este medio tan inseguro como lo es la internet, ofrece la autentificación para que los nodos desconocidos no se puedan conectar a nuestra red.&lt;a name='more'&gt;&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                Automatic Full Mesh routing: Sin importar la configuración del demonio, tinc siempre buscara la mejor ruta entre la mesh para no tener que dar saltos o si este es necesario, lograr de que los saltos sean menores.
+              &lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;ul style=&quot;text-align:left;&quot;&gt;
+              &lt;li&gt;
+                 Easily expand your VPN: tinc se destaca por su facil configuración para que otro nodo ingrese a la mesh, solo se tiene que configurar dos nodos, el primero el nodo que va a ingresar a la mesh y el otro nodo el que ya esta en la mesh conectados con los otros. Ya cuando estos dos nodos esten conectados, el nodo nuevo podra ver a todos los nodos conectados. Es recomendable hacer las conexiones con mas de un nodo ya que si se pierda la conexión con un nodo, este ira por otra conexión o en pocas palabras otra ruta.
+              &lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;p&gt;
+              Existen diferentes topologias que podemos usar para establecer la conexión entre los nodos, ya es cuestión de comodidad en conexiones y uso de cada usuario.
+            &lt;/p&gt;
+
+            &lt;div class=&quot;separator&quot; style=&quot;clear:both;text-align:center;&quot;&gt;
+              &lt;a href=&quot;https://braybaut.files.wordpress.com/2014/03/4fc7b-redes-topologia.png?resize=320%2C187&quot; style=&quot;margin-left:1em;margin-right:1em;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://braybaut.files.wordpress.com/2014/03/4fc7b-redes-topologia.png?resize=320%2C187&quot; height=&quot;187&quot; width=&quot;320&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;
+            &lt;/div&gt;
+
+            &lt;p&gt;
+            &lt;/p&gt;
+
+            &lt;ul style=&quot;text-align:left;&quot;&gt;
+            &lt;/ul&gt;
+
+            &lt;p&gt;
+              Tenemos que redireccionar en nuestro router el puerto 655 (TCP y UDP) hacia nuestro raspberry donde estara tinc
+            &lt;/p&gt;
+
+            &lt;p&gt;
+              Ahora vamos al grano, para instalar tinc en nuestro raspberry Pi, los pasos son sencillos, !Iniciemos!
+            &lt;/p&gt;
+
+            &lt;p&gt;
+              Antes de instalar tinc, procedemos a activar tun, para poder gestionar la interfaz virtual
+            &lt;/p&gt;
+
+            &lt;blockquote&gt;
+              &lt;p&gt;
+                &lt;code&gt;modprobe tun &lt;/code&gt;
+              &lt;/p&gt;
+            &lt;/blockquote&gt;
+
+            &lt;p&gt;
+              Ahora si:
+            &lt;/p&gt;
+
+            &lt;p&gt;
+              &lt;b&gt;Rasbian&lt;/b&gt;
+            &lt;/p&gt;
+
+            &lt;blockquote&gt;
+              &lt;p&gt;
+                &lt;code&gt;sudo apt-get install tinc &lt;/code&gt;
+              &lt;/p&gt;
+            &lt;/blockquote&gt;
+
+            &lt;p&gt;
+              &lt;b&gt;Archlinux arm&lt;/b&gt;
+            &lt;/p&gt;
+
+            &lt;blockquote&gt;
+              &lt;p&gt;
+                &lt;code&gt;sudo pacman -S tinc&lt;/code&gt;
+              &lt;/p&gt;
+            &lt;/blockquote&gt;
+
+            &lt;h3 style=&quot;text-align:left;&quot;&gt;
+              Configuración
+            &lt;/h3&gt;
+
+            &lt;h3 style=&quot;text-align:left;&quot;&gt;
+               
+            &lt;/h3&gt;
+
+            &lt;div style=&quot;text-align:left;&quot;&gt;
+              Creamos los directorios de configuración:
+            &lt;/div&gt;
+
+            &lt;blockquote&gt;
+              &lt;p&gt;
+                &lt;code&gt;sudo mkdir /etc/tinc/vpnraspberry&amp;lt;br /&gt;sudo mkdir /etc/tinc/vpnraspberry/hosts&lt;/code&gt;
+              &lt;/p&gt;
+            &lt;/blockquote&gt;
+
+            &lt;div style=&quot;text-align:left;&quot;&gt;
+              Creamos el archivo /etc/tinc/vpnraspberry/tinc.conf:&lt;/p&gt; 
+
+              &lt;blockquote&gt;
+                &lt;p&gt;
+                  &lt;code&gt;Name = raspberry&amp;lt;br /&gt;Device = /dev/net/tun&lt;/code&gt; &lt;&lt;br /&gt;&lt;code&gt;PrivateKeyFile = /etc/tinc/vpnraspberrypi/rsa_key.priv&lt;/code&gt;&lt;br /&gt;&lt;code&gt;Interface = rp0 ##Nombre de la interfaz, cada quien es libre de darle un nombre&lt;/code&gt;
+                &lt;/p&gt;
+              &lt;/blockquote&gt;
+
+              &lt;p&gt;
+                Creamos el archivo /etc/tinc/vpnraspberry/host/raspberry:
+              &lt;/p&gt;
+
+              &lt;blockquote&gt;
+                &lt;p&gt;
+                  &lt;code&gt;&amp;lt;br /&gt;Subnet = 10.0.0.1/32&amp;lt;br /&gt;Address = 1.2.3.4 ## en esta linea ira la ip publica.&lt;/code&gt;
+                &lt;/p&gt;
+              &lt;/blockquote&gt;
+
+              &lt;p&gt;
+              &lt;/p&gt;
+
+              &lt;div style=&quot;text-align:left;&quot;&gt;
+                Generamos las llaves para el nodo:
+              &lt;/div&gt;
+
+              &lt;div style=&quot;text-align:left;&quot;&gt;
+                  
+              &lt;/div&gt;
+
+              &lt;div style=&quot;text-align:left;&quot;&gt;
+                &lt;blockquote&gt;
+                  &lt;p&gt;
+                    &lt;code&gt;sudo tincd -n vpnraspberry -K&lt;/code&gt; &lt;code&gt; &lt;/code&gt;&lt;br /&gt;&lt;code&gt;Generating 1024 bits keys:&amp;lt;br /&gt;..............++++++ p&amp;lt;br /&gt;..............++++++ q&amp;lt;br /&gt;Done.&amp;lt;br /&gt;Please enter a file to save private RSA key to [/etc/tinc/vpnraspberry/rsa_key.priv]:&amp;lt;br /&gt;Please enter a file to save public RSA key to [/etc/tinc/raspberry/hosts/raspberry]:&amp;lt;br /&gt;Appending key to existing contents.&amp;lt;br /&gt;Make sure only one key is stored in the file.&lt;/code&gt;
+                  &lt;/p&gt;
+                &lt;/blockquote&gt;
+
+                &lt;p&gt;
+                  Configuramos la interfaz rp0, en este caso crearemos un script en &amp;#8220;/etc/tinc/vpnraspberry/tinc-up&amp;#8221;, que usara Tinc para arrancar la interfaz
+                &lt;/p&gt;
+
+                &lt;blockquote&gt;
+                  &lt;p&gt;
+                    &lt;code&gt;#!/bin/sh&amp;lt;br /&gt;ifconfig rp0 10.0.0.1 netmask 255.255.0.0&lt;/code&gt;
+                  &lt;/p&gt;
+                &lt;/blockquote&gt;
+
+                &lt;p&gt;
+                  Damos permisos de ejecución
+                &lt;/p&gt;
+
+                &lt;p&gt;
+                   
+                &lt;/p&gt;
+
+                &lt;blockquote&gt;
+                  &lt;p&gt;
+                    &lt;code&gt;# chmod +x /etc/tinc/tinc-up&lt;/code&gt;
+                  &lt;/p&gt;
+                &lt;/blockquote&gt;
+
+                &lt;p&gt;
+                  Por ultimo,, creamos un script, que dará de baja la interfaz usada cuando Tinc no este activo, Al igual como el script anterior, le damos permisos de ejecución
+                &lt;/p&gt;
+
+                &lt;blockquote&gt;
+                  &lt;p&gt;
+                    &lt;code&gt;#!/bin/sh&lt;/code&gt;&lt;br /&gt;&lt;code&gt;ifconfig rp0 down&lt;/code&gt;
+                  &lt;/p&gt;
+                &lt;/blockquote&gt;
+
+                &lt;p&gt;
+                  !!Listo!!&lt;span class=&quot;fullpost&quot;&gt;  La configuración de tinc en nuestra raspberry ya esta terminada, ahora para arrancar tinc escribimos en nuestra consola&lt;/span&gt;
+                &lt;/p&gt;
+
+                &lt;blockquote&gt;
+                  &lt;p&gt;
+                    &lt;code&gt;sudo tincd -D -d -n vpnraspberry &lt;/code&gt;
+                  &lt;/p&gt;
+                &lt;/blockquote&gt;
+
+                &lt;p&gt;
+                  &lt;span class=&quot;fullpost&quot;&gt;&lt;/span&gt;
+                &lt;/p&gt;
+
+                &lt;div style=&quot;text-align:left;&quot;&gt;
+                  &lt;span class=&quot;fullpost&quot;&gt;&lt;br /&gt;&lt;!-- AddThis Button BEGIN --&gt;&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;p&gt;
+                  &lt;span class=&quot;fullpost&quot;&gt;Si todo esta a la perfección tinc nos mostrara :&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;fullpost&quot;&gt;&lt;br /&gt;&lt;!-- AddThis Button BEGIN --&gt;&lt;/span&gt;
+                &lt;/p&gt;
+
+                &lt;div class=&quot;separator&quot; style=&quot;clear:both;text-align:center;&quot;&gt;
+                  &lt;a href=&quot;https://braybaut.files.wordpress.com/2014/03/16b3c-tincd.png?resize=320%2C61&quot; style=&quot;margin-left:1em;margin-right:1em;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://braybaut.files.wordpress.com/2014/03/16b3c-tincd.png?resize=320%2C61&quot; height=&quot;61&quot; width=&quot;320&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;p&gt;
+                  &lt;span class=&quot;fullpost&quot;&gt;Para que otros nodos tinc  se conecten a nuestro nodo tenemos que compartirle nuestro archivo raspberry alojado en &lt;i&gt;/etc/tinc/vpnraspberry/hosts/ &lt;/i&gt;y alojarlo en el directorio hosts de dicho nodo, este Archivo contiene la llave generada anteriormente, adicionalmente ese nodo debe ingresar en el tinc.conf la linea &lt;i&gt;connectTo = raspberry&lt;/i&gt;, esa linea especifica que se conectada al nodo raspberry. Para permitir la conexión de ese nodo, debemos tener en nuestro directorio hosts, El archivo donde se encuentra la llave del nodo que desea conectarse con nuestro nodo.&lt;/p&gt; 
+
+                  &lt;p&gt;
+                    Mas adelante explicare como lograr que otros nodos se conecten a la raspberry logrando la creación de una mesh, también hablare un poco sobre la unión de tinc, con openvpn, pptd y otras herramientas.&lt;/span&gt;
+                  &lt;/p&gt;
+
+                  &lt;p&gt;
+                    &lt;span class=&quot;fullpost&quot;&gt;Proyecto Tinc:&lt;a href=&quot;http://www.tinc-vpn.org/&quot; target=&quot;_blank&quot;&gt; http://www.tinc-vpn.org/ &lt;/a&gt;&lt;/span&gt;
+                  &lt;/p&gt;
+
+                  &lt;div class=&quot;addthis_toolbox addthis_default_style &quot;&gt;
+                    &lt;span class=&quot;fullpost&quot;&gt;&lt;a class=&quot;addthis_button_facebook_like&quot; href=&quot;https://www.blogger.com/null&quot;&gt;&lt;/a&gt;&lt;a class=&quot;addthis_button_tweet&quot; href=&quot;https://www.blogger.com/null&quot;&gt;&lt;/a&gt;&lt;a class=&quot;addthis_counter addthis_pill_style&quot; href=&quot;https://www.blogger.com/null&quot;&gt;&lt;/a&gt;&lt;/span&gt;
+                  &lt;/div&gt;
+
+                  &lt;p&gt;
+                    &lt;span class=&quot;fullpost&quot;&gt;&lt;a href=&quot;http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4dcde18b394a19ad&quot;&gt;http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4dcde18b394a19ad&lt;/a&gt;&lt;!-- AddThis Button END --&gt;&lt;/span&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;
+</code></pre>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

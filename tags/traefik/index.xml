@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Traefik on Braybaut</title>
+    <link>/tags/traefik.html</link>
+    <description>Recent content in Traefik on Braybaut</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Dec 2017 01:20:18 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/traefik/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Utilizando Traefik como Dynamic Reverse Proxy en Docker Swarm sobre  AWS</title>
+      <link>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws.html</link>
+      <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
+      
+      <guid>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws.html</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?ssl=1&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-890&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=648%2C354&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;648&#34; height=&#34;354&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?w=1921&amp;ssl=1 1921w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=300%2C164&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=768%2C420&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=1024%2C560&amp;ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=750%2C410&amp;ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=1140%2C624&amp;ssl=1 1140w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?w=1296&amp;ssl=1 1296w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Traefik es una herramienta muy potente gracias a que soporta varios providers como backend, en este caso usaremos traefik para que nos sirva como &lt;strong&gt;Dynamic Reverse Proxy&lt;/strong&gt; sobre un cluster de &lt;strong&gt;Docker Swarm&lt;/strong&gt; en &lt;strong&gt;Amazon Web Services&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;componentes&#34;&gt;Componentes:&lt;/h3&gt;
+
+&lt;h4 id=&#34;3-instancias-1-manager-y-2-worker&#34;&gt;3 Instancias (1 Manager  y 2 worker):&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Manager: &lt;/strong&gt;Esta instancia sera la que controlara todo el cluster, en ella desplegaremos traefik y los servicios que no son worker, esta instancia estará sobre una subnet , la cual llamaremos &lt;strong&gt;&amp;#8220;subnet frontend&amp;#8221; &lt;/strong&gt;y tendrá su respectivo Secure Group&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Worker: &lt;/strong&gt;las instancias llamadas workers son dichas instancias donde correran nuestros servicios desplegados en AWS, sin tener en cuenta los servicios de &amp;#8220;management&amp;#8221; que podemos desplegar en la subnet de frontend, aquí desplegaremos los servicios que necesitemos como un web server, un micro servicio, etc, estas dos instancias estarán sobre otra subnet, la cual la llamaremos &lt;strong&gt;&amp;#8220;subnet backend&amp;#8221;&lt;/strong&gt; y tendrá su respectivo Secure Group&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Traefik: Load Balancer y Reverse Proxy para Docker</title>
+      <link>/posts/traefik-load-balancer-y-reverse-proxy-para-docker.html</link>
+      <pubDate>Wed, 25 Oct 2017 22:25:26 +0000</pubDate>
+      
+      <guid>/posts/traefik-load-balancer-y-reverse-proxy-para-docker.html</guid>
+      <description>&lt;p&gt;[&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;aligncenter size-full wp-image-868&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=648%2C354&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;648&#34; height=&#34;354&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?w=1921&amp;ssl=1 1921w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=300%2C164&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=768%2C420&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=1024%2C560&amp;ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=750%2C410&amp;ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?w=1296&amp;ssl=1 1296w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;]&lt;a href=&#34;https://braybaut.com/wp-content/uploads/2017/10/architecture.png&#34; target=&#34;_blank&#34;&gt;1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Cuando trabajamos con docker en ambientes productivos, la mayoría de casos usamos tecnologías para orquestar y poder ofrecer alta disponibilidad sobre nuestros micro servicios, debido a esto, nosotros corremos multiples aplicaciones sobre un mismo host que haga parte de nuestro stack de orquestación. Para que estas aplicaciones puedan ser consumidas sin necesidad de exponer un puerto, necesitamos un reverse proxy para poder consumir estos servicios desde un único puerto.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Traefik &lt;/strong&gt;es un reverse proxy  y load balancer compatible con docker escrito en Go, creado especialmente para micro servicios, Traefik soporta diferentes Backends como: &lt;strong&gt;(Docker, docker Swarm, Kubernetes, Rancher, Amazon ECS y muchos mas )&lt;/strong&gt; su configuración es bastante sencilla y cuenta con un Dashboard donde podemos visualizar nuestros Micro servicios.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
