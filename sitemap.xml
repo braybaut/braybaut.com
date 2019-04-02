@@ -70,13 +70,13 @@
   </url>
   
   <url>
-    <loc>/tags/aws/</loc>
+    <loc>/categories/aws/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/aws/</loc>
+    <loc>/tags/aws/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -136,13 +136,13 @@
   </url>
   
   <url>
-    <loc>/tags/docker/</loc>
+    <loc>/categories/docker/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/docker/</loc>
+    <loc>/tags/docker/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -184,13 +184,13 @@
   </url>
   
   <url>
-    <loc>/tags/golang/</loc>
+    <loc>/categories/golang/</loc>
     <lastmod>2019-02-10T21:52:53+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/golang/</loc>
+    <loc>/tags/golang/</loc>
     <lastmod>2019-02-10T21:52:53+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -208,26 +208,26 @@
   </url>
   
   <url>
-    <loc>/tags/ldap/</loc>
-    <lastmod>2016-01-19T01:43:11+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/ldap/</loc>
     <lastmod>2016-01-19T01:43:11+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/linux/</loc>
-    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+    <loc>/tags/ldap/</loc>
+    <lastmod>2016-01-19T01:43:11+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/linux/</loc>
     <lastmod>2017-03-07T06:54:30+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -244,13 +244,13 @@
   </url>
   
   <url>
-    <loc>/tags/opensource/</loc>
+    <loc>/categories/opensource/</loc>
     <lastmod>2017-03-07T06:54:30+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/opensource/</loc>
+    <loc>/tags/opensource/</loc>
     <lastmod>2017-03-07T06:54:30+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -310,13 +310,13 @@
   </url>
   
   <url>
-    <loc>/tags/tutoriales/</loc>
+    <loc>/categories/tutoriales/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/tutoriales/</loc>
+    <loc>/tags/tutoriales/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
