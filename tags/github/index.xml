@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github on Braybaut</title>
-    <link>/tags/github/</link>
+    <link>/tags/github.html</link>
     <description>Recent content in Github on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Docker: Ingresar al bash de un contenedor iniciado | Script</title>
-      <link>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</link>
+      <link>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script.html</link>
       <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
       
-      <guid>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</guid>
+      <guid>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script.html</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/docker.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ultimamente he trabajado mucho con docker y en el maravilloso recorrido que he tenido con docker se me presento un problema gigante,  inicio el contenedor con su servicio pero por X o Y motivo quiero ingresar al bash y el &amp;#8220;docker attach&amp;#8221; no funciona porque el docker no lo inicie con /bin/bash&lt;/p&gt;

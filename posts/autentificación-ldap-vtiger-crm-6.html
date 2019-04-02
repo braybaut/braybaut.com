@@ -7,8 +7,7 @@
 <meta name="author"
     content="braybaut">
 <meta name="description"
-    content="
-Vtiger es un CRM de código abierto muy potente que trata de acercarse a grandes crms como salesforce y SugarCRM, pero en esta ocasión veremos como autentificarlo hacia LDAP.
+    content="Vtiger es un CRM de código abierto muy potente que trata de acercarse a grandes crms como salesforce y SugarCRM, pero en esta ocasión veremos como autentificarlo hacia LDAP.
 Con un gran compañero de la compañía Gabo, logramos hacer la autentificación continuación describo los pasos para lograrla.
 Para lograr la autentificación debemos usar los archivos de autentificación de Vtiger de 5.x, estos archivos los encuentran en github.
 https://github.com/braybaut/ldap-vtiger
@@ -33,6 +32,10 @@ https://github.com/braybaut/ldap-vtiger
 
 
 <link rel="stylesheet" href="/scss/main.min.2cb2cfcb2d25c14d702e06c24f9c05a189f6cbc9ef31f0a235fd739b411a5a1b.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/styles.scss">
 
 
 
@@ -88,6 +91,7 @@ https://github.com/braybaut/ldap-vtiger"/>
 
 
 
+
     </head>
 
     <body class="dark-theme">
@@ -134,19 +138,19 @@ https://github.com/braybaut/ldap-vtiger"/>
             <div class="content">
                 
     <main class="post">
-
         <div class="post-info">
             
             </p>
         </div>
-
+        
+        
         <article>
+
             <h2 class="post-title"><a href="/posts/autentificaci%C3%B3n-ldap-vtiger-crm-6.html">Autentificación LDAP Vtiger CRM 6</a></h2>
 
             
-
             <div class="post-content">
-                <p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?ssl=1" rel="attachment wp-att-641"><img class="aligncenter size-full wp-image-641" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=648%2C195&#038;ssl=1" alt="Vtiger-Logo-1" width="648" height="195" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?w=3546&ssl=1 3546w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=300%2C90&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=768%2C231&ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=1024%2C308&ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?resize=750%2C226&ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?w=1296&ssl=1 1296w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/Vtiger-Logo-1.jpg?w=1944&ssl=1 1944w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+                <p><img src="/images/vtiger1.jpg" alt="" /></p>
 
 <p>Vtiger es un CRM de código abierto muy potente que trata de acercarse  a grandes crms como salesforce y SugarCRM, pero en esta ocasión veremos como autentificarlo hacia LDAP.</p>
 
@@ -157,68 +161,56 @@ https://github.com/braybaut/ldap-vtiger"/>
 <p><a href="https://github.com/braybaut/ldap-vtiger" target="_blank"><a href="https://github.com/braybaut/ldap-vtiger" target="_blank">https://github.com/braybaut/ldap-vtiger</a></a></p>
 
 <p>Los archivos Ldap.php y config.ldap.php deben quedar en la siguiente ruta:</p>
-
-<pre class="lang:default decode:true">/var/www/html/vtigercrm/include/ldap/</pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-code" data-lang="code">/var/www/html/vtigercrm/include/ldap/</code></pre></div>
 <p><strong>Nota: debe editar el archivo Config.ldap.php y adicionar la configuración de su servidor LDAP</strong></p>
 
 <p><em>la ruta puede variar dependiendo de donde tenga ubicado los archivos de  vtiger.</em></p>
 
 <p>A continuación debemos hacer unos cambios en el archivo:</p>
-
-<pre class="lang:default decode:true">/var/www/html/vtigercrm/modules/Users/Users.php</pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-code" data-lang="code">/var/www/html/vtigercrm/modules/Users/Users.php</code></pre></div>
 <p>Este archivo es el encargado de hacer la autentificación de los usuarios, aquí lo que vamos  hacer es llamar  los archivos <strong>Ldap.php y Config.ldap.php</strong> para que lea las variables y posteriormente lograr la autentificación, igualmente haremos un cambio en una función para que no se presenten problemas.</p>
 
 <p>Adicionar las siguientes dos lineas al final de los require once , aproximadamente en la linea 41:</p>
-
-<pre class="lang:default decode:true">require_once 'include/ldap/config.ldap.php';
-require_once 'include/ldap/ldap.php';</pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">require_once &#39;include/ldap/config.ldap.php&#39;;
+require_once &#39;include/ldap/ldap.php&#39;;</code></pre></div>
 <p>La función dologin la cual es:</p>
-
-<pre class="lang:default decode:true">function doLogin($user_password) {
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">function doLogin($user_password) {
         global $AUTHCFG;
-        $usr_name = $this-&gt;column_fields["user_name"];
+        $usr_name = $this-&amp;gt;column_fields[&#34;user_name&#34;];
 
-        switch (strtoupper($AUTHCFG['authType'])) {
-            case 'LDAP':
-                $this-&gt;log-&gt;debug("Using LDAP authentication");
-                require_once('modules/Users/authTypes/LDAP.php');
-                $result = ldapAuthenticate($this-&gt;column_fields["user_name"], $user_password);
+        switch (strtoupper($AUTHCFG[&#39;authType&#39;])) {
+            case &#39;LDAP&#39;:
+                $this-&amp;gt;log-&amp;gt;debug(&#34;Using LDAP authentication&#34;);
+                require_once(&#39;modules/Users/authTypes/LDAP.php&#39;);
+                $result = ldapAuthenticate($this-&amp;gt;column_fields[&#34;user_name&#34;], $user_password);
                 if ($result == NULL) {
                     return false;
                 } else {
                     return true;
                 }
-                break;
-</pre>
-
+                break;</code></pre></div>
 <p>Debe ser cambiada por esta:</p>
-
-<pre class="lang:default decode:true">function doLogin($user_password) {
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">function doLogin($user_password) {
         global $AUTHCFG;
-        $usr_name = $this-&gt;column_fields["user_name"];
+        $usr_name = $this-&amp;gt;column_fields[&#34;user_name&#34;];
 
-        // Allow the 'admin' always to log in independent from the LDAP server
-        $usr_list = $AUTHCFG['sql_accounts'];
+        // Allow the &#39;admin&#39; always to log in independent from the LDAP server
+        $usr_list = $AUTHCFG[&#39;sql_accounts&#39;];
 
         if (in_array(strtolower($usr_name), $usr_list))
-            $AUTHCFG['authType'] = 'SQL';
+            $AUTHCFG[&#39;authType&#39;] = &#39;SQL&#39;;
 
         //SEAN TSANG PATCH START - User must exists in database first
-        $query = "SELECT * from $this-&gt;table_name where user_name=?";
-               $result = $this-&gt;db-&gt;requirePsSingleResult($query, array($usr_name), false);
+        $query = &#34;SELECT * from $this-&amp;gt;table_name where user_name=?&#34;;
+               $result = $this-&amp;gt;db-&amp;gt;requirePsSingleResult($query, array($usr_name), false);
               if (empty($result)) return false;
         //SEAN TSANG PATCH END------------------------------------------
 
-        switch (strtoupper($AUTHCFG['authType'])) {
-            case 'LDAP':
-                $this-&gt;log-&gt;debug("Using LDAP authentication");
-                require_once('include/ldap/Ldap.php');
-                return ldapAuthenticate($this-&gt;column_fields["user_name"], $user_password);
-</pre>
-
+        switch (strtoupper($AUTHCFG[&#39;authType&#39;])) {
+            case &#39;LDAP&#39;:
+                $this-&amp;gt;log-&amp;gt;debug(&#34;Using LDAP authentication&#34;);
+                require_once(&#39;include/ldap/Ldap.php&#39;);
+                return ldapAuthenticate($this-&amp;gt;column_fields[&#34;user_name&#34;], $user_password);</code></pre></div>
 <p>Después de estos cambios la autentificación desde LDAP debe funcionar.</p>
 
 <p>Importante:</p>
@@ -226,24 +218,51 @@ require_once 'include/ldap/ldap.php';</pre>
 <p>Automáticamente el no autentificara con los usuarios que esten el el servidor LDAP, Para que funcione debe crear los usuarios en vtiger con  usuario, contraseña, correo electrónico, etc  <strong>(NO IMPORTA LA CONTRASEÑA QUE ASIGNE AL CREAR LA CUENTA,  AL AUTENTIFICARSE CON UN USUARIO, VTIGER BUSCARA LA CONTRASEÑA EN EL SERVIDOR LDAP Y NO USARA LA QUE USTED ASIGNO, EL USERNAME DEL USUARIO DE VTIGER DEBE SER EL MISMO USERNAME DEL USUARIO EN LDAP)</strong></p>
 
 <p>PD: Funciona para todas las versiones de 6.X tanto para 6.0 como para 6.4</p>
+
             </div>
+
         </article>
 
         <hr />
 
         <div class="post-info">
   				<p>
-  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="tags/autentificaci%C3%B3n">autentificación</a></span><span class="tag"><a href="tags/crm">crm</a></span><span class="tag"><a href="tags/ldap">ldap</a></span><span class="tag"><a href="tags/tutoriales">tutoriales</a></span><span class="tag"><a href="tags/vtiger">vtiger</a></span><span class="tag"><a href="tags/vtiger-6.0">vtiger 6.0</a></span><span class="tag"><a href="tags/vtiger-6.4">vtiger 6.4</a></span><span class="tag"><a href="tags/vtiger-crm">vtiger crm</a></span>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="/tags/autentificaci%C3%B3n">autentificación</a></span><span class="tag"><a href="/tags/crm">crm</a></span><span class="tag"><a href="/tags/ldap">ldap</a></span><span class="tag"><a href="/tags/tutoriales">tutoriales</a></span><span class="tag"><a href="/tags/vtiger">vtiger</a></span><span class="tag"><a href="/tags/vtiger-6.0">vtiger 6.0</a></span><span class="tag"><a href="/tags/vtiger-6.4">vtiger 6.4</a></span><span class="tag"><a href="/tags/vtiger-crm">vtiger crm</a></span>
   				</p>
   			</div>
 
-        
+
+                    <div id="comments" class="thin">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "braybaut" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
     </main>
 
             </div>
 
             
-                <footer class="footer">
+                
+
+
+<footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
             <span>&copy; 2019</span>
@@ -274,8 +293,15 @@ require_once 'include/ldap/ldap.php';</pre>
 
 
 
-
-<script type="text/javascript" src="/js/bundle.4b80fbbfab88198dcef181b034822e60a3e68b1c128d1dc05392a32943a18ec2f866fbcd9ce31dcf84134397161647ad605ea5c25ecf12e5fcf9d28b47e64bb5.js" integrity="sha512-S4D7v6uIGY3O8YGwNIIuYKPmixwSjR3AU5KjKUOhjsL4ZvvNnOMdz4QTQ5cWFketYF6lwl7PEuX8&#43;dKLR&#43;ZLtQ=="></script>
+<script type="text/javascript" src="/js/bundle.dd80b4936d9208f7384932ce622316900942c58cd138dd354b6a863e212c7fd1c951c7c3e5b83585da6297165e02ddfddbe523bbb46478a41628469263b7f000.js" integrity="sha512-3YC0k22SCPc4STLOYiMWkAlCxYzRON01S2qGPiEsf9HJUcfD5bg1hdpilxZeAt392&#43;Uju7RkeKQWKEaSY7fwAA=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-69725711-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 
 

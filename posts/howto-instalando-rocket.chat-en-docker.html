@@ -37,6 +37,10 @@ systemctl start enable systemcl enable docker" />
 
 
 
+<link rel="stylesheet" type="text/css" href="/css/styles.scss">
+
+
+
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -58,11 +62,8 @@ Vamos a usar varios contenedores y para lograr la comunicación entre ellos, se 
 Docker:
 
 Instalamos docker usando el script que se encuentra en su pagina oficial.
-
 wget -qO- https://get.docker.com/ | sh
-
 Al finalizar el proceso usamos systemctl para subir el servicio y dejarlo habilitado para que inicie cuando se inicie el servidor.
-
 systemctl start enable
 
 systemcl enable docker">
@@ -70,11 +71,11 @@ systemcl enable docker">
 
 <meta itemprop="datePublished" content="2017-03-07T06:54:30&#43;00:00" />
 <meta itemprop="dateModified" content="2017-03-07T06:54:30&#43;00:00" />
-<meta itemprop="wordCount" content="630">
+<meta itemprop="wordCount" content="558">
 
 
 
-<meta itemprop="keywords" content="Centos,Docker,docker-compose,linux,opensource,rocket.chat,rocketchat," />
+<meta itemprop="keywords" content="Docker,docker-compose,linux,opensource," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Howto: Instalando Rocket.Chat en Docker"/>
 <meta name="twitter:description" content="
@@ -90,11 +91,8 @@ Vamos a usar varios contenedores y para lograr la comunicación entre ellos, se 
 Docker:
 
 Instalamos docker usando el script que se encuentra en su pagina oficial.
-
 wget -qO- https://get.docker.com/ | sh
-
 Al finalizar el proceso usamos systemctl para subir el servicio y dejarlo habilitado para que inicie cuando se inicie el servidor.
-
 systemctl start enable
 
 systemcl enable docker"/>
@@ -104,9 +102,9 @@ systemcl enable docker"/>
 <meta property="article:section" content="Docker" />
 <meta property="article:section" content="LINUX" />
 <meta property="article:section" content="Opensource" />
-<meta property="article:section" content="TUTORIALES" />
 
 <meta property="article:published_time" content="2017-03-07 06:54:30 &#43;0000 &#43;0000" />
+
 
 
 
@@ -161,19 +159,19 @@ systemcl enable docker"/>
             <div class="content">
                 
     <main class="post">
-
         <div class="post-info">
             
             </p>
         </div>
-
+        
+        
         <article>
+
             <h2 class="post-title"><a href="/posts/howto-instalando-rocket.chat-en-docker.html">Howto: Instalando Rocket.Chat en Docker</a></h2>
 
             
-
             <div class="post-content">
-                <p><a href="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-824" src="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?resize=546%2C126&#038;ssl=1" alt="" width="546" height="126" srcset="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?w=546&ssl=1 546w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?resize=300%2C69&ssl=1 300w" sizes="(max-width: 546px) 100vw, 546px" data-recalc-dims="1" /></a></p>
+                <p><center><img src="/images/rocketchat1.png" alt="" /></center></p>
 
 <p>Rocket.chat para mi es una de las mejores plataformas de chat <strong>OpenSource</strong> que existen, es muy flexible a la hora de adaptarlo y lo mejor, tiene cliente para toda las plataformas.</p>
 
@@ -186,80 +184,58 @@ systemcl enable docker"/>
 <h3 id="docker">Docker:</h3>
 
 <p>Instalamos docker usando el script que se encuentra en su pagina oficial.</p>
-
-<pre class="lang:default decode:true">wget -qO- https://get.docker.com/ | sh</pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">wget -qO- https://get.docker.com/ | sh</code></pre></div>
 <p>Al finalizar el proceso usamos systemctl para subir el servicio y dejarlo habilitado para que inicie cuando se inicie el servidor.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">systemctl start enable
 
-<pre class="lang:default decode:true">systemctl start enable</pre>
-
-<pre class="lang:default decode:true ">systemcl enable docker</pre>
-
+systemcl enable docker</code></pre></div>
 <h3 id="docker-compose">Docker Compose:</h3>
 
 <p>Hacemos uso de la ultima versión estable de docker compose que se encuentra en  github y dejamos el script en <strong>/usr/local/bin/docker-compose</strong></p>
-
-<pre class="lang:default decode:true ">curl -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose</pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">curl -L &#34;https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)&#34; -o /usr/local/bin/docker-compose</code></pre></div>
 <p>Aplicamos permisos de ejecución:</p>
-
-<pre class="lang:default decode:true ">chmod +x /usr/local/bin/docker-compose 
-</pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">chmod +x /usr/local/bin/docker-compose </code></pre></div>
 <p>Verificamos la versión de docker-compose para mirar que se instalo la versión correcta:</p>
-
-<pre class="lang:default decode:true ">docker-compose --version</pre>
-
-<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-06-23-48-00.png?ssl=1" target="_blank"><img class="size-full wp-image-851 aligncenter" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-06-23-48-00.png?resize=488%2C66&#038;ssl=1" alt="" width="488" height="66" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-06-23-48-00.png?w=488&ssl=1 488w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-06-23-48-00.png?resize=300%2C41&ssl=1 300w" sizes="(max-width: 488px) 100vw, 488px" data-recalc-dims="1" /></a></p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">docker-compose --version</code></pre></div>
+<p><img src="/images/rocketchat2.png" alt="" /></p>
 
 <p>Ya que tenemos docker y docker-compose instalado, vamos a preparar el <strong>docker-compose.yml</strong> necesario para el despliegue de los contenedores y los directorios locales donde se almacenara la data.</p>
 
 <h3 id="creando-los-directorios-locales">Creando los directorios locales :</h3>
-
-<pre class="lang:default decode:true ">mkdir -p /opt/rocket.chat/data/runtime/db
-mkdir -p /opt/rocket.chat/data/dump</pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir -p /opt/rocket.chat/data/runtime/db
+mkdir -p /opt/rocket.chat/data/dump</code></pre></div>
 <h3 id="creando-el-docker-compose-yaml">Creando el docker-compose.yaml</h3>
 
 <p>Creamos y editamos el archivo docker-compose.yml</p>
-
-<pre class="lang:default decode:true">vim /opt/rocket.chat/docker-compose.yml</pre>
-
-<p>&nbsp;</p>
-
-<pre class="lang:default decode:true">db:
-  image: mongo
-  volumes:
-    - ./data/runtime/db:/data/db
-    - ./data/dump:/dump
-  command: mongod --smallfiles
-
-rocketchat:
-  image: rocketchat/rocket.chat:latest
-  environment:
-    - MONGO_URL=mongodb://db:27017/rocketchat
-    - ROOT_URL=http://chat.braybaut.com
-    - Accounts_UseDNSDomainCheck=True
-  links:
-    - db:db
-  ports:
-    - 3000:3000
-
-hubot:
-  image: rocketchat/hubot-rocketchat:v0.1.4
-  environment:
-    - ROCKETCHAT_URL=192.168.0.26:3000
-    - ROCKETCHAT_ROOM=GENERAL
-    - ROCKETCHAT_USER=Botname
-    - ROCKETCHAT_PASSWORD=BotPassw0rd
-    - BOT_NAME=Botname
-    - EXTERNAL_SCRIPTS=hubot-help,hubot-seen,hubot-links,hubot-greetings
-  links:
-    - rocketchat:rocketchat
-#Esto se utiliza para exponer el puerto de hubot para las notificaciones del host en el puerto 3001 para hubot-jenkins-notifier
-  ports:
-    - 3001:8080</pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">vim /opt/rocket.chat/docker-compose.yml</code></pre></div><div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#666">  </span>image:<span style="color:#666"> </span>mongo<span style="color:#666">
+</span><span style="color:#666">  </span>volumes:<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span>./data/runtime/db:/data/db<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span>./data/dump:/dump<span style="color:#666">
+</span><span style="color:#666">  </span>command:<span style="color:#666"> </span>mongod<span style="color:#666"> </span>--smallfiles<span style="color:#666">
+</span><span style="color:#666"></span>rocketchat:<span style="color:#666">
+</span><span style="color:#666">  </span>image:<span style="color:#666"> </span>rocketchat/rocket.chat:latest<span style="color:#666">
+</span><span style="color:#666">  </span>environment:<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span>MONGO_URL=mongodb://db:<span style="color:#3677a9">27017</span>/rocketchat<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span>ROOT_URL=http://chat.braybaut.com<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span>Accounts_UseDNSDomainCheck=True<span style="color:#666">
+</span><span style="color:#666">  </span>links:<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span>db:db<span style="color:#666">
+</span><span style="color:#666">  </span>ports:<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span><span style="color:#3677a9">3000</span>:<span style="color:#3677a9">3000</span><span style="color:#666">
+</span><span style="color:#666"></span>hubot:<span style="color:#666">
+</span><span style="color:#666">  </span>image:<span style="color:#666"> </span>rocketchat/hubot-rocketchat:v0.<span style="color:#3677a9">1.4</span><span style="color:#666">
+</span><span style="color:#666">  </span>environment:<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span>ROCKETCHAT_URL=<span style="color:#3677a9">192.168</span>.<span style="color:#3677a9">0.26</span>:<span style="color:#3677a9">3000</span><span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span>ROCKETCHAT_ROOM=GENERAL<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span>ROCKETCHAT_USER=Botname<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span>ROCKETCHAT_PASSWORD=BotPassw0rd<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span>BOT_NAME=Botname<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span>EXTERNAL_SCRIPTS=hubot-help,hubot-seen,hubot-links,hubot-greetings<span style="color:#666">
+</span><span style="color:#666">  </span>links:<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span>rocketchat:rocketchat<span style="color:#666">
+</span><span style="color:#666"></span><span style="color:#999;font-style:italic">#Esto se utiliza para exponer el puerto de hubot para las notificaciones del host en el puerto 3001 para hubot-jenkins-notifier</span><span style="color:#666">
+</span><span style="color:#666">  </span>ports:<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span><span style="color:#3677a9">3001</span>:<span style="color:#3677a9">8080</span></code></pre></div>
 <p>Editar los siguientes parámetros:</p>
 
 <p><strong>ROOT_URL:</strong> El FQDN de nuestro host en este caso usare el dominio <strong>chat.braybaut.com // <em>En mi caso no voy a exponer el chat a internet, por el cual, este dominio es interno.</em></strong></p>
@@ -271,10 +247,7 @@ hubot:
 <h3 id="reglas-de-firewall">Reglas de Firewall</h3>
 
 <p>Ya para terminar, aplicamos una regla de firewall para abrir el puerto 3000 el cual es el que utilizamos para acceder a rocket.chat</p>
-
-<pre class="lang:default decode:true ">firewall-cmd --add-port=3000/tcp
-firewall-cmd --add-port=3000/tcp --permanent</pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">firewall-cmd --add-port=3000/tcp --permanent</code></pre></div>
 <h3 id="descargando-imágenes-y-desplegando-contenedores">Descargando imágenes y desplegando contenedores</h3>
 
 <p>Por ultimo, vamos a correr el archivo docker-compose.yml, en este archivo el bajara los 3 docker image necesarios y posteriormente iniciara un contenedor para cada uno, los docker image que se descargaran son: <strong>mongodb, rocket.chat (ultima versión) y hubot.</strong></p>
@@ -282,29 +255,22 @@ firewall-cmd --add-port=3000/tcp --permanent</pre>
 <p>Despues de bajar las imágenes docker-compose creara los contenedores y aplicara las configuraciones que se encuentran en el archivo docker-compose.yml.</p>
 
 <p>Ingresamos al directorio:</p>
-
-<pre class="lang:default decode:true ">cd /opt/rocket.chat/
-</pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">cd /opt/rocket.chat/</code></pre></div>
 <p>Ejecutamos Docker compose:</p>
-
-<pre class="lang:default decode:true ">docker-compose up</pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">docker-compose up</code></pre></div>
 <p>La primera vez que se ejecute docker-compose se demorara un poco, debido a que debe descargar los docker image, cuando se vuelva a ejecutar docker-compose la ejecución de los contenedores sera breve debido a que los docker image ya existen.</p>
 
 <p>Después de ejecutar el comando anterior y nos aparezca la siguiente imagen quiere decir que el proceso de despliegue y ejecución a terminado y podemos acceder a nuestro rocket.chat.</p>
 
-<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-00-47-52.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-853" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-00-47-52.png?resize=582%2C223&#038;ssl=1" alt="" width="582" height="223" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-00-47-52.png?w=582&ssl=1 582w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-00-47-52.png?resize=300%2C115&ssl=1 300w" sizes="(max-width: 582px) 100vw, 582px" data-recalc-dims="1" /></a></p>
+<p><img src="/images/rocketchat3.png" alt="" /></p>
 
 <p>Verificamos que los contenedores estén corriendo:</p>
-
-<pre class="lang:default decode:true ">docker ps -a</pre>
-
-<p><a href="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-35-10.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-855" src="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-35-10.png?resize=648%2C70&#038;ssl=1" alt="" width="648" height="70" srcset="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-35-10.png?w=1264&ssl=1 1264w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-35-10.png?resize=300%2C33&ssl=1 300w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-35-10.png?resize=768%2C83&ssl=1 768w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-35-10.png?resize=1024%2C111&ssl=1 1024w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-code" data-lang="code">docker ps -a</code></pre></div>
+<p><img src="/images/rocketchat4.png" alt="" /></p>
 
 <p>Ingresamos al navegador para ingresar al chat:</p>
 
-<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-36-40.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-857" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-36-40.png?resize=648%2C312&#038;ssl=1" alt="" width="648" height="312" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-36-40.png?w=1278&ssl=1 1278w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-36-40.png?resize=300%2C144&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-36-40.png?resize=768%2C370&ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/03/Screenshot-from-2017-03-07-01-36-40.png?resize=1024%2C493&ssl=1 1024w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+<p><img src="/images/rocketchat5.png" alt="" /></p>
 
 <p>Con esto ya terminamos y comprobamos que nuestro Rocket.chat esta corriendo sin ningún inconveniente y lo mejor, en contenedores con persistencia de data.</p>
 
@@ -312,39 +278,56 @@ firewall-cmd --add-port=3000/tcp --permanent</pre>
 
 <p>Mas información:</p>
 
-<p>[<strong><a href="https://rocket.chat/" target="_blank">https://rocket.chat/</a></strong>][6]</p>
+<p>[<strong><a href="https://rocket.chat/" target="_blank">https://rocket.chat/</a></strong>]</p>
 
-<p>[<strong><a href="https://github.com/RocketChat/Rocket.Chat" target="_blank">https://github.com/RocketChat/Rocket.Chat</a></strong>][7]</p>
+<p>[<strong><a href="https://github.com/RocketChat/Rocket.Chat" target="_blank">https://github.com/RocketChat/Rocket.Chat</a></strong>]</p>
 
-<p>[<strong><a href="https://hub.docker.com/u/rocketchat/" target="_blank">https://hub.docker.com/u/rocketchat/</a></strong>][8]</p>
+<p>[<strong><a href="https://hub.docker.com/u/rocketchat/" target="_blank">https://hub.docker.com/u/rocketchat/</a></strong>]</p>
 
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>[6]: <a href="http://Pagina" target="_blank">http://Pagina</a> oficial de Rocket.Chat
- [7]: <a href="http://Github" target="_blank">http://Github</a> de Rocket.Chat.
- [8]: <a href="http://Repositorio" target="_blank">http://Repositorio</a> de Docker Image de Rocket.Chat</p>
             </div>
+
         </article>
 
         <hr />
 
         <div class="post-info">
   				<p>
-  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="tags/centos">Centos</a></span><span class="tag"><a href="tags/docker">Docker</a></span><span class="tag"><a href="tags/docker-compose">docker-compose</a></span><span class="tag"><a href="tags/linux">linux</a></span><span class="tag"><a href="tags/opensource">opensource</a></span><span class="tag"><a href="tags/rocket.chat">rocket.chat</a></span><span class="tag"><a href="tags/rocketchat">rocketchat</a></span>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="/tags/docker">Docker</a></span><span class="tag"><a href="/tags/docker-compose">docker-compose</a></span><span class="tag"><a href="/tags/linux">linux</a></span><span class="tag"><a href="/tags/opensource">opensource</a></span>
   				</p>
   			</div>
 
-        
+
+                    <div id="comments" class="thin">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "braybaut" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
     </main>
 
             </div>
 
             
-                <footer class="footer">
+                
+
+
+<footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
             <span>&copy; 2019</span>
@@ -375,8 +358,15 @@ firewall-cmd --add-port=3000/tcp --permanent</pre>
 
 
 
-
-<script type="text/javascript" src="/js/bundle.4b80fbbfab88198dcef181b034822e60a3e68b1c128d1dc05392a32943a18ec2f866fbcd9ce31dcf84134397161647ad605ea5c25ecf12e5fcf9d28b47e64bb5.js" integrity="sha512-S4D7v6uIGY3O8YGwNIIuYKPmixwSjR3AU5KjKUOhjsL4ZvvNnOMdz4QTQ5cWFketYF6lwl7PEuX8&#43;dKLR&#43;ZLtQ=="></script>
+<script type="text/javascript" src="/js/bundle.dd80b4936d9208f7384932ce622316900942c58cd138dd354b6a863e212c7fd1c951c7c3e5b83585da6297165e02ddfddbe523bbb46478a41628469263b7f000.js" integrity="sha512-3YC0k22SCPc4STLOYiMWkAlCxYzRON01S2qGPiEsf9HJUcfD5bg1hdpilxZeAt392&#43;Uju7RkeKQWKEaSY7fwAA=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-69725711-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 
 

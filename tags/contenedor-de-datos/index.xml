@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Contenedor De Datos on Braybaut</title>
-    <link>/tags/contenedor-de-datos/</link>
+    <link>/tags/contenedor-de-datos.html</link>
     <description>Recent content in Contenedor De Datos on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Howto: como crear un contenedor de datos en docker</title>
-      <link>/posts/howto-como-crear-un-contenedor-de-datos-en-docker/</link>
+      <link>/posts/howto-como-crear-un-contenedor-de-datos-en-docker.html</link>
       <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
       
-      <guid>/posts/howto-como-crear-un-contenedor-de-datos-en-docker/</guid>
+      <guid>/posts/howto-como-crear-un-contenedor-de-datos-en-docker.html</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/docker.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;los contenedores no son persistentes en sus datos al ser ejecutados, esto quiere decir que al terminar una ejecución de un contenedor este pierde sus datos.&lt;/p&gt;

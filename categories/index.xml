@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Braybaut</title>
-    <link>/categories/</link>
+    <link>/categories.html</link>
     <description>Recent content in Categories on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -13,91 +13,91 @@
     
     <item>
       <title>Aws</title>
-      <link>/categories/aws/</link>
+      <link>/categories/aws.html</link>
       <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
       
-      <guid>/categories/aws/</guid>
+      <guid>/categories/aws.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>/categories/docker/</link>
+      <link>/categories/docker.html</link>
       <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
       
-      <guid>/categories/docker/</guid>
+      <guid>/categories/docker.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Golang</title>
-      <link>/categories/golang/</link>
+      <link>/categories/golang.html</link>
       <pubDate>Sun, 10 Feb 2019 21:52:53 +0000</pubDate>
       
-      <guid>/categories/golang/</guid>
+      <guid>/categories/golang.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ldap</title>
-      <link>/categories/ldap/</link>
+      <link>/categories/ldap.html</link>
       <pubDate>Tue, 19 Jan 2016 01:43:11 +0000</pubDate>
       
-      <guid>/categories/ldap/</guid>
+      <guid>/categories/ldap.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>/categories/linux/</link>
+      <link>/categories/linux.html</link>
       <pubDate>Tue, 07 Mar 2017 06:54:30 +0000</pubDate>
       
-      <guid>/categories/linux/</guid>
+      <guid>/categories/linux.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Opensource</title>
-      <link>/categories/opensource/</link>
+      <link>/categories/opensource.html</link>
       <pubDate>Tue, 07 Mar 2017 06:54:30 +0000</pubDate>
       
-      <guid>/categories/opensource/</guid>
+      <guid>/categories/opensource.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Raspberry Pi</title>
-      <link>/categories/raspberry-pi/</link>
+      <link>/categories/raspberry-pi.html</link>
       <pubDate>Mon, 24 Mar 2014 06:18:00 +0000</pubDate>
       
-      <guid>/categories/raspberry-pi/</guid>
+      <guid>/categories/raspberry-pi.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Software Libre</title>
-      <link>/categories/software-libre/</link>
+      <link>/categories/software-libre.html</link>
       <pubDate>Mon, 24 Mar 2014 06:18:00 +0000</pubDate>
       
-      <guid>/categories/software-libre/</guid>
+      <guid>/categories/software-libre.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tinc</title>
-      <link>/categories/tinc/</link>
+      <link>/categories/tinc.html</link>
       <pubDate>Mon, 24 Mar 2014 06:18:00 +0000</pubDate>
       
-      <guid>/categories/tinc/</guid>
+      <guid>/categories/tinc.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tutoriales</title>
-      <link>/categories/tutoriales/</link>
+      <link>/categories/tutoriales.html</link>
       <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
       
-      <guid>/categories/tutoriales/</guid>
+      <guid>/categories/tutoriales.html</guid>
       <description></description>
     </item>
     

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Traefik on Braybaut</title>
-    <link>/tags/traefik/</link>
+    <link>/tags/traefik.html</link>
     <description>Recent content in Traefik on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Utilizando Traefik como Dynamic Reverse Proxy en Docker Swarm sobre  AWS</title>
-      <link>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws/</link>
+      <link>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws.html</link>
       <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
       
-      <guid>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws/</guid>
+      <guid>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws.html</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/traefik.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Traefik es una herramienta muy potente gracias a que soporta varios providers como backend, en este caso usaremos traefik para que nos sirva como &lt;strong&gt;Dynamic Reverse Proxy&lt;/strong&gt; sobre un cluster de &lt;strong&gt;Docker Swarm&lt;/strong&gt; en &lt;strong&gt;Amazon Web Services&lt;/strong&gt;.&lt;/p&gt;
@@ -32,10 +32,10 @@
     
     <item>
       <title>Traefik: Load Balancer y Reverse Proxy para Docker</title>
-      <link>/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</link>
+      <link>/posts/traefik-load-balancer-y-reverse-proxy-para-docker.html</link>
       <pubDate>Wed, 25 Oct 2017 22:25:26 +0000</pubDate>
       
-      <guid>/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</guid>
+      <guid>/posts/traefik-load-balancer-y-reverse-proxy-para-docker.html</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/traefik.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Cuando trabajamos con docker en ambientes productivos, la mayoría de casos usamos tecnologías para orquestar y poder ofrecer alta disponibilidad sobre nuestros micro servicios, debido a esto, nosotros corremos multiples aplicaciones sobre un mismo host que haga parte de nuestro stack de orquestación. Para que estas aplicaciones puedan ser consumidas sin necesidad de exponer un puerto, necesitamos un reverse proxy para poder consumir estos servicios desde un único puerto.&lt;/p&gt;

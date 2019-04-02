@@ -7,7 +7,7 @@
 <meta name="author"
     content="braybaut">
 <meta name="description"
-    content=" Golang se ha convertido en uno de mis lenguajes favoritos y hoy escribiré de como podemos usar go para poder consumir la API de spaceX y obtener información de las naves lanzadas al espacio
+    content="Golang se ha convertido en uno de mis lenguajes favoritos y hoy escribiré de como podemos usar go para poder consumir la API de spaceX y obtener información de las naves lanzadas al espacio
 Soy admirador total de Elon musk y de todas sus compañías, una de ellas es spaceX, una compañía dedicada al transporte aeroespacial y hoy por medio de Golang vamos a obtener información de su ultima nave lanzada al espacio.
 " />
 <meta name="keywords" content="" />
@@ -33,6 +33,10 @@ Soy admirador total de Elon musk y de todas sus compañías, una de ellas es spa
 
 
 
+<link rel="stylesheet" type="text/css" href="/css/styles.scss">
+
+
+
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,7 +45,7 @@ Soy admirador total de Elon musk y de todas sus compañías, una de ellas es spa
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627">
 <meta itemprop="name" content="Parseando JSON con Golang y las naves de spaceX">
-<meta itemprop="description" content=" 
+<meta itemprop="description" content="
 
 Golang se ha convertido en uno de mis lenguajes favoritos y hoy escribiré de como podemos usar go para poder consumir la API de spaceX y obtener información de las naves lanzadas al espacio
 
@@ -50,14 +54,14 @@ Soy admirador total de Elon musk y de todas sus compañías, una de ellas es spa
 
 <meta itemprop="datePublished" content="2019-02-10T21:52:53&#43;00:00" />
 <meta itemprop="dateModified" content="2019-02-10T21:52:53&#43;00:00" />
-<meta itemprop="wordCount" content="904">
+<meta itemprop="wordCount" content="906">
 
 
 
-<meta itemprop="keywords" content="go,Golang,Json,spaceX," />
+<meta itemprop="keywords" content="go,Golang,Json," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Parseando JSON con Golang y las naves de spaceX"/>
-<meta name="twitter:description" content=" 
+<meta name="twitter:description" content="
 
 Golang se ha convertido en uno de mis lenguajes favoritos y hoy escribiré de como podemos usar go para poder consumir la API de spaceX y obtener información de las naves lanzadas al espacio
 
@@ -68,6 +72,7 @@ Soy admirador total de Elon musk y de todas sus compañías, una de ellas es spa
 <meta property="article:section" content="Golang" />
 
 <meta property="article:published_time" content="2019-02-10 21:52:53 &#43;0000 &#43;0000" />
+
 
 
 
@@ -122,160 +127,156 @@ Soy admirador total de Elon musk y de todas sus compañías, una de ellas es spa
             <div class="content">
                 
     <main class="post">
-
         <div class="post-info">
             
             </p>
         </div>
-
+        
+        
         <article>
+
             <h2 class="post-title"><a href="/posts/parseando-json-con-golang-y-las-naves-de-spacex.html">Parseando JSON con Golang y las naves de spaceX</a></h2>
 
             
-
             <div class="post-content">
-                <figure class="wp-block-image"><img src="https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=648%2C365&#038;ssl=1" alt="" class="wp-image-974" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=1024%2C576&ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=300%2C169&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=768%2C432&ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?w=1280&ssl=1 1280w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></figure> 
+                <p><img src="/images/maxresdefault.jpg" alt="Golang" /></p>
 
 <p>Golang se ha convertido en uno de mis lenguajes favoritos y hoy escribiré de como podemos usar go para poder consumir la API de spaceX y obtener información de las naves lanzadas al espacio</p>
 
 <p>Soy admirador total de <a href="https://en.wikipedia.org/wiki/Elon_Musk" target="_blank">Elon musk</a> y de todas sus compañías, una de ellas es <a href="https://www.spacex.com/" target="_blank">spaceX</a>, una compañía dedicada al transporte aeroespacial y hoy por medio de Golang vamos a obtener información de su ultima nave lanzada al espacio.</p>
 
 <p>SpaceX provee una API para obtener toda la información de las naves lanzadas al espacio:</p>
-
-<pre class="wp-block-code"><code>curl -x https://api.spacexdata.com/v3/launches/latest | jq . </code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">curl -x https://api.spacexdata.com/v3/launches/latest | jq .</code></pre></div>
 <p>Con esta API podemos obtener los siguientes datos:</p>
-
-<pre class="wp-block-code"><code>{
-  "flight_number": 74,
-  "mission_name": "Iridium NEXT Mission 8",
-  "mission_id": [
-    "F3364BF"
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#6ab825;font-weight:bold">&#34;flight_number&#34;</span>: <span style="color:#3677a9">74</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;mission_name&#34;</span>: <span style="color:#ed9d13">&#34;Iridium NEXT Mission 8&#34;</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;mission_id&#34;</span>: [
+    <span style="color:#ed9d13">&#34;F3364BF&#34;</span>
   ],
-  "launch_year": "2019",
-  "launch_date_unix": 1547220660,
-  "launch_date_utc": "2019-01-11T15:31:00.000Z",
-  "launch_date_local": "2019-01-11T07:31:00-08:00",
-  "is_tentative": false,
-  "tentative_max_precision": "hour",
-  "tbd": false,
-  "launch_window": 0,
-  "rocket": {
-    "rocket_id": "falcon9",
-    "rocket_name": "Falcon 9",
-    "rocket_type": "FT",
-    "first_stage": {
-      "cores": [
+  <span style="color:#6ab825;font-weight:bold">&#34;launch_year&#34;</span>: <span style="color:#ed9d13">&#34;2019&#34;</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;launch_date_unix&#34;</span>: <span style="color:#3677a9">1547220660</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;launch_date_utc&#34;</span>: <span style="color:#ed9d13">&#34;2019-01-11T15:31:00.000Z&#34;</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;launch_date_local&#34;</span>: <span style="color:#ed9d13">&#34;2019-01-11T07:31:00-08:00&#34;</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;is_tentative&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;tentative_max_precision&#34;</span>: <span style="color:#ed9d13">&#34;hour&#34;</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;tbd&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;launch_window&#34;</span>: <span style="color:#3677a9">0</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;rocket&#34;</span>: {
+    <span style="color:#6ab825;font-weight:bold">&#34;rocket_id&#34;</span>: <span style="color:#ed9d13">&#34;falcon9&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;rocket_name&#34;</span>: <span style="color:#ed9d13">&#34;Falcon 9&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;rocket_type&#34;</span>: <span style="color:#ed9d13">&#34;FT&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;first_stage&#34;</span>: {
+      <span style="color:#6ab825;font-weight:bold">&#34;cores&#34;</span>: [
         {
-          "core_serial": "B1049",
-          "flight": 2,
-          "block": 5,
-          "gridfins": true,
-          "legs": true,
-          "reused": true,
-          "land_success": true,
-          "landing_intent": true,
-          "landing_type": "ASDS",
-          "landing_vehicle": "JRTI"
+          <span style="color:#6ab825;font-weight:bold">&#34;core_serial&#34;</span>: <span style="color:#ed9d13">&#34;B1049&#34;</span>,
+          <span style="color:#6ab825;font-weight:bold">&#34;flight&#34;</span>: <span style="color:#3677a9">2</span>,
+          <span style="color:#6ab825;font-weight:bold">&#34;block&#34;</span>: <span style="color:#3677a9">5</span>,
+          <span style="color:#6ab825;font-weight:bold">&#34;gridfins&#34;</span>: <span style="color:#6ab825;font-weight:bold">true</span>,
+          <span style="color:#6ab825;font-weight:bold">&#34;legs&#34;</span>: <span style="color:#6ab825;font-weight:bold">true</span>,
+          <span style="color:#6ab825;font-weight:bold">&#34;reused&#34;</span>: <span style="color:#6ab825;font-weight:bold">true</span>,
+          <span style="color:#6ab825;font-weight:bold">&#34;land_success&#34;</span>: <span style="color:#6ab825;font-weight:bold">true</span>,
+          <span style="color:#6ab825;font-weight:bold">&#34;landing_intent&#34;</span>: <span style="color:#6ab825;font-weight:bold">true</span>,
+          <span style="color:#6ab825;font-weight:bold">&#34;landing_type&#34;</span>: <span style="color:#ed9d13">&#34;ASDS&#34;</span>,
+          <span style="color:#6ab825;font-weight:bold">&#34;landing_vehicle&#34;</span>: <span style="color:#ed9d13">&#34;JRTI&#34;</span>
         }
       ]
     },
-    "second_stage": {
-      "block": 5,
-      "payloads": [
+    <span style="color:#6ab825;font-weight:bold">&#34;second_stage&#34;</span>: {
+      <span style="color:#6ab825;font-weight:bold">&#34;block&#34;</span>: <span style="color:#3677a9">5</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;payloads&#34;</span>: [
         {
-          "payload_id": "Iridium NEXT 8",
-          "norad_id": [
-            43922,
-            43923,
-            43924,
-            43925,
-            43926,
-            43927,
-            43928,
-            43929,
-            43930,
-            43931
+          <span style="color:#6ab825;font-weight:bold">&#34;payload_id&#34;</span>: <span style="color:#ed9d13">&#34;Iridium NEXT 8&#34;</span>,
+          <span style="color:#6ab825;font-weight:bold">&#34;norad_id&#34;</span>: [
+            <span style="color:#3677a9">43922</span>,
+            <span style="color:#3677a9">43923</span>,
+            <span style="color:#3677a9">43924</span>,
+            <span style="color:#3677a9">43925</span>,
+            <span style="color:#3677a9">43926</span>,
+            <span style="color:#3677a9">43927</span>,
+            <span style="color:#3677a9">43928</span>,
+            <span style="color:#3677a9">43929</span>,
+            <span style="color:#3677a9">43930</span>,
+            <span style="color:#3677a9">43931</span>
           ],
-          "reused": false,
-          "customers": [
-            "Iridium Communications"
+          <span style="color:#6ab825;font-weight:bold">&#34;reused&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
+          <span style="color:#6ab825;font-weight:bold">&#34;customers&#34;</span>: [
+            <span style="color:#ed9d13">&#34;Iridium Communications&#34;</span>
           ],
-          "nationality": "United States",
-          "manufacturer": "Thales Alenia Space",
-          "payload_type": "Satellite",
-          "payload_mass_kg": 9600,
-          "payload_mass_lbs": 21164.38,
-          "orbit": "PO",
-          "orbit_params": {
-            "reference_system": "geocentric",
-            "regime": "low-earth",
-            "longitude": null,
-            "semi_major_axis_km": 6997.303,
-            "eccentricity": 0.0011185,
-            "periapsis_km": 611.342,
-            "apoapsis_km": 626.995,
-            "inclination_deg": 86.6809,
-            "period_min": 97.085,
-            "lifespan_years": 15,
-            "epoch": "2019-01-14T19:01:22.000Z",
-            "mean_motion": 14.83223805,
-            "raan": 46.2409,
-            "arg_of_pericenter": 203.1527,
-            "mean_anomaly": 156.9184
+          <span style="color:#6ab825;font-weight:bold">&#34;nationality&#34;</span>: <span style="color:#ed9d13">&#34;United States&#34;</span>,
+          <span style="color:#6ab825;font-weight:bold">&#34;manufacturer&#34;</span>: <span style="color:#ed9d13">&#34;Thales Alenia Space&#34;</span>,
+          <span style="color:#6ab825;font-weight:bold">&#34;payload_type&#34;</span>: <span style="color:#ed9d13">&#34;Satellite&#34;</span>,
+          <span style="color:#6ab825;font-weight:bold">&#34;payload_mass_kg&#34;</span>: <span style="color:#3677a9">9600</span>,
+          <span style="color:#6ab825;font-weight:bold">&#34;payload_mass_lbs&#34;</span>: <span style="color:#3677a9">21164.38</span>,
+          <span style="color:#6ab825;font-weight:bold">&#34;orbit&#34;</span>: <span style="color:#ed9d13">&#34;PO&#34;</span>,
+          <span style="color:#6ab825;font-weight:bold">&#34;orbit_params&#34;</span>: {
+            <span style="color:#6ab825;font-weight:bold">&#34;reference_system&#34;</span>: <span style="color:#ed9d13">&#34;geocentric&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;regime&#34;</span>: <span style="color:#ed9d13">&#34;low-earth&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;longitude&#34;</span>: <span style="color:#6ab825;font-weight:bold">null</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;semi_major_axis_km&#34;</span>: <span style="color:#3677a9">6997.303</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;eccentricity&#34;</span>: <span style="color:#3677a9">0.0011185</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;periapsis_km&#34;</span>: <span style="color:#3677a9">611.342</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;apoapsis_km&#34;</span>: <span style="color:#3677a9">626.995</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;inclination_deg&#34;</span>: <span style="color:#3677a9">86.6809</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;period_min&#34;</span>: <span style="color:#3677a9">97.085</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;lifespan_years&#34;</span>: <span style="color:#3677a9">15</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;epoch&#34;</span>: <span style="color:#ed9d13">&#34;2019-01-14T19:01:22.000Z&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;mean_motion&#34;</span>: <span style="color:#3677a9">14.83223805</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;raan&#34;</span>: <span style="color:#3677a9">46.2409</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;arg_of_pericenter&#34;</span>: <span style="color:#3677a9">203.1527</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;mean_anomaly&#34;</span>: <span style="color:#3677a9">156.9184</span>
           }
         }
       ]
     },
-    "fairings": {
-      "reused": false,
-      "recovery_attempt": false,
-      "recovered": null,
-      "ship": null
+    <span style="color:#6ab825;font-weight:bold">&#34;fairings&#34;</span>: {
+      <span style="color:#6ab825;font-weight:bold">&#34;reused&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;recovery_attempt&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;recovered&#34;</span>: <span style="color:#6ab825;font-weight:bold">null</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;ship&#34;</span>: <span style="color:#6ab825;font-weight:bold">null</span>
     }
   },
-  "ships": [
-    "JRTI-2",
-    "NRCQUEST",
-    "PACIFICFREEDOM"
+  <span style="color:#6ab825;font-weight:bold">&#34;ships&#34;</span>: [
+    <span style="color:#ed9d13">&#34;JRTI-2&#34;</span>,
+    <span style="color:#ed9d13">&#34;NRCQUEST&#34;</span>,
+    <span style="color:#ed9d13">&#34;PACIFICFREEDOM&#34;</span>
   ],
-  "telemetry": {
-    "flight_club": "https://www.flightclub.io/result?code=IRD8"
+  <span style="color:#6ab825;font-weight:bold">&#34;telemetry&#34;</span>: {
+    <span style="color:#6ab825;font-weight:bold">&#34;flight_club&#34;</span>: <span style="color:#ed9d13">&#34;https://www.flightclub.io/result?code=IRD8&#34;</span>
   },
-  "launch_site": {
-    "site_id": "vafb_slc_4e",
-    "site_name": "VAFB SLC 4E",
-    "site_name_long": "Vandenberg Air Force Base Space Launch Complex 4E"
+  <span style="color:#6ab825;font-weight:bold">&#34;launch_site&#34;</span>: {
+    <span style="color:#6ab825;font-weight:bold">&#34;site_id&#34;</span>: <span style="color:#ed9d13">&#34;vafb_slc_4e&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;site_name&#34;</span>: <span style="color:#ed9d13">&#34;VAFB SLC 4E&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;site_name_long&#34;</span>: <span style="color:#ed9d13">&#34;Vandenberg Air Force Base Space Launch Complex 4E&#34;</span>
   },
-  "launch_success": true,
-  "links": {
-    "mission_patch": "https://images2.imgbox.com/80/ae/1JL1ZzXD_o.png",
-    "mission_patch_small": "https://images2.imgbox.com/11/f0/xPDcIpmS_o.png",
-    "reddit_campaign": "https://www.reddit.com/r/spacex/comments/a699fh/iridium_next_constellation_mission_8_launch/",
-    "reddit_launch": "https://www.reddit.com/r/spacex/comments/aemq2i/rspacex_iridium_next_8_official_launch_discussion/",
-    "reddit_recovery": "https://www.reddit.com/r/spacex/comments/aewp4r/iridium_8_recovery_thread/",
-    "reddit_media": "https://www.reddit.com/r/spacex/comments/aeoxve/rspacex_iridium_next_8_media_thread_videos_images/",
-    "presskit": "https://www.spacex.com/sites/spacex/files/iridium8presskit.pdf",
-    "article_link": "https://spaceflightnow.com/2019/01/11/spacex-begins-2019-with-eighth-and-final-for-upgraded-iridium-network/",
-    "wikipedia": "https://en.wikipedia.org/wiki/Iridium_satellite_constellation#Next-generation_constellation",
-    "video_link": "https://youtu.be/VshdafZvwrg",
-    "youtube_id": "VshdafZvwrg",
-    "flickr_images": [
-      "https://farm5.staticflickr.com/4866/39745612523_14270b4b9d_o.jpg",
-      "https://farm8.staticflickr.com/7833/39745612923_21aa442350_o.jpg",
-      "https://farm5.staticflickr.com/4881/39745613173_e99b09c000_o.jpg",
-      "https://farm8.staticflickr.com/7882/39745613513_6cdd4581af_o.jpg",
-      "https://farm8.staticflickr.com/7807/39745613733_1a7b70e54a_o.jpg",
-      "https://farm5.staticflickr.com/4891/39745614053_43855205bc_o.jpg"
+  <span style="color:#6ab825;font-weight:bold">&#34;launch_success&#34;</span>: <span style="color:#6ab825;font-weight:bold">true</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;links&#34;</span>: {
+    <span style="color:#6ab825;font-weight:bold">&#34;mission_patch&#34;</span>: <span style="color:#ed9d13">&#34;https://images2.imgbox.com/80/ae/1JL1ZzXD_o.png&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;mission_patch_small&#34;</span>: <span style="color:#ed9d13">&#34;https://images2.imgbox.com/11/f0/xPDcIpmS_o.png&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;reddit_campaign&#34;</span>: <span style="color:#ed9d13">&#34;https://www.reddit.com/r/spacex/comments/a699fh/iridium_next_constellation_mission_8_launch/&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;reddit_launch&#34;</span>: <span style="color:#ed9d13">&#34;https://www.reddit.com/r/spacex/comments/aemq2i/rspacex_iridium_next_8_official_launch_discussion/&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;reddit_recovery&#34;</span>: <span style="color:#ed9d13">&#34;https://www.reddit.com/r/spacex/comments/aewp4r/iridium_8_recovery_thread/&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;reddit_media&#34;</span>: <span style="color:#ed9d13">&#34;https://www.reddit.com/r/spacex/comments/aeoxve/rspacex_iridium_next_8_media_thread_videos_images/&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;presskit&#34;</span>: <span style="color:#ed9d13">&#34;https://www.spacex.com/sites/spacex/files/iridium8presskit.pdf&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;article_link&#34;</span>: <span style="color:#ed9d13">&#34;https://spaceflightnow.com/2019/01/11/spacex-begins-2019-with-eighth-and-final-for-upgraded-iridium-network/&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;wikipedia&#34;</span>: <span style="color:#ed9d13">&#34;https://en.wikipedia.org/wiki/Iridium_satellite_constellation#Next-generation_constellation&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;video_link&#34;</span>: <span style="color:#ed9d13">&#34;https://youtu.be/VshdafZvwrg&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;youtube_id&#34;</span>: <span style="color:#ed9d13">&#34;VshdafZvwrg&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;flickr_images&#34;</span>: [
+      <span style="color:#ed9d13">&#34;https://farm5.staticflickr.com/4866/39745612523_14270b4b9d_o.jpg&#34;</span>,
+      <span style="color:#ed9d13">&#34;https://farm8.staticflickr.com/7833/39745612923_21aa442350_o.jpg&#34;</span>,
+      <span style="color:#ed9d13">&#34;https://farm5.staticflickr.com/4881/39745613173_e99b09c000_o.jpg&#34;</span>,
+      <span style="color:#ed9d13">&#34;https://farm8.staticflickr.com/7882/39745613513_6cdd4581af_o.jpg&#34;</span>,
+      <span style="color:#ed9d13">&#34;https://farm8.staticflickr.com/7807/39745613733_1a7b70e54a_o.jpg&#34;</span>,
+      <span style="color:#ed9d13">&#34;https://farm5.staticflickr.com/4891/39745614053_43855205bc_o.jpg&#34;</span>
     ]
   },
-  "details": "SpaceX's first flight of 2019 will be the eighth and final launch of its planned Iridium flights. Delivering 10 satellites to low earth orbit, this brings the total up to 75 and completes the Iridium NEXT constellation. This mission launches from SLC-4E at Vandenberg AFB. The booster is expected to land on JRTI.",
-  "upcoming": false,
-  "static_fire_date_utc": "2019-01-06T13:51:00.000Z",
-  "static_fire_date_unix": 1546782660,
-  "timeline": null
-}</code></pre>
-
+  <span style="color:#6ab825;font-weight:bold">&#34;details&#34;</span>: <span style="color:#ed9d13">&#34;SpaceX&#39;s first flight of 2019 will be the eighth and final launch of its planned Iridium flights. Delivering 10 satellites to low earth orbit, this brings the total up to 75 and completes the Iridium NEXT constellation. This mission launches from SLC-4E at Vandenberg AFB. The booster is expected to land on JRTI.&#34;</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;upcoming&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;static_fire_date_utc&#34;</span>: <span style="color:#ed9d13">&#34;2019-01-06T13:51:00.000Z&#34;</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;static_fire_date_unix&#34;</span>: <span style="color:#3677a9">1546782660</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;timeline&#34;</span>: <span style="color:#6ab825;font-weight:bold">null</span>
+}</code></pre></div>
 <p>Pero no queremos toda la información que nos da el API, solo queremos saber, estos tres valores: Number Flight, mission Name y description. para esto, usaremos Go y consumiremos la API.</p>
 
 <h3 id="pre-requisitos"><strong>Pre-requisitos</strong></h3>
@@ -292,151 +293,160 @@ Soy admirador total de Elon musk y de todas sus compañías, una de ellas es spa
 </p>
 
 <p>creamos un archivo llamado <strong>spaceX.go y</strong> escribimos las lineas básicas de nuestro archivo:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">package</span> main
 
-<pre class="wp-block-code"><code>package main 
+<span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {
 
-func main() {
-
-}</code></pre>
-
+}</code></pre></div>
 <p>podemos ejecutar nuestro archivo como <strong>go run spaceX.go</strong> o <strong>go build ./spaceX.go</strong></p>
 
 <p>Ahora crearemos el request hacia la API y parsearemos el output para tener los valores que necesitamos:, para eso necesitamos los siguientes librerías</p>
-
-<pre class="wp-block-code"><code> import (                                                                                                                                                                                         
-     "encoding/json"                                                                                                                                                                              
-     "fmt"                                                                                                                                                                                        
-     "io/ioutil"                                                                                                                                                                                  
-     "log"                                                                                                                                                                                        
-     "net/http"                                                                                                                                                                                   
-     "time"                                                                                                                                                                                       
- )   </code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">import</span> (
+<span style="color:#ed9d13">&#34;encoding/json&#34;</span>
+<span style="color:#ed9d13">&#34;fmt&#34;</span>
+<span style="color:#ed9d13">&#34;io/ioutil&#34;</span>
+<span style="color:#ed9d13">&#34;log&#34;</span>
+<span style="color:#ed9d13">&#34;net/http&#34;</span>
+<span style="color:#ed9d13">&#34;time&#34;</span>
+)</code></pre></div>
 <p>Tambien necesitamos escribir una estructura donde se extraera el texto del JSON, el nombre de las propiedades de la estructura deben iniciar con una letra mayúscula, para que puedan ser referenciadas como publicas</p>
-
-<pre class="wp-block-code"><code> type ship struct {                                                                                                                                                                               
-     Flight_number int    `json:"flight_number"`                                                                                                                                                  
-     Mission_name  string `json:"mission_name"`                                                                                                                                                   
-     Details       string `json:"details"`                                                                                                                                                        
- }   </code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">type</span> ship <span style="color:#6ab825;font-weight:bold">struct</span> {
+     Flight_number <span style="color:#6ab825;font-weight:bold">int</span>    <span style="color:#ed9d13">`json:&#34;flight_number&#34;`</span>
+     Mission_name  <span style="color:#6ab825;font-weight:bold">string</span> <span style="color:#ed9d13">`json:&#34;mission_name&#34;`</span>
+     Details       <span style="color:#6ab825;font-weight:bold">string</span> <span style="color:#ed9d13">`json:&#34;details&#34;`</span>
+ }</code></pre></div>
 <p>Realizamos el request y leemos la data con <strong>ioutil.ReadAll</strong></p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">     url := <span style="color:#ed9d13">&#34;https://api.spacexdata.com/v3/launches/latest&#34;</span>
+     spaceX := http.Client{
+         Timeout: time.Second * <span style="color:#3677a9">2</span>,
+     }
 
-<pre class="wp-block-code"><code>     url := "https://api.spacexdata.com/v3/launches/latest"                                                                                                                                       
-     spaceX := http.Client{                                                                                                                                                                       
-         Timeout: time.Second * 2,                                                                                                                                                                
-     }                                                                                                                                                                                            
-                                                                                                                                                                                                  
-     req, err := http.NewRequest(http.MethodGet, url, nil)                                                                                                                                        
-     if err != nil {                                                                                                                                                                              
-         log.Fatal(err)                                                                                                                                                                           
-     }                                                                                                                                                                                            
-                                                                                                                                                                                                  
-     res, getErr := spaceX.Do(req)                                                                                                                                                                
-     if getErr != nil {                                                                                                                                                                           
-         log.Fatal(getErr)                                                                                                                                                                        
-     }                                                                                                                                                                                            
-                                                                                                                                                                                                  
-     body, readErr := ioutil.ReadAll(res.Body)                                                                                                                                                    
-     if readErr != nil {                                                                                                                                                                          
-         log.Fatal(readErr)                                                                                                                                                                       
-     }                                                                                                                                                                                            </code></pre>
+     req, err := http.<span style="color:#447fcf">NewRequest</span>(http.MethodGet, url, <span style="color:#6ab825;font-weight:bold">nil</span>)
+     <span style="color:#6ab825;font-weight:bold">if</span> err != <span style="color:#6ab825;font-weight:bold">nil</span> {
+         log.<span style="color:#447fcf">Fatal</span>(err)
+     }
 
+     res, getErr := spaceX.<span style="color:#447fcf">Do</span>(req)
+     <span style="color:#6ab825;font-weight:bold">if</span> getErr != <span style="color:#6ab825;font-weight:bold">nil</span> {
+         log.<span style="color:#447fcf">Fatal</span>(getErr)
+     }
+
+     body, readErr := ioutil.<span style="color:#447fcf">ReadAll</span>(res.Body)
+     <span style="color:#6ab825;font-weight:bold">if</span> readErr != <span style="color:#6ab825;font-weight:bold">nil</span> {
+         log.<span style="color:#447fcf">Fatal</span>(readErr)
+     }</code></pre></div>
 <p>Instanciamos ship1 con base a la estructura ship que escribimos anteriormente, posteriormente usamos json.Unmarshal para encodear la data y almacenarla en el objeto que instanciamos</p>
-
-<pre class="wp-block-code"><code>     ship1 := ship{}                                                                                                                                                                              
-     jsonErr := json.Unmarshal(body, &ship1)                                                                                                                                                      
-     if jsonErr != nil {                                                                                                                                                                          
-         log.Fatal(jsonErr)                                                                                                                                                                       
-     }                                                                                                                                                                                            
-     </code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">&lt;pre class=<span style="color:#ed9d13">&#34;wp-block-code&#34;</span>&gt;&lt;code&gt;     ship1 := ship{}
+     jsonErr := json.<span style="color:#447fcf">Unmarshal</span>(body, &amp;ship1)
+     <span style="color:#6ab825;font-weight:bold">if</span> jsonErr != <span style="color:#6ab825;font-weight:bold">nil</span> {
+         log.<span style="color:#447fcf">Fatal</span>(jsonErr)
+     }</code></pre></div>
 <p>Por ultimo el resultado final que queremos mostrar:</p>
-
-<pre class="wp-block-code"><code>fmt.Println("Flight Number: ", ship1.Flight_number)                                                                                                                                          
-fmt.Println("Mission Name: ", ship1.Mission_name)                                                                                                                                            
-fmt.Println("Details: ", ship1.Details) </code></pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;Flight Number: &#34;</span>, ship1.Flight_number)
+fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;Mission Name: &#34;</span>, ship1.Mission_name)
+fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;Details: &#34;</span>, ship1.Details)</code></pre></div>
 <p>Nuestro código debe quedar algo asi:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">package</span> main
 
-<pre class="wp-block-code"><code>package main                                                                                                                                                                                     
-                                                                                                                                                                                                  
- import (                                                                                                                                                                                         
-     "encoding/json"                                                                                                                                                                              
-     "fmt"                                                                                                                                                                                        
-     "io/ioutil"                                                                                                                                                                                  
-     "log"                                                                                                                                                                                        
-     "net/http"                                                                                                                                                                                   
-     "time"                                                                                                                                                                                       
- )                                                                                                                                                                                                
-                                                                                                                                                                                                  
- type ship struct {                                                                                                                                                                               
-     Flight_number int    `json:"flight_number"`                                                                                                                                                  
-     Mission_name  string `json:"mission_name"`                                                                                                                                                   
-     Details       string `json:"details"`                                                                                                                                                        
- }                                                                                                                                                                                                
-                                                                                                                                                                                                  
- func main() {                                                                                                                                                                                    
-                                                                                                                                                                                                  
-     url := "https://api.spacexdata.com/v3/launches/latest"                                                                                                                                       
-     spaceX := http.Client{                                                                                                                                                                       
-         Timeout: time.Second * 2,                                                                                                                                                                
-     }                                                                                                                                                                                            
-                                                                                                                                                                                                  
-     req, err := http.NewRequest(http.MethodGet, url, nil)                                                                                                                                        
-     if err != nil {                                                                                                                                                                              
-         log.Fatal(err)                                                                                                                                                                           
-     }                                                                                                                                                                                            
-                                                                                                                                                                                                  
-     res, getErr := spaceX.Do(req)                                                                                                                                                                
-     if getErr != nil {                                                                                                                                                                           
-         log.Fatal(getErr)                                                                                                                                                                        
-     }                                                                                                                                                                                            
-                                                                                                                                                                                                  
-     body, readErr := ioutil.ReadAll(res.Body)                                                                                                                                                    
-     if readErr != nil {                                                                                                                                                                          
-         log.Fatal(readErr)                                                                                                                                                                       
-     }                                                                                                                                                                                            
-     ship1 := ship{}                                                                                                                                                                              
-     jsonErr := json.Unmarshal(body, &ship1)                                                                                                                                                      
-     if jsonErr != nil {                                                                                                                                                                          
-         log.Fatal(jsonErr)                                                                                                                                                                       
-     }                                                                                                                                                                                            
-     fmt.Println("Flight Number: ", ship1.Flight_number)                                                                                                                                          
-     fmt.Println("Mission Name: ", ship1.Mission_name)                                                                                                                                            
-     fmt.Println("Details: ", ship1.Details)                                                                                                                                                                           
- } </code></pre>
+ <span style="color:#6ab825;font-weight:bold">import</span> (
+     <span style="color:#ed9d13">&#34;encoding/json&#34;</span>
+     <span style="color:#ed9d13">&#34;fmt&#34;</span>
+     <span style="color:#ed9d13">&#34;io/ioutil&#34;</span>
+     <span style="color:#ed9d13">&#34;log&#34;</span>
+     <span style="color:#ed9d13">&#34;net/http&#34;</span>
+     <span style="color:#ed9d13">&#34;time&#34;</span>
+ )
 
+ <span style="color:#6ab825;font-weight:bold">type</span> ship <span style="color:#6ab825;font-weight:bold">struct</span> {
+     Flight_number <span style="color:#6ab825;font-weight:bold">int</span>    <span style="color:#ed9d13">`json:&#34;flight_number&#34;`</span>
+     Mission_name  <span style="color:#6ab825;font-weight:bold">string</span> <span style="color:#ed9d13">`json:&#34;mission_name&#34;`</span>
+     Details       <span style="color:#6ab825;font-weight:bold">string</span> <span style="color:#ed9d13">`json:&#34;details&#34;`</span>
+ }
+
+ <span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {
+
+     url := <span style="color:#ed9d13">&#34;https://api.spacexdata.com/v3/launches/latest&#34;</span>
+     spaceX := http.Client{
+         Timeout: time.Second * <span style="color:#3677a9">2</span>,
+     }
+
+     req, err := http.<span style="color:#447fcf">NewRequest</span>(http.MethodGet, url, <span style="color:#6ab825;font-weight:bold">nil</span>)
+     <span style="color:#6ab825;font-weight:bold">if</span> err != <span style="color:#6ab825;font-weight:bold">nil</span> {
+         log.<span style="color:#447fcf">Fatal</span>(err)
+     }
+
+     res, getErr := spaceX.<span style="color:#447fcf">Do</span>(req)
+     <span style="color:#6ab825;font-weight:bold">if</span> getErr != <span style="color:#6ab825;font-weight:bold">nil</span> {
+         log.<span style="color:#447fcf">Fatal</span>(getErr)
+     }
+
+     body, readErr := ioutil.<span style="color:#447fcf">ReadAll</span>(res.Body)
+     <span style="color:#6ab825;font-weight:bold">if</span> readErr != <span style="color:#6ab825;font-weight:bold">nil</span> {
+         log.<span style="color:#447fcf">Fatal</span>(readErr)
+     }
+     ship1 := ship{}
+     jsonErr := json.<span style="color:#447fcf">Unmarshal</span>(body, &amp;ship1)
+     <span style="color:#6ab825;font-weight:bold">if</span> jsonErr != <span style="color:#6ab825;font-weight:bold">nil</span> {
+         log.<span style="color:#447fcf">Fatal</span>(jsonErr)
+     }
+     fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;Flight Number: &#34;</span>, ship1.Flight_number)
+     fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;Mission Name: &#34;</span>, ship1.Mission_name)
+     fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;Details: &#34;</span>, ship1.Details)
+ }</code></pre></div>
 <p>Guardamos y ejecutamos y debemos obtener un output como este:</p>
-
-<pre class="wp-block-code"><code>Flight Number:  74
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-code" data-lang="code">Flight Number:  74
 Mission Name:  Iridium NEXT Mission 8
-Details:  SpaceX's first flight of 2019 will be the eighth and final launch of its planned Iridium flights. Delivering 10 satellites to low earth orbit, this brings the total up to 75 and completes the Iridium NEXT constellation. This mission launches from SLC-4E at Vandenberg AFB. The booster is expected to land on JRTI.
-</code></pre>
-
+Details:  SpaceX&#39;s first flight of 2019 will be the eighth and final launch of its planned Iridium flights. Delivering 10 satellites to low earth orbit, this brings the total up to 75 and completes the Iridium NEXT constellation. This mission launches from SLC-4E at Vandenberg AFB. The booster is expected to land on JRTI.</code></pre></div>
 <p>Con esto, logramos escribir con Go un HTTP Client que realiza un Request para consumir la API de spaceX y obtener un poco de información de la ultima nave lanzada al espacio.</p>
 
 <p>Mas información</p>
 
 <p><a href="https://golang.org/doc/" target="_blank">https://golang.org/doc/</a></p>
+
             </div>
+
         </article>
 
         <hr />
 
         <div class="post-info">
   				<p>
-  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="tags/go">go</a></span><span class="tag"><a href="tags/golang">Golang</a></span><span class="tag"><a href="tags/json">Json</a></span><span class="tag"><a href="tags/spacex">spaceX</a></span>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="/tags/go">go</a></span><span class="tag"><a href="/tags/golang">Golang</a></span><span class="tag"><a href="/tags/json">Json</a></span>
   				</p>
   			</div>
 
-        
+
+                    <div id="comments" class="thin">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "braybaut" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
     </main>
 
             </div>
 
             
-                <footer class="footer">
+                
+
+
+<footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
             <span>&copy; 2019</span>
@@ -467,8 +477,15 @@ Details:  SpaceX's first flight of 2019 will be the eighth and final launch of i
 
 
 
-
-<script type="text/javascript" src="/js/bundle.4b80fbbfab88198dcef181b034822e60a3e68b1c128d1dc05392a32943a18ec2f866fbcd9ce31dcf84134397161647ad605ea5c25ecf12e5fcf9d28b47e64bb5.js" integrity="sha512-S4D7v6uIGY3O8YGwNIIuYKPmixwSjR3AU5KjKUOhjsL4ZvvNnOMdz4QTQ5cWFketYF6lwl7PEuX8&#43;dKLR&#43;ZLtQ=="></script>
+<script type="text/javascript" src="/js/bundle.dd80b4936d9208f7384932ce622316900942c58cd138dd354b6a863e212c7fd1c951c7c3e5b83585da6297165e02ddfddbe523bbb46478a41628469263b7f000.js" integrity="sha512-3YC0k22SCPc4STLOYiMWkAlCxYzRON01S2qGPiEsf9HJUcfD5bg1hdpilxZeAt392&#43;Uju7RkeKQWKEaSY7fwAA=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-69725711-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 
 

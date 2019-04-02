@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker Compose on Braybaut</title>
-    <link>/tags/docker-compose/</link>
+    <link>/tags/docker-compose.html</link>
     <description>Recent content in Docker Compose on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Traefik: Load Balancer y Reverse Proxy para Docker</title>
-      <link>/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</link>
+      <link>/posts/traefik-load-balancer-y-reverse-proxy-para-docker.html</link>
       <pubDate>Wed, 25 Oct 2017 22:25:26 +0000</pubDate>
       
-      <guid>/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</guid>
+      <guid>/posts/traefik-load-balancer-y-reverse-proxy-para-docker.html</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/traefik.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Cuando trabajamos con docker en ambientes productivos, la mayoría de casos usamos tecnologías para orquestar y poder ofrecer alta disponibilidad sobre nuestros micro servicios, debido a esto, nosotros corremos multiples aplicaciones sobre un mismo host que haga parte de nuestro stack de orquestación. Para que estas aplicaciones puedan ser consumidas sin necesidad de exponer un puerto, necesitamos un reverse proxy para poder consumir estos servicios desde un único puerto.&lt;/p&gt;
@@ -26,10 +26,10 @@
     
     <item>
       <title>Howto: Instalando Rocket.Chat en Docker</title>
-      <link>/posts/howto-instalando-rocket.chat-en-docker/</link>
+      <link>/posts/howto-instalando-rocket.chat-en-docker.html</link>
       <pubDate>Tue, 07 Mar 2017 06:54:30 +0000</pubDate>
       
-      <guid>/posts/howto-instalando-rocket.chat-en-docker/</guid>
+      <guid>/posts/howto-instalando-rocket.chat-en-docker.html</guid>
       <description>&lt;p&gt;&lt;center&gt;&lt;img src=&#34;/images/rocketchat1.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Rocket.chat para mi es una de las mejores plataformas de chat &lt;strong&gt;OpenSource&lt;/strong&gt; que existen, es muy flexible a la hora de adaptarlo y lo mejor, tiene cliente para toda las plataformas.&lt;/p&gt;

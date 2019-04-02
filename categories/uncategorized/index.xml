@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Uncategorized on Braybaut</title>
-    <link>/categories/uncategorized/</link>
+    <link>/categories/uncategorized.html</link>
     <description>Recent content in Uncategorized on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Creando un cluster de kubernetes en GCP con terraform</title>
-      <link>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</link>
+      <link>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform.html</link>
       <pubDate>Sun, 03 Feb 2019 21:44:10 +0000</pubDate>
       
-      <guid>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</guid>
+      <guid>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform.html</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/terra-gcp-kubernetes2.png&#34; alt=&#34;Kubernetes&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
@@ -42,10 +42,10 @@
     
     <item>
       <title>Traefik: Load Balancer y Reverse Proxy para Docker</title>
-      <link>/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</link>
+      <link>/posts/traefik-load-balancer-y-reverse-proxy-para-docker.html</link>
       <pubDate>Wed, 25 Oct 2017 22:25:26 +0000</pubDate>
       
-      <guid>/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</guid>
+      <guid>/posts/traefik-load-balancer-y-reverse-proxy-para-docker.html</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/traefik.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Cuando trabajamos con docker en ambientes productivos, la mayoría de casos usamos tecnologías para orquestar y poder ofrecer alta disponibilidad sobre nuestros micro servicios, debido a esto, nosotros corremos multiples aplicaciones sobre un mismo host que haga parte de nuestro stack de orquestación. Para que estas aplicaciones puedan ser consumidas sin necesidad de exponer un puerto, necesitamos un reverse proxy para poder consumir estos servicios desde un único puerto.&lt;/p&gt;
@@ -55,10 +55,10 @@
     
     <item>
       <title>Docker: Ingresar al bash de un contenedor iniciado | Script</title>
-      <link>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</link>
+      <link>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script.html</link>
       <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
       
-      <guid>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</guid>
+      <guid>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script.html</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/docker.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ultimamente he trabajado mucho con docker y en el maravilloso recorrido que he tenido con docker se me presento un problema gigante,  inicio el contenedor con su servicio pero por X o Y motivo quiero ingresar al bash y el &amp;#8220;docker attach&amp;#8221; no funciona porque el docker no lo inicie con /bin/bash&lt;/p&gt;

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on Braybaut</title>
-    <link>/tags/go/</link>
+    <link>/tags/go.html</link>
     <description>Recent content in Go on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Parseando JSON con Golang y las naves de spaceX</title>
-      <link>/posts/parseando-json-con-golang-y-las-naves-de-spacex/</link>
+      <link>/posts/parseando-json-con-golang-y-las-naves-de-spacex.html</link>
       <pubDate>Sun, 10 Feb 2019 21:52:53 +0000</pubDate>
       
-      <guid>/posts/parseando-json-con-golang-y-las-naves-de-spacex/</guid>
+      <guid>/posts/parseando-json-con-golang-y-las-naves-de-spacex.html</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/maxresdefault.jpg&#34; alt=&#34;Golang&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Golang se ha convertido en uno de mis lenguajes favoritos y hoy escribiré de como podemos usar go para poder consumir la API de spaceX y obtener información de las naves lanzadas al espacio&lt;/p&gt;

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubernetes on Braybaut</title>
-    <link>/tags/kubernetes/</link>
+    <link>/tags/kubernetes.html</link>
     <description>Recent content in Kubernetes on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Creando un cluster de kubernetes en GCP con terraform</title>
-      <link>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</link>
+      <link>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform.html</link>
       <pubDate>Sun, 03 Feb 2019 21:44:10 +0000</pubDate>
       
-      <guid>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</guid>
+      <guid>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform.html</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/terra-gcp-kubernetes2.png&#34; alt=&#34;Kubernetes&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Opensource on Braybaut</title>
-    <link>/tags/opensource/</link>
+    <link>/tags/opensource.html</link>
     <description>Recent content in Opensource on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Howto: Instalando Rocket.Chat en Docker</title>
-      <link>/posts/howto-instalando-rocket.chat-en-docker/</link>
+      <link>/posts/howto-instalando-rocket.chat-en-docker.html</link>
       <pubDate>Tue, 07 Mar 2017 06:54:30 +0000</pubDate>
       
-      <guid>/posts/howto-instalando-rocket.chat-en-docker/</guid>
+      <guid>/posts/howto-instalando-rocket.chat-en-docker.html</guid>
       <description>&lt;p&gt;&lt;center&gt;&lt;img src=&#34;/images/rocketchat1.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Rocket.chat para mi es una de las mejores plataformas de chat &lt;strong&gt;OpenSource&lt;/strong&gt; que existen, es muy flexible a la hora de adaptarlo y lo mejor, tiene cliente para toda las plataformas.&lt;/p&gt;

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vtiger 6.0 on Braybaut</title>
-    <link>/tags/vtiger-6.0/</link>
+    <link>/tags/vtiger-6.0.html</link>
     <description>Recent content in Vtiger 6.0 on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Autentificación LDAP Vtiger CRM 6</title>
-      <link>/posts/autentificaci%C3%B3n-ldap-vtiger-crm-6/</link>
+      <link>/posts/autentificaci%C3%B3n-ldap-vtiger-crm-6.html</link>
       <pubDate>Tue, 19 Jan 2016 01:43:11 +0000</pubDate>
       
-      <guid>/posts/autentificaci%C3%B3n-ldap-vtiger-crm-6/</guid>
+      <guid>/posts/autentificaci%C3%B3n-ldap-vtiger-crm-6.html</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/vtiger1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Vtiger es un CRM de código abierto muy potente que trata de acercarse  a grandes crms como salesforce y SugarCRM, pero en esta ocasión veremos como autentificarlo hacia LDAP.&lt;/p&gt;
