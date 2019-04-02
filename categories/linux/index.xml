@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Braybaut</title>
-    <link>https://practical-colden-971ce7.netlify.com/categories/linux/</link>
+    <link>/categories/linux/</link>
     <description>Recent content in Linux on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 07 Mar 2017 06:54:30 +0000</lastBuildDate>
     
-	<atom:link href="https://practical-colden-971ce7.netlify.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Howto: Instalando Rocket.Chat en Docker</title>
-      <link>https://practical-colden-971ce7.netlify.com/posts/howto-instalando-rocket.chat-en-docker/</link>
+      <link>/posts/howto-instalando-rocket.chat-en-docker/</link>
       <pubDate>Tue, 07 Mar 2017 06:54:30 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/posts/howto-instalando-rocket.chat-en-docker/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?ssl=1&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-824&#34; src=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?resize=546%2C126&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;546&#34; height=&#34;126&#34; srcset=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?w=546&amp;ssl=1 546w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?resize=300%2C69&amp;ssl=1 300w&#34; sizes=&#34;(max-width: 546px) 100vw, 546px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+      <guid>/posts/howto-instalando-rocket.chat-en-docker/</guid>
+      <description>&lt;p&gt;&lt;center&gt;&lt;img src=&#34;/images/rocketchat1.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Rocket.chat para mi es una de las mejores plataformas de chat &lt;strong&gt;OpenSource&lt;/strong&gt; que existen, es muy flexible a la hora de adaptarlo y lo mejor, tiene cliente para toda las plataformas.&lt;/p&gt;
 
@@ -30,32 +30,19 @@
 &lt;h3 id=&#34;docker&#34;&gt;Docker:&lt;/h3&gt;
 
 &lt;p&gt;Instalamos docker usando el script que se encuentra en su pagina oficial.&lt;/p&gt;
-
-&lt;pre class=&#34;lang:default decode:true&#34;&gt;wget -qO- https://get.docker.com/ | sh&lt;/pre&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;wget -qO- https://get.docker.com/ | sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Al finalizar el proceso usamos systemctl para subir el servicio y dejarlo habilitado para que inicie cuando se inicie el servidor.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;systemctl start enable
 
-&lt;pre class=&#34;lang:default decode:true&#34;&gt;systemctl start enable&lt;/pre&gt;
-
-&lt;pre class=&#34;lang:default decode:true &#34;&gt;systemcl enable docker&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
-      <title>Compilando Spice-xpi en Ubuntu.</title>
-      <link>https://practical-colden-971ce7.netlify.com/posts/compilando-spice-xpi-en-ubuntu./</link>
-      <pubDate>Wed, 20 May 2015 01:33:00 +0000</pubDate>
-      
-      <guid>https://practical-colden-971ce7.netlify.com/posts/compilando-spice-xpi-en-ubuntu./</guid>
-      <description>Tenia olvidado mi blog personal, desde que ingrese a la universidad, el tiempo empleado en el blog bajo muchisimo pero bueno ya poco a poco estoy sacando tiempo para el blog.
- En SEAQ somos Partner de Red Hat en Colombia y constantemente debemos tener acceso remoto a los guests que corren en Red Hat Enterprise Virtualization RHEV, para poder tener acceso remoto a estos guests, se requiere de spice-xpi, Un complemento para firefox que nos permite iniciar el acceso remoto a los guest.</description>
+systemcl enable docker&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
       <title>Introducción Vpn Full Mesh con Tinc y configuración en Raspberry Pi</title>
-      <link>https://practical-colden-971ce7.netlify.com/posts/introducci%C3%B3n-vpn-full-mesh-con-tinc-y-configuraci%C3%B3n-en-raspberry-pi/</link>
+      <link>/posts/introducci%C3%B3n-vpn-full-mesh-con-tinc-y-configuraci%C3%B3n-en-raspberry-pi/</link>
       <pubDate>Mon, 24 Mar 2014 06:18:00 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/posts/introducci%C3%B3n-vpn-full-mesh-con-tinc-y-configuraci%C3%B3n-en-raspberry-pi/</guid>
+      <guid>/posts/introducci%C3%B3n-vpn-full-mesh-con-tinc-y-configuraci%C3%B3n-en-raspberry-pi/</guid>
       <description>http://platform.twitter.com/widgets.js   &amp;lt;div class=&amp;quot;separator&amp;quot; style=&amp;quot;clear:both;text-align:center;&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;https://braybaut.files.wordpress.com/2014/03/8000d-tinclogo1.png?w=648&amp;quot; style=&amp;quot;margin-left:1em;margin-right:1em;&amp;quot;&amp;gt;&amp;lt;img border=&amp;quot;0&amp;quot; src=&amp;quot;https://braybaut.files.wordpress.com/2014/03/8000d-tinclogo1.png?w=648&amp;quot; data-recalc-dims=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;p&amp;gt; Con tinc Podemos crear una &amp;lt;b&amp;gt;VPN &amp;lt;/b&amp;gt;tipo full mesh(&amp;lt;i&amp;gt;Nodos conectados entre s&amp;lt;/i&amp;gt;i), Estableciendo la comunicación de todos los host conectados a cada nodo. Cabe aclarar que cada nodo es el servidor donde esta configurado tinc. &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; Tinc esta lanzada bajo licencia GPL que en pocas palabras podemos decir que es &amp;lt;b&amp;gt;Software Libre =D&amp;lt;/b&amp;gt;, este maravilloso protocolo nos ofrece unas caracteristicas que son: &amp;lt;/p&amp;gt; &amp;lt;ul style=&amp;quot;text-align:left;&amp;quot;&amp;gt; &amp;lt;li&amp;gt; Encryptation, Authenticatión and compressión: Comprime los paquetes antes de enviarlos, encripta los datos para que uestra información viaje segura en este medio tan inseguro como lo es la internet, ofrece la autentificación para que los nodos desconocidos no se puedan conectar a nuestra red.</description>
     </item>
     

@@ -7,14 +7,13 @@
 <meta name="author"
     content="braybaut">
 <meta name="description"
-    content="
-Traefik es una herramienta muy potente gracias a que soporta varios providers como backend, en este caso usaremos traefik para que nos sirva como Dynamic Reverse Proxy sobre un cluster de Docker Swarm en Amazon Web Services.
+    content="Traefik es una herramienta muy potente gracias a que soporta varios providers como backend, en este caso usaremos traefik para que nos sirva como Dynamic Reverse Proxy sobre un cluster de Docker Swarm en Amazon Web Services.
 Componentes: 3 Instancias (1 Manager y 2 worker): Manager: Esta instancia sera la que controlara todo el cluster, en ella desplegaremos traefik y los servicios que no son worker, esta instancia estará sobre una subnet , la cual llamaremos &amp;#8220;subnet frontend&amp;#8221; y tendrá su respectivo Secure Group
 Worker: las instancias llamadas workers son dichas instancias donde correran nuestros servicios desplegados en AWS, sin tener en cuenta los servicios de &amp;#8220;management&amp;#8221; que podemos desplegar en la subnet de frontend, aquí desplegaremos los servicios que necesitemos como un web server, un micro servicio, etc, estas dos instancias estarán sobre otra subnet, la cual la llamaremos &amp;#8220;subnet backend&amp;#8221; y tendrá su respectivo Secure Group
 " />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://practical-colden-971ce7.netlify.com/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws/" />
+<link rel="canonical" href="/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws/" />
 
 
 <title>
@@ -31,16 +30,20 @@ Worker: las instancias llamadas workers son dichas instancias donde correran nu
     type="text/css">
 
 
-<link rel="stylesheet" href="https://practical-colden-971ce7.netlify.com/scss/main.min.2cb2cfcb2d25c14d702e06c24f9c05a189f6cbc9ef31f0a235fd739b411a5a1b.css">
+<link rel="stylesheet" href="/scss/main.min.2cb2cfcb2d25c14d702e06c24f9c05a189f6cbc9ef31f0a235fd739b411a5a1b.css">
 
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="https://practical-colden-971ce7.netlify.com/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://practical-colden-971ce7.netlify.com/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://practical-colden-971ce7.netlify.com/favicon-16x16.png">
-<link rel="manifest" href="https://practical-colden-971ce7.netlify.com/site.webmanifest">
-<link rel="mask-icon" href="https://practical-colden-971ce7.netlify.com/safari-pinned-tab.svg" color="#252627">
-<link rel="shortcut icon" href="https://practical-colden-971ce7.netlify.com/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/css/styles.scss">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627">
 <meta itemprop="name" content="Utilizando Traefik como Dynamic Reverse Proxy en Docker Swarm sobre  AWS">
 <meta itemprop="description" content="
@@ -62,7 +65,7 @@ Worker: las instancias llamadas workers son dichas instancias donde correran nu
 
 
 
-<meta itemprop="keywords" content="amazon,AWS,Docker,dockerswarm,linux,reverseproxy,Traefik,tutoriales," />
+<meta itemprop="keywords" content="amazon,AWS,Docker,dockerswarm,linux,Traefik,tutoriales," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Utilizando Traefik como Dynamic Reverse Proxy en Docker Swarm sobre  AWS"/>
 <meta name="twitter:description" content="
@@ -92,13 +95,14 @@ Worker: las instancias llamadas workers son dichas instancias donde correran nu
 
 
 
+
     </head>
 
     <body class="dark-theme">
         <div class="container">
             <header class="header">
     <span class="header__inner">
-        <a href="https://practical-colden-971ce7.netlify.com/" style="text-decoration: none;">
+        <a href="/" style="text-decoration: none;">
     <div class="logo">
         
             <span class="logo__mark">></span>
@@ -112,7 +116,7 @@ Worker: las instancias llamadas workers son dichas instancias donde correran nu
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://practical-colden-971ce7.netlify.com/about">About</a></li><li><a href="https://practical-colden-971ce7.netlify.com/posts">Archive</a></li><li><a href="https://practical-colden-971ce7.netlify.com/archive">Blog</a></li>
+    <ul class="menu__inner"><li><a href="/about">About</a></li><li><a href="/posts">Archive</a></li><li><a href="/archive">Blog</a></li>
     </ul>
 </nav>
 
@@ -145,12 +149,12 @@ Worker: las instancias llamadas workers son dichas instancias donde correran nu
         </div>
 
         <article>
-            <h2 class="post-title"><a href="https://practical-colden-971ce7.netlify.com/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws/">Utilizando Traefik como Dynamic Reverse Proxy en Docker Swarm sobre  AWS</a></h2>
+            <h2 class="post-title"><a href="/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws/">Utilizando Traefik como Dynamic Reverse Proxy en Docker Swarm sobre  AWS</a></h2>
 
             
 
             <div class="post-content">
-                <p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-890" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=648%2C354&#038;ssl=1" alt="" width="648" height="354" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?w=1921&ssl=1 1921w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=300%2C164&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=768%2C420&ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=1024%2C560&ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=750%2C410&ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?resize=1140%2C624&ssl=1 1140w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/internal.png?w=1296&ssl=1 1296w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+                <p><img src="/images/traefik.png" alt="image1" /></p>
 
 <p>Traefik es una herramienta muy potente gracias a que soporta varios providers como backend, en este caso usaremos traefik para que nos sirva como <strong>Dynamic Reverse Proxy</strong> sobre un cluster de <strong>Docker Swarm</strong> en <strong>Amazon Web Services</strong>.</p>
 
@@ -175,11 +179,9 @@ Worker: las instancias llamadas workers son dichas instancias donde correran nu
 <h3 id="instalación-de-docker-y-despliegue-de-docker-swarm">Instalación de Docker y despliegue de Docker Swarm</h3>
 
 <p>Voy a concluir que ya se tiene desplegadas las instancias en cada subnet y se utilizo la ami de amazon linux, para instalar docker y dejarlo corriendo sin problemas es necesario ejecutar los siguientes comandos en las 3 instancias <strong>( Manager  y workers )</strong></p>
-
-<pre class="theme:github font:consolas font-size:15 line-height:18 lang:default decode:true">sudo yum install docker
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo yum install docker
 sudo service docker start
-sudo chkconfig docker on</pre>
-
+sudo chkconfig docker on</code></pre></div>
 <p>Con estos comandos, docker ya esta instalado, ahora si, vamos a crear un cluster de Docker Swarm</p>
 
 <h3 id="inicializando-el-cluster">Inicializando el Cluster</h3>
@@ -190,7 +192,7 @@ sudo chkconfig docker on</pre>
 
 <p>Obtendremos un output parecido a este:</p>
 
-<p><a href="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-02-42.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-900" src="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-02-42.png?resize=648%2C87&#038;ssl=1" alt="" width="648" height="87" srcset="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-02-42.png?w=1474&ssl=1 1474w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-02-42.png?resize=300%2C40&ssl=1 300w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-02-42.png?resize=768%2C103&ssl=1 768w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-02-42.png?resize=1024%2C138&ssl=1 1024w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-02-42.png?w=1296&ssl=1 1296w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+<p><img src="/images/traefik1.png" alt="image1" /></p>
 
 <p>El output nos genera un token, este token lo usamos para unir los worker al cluster, ahora ejecutamos el siguiente comando en cada worker ( cambiando la ip de su respectiva instancia )</p>
 
@@ -210,7 +212,7 @@ sudo chkconfig docker on</pre>
 
 <pre class="theme:github font:consolas font-size:15 line-height:18 lang:default decode:true ">docker node ls</pre>
 
-<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-15-33.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-904" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-15-33.png?resize=648%2C117&#038;ssl=1" alt="" width="648" height="117" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-15-33.png?w=1385&ssl=1 1385w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-15-33.png?resize=300%2C54&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-15-33.png?resize=768%2C139&ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-15-33.png?resize=1024%2C186&ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-15-33.png?w=1296&ssl=1 1296w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+<p><img src="/images/traefik2.png" alt="images3" /></p>
 
 <p>Finalmente, creamos una red tipo overlay para nuestro cluster, ejecutamos el siguiente comando desde el manager:</p>
 
@@ -239,7 +241,7 @@ sudo chkconfig docker on</pre>
 
 <pre class="theme:github font:consolas font-size:15 line-height:18 lang:default decode:true">docker service ls</pre>
 
-<p><a href="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-28-59.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-907" src="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-28-59.png?resize=648%2C58&#038;ssl=1" alt="" width="648" height="58" srcset="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-28-59.png?w=1841&ssl=1 1841w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-28-59.png?resize=300%2C27&ssl=1 300w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-28-59.png?resize=768%2C69&ssl=1 768w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-28-59.png?resize=1024%2C92&ssl=1 1024w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-28-59.png?w=1296&ssl=1 1296w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+<p><img src="/images/traefik3.png" alt="image3" /></p>
 
 <p>Como se observa en la imagen, vemos que se encuentra el servicio traefik desplegado y a la escucha de request por el puerto 80</p>
 
@@ -269,21 +271,20 @@ sudo chkconfig docker on</pre>
     --label traefik.backend=app02 \
     katacoda/docker-http-server</pre>
 
-<p>Observamos los servicios desplegados:</p>
-
-<p><a href="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-46-02.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-908" src="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-46-02.png?resize=648%2C67&#038;ssl=1" alt="" width="648" height="67" srcset="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-46-02.png?w=1789&ssl=1 1789w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-46-02.png?resize=300%2C31&ssl=1 300w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-46-02.png?resize=768%2C79&ssl=1 768w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-46-02.png?resize=1024%2C105&ssl=1 1024w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-46-02.png?w=1296&ssl=1 1296w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+<p>Observamos los servicios desplegados:
+<img src="/images/traefik4.png" alt="image4" /></p>
 
 <p>Observamos que tenemos nuestro traefik y  nuestras dos apps (app01 y app02)</p>
 
 <p>Con esto, logramos desplegar dos apps en nuestro Swarm Cluster, ahora, podemos acceder desde nuestro balanceador a nuestras dos Apps.</p>
 
-<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-48-44.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-909" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-48-44.png?resize=648%2C66&#038;ssl=1" alt="" width="648" height="66" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-48-44.png?w=1065&ssl=1 1065w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-48-44.png?resize=300%2C31&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-48-44.png?resize=768%2C79&ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-48-44.png?resize=1024%2C105&ssl=1 1024w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+<p><img src="/images/traefik5.png" alt="image4" /></p>
 
 <p>Con los anteriores Request, observamos que app01 se esta ejecutando en el contenedor d066207b1e23  y el app02 corre en el contenedor 80f164e6b5de</p>
 
 <p>Cada contenedor se encuentra en una worker diferente:</p>
 
-<p><a href="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-53-16.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-910" src="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-53-16.png?resize=588%2C637&#038;ssl=1" alt="" width="588" height="637" srcset="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-53-16.png?w=588&ssl=1 588w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-53-16.png?resize=277%2C300&ssl=1 277w" sizes="(max-width: 588px) 100vw, 588px" data-recalc-dims="1" /></a></p>
+<p><center> <img src="/images/traefik6.png" alt="image4" /> </center></p>
 
 <p>Podemos escalar  nuestros servicios y observar como funciona el balanceo de nuestro traefik:</p>
 
@@ -294,13 +295,13 @@ sudo chkconfig docker on</pre>
 
 <p>Realizamos peticiones a nuestro app con el endpoint app01.braybaut.com</p>
 
-<p><a href="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-56-11.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-911" src="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-56-11.png?resize=648%2C157&#038;ssl=1" alt="" width="648" height="157" srcset="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-56-11.png?w=1077&ssl=1 1077w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-56-11.png?resize=300%2C73&ssl=1 300w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-56-11.png?resize=768%2C186&ssl=1 768w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-56-11.png?resize=1024%2C248&ssl=1 1024w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+<p><img src="/images/traefik7.png" alt="image4" /></p>
 
 <p>Como se observa en la imagen, en cada request responde un container diferente, esto quiere decir que traefik realiza el balanceo del trafico de una manera correcta.</p>
 
 <p>Vemos que nuestro servicio se encuentra escalado:</p>
 
-<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-57-26.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-912" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-57-26.png?resize=592%2C639&#038;ssl=1" alt="" width="592" height="639" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-57-26.png?w=592&ssl=1 592w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/12/Screenshot-from-2017-12-21-19-57-26.png?resize=278%2C300&ssl=1 278w" sizes="(max-width: 592px) 100vw, 592px" data-recalc-dims="1" /></a></p>
+<p><center> <img src="/images/traefik8.png" alt="image4" /> </center></p>
 
 <p>Esto es todo, traefik balancea nuestro trafico de una manera dinámica, sin importar el momento en que nuestro servicio escale, traefik sera capas de reconocer los nuevos container y balancear dicho trafico.</p>
 
@@ -314,27 +315,54 @@ sudo chkconfig docker on</pre>
 
         <hr />
 
+                    <div id="comments" class="thin">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "braybaut" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+</div>
         <div class="post-info">
   				<p>
-  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://practical-colden-971ce7.netlify.com/tags/amazon">amazon</a></span><span class="tag"><a href="https://practical-colden-971ce7.netlify.com/tags/aws">AWS</a></span><span class="tag"><a href="https://practical-colden-971ce7.netlify.com/tags/docker">Docker</a></span><span class="tag"><a href="https://practical-colden-971ce7.netlify.com/tags/dockerswarm">dockerswarm</a></span><span class="tag"><a href="https://practical-colden-971ce7.netlify.com/tags/linux">linux</a></span><span class="tag"><a href="https://practical-colden-971ce7.netlify.com/tags/reverseproxy">reverseproxy</a></span><span class="tag"><a href="https://practical-colden-971ce7.netlify.com/tags/traefik">Traefik</a></span><span class="tag"><a href="https://practical-colden-971ce7.netlify.com/tags/tutoriales">tutoriales</a></span>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="/tags/amazon">amazon</a></span><span class="tag"><a href="/tags/aws">AWS</a></span><span class="tag"><a href="/tags/docker">Docker</a></span><span class="tag"><a href="/tags/dockerswarm">dockerswarm</a></span><span class="tag"><a href="/tags/linux">linux</a></span><span class="tag"><a href="/tags/traefik">Traefik</a></span><span class="tag"><a href="/tags/tutoriales">tutoriales</a></span>
   				</p>
   			</div>
 
-        
+                     
     </main>
 
             </div>
 
             
-                <footer class="footer">
+                
+
+
+<footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
             <span>&copy; 2019</span>
             
-                <span><a href="https://practical-colden-971ce7.netlify.com/">Braybaut</a></span>
+                <span><a href="">Braybaut</a></span>
             
             <span></span>
-            <span> <a href="https://practical-colden-971ce7.netlify.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            <span> <a href="posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
         </div>
     </div>
     <div class="footer__inner">
@@ -357,8 +385,15 @@ sudo chkconfig docker on</pre>
 
 
 
-
-<script type="text/javascript" src="https://practical-colden-971ce7.netlify.com/js/bundle.4b80fbbfab88198dcef181b034822e60a3e68b1c128d1dc05392a32943a18ec2f866fbcd9ce31dcf84134397161647ad605ea5c25ecf12e5fcf9d28b47e64bb5.js" integrity="sha512-S4D7v6uIGY3O8YGwNIIuYKPmixwSjR3AU5KjKUOhjsL4ZvvNnOMdz4QTQ5cWFketYF6lwl7PEuX8&#43;dKLR&#43;ZLtQ=="></script>
+<script type="text/javascript" src="/js/bundle.dd80b4936d9208f7384932ce622316900942c58cd138dd354b6a863e212c7fd1c951c7c3e5b83585da6297165e02ddfddbe523bbb46478a41628469263b7f000.js" integrity="sha512-3YC0k22SCPc4STLOYiMWkAlCxYzRON01S2qGPiEsf9HJUcfD5bg1hdpilxZeAt392&#43;Uju7RkeKQWKEaSY7fwAA=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-69725711-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 
 

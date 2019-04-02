@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Uncategorized on Braybaut</title>
-    <link>https://practical-colden-971ce7.netlify.com/categories/uncategorized/</link>
+    <link>/categories/uncategorized/</link>
     <description>Recent content in Uncategorized on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Feb 2019 21:44:10 +0000</lastBuildDate>
     
-	<atom:link href="https://practical-colden-971ce7.netlify.com/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Creando un cluster de kubernetes en GCP con terraform</title>
-      <link>https://practical-colden-971ce7.netlify.com/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</link>
+      <link>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</link>
       <pubDate>Sun, 03 Feb 2019 21:44:10 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?ssl=1&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-924&#34; src=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?resize=648%2C220&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;648&#34; height=&#34;220&#34; srcset=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?w=750&amp;ssl=1 750w, https://i0.wp.com/braybaut.com/wp-content/uploads/2018/03/terra-gcp-kubernetes2.png?resize=300%2C102&amp;ssl=1 300w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+      <guid>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/images/terra-gcp-kubernetes2.png&#34; alt=&#34;Kubernetes&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
 
@@ -42,13 +42,11 @@
     
     <item>
       <title>Traefik: Load Balancer y Reverse Proxy para Docker</title>
-      <link>https://practical-colden-971ce7.netlify.com/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</link>
+      <link>/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</link>
       <pubDate>Wed, 25 Oct 2017 22:25:26 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</guid>
-      <description>&lt;p&gt;[&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&#34;aligncenter size-full wp-image-868&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=648%2C354&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;648&#34; height=&#34;354&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?w=1921&amp;ssl=1 1921w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=300%2C164&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=768%2C420&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=1024%2C560&amp;ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=750%2C410&amp;ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?w=1296&amp;ssl=1 1296w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;]&lt;a href=&#34;https://braybaut.com/wp-content/uploads/2017/10/architecture.png&#34; target=&#34;_blank&#34;&gt;1&lt;/a&gt;&lt;/p&gt;
+      <guid>/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/images/traefik.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Cuando trabajamos con docker en ambientes productivos, la mayoría de casos usamos tecnologías para orquestar y poder ofrecer alta disponibilidad sobre nuestros micro servicios, debido a esto, nosotros corremos multiples aplicaciones sobre un mismo host que haga parte de nuestro stack de orquestación. Para que estas aplicaciones puedan ser consumidas sin necesidad de exponer un puerto, necesitamos un reverse proxy para poder consumir estos servicios desde un único puerto.&lt;/p&gt;
 
@@ -57,11 +55,11 @@
     
     <item>
       <title>Docker: Ingresar al bash de un contenedor iniciado | Script</title>
-      <link>https://practical-colden-971ce7.netlify.com/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</link>
+      <link>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</link>
       <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?ssl=1&#34; rel=&#34;attachment wp-att-611&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-611&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=648%2C220&amp;#038;ssl=1&#34; alt=&#34;docker&#34; width=&#34;648&#34; height=&#34;220&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?w=792&amp;ssl=1 792w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=300%2C102&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=768%2C261&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2016/01/docker.png?resize=750%2C255&amp;ssl=1 750w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+      <guid>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/images/docker.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ultimamente he trabajado mucho con docker y en el maravilloso recorrido que he tenido con docker se me presento un problema gigante,  inicio el contenedor con su servicio pero por X o Y motivo quiero ingresar al bash y el &amp;#8220;docker attach&amp;#8221; no funciona porque el docker no lo inicie con /bin/bash&lt;/p&gt;
 

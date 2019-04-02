@@ -2,102 +2,102 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Braybaut</title>
-    <link>https://practical-colden-971ce7.netlify.com/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 22 Dec 2017 01:20:18 +0000</lastBuildDate>
     
-	<atom:link href="https://practical-colden-971ce7.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Amazon</title>
-      <link>https://practical-colden-971ce7.netlify.com/tags/amazon/</link>
+      <link>/tags/amazon/</link>
       <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/tags/amazon/</guid>
+      <guid>/tags/amazon/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Autentificación</title>
-      <link>https://practical-colden-971ce7.netlify.com/tags/autentificaci%C3%B3n/</link>
+      <link>/tags/autentificaci%C3%B3n/</link>
       <pubDate>Tue, 19 Jan 2016 01:43:11 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/tags/autentificaci%C3%B3n/</guid>
+      <guid>/tags/autentificaci%C3%B3n/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Aws</title>
-      <link>https://practical-colden-971ce7.netlify.com/tags/aws/</link>
+      <link>/tags/aws/</link>
       <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/tags/aws/</guid>
+      <guid>/tags/aws/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bash</title>
-      <link>https://practical-colden-971ce7.netlify.com/tags/bash/</link>
+      <link>/tags/bash/</link>
       <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/tags/bash/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Centos</title>
-      <link>https://practical-colden-971ce7.netlify.com/tags/centos/</link>
-      <pubDate>Tue, 07 Mar 2017 06:54:30 +0000</pubDate>
-      
-      <guid>https://practical-colden-971ce7.netlify.com/tags/centos/</guid>
+      <guid>/tags/bash/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Container</title>
-      <link>https://practical-colden-971ce7.netlify.com/tags/container/</link>
+      <link>/tags/container/</link>
       <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/tags/container/</guid>
+      <guid>/tags/container/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contenedor De Datos</title>
-      <link>https://practical-colden-971ce7.netlify.com/tags/contenedor-de-datos/</link>
+      <link>/tags/contenedor-de-datos/</link>
       <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/tags/contenedor-de-datos/</guid>
+      <guid>/tags/contenedor-de-datos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contenedores</title>
-      <link>https://practical-colden-971ce7.netlify.com/tags/contenedores/</link>
+      <link>/tags/contenedores/</link>
       <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/tags/contenedores/</guid>
+      <guid>/tags/contenedores/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Crm</title>
-      <link>https://practical-colden-971ce7.netlify.com/tags/crm/</link>
+      <link>/tags/crm/</link>
       <pubDate>Tue, 19 Jan 2016 01:43:11 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/tags/crm/</guid>
+      <guid>/tags/crm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Container</title>
-      <link>https://practical-colden-971ce7.netlify.com/tags/data-container/</link>
+      <link>/tags/data-container/</link>
       <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/tags/data-container/</guid>
+      <guid>/tags/data-container/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Devops</title>
+      <link>/tags/devops/</link>
+      <pubDate>Wed, 25 Oct 2017 22:25:26 +0000</pubDate>
+      
+      <guid>/tags/devops/</guid>
       <description></description>
     </item>
     

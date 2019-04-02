@@ -1,0 +1,10 @@
+
+$color-foreground: "#fff";
+
+img.portrait {
+    border-radius: 50%;
+    border: 10px solid $color-foreground;
+    margin: 2em 3em;
+    width: 185px;
+    height: 190px;
+}

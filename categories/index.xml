@@ -2,102 +2,102 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Braybaut</title>
-    <link>https://practical-colden-971ce7.netlify.com/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 22 Dec 2017 01:20:18 +0000</lastBuildDate>
     
-	<atom:link href="https://practical-colden-971ce7.netlify.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Aws</title>
-      <link>https://practical-colden-971ce7.netlify.com/categories/aws/</link>
+      <link>/categories/aws/</link>
       <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/categories/aws/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Compilar</title>
-      <link>https://practical-colden-971ce7.netlify.com/categories/compilar/</link>
-      <pubDate>Wed, 20 May 2015 01:33:00 +0000</pubDate>
-      
-      <guid>https://practical-colden-971ce7.netlify.com/categories/compilar/</guid>
+      <guid>/categories/aws/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>https://practical-colden-971ce7.netlify.com/categories/docker/</link>
+      <link>/categories/docker/</link>
       <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/categories/docker/</guid>
+      <guid>/categories/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Golang</title>
-      <link>https://practical-colden-971ce7.netlify.com/categories/golang/</link>
+      <link>/categories/golang/</link>
       <pubDate>Sun, 10 Feb 2019 21:52:53 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/categories/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Instalar</title>
-      <link>https://practical-colden-971ce7.netlify.com/categories/instalar/</link>
-      <pubDate>Wed, 20 May 2015 01:33:00 +0000</pubDate>
-      
-      <guid>https://practical-colden-971ce7.netlify.com/categories/instalar/</guid>
+      <guid>/categories/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ldap</title>
-      <link>https://practical-colden-971ce7.netlify.com/categories/ldap/</link>
+      <link>/categories/ldap/</link>
       <pubDate>Tue, 19 Jan 2016 01:43:11 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/categories/ldap/</guid>
+      <guid>/categories/ldap/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://practical-colden-971ce7.netlify.com/categories/linux/</link>
+      <link>/categories/linux/</link>
       <pubDate>Tue, 07 Mar 2017 06:54:30 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/categories/linux/</guid>
+      <guid>/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Opensource</title>
-      <link>https://practical-colden-971ce7.netlify.com/categories/opensource/</link>
+      <link>/categories/opensource/</link>
       <pubDate>Tue, 07 Mar 2017 06:54:30 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/categories/opensource/</guid>
+      <guid>/categories/opensource/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Raspberry Pi</title>
-      <link>https://practical-colden-971ce7.netlify.com/categories/raspberry-pi/</link>
+      <link>/categories/raspberry-pi/</link>
       <pubDate>Mon, 24 Mar 2014 06:18:00 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/categories/raspberry-pi/</guid>
+      <guid>/categories/raspberry-pi/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Red Hat</title>
-      <link>https://practical-colden-971ce7.netlify.com/categories/red-hat/</link>
-      <pubDate>Wed, 20 May 2015 01:33:00 +0000</pubDate>
+      <title>Software Libre</title>
+      <link>/categories/software-libre/</link>
+      <pubDate>Mon, 24 Mar 2014 06:18:00 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/categories/red-hat/</guid>
+      <guid>/categories/software-libre/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tinc</title>
+      <link>/categories/tinc/</link>
+      <pubDate>Mon, 24 Mar 2014 06:18:00 +0000</pubDate>
+      
+      <guid>/categories/tinc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutoriales</title>
+      <link>/categories/tutoriales/</link>
+      <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
+      
+      <guid>/categories/tutoriales/</guid>
       <description></description>
     </item>
     

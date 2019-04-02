@@ -1,0 +1,132 @@
+---
+title: 'Traefik: Load Balancer y Reverse Proxy para Docker'
+author: braybaut
+type: post
+date: 2017-10-25T22:25:26+00:00
+categories:
+  - Uncategorized
+tags:
+  - DevOps
+  - Docker
+  - docker-compose
+  - DockerCompose
+  - Load Balancer
+  - MicroServicios
+  - Reverse-Proxy
+  - Traefik
+
+---
+
+![image1](/images/traefik.png)
+
+Cuando trabajamos con docker en ambientes productivos, la mayoría de casos usamos tecnologías para orquestar y poder ofrecer alta disponibilidad sobre nuestros micro servicios, debido a esto, nosotros corremos multiples aplicaciones sobre un mismo host que haga parte de nuestro stack de orquestación. Para que estas aplicaciones puedan ser consumidas sin necesidad de exponer un puerto, necesitamos un reverse proxy para poder consumir estos servicios desde un único puerto.
+
+**Traefik **es un reverse proxy  y load balancer compatible con docker escrito en Go, creado especialmente para micro servicios, Traefik soporta diferentes Backends como: **(Docker, docker Swarm, Kubernetes, Rancher, Amazon ECS y muchos mas )** su configuración es bastante sencilla y cuenta con un Dashboard donde podemos visualizar nuestros Micro servicios.
+
+<!--more-->
+
+## **Demo:**
+
+&nbsp;
+
+En este caso desplegare dos web servers  en docker que van a ser manejados por traefik.
+
+**Web Server 1:** blog1.braybaut.com
+
+**Web Server 2 :** blog2.braybaut.com
+
+**docker-compose.yml:**
+
+&nbsp;
+
+```yaml
+  image: traefik
+  command: --web --docker --docker.domain=docker.localhost --logLevel=DEBUG
+  ports:
+    - "80:80"
+    - "8080:8080"
+    - "443:443"
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - /dev/null:/traefik.toml
+
+
+machine1:
+  image: katacoda/docker-http-server
+  labels:
+    - "traefik.backend=blog1"
+    - "traefik.frontend.rule=Host:blog1.braybaut.com"
+
+machine2:
+  image: katacoda/docker-http-server:v2
+  labels:
+    - "traefik.backend=blog2"
+    - "traefik.frontend.rule=Host:blog2.braybaut.com"
+```
+Este docker-compose es muy fácil de interpretar, en el despliegue del container de  traefik el usa el docker.sock para permitir que traefik escuche los eventos del daemon de Docker, re configurarse cuando los containers se inician y se detienen y para utilizar algunos meta datos que este daemon pueda ofrecer, como por ejemplo el nombre de los containers. Para los web Servers use la imagen de Kataconda el cual es ideal para este ejemplo, estos containers usan varios label lo cual permiten cambiar su configuración para el uso de traefik
+
+Algunos label:
+
+  * traefik.port
+  * traefik.protoco
+  * traefik.weight
+  * traefik.frontend.rule
+  * traefik.docker.network
+  * traefik.backend
+
+En el caso de **traefik.frontend.rule** especificamos el dominio por el cual nos llegara la petición desde el frontend, en este caso: blog1.braybaut.com y blog2.braybaut.com
+
+Despues de definir el docker-compose, despliegamos los container mencionados en el yaml file:
+
+```code
+docker-compose up -d
+```
+Si los containers se desplegaron sin inconvenientes, tendremos este output:
+
+![](/images/traefik9.png)
+
+Ahora, podemos hacer peticiones con curl a blog1.braybaut.com y blog2.braybaut.com y nos debe responder cada container.
+
+![](/images/traefik10.png)
+ 
+Como observamos vemos que cada peticion  me responde con el ID de su respectivo container** 873c9508bef7   8f3c982a1949
+  
+  
+### **Escalando nuestro Micro servicio:
+
+Como mencione al inicio de esta publicación, traefik también es un **load Balancer** y maneja diferentes técnicas de balanceo, ya que estamos usando docker compose para este ejemplo, escalare un web server **Machine1**.
+
+```console
+docker-compose scale machine1=2</pre>
+```
+
+![](/images/traefik11.png)
+
+Micro servicio escalado, ahora debemos tener dos containers de este micro servicio **&#8220;machine1&#8221;** en ejecución:
+
+
+![](/images/traefik12.png)
+
+Ahora, como nuestro traefik esta balanceando el trafico de este servicio **machine1 **por medio del domain **blog1.braybaut.com **al volver a realizar una petición por curl nos debe responder cada contenedor:
+
+
+![](/images/traefik13.png)
+
+Como observamos, por cada petición a **blog1.braybaut.com** nos va a responder un container diferente:  **cebaede35153  cad89564505e  ** Con esto, logramos un load balancer automático cuando necesitemos hacer scaling de nuestros micro servicios.
+
+No olvidar que tenemos un Dashboard donde podemos ver nuestros Micro servicios manejados por Traefik:
+  
+&#8220;Podemos acceder a este Dashboard por el puerto 8080&#8221;
+
+![](/images/traefik13.png)
+
+Próximamente escribiré como usar traefik usando Amazon ECS  y Docker Swarm como Backend.
+
+Mas información:
+
+<https://traefik.io/>
+  
+<https://docs.traefik.io/>
+
+
+

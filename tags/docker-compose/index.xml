@@ -2,24 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker Compose on Braybaut</title>
-    <link>https://practical-colden-971ce7.netlify.com/tags/docker-compose/</link>
+    <link>/tags/docker-compose/</link>
     <description>Recent content in Docker Compose on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 25 Oct 2017 22:25:26 +0000</lastBuildDate>
     
-	<atom:link href="https://practical-colden-971ce7.netlify.com/tags/docker-compose/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/docker-compose/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Traefik: Load Balancer y Reverse Proxy para Docker</title>
-      <link>https://practical-colden-971ce7.netlify.com/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</link>
+      <link>/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</link>
       <pubDate>Wed, 25 Oct 2017 22:25:26 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</guid>
-      <description>&lt;p&gt;[&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&#34;aligncenter size-full wp-image-868&#34; src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=648%2C354&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;648&#34; height=&#34;354&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?w=1921&amp;ssl=1 1921w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=300%2C164&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=768%2C420&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=1024%2C560&amp;ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=750%2C410&amp;ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?w=1296&amp;ssl=1 1296w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;]&lt;a href=&#34;https://braybaut.com/wp-content/uploads/2017/10/architecture.png&#34; target=&#34;_blank&#34;&gt;1&lt;/a&gt;&lt;/p&gt;
+      <guid>/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/images/traefik.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Cuando trabajamos con docker en ambientes productivos, la mayoría de casos usamos tecnologías para orquestar y poder ofrecer alta disponibilidad sobre nuestros micro servicios, debido a esto, nosotros corremos multiples aplicaciones sobre un mismo host que haga parte de nuestro stack de orquestación. Para que estas aplicaciones puedan ser consumidas sin necesidad de exponer un puerto, necesitamos un reverse proxy para poder consumir estos servicios desde un único puerto.&lt;/p&gt;
 
@@ -28,11 +26,11 @@
     
     <item>
       <title>Howto: Instalando Rocket.Chat en Docker</title>
-      <link>https://practical-colden-971ce7.netlify.com/posts/howto-instalando-rocket.chat-en-docker/</link>
+      <link>/posts/howto-instalando-rocket.chat-en-docker/</link>
       <pubDate>Tue, 07 Mar 2017 06:54:30 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/posts/howto-instalando-rocket.chat-en-docker/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?ssl=1&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-824&#34; src=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?resize=546%2C126&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;546&#34; height=&#34;126&#34; srcset=&#34;https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?w=546&amp;ssl=1 546w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/03/rocket-chat.png?resize=300%2C69&amp;ssl=1 300w&#34; sizes=&#34;(max-width: 546px) 100vw, 546px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+      <guid>/posts/howto-instalando-rocket.chat-en-docker/</guid>
+      <description>&lt;p&gt;&lt;center&gt;&lt;img src=&#34;/images/rocketchat1.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Rocket.chat para mi es una de las mejores plataformas de chat &lt;strong&gt;OpenSource&lt;/strong&gt; que existen, es muy flexible a la hora de adaptarlo y lo mejor, tiene cliente para toda las plataformas.&lt;/p&gt;
 
@@ -45,14 +43,11 @@
 &lt;h3 id=&#34;docker&#34;&gt;Docker:&lt;/h3&gt;
 
 &lt;p&gt;Instalamos docker usando el script que se encuentra en su pagina oficial.&lt;/p&gt;
-
-&lt;pre class=&#34;lang:default decode:true&#34;&gt;wget -qO- https://get.docker.com/ | sh&lt;/pre&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;wget -qO- https://get.docker.com/ | sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Al finalizar el proceso usamos systemctl para subir el servicio y dejarlo habilitado para que inicie cuando se inicie el servidor.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;systemctl start enable
 
-&lt;pre class=&#34;lang:default decode:true&#34;&gt;systemctl start enable&lt;/pre&gt;
-
-&lt;pre class=&#34;lang:default decode:true &#34;&gt;systemcl enable docker&lt;/pre&gt;</description>
+systemcl enable docker&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

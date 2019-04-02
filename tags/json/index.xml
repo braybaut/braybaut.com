@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Json on Braybaut</title>
-    <link>https://practical-colden-971ce7.netlify.com/tags/json/</link>
+    <link>/tags/json/</link>
     <description>Recent content in Json on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Feb 2019 21:52:53 +0000</lastBuildDate>
     
-	<atom:link href="https://practical-colden-971ce7.netlify.com/tags/json/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/json/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Parseando JSON con Golang y las naves de spaceX</title>
-      <link>https://practical-colden-971ce7.netlify.com/posts/parseando-json-con-golang-y-las-naves-de-spacex/</link>
+      <link>/posts/parseando-json-con-golang-y-las-naves-de-spacex/</link>
       <pubDate>Sun, 10 Feb 2019 21:52:53 +0000</pubDate>
       
-      <guid>https://practical-colden-971ce7.netlify.com/posts/parseando-json-con-golang-y-las-naves-de-spacex/</guid>
-      <description>&lt;figure class=&#34;wp-block-image&#34;&gt;&lt;img src=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=648%2C365&amp;#038;ssl=1&#34; alt=&#34;&#34; class=&#34;wp-image-974&#34; srcset=&#34;https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2019/02/maxresdefault.jpg?w=1280&amp;ssl=1 1280w&#34; sizes=&#34;(max-width: 648px) 100vw, 648px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/figure&gt; 
+      <guid>/posts/parseando-json-con-golang-y-las-naves-de-spacex/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/images/maxresdefault.jpg&#34; alt=&#34;Golang&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Golang se ha convertido en uno de mis lenguajes favoritos y hoy escribiré de como podemos usar go para poder consumir la API de spaceX y obtener información de las naves lanzadas al espacio&lt;/p&gt;
 

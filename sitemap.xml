@@ -3,421 +3,362 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/archive/</loc>
-    <lastmod>2019-03-23T19:17:02-05:00</lastmod>
+    <loc>/archive/</loc>
+    <lastmod>2019-03-24T17:12:48-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/about/</loc>
-    <lastmod>2019-03-17T14:05:50-05:00</lastmod>
+    <loc>/about/</loc>
+    <lastmod>2019-03-24T16:46:05-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/posts/parseando-json-con-golang-y-las-naves-de-spacex/</loc>
+    <loc>/posts/parseando-json-con-golang-y-las-naves-de-spacex/</loc>
     <lastmod>2019-02-10T21:52:53+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</loc>
+    <loc>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</loc>
     <lastmod>2019-02-03T21:44:10+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws/</loc>
+    <loc>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</loc>
+    <loc>/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</loc>
     <lastmod>2017-10-25T22:25:26+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/posts/howto-instalando-rocket.chat-en-docker/</loc>
+    <loc>/posts/howto-instalando-rocket.chat-en-docker/</loc>
     <lastmod>2017-03-07T06:54:30+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/posts/autentificaci%C3%B3n-ldap-vtiger-crm-6/</loc>
+    <loc>/posts/autentificaci%C3%B3n-ldap-vtiger-crm-6/</loc>
     <lastmod>2016-01-19T01:43:11+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/posts/howto-como-crear-un-contenedor-de-datos-en-docker/</loc>
+    <loc>/posts/howto-como-crear-un-contenedor-de-datos-en-docker/</loc>
     <lastmod>2016-01-13T17:40:11+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</loc>
+    <loc>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</loc>
     <lastmod>2016-01-12T04:40:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/posts/compilando-spice-xpi-en-ubuntu./</loc>
-    <lastmod>2015-05-20T01:33:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://practical-colden-971ce7.netlify.com/posts/introducci%C3%B3n-vpn-full-mesh-con-tinc-y-configuraci%C3%B3n-en-raspberry-pi/</loc>
+    <loc>/posts/introducci%C3%B3n-vpn-full-mesh-con-tinc-y-configuraci%C3%B3n-en-raspberry-pi/</loc>
     <lastmod>2014-03-24T06:18:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/amazon/</loc>
+    <loc>/tags/amazon/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/autentificaci%C3%B3n/</loc>
+    <loc>/tags/autentificaci%C3%B3n/</loc>
     <lastmod>2016-01-19T01:43:11+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/categories/aws/</loc>
+    <loc>/tags/aws/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/aws/</loc>
+    <loc>/categories/aws/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/bash/</loc>
+    <loc>/tags/bash/</loc>
     <lastmod>2016-01-12T04:40:50+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/</loc>
-    <lastmod>2019-03-23T19:17:02-05:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2019-03-24T17:12:48-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/categories/</loc>
+    <loc>/categories/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/centos/</loc>
-    <lastmod>2017-03-07T06:54:30+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://practical-colden-971ce7.netlify.com/categories/compilar/</loc>
-    <lastmod>2015-05-20T01:33:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/container/</loc>
+    <loc>/tags/container/</loc>
     <lastmod>2016-01-13T17:40:11+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/contenedor-de-datos/</loc>
+    <loc>/tags/contenedor-de-datos/</loc>
     <lastmod>2016-01-13T17:40:11+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/contenedores/</loc>
+    <loc>/tags/contenedores/</loc>
     <lastmod>2016-01-13T17:40:11+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/crm/</loc>
+    <loc>/tags/crm/</loc>
     <lastmod>2016-01-19T01:43:11+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/data-container/</loc>
+    <loc>/tags/data-container/</loc>
     <lastmod>2016-01-13T17:40:11+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/devops/</loc>
+    <loc>/tags/devops/</loc>
     <lastmod>2017-10-25T22:25:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/categories/docker/</loc>
+    <loc>/tags/docker/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/docker/</loc>
+    <loc>/categories/docker/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/docker-compose/</loc>
+    <loc>/tags/docker-compose/</loc>
     <lastmod>2017-10-25T22:25:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/dockercompose/</loc>
+    <loc>/tags/dockercompose/</loc>
     <lastmod>2017-10-25T22:25:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/dockerswarm/</loc>
+    <loc>/tags/dockerswarm/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/gcp/</loc>
+    <loc>/tags/gcp/</loc>
     <lastmod>2019-02-03T21:44:10+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/github/</loc>
+    <loc>/tags/github/</loc>
     <lastmod>2016-01-12T04:40:50+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/go/</loc>
+    <loc>/tags/go/</loc>
     <lastmod>2019-02-10T21:52:53+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/categories/golang/</loc>
+    <loc>/tags/golang/</loc>
     <lastmod>2019-02-10T21:52:53+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/golang/</loc>
+    <loc>/categories/golang/</loc>
     <lastmod>2019-02-10T21:52:53+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/categories/instalar/</loc>
-    <lastmod>2015-05-20T01:33:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/json/</loc>
+    <loc>/tags/json/</loc>
     <lastmod>2019-02-10T21:52:53+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/kubernetes/</loc>
+    <loc>/tags/kubernetes/</loc>
     <lastmod>2019-02-03T21:44:10+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/categories/ldap/</loc>
+    <loc>/tags/ldap/</loc>
     <lastmod>2016-01-19T01:43:11+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/ldap/</loc>
+    <loc>/categories/ldap/</loc>
     <lastmod>2016-01-19T01:43:11+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/categories/linux/</loc>
-    <lastmod>2017-03-07T06:54:30+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/linux/</loc>
+    <loc>/tags/linux/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/load-balancer/</loc>
-    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/microservicios/</loc>
-    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://practical-colden-971ce7.netlify.com/categories/opensource/</loc>
+    <loc>/categories/linux/</loc>
     <lastmod>2017-03-07T06:54:30+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/opensource/</loc>
+    <loc>/tags/load-balancer/</loc>
+    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/microservicios/</loc>
+    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/opensource/</loc>
     <lastmod>2017-03-07T06:54:30+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/persistencia/</loc>
+    <loc>/categories/opensource/</loc>
+    <lastmod>2017-03-07T06:54:30+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/persistencia/</loc>
     <lastmod>2016-01-13T17:40:11+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>2019-02-10T21:52:53+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/categories/raspberry-pi/</loc>
+    <loc>/categories/raspberry-pi/</loc>
     <lastmod>2014-03-24T06:18:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/categories/red-hat/</loc>
-    <lastmod>2015-05-20T01:33:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/reverse-proxy/</loc>
+    <loc>/tags/reverse-proxy/</loc>
     <lastmod>2017-10-25T22:25:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/reverseproxy/</loc>
-    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/rocket.chat/</loc>
-    <lastmod>2017-03-07T06:54:30+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/rocketchat/</loc>
-    <lastmod>2017-03-07T06:54:30+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/script/</loc>
+    <loc>/tags/script/</loc>
     <lastmod>2016-01-12T04:40:50+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/categories/software-libre/</loc>
+    <loc>/categories/software-libre/</loc>
     <lastmod>2014-03-24T06:18:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/spacex/</loc>
-    <lastmod>2019-02-10T21:52:53+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/categories/tinc/</loc>
+    <loc>/categories/tinc/</loc>
     <lastmod>2014-03-24T06:18:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/traefik/</loc>
+    <loc>/tags/traefik/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/categories/tutoriales/</loc>
+    <loc>/tags/tutoriales/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/tutoriales/</loc>
+    <loc>/categories/tutoriales/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/categories/ubuntu/</loc>
-    <lastmod>2015-05-20T01:33:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://practical-colden-971ce7.netlify.com/categories/uncategorized/</loc>
+    <loc>/categories/uncategorized/</loc>
     <lastmod>2019-02-03T21:44:10+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/volume-container/</loc>
+    <loc>/tags/volume-container/</loc>
     <lastmod>2016-01-13T17:40:11+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/categories/vpn/</loc>
+    <loc>/categories/vpn/</loc>
     <lastmod>2014-03-24T06:18:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/vtiger/</loc>
+    <loc>/tags/vtiger/</loc>
     <lastmod>2016-01-19T01:43:11+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/vtiger-6.0/</loc>
+    <loc>/tags/vtiger-6.0/</loc>
     <lastmod>2016-01-19T01:43:11+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/vtiger-6.4/</loc>
+    <loc>/tags/vtiger-6.4/</loc>
     <lastmod>2016-01-19T01:43:11+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://practical-colden-971ce7.netlify.com/tags/vtiger-crm/</loc>
+    <loc>/tags/vtiger-crm/</loc>
     <lastmod>2016-01-19T01:43:11+00:00</lastmod>
     <priority>0</priority>
   </url>

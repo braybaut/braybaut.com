@@ -7,14 +7,12 @@
 <meta name="author"
     content="braybaut">
 <meta name="description"
-    content="[
-]1
-Cuando trabajamos con docker en ambientes productivos, la mayoría de casos usamos tecnologías para orquestar y poder ofrecer alta disponibilidad sobre nuestros micro servicios, debido a esto, nosotros corremos multiples aplicaciones sobre un mismo host que haga parte de nuestro stack de orquestación. Para que estas aplicaciones puedan ser consumidas sin necesidad de exponer un puerto, necesitamos un reverse proxy para poder consumir estos servicios desde un único puerto.
+    content="Cuando trabajamos con docker en ambientes productivos, la mayoría de casos usamos tecnologías para orquestar y poder ofrecer alta disponibilidad sobre nuestros micro servicios, debido a esto, nosotros corremos multiples aplicaciones sobre un mismo host que haga parte de nuestro stack de orquestación. Para que estas aplicaciones puedan ser consumidas sin necesidad de exponer un puerto, necesitamos un reverse proxy para poder consumir estos servicios desde un único puerto.
 Traefik es un reverse proxy y load balancer compatible con docker escrito en Go, creado especialmente para micro servicios, Traefik soporta diferentes Backends como: (Docker, docker Swarm, Kubernetes, Rancher, Amazon ECS y muchos mas ) su configuración es bastante sencilla y cuenta con un Dashboard donde podemos visualizar nuestros Micro servicios.
 " />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://practical-colden-971ce7.netlify.com/posts/traefik-load-balancer-y-reverse-proxy-para-docker/" />
+<link rel="canonical" href="/posts/traefik-load-balancer-y-reverse-proxy-para-docker/" />
 
 
 <title>
@@ -31,21 +29,23 @@ Traefik es un reverse proxy y load balancer compatible con docker escrito en Go
     type="text/css">
 
 
-<link rel="stylesheet" href="https://practical-colden-971ce7.netlify.com/scss/main.min.2cb2cfcb2d25c14d702e06c24f9c05a189f6cbc9ef31f0a235fd739b411a5a1b.css">
+<link rel="stylesheet" href="/scss/main.min.2cb2cfcb2d25c14d702e06c24f9c05a189f6cbc9ef31f0a235fd739b411a5a1b.css">
 
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="https://practical-colden-971ce7.netlify.com/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://practical-colden-971ce7.netlify.com/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://practical-colden-971ce7.netlify.com/favicon-16x16.png">
-<link rel="manifest" href="https://practical-colden-971ce7.netlify.com/site.webmanifest">
-<link rel="mask-icon" href="https://practical-colden-971ce7.netlify.com/safari-pinned-tab.svg" color="#252627">
-<link rel="shortcut icon" href="https://practical-colden-971ce7.netlify.com/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/css/styles.scss">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627">
 <meta itemprop="name" content="Traefik: Load Balancer y Reverse Proxy para Docker">
-<meta itemprop="description" content="[
-
-]1
+<meta itemprop="description" content="
 
 Cuando trabajamos con docker en ambientes productivos, la mayoría de casos usamos tecnologías para orquestar y poder ofrecer alta disponibilidad sobre nuestros micro servicios, debido a esto, nosotros corremos multiples aplicaciones sobre un mismo host que haga parte de nuestro stack de orquestación. Para que estas aplicaciones puedan ser consumidas sin necesidad de exponer un puerto, necesitamos un reverse proxy para poder consumir estos servicios desde un único puerto.
 
@@ -54,16 +54,14 @@ Traefik es un reverse proxy  y load balancer compatible con docker escrito en 
 
 <meta itemprop="datePublished" content="2017-10-25T22:25:26&#43;00:00" />
 <meta itemprop="dateModified" content="2017-10-25T22:25:26&#43;00:00" />
-<meta itemprop="wordCount" content="528">
+<meta itemprop="wordCount" content="486">
 
 
 
 <meta itemprop="keywords" content="DevOps,Docker,docker-compose,DockerCompose,Load Balancer,MicroServicios,Reverse-Proxy,Traefik," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Traefik: Load Balancer y Reverse Proxy para Docker"/>
-<meta name="twitter:description" content="[
-
-]1
+<meta name="twitter:description" content="
 
 Cuando trabajamos con docker en ambientes productivos, la mayoría de casos usamos tecnologías para orquestar y poder ofrecer alta disponibilidad sobre nuestros micro servicios, debido a esto, nosotros corremos multiples aplicaciones sobre un mismo host que haga parte de nuestro stack de orquestación. Para que estas aplicaciones puedan ser consumidas sin necesidad de exponer un puerto, necesitamos un reverse proxy para poder consumir estos servicios desde un único puerto.
 
@@ -82,13 +80,14 @@ Traefik es un reverse proxy  y load balancer compatible con docker escrito en 
 
 
 
+
     </head>
 
     <body class="dark-theme">
         <div class="container">
             <header class="header">
     <span class="header__inner">
-        <a href="https://practical-colden-971ce7.netlify.com/" style="text-decoration: none;">
+        <a href="/" style="text-decoration: none;">
     <div class="logo">
         
             <span class="logo__mark">></span>
@@ -102,7 +101,7 @@ Traefik es un reverse proxy  y load balancer compatible con docker escrito en 
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://practical-colden-971ce7.netlify.com/about">About</a></li><li><a href="https://practical-colden-971ce7.netlify.com/posts">Archive</a></li><li><a href="https://practical-colden-971ce7.netlify.com/archive">Blog</a></li>
+    <ul class="menu__inner"><li><a href="/about">About</a></li><li><a href="/posts">Archive</a></li><li><a href="/archive">Blog</a></li>
     </ul>
 </nav>
 
@@ -135,22 +134,18 @@ Traefik es un reverse proxy  y load balancer compatible con docker escrito en 
         </div>
 
         <article>
-            <h2 class="post-title"><a href="https://practical-colden-971ce7.netlify.com/posts/traefik-load-balancer-y-reverse-proxy-para-docker/">Traefik: Load Balancer y Reverse Proxy para Docker</a></h2>
+            <h2 class="post-title"><a href="/posts/traefik-load-balancer-y-reverse-proxy-para-docker/">Traefik: Load Balancer y Reverse Proxy para Docker</a></h2>
 
             
 
             <div class="post-content">
-                <p>[</p>
-
-<p><img class="aligncenter size-full wp-image-868" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=648%2C354&#038;ssl=1" alt="" width="648" height="354" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?w=1921&ssl=1 1921w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=300%2C164&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=768%2C420&ssl=1 768w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=1024%2C560&ssl=1 1024w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?resize=750%2C410&ssl=1 750w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/architecture.png?w=1296&ssl=1 1296w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" />]<a href="https://braybaut.com/wp-content/uploads/2017/10/architecture.png" target="_blank">1</a></p>
+                <p><img src="/images/traefik.png" alt="image1" /></p>
 
 <p>Cuando trabajamos con docker en ambientes productivos, la mayoría de casos usamos tecnologías para orquestar y poder ofrecer alta disponibilidad sobre nuestros micro servicios, debido a esto, nosotros corremos multiples aplicaciones sobre un mismo host que haga parte de nuestro stack de orquestación. Para que estas aplicaciones puedan ser consumidas sin necesidad de exponer un puerto, necesitamos un reverse proxy para poder consumir estos servicios desde un único puerto.</p>
 
 <p><strong>Traefik </strong>es un reverse proxy  y load balancer compatible con docker escrito en Go, creado especialmente para micro servicios, Traefik soporta diferentes Backends como: <strong>(Docker, docker Swarm, Kubernetes, Rancher, Amazon ECS y muchos mas )</strong> su configuración es bastante sencilla y cuenta con un Dashboard donde podemos visualizar nuestros Micro servicios.</p>
 
 <h2 id="demo"><strong>Demo:</strong></h2>
-
-<p>&nbsp;</p>
 
 <p>En este caso desplegare dos web servers  en docker que van a ser manejados por traefik.</p>
 
@@ -159,34 +154,28 @@ Traefik es un reverse proxy  y load balancer compatible con docker escrito en 
 <p><strong>Web Server 2 :</strong> blog2.braybaut.com</p>
 
 <p><strong>docker-compose.yml:</strong></p>
-
-<p>&nbsp;</p>
-
-<pre class="lang:yaml decode:true" title="docker-compose.yml">traefik:
-  image: traefik
-  command: --web --docker --docker.domain=docker.localhost --logLevel=DEBUG
-  ports:
-    - "80:80"
-    - "8080:8080"
-    - "443:443"
-  volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
-    - /dev/null:/traefik.toml
-
-
-machine1:
-  image: katacoda/docker-http-server
-  labels:
-    - "traefik.backend=blog1"
-    - "traefik.frontend.rule=Host:blog1.braybaut.com"
-
-machine2:
-  image: katacoda/docker-http-server:v2
-  labels:
-    - "traefik.backend=blog2"
-    - "traefik.frontend.rule=Host:blog2.braybaut.com"
-</pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#666">  </span>image:<span style="color:#666"> </span>traefik<span style="color:#666">
+</span><span style="color:#666">  </span>command:<span style="color:#666"> </span>--web<span style="color:#666"> </span>--docker<span style="color:#666"> </span>--docker.domain=docker.localhost<span style="color:#666"> </span>--logLevel=DEBUG<span style="color:#666">
+</span><span style="color:#666">  </span>ports:<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span><span style="color:#ed9d13">&#34;80:80&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span><span style="color:#ed9d13">&#34;8080:8080&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span><span style="color:#ed9d13">&#34;443:443&#34;</span><span style="color:#666">
+</span><span style="color:#666">  </span>volumes:<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span>/var/run/docker.sock:/var/run/docker.sock<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span>/dev/<span style="color:#6ab825;font-weight:bold">null</span>:/traefik.toml<span style="color:#666">
+</span><span style="color:#666">
+</span><span style="color:#666">
+</span><span style="color:#666"></span>machine1:<span style="color:#666">
+</span><span style="color:#666">  </span>image:<span style="color:#666"> </span>katacoda/docker-http-server<span style="color:#666">
+</span><span style="color:#666">  </span>labels:<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span><span style="color:#ed9d13">&#34;traefik.backend=blog1&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span><span style="color:#ed9d13">&#34;traefik.frontend.rule=Host:blog1.braybaut.com&#34;</span><span style="color:#666">
+</span><span style="color:#666">
+</span><span style="color:#666"></span>machine2:<span style="color:#666">
+</span><span style="color:#666">  </span>image:<span style="color:#666"> </span>katacoda/docker-http-server:v2<span style="color:#666">
+</span><span style="color:#666">  </span>labels:<span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span><span style="color:#ed9d13">&#34;traefik.backend=blog2&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span>-<span style="color:#666"> </span><span style="color:#ed9d13">&#34;traefik.frontend.rule=Host:blog2.braybaut.com&#34;</span></code></pre></div>
 <p>Este docker-compose es muy fácil de interpretar, en el despliegue del container de  traefik el usa el docker.sock para permitir que traefik escuche los eventos del daemon de Docker, re configurarse cuando los containers se inician y se detienen y para utilizar algunos meta datos que este daemon pueda ofrecer, como por ejemplo el nombre de los containers. Para los web Servers use la imagen de Kataconda el cual es ideal para este ejemplo, estos containers usan varios label lo cual permiten cambiar su configuración para el uso de traefik</p>
 
 <p>Algunos label:</p>
@@ -203,38 +192,30 @@ machine2:
 <p>En el caso de <strong>traefik.frontend.rule</strong> especificamos el dominio por el cual nos llegara la petición desde el frontend, en este caso: blog1.braybaut.com y blog2.braybaut.com</p>
 
 <p>Despues de definir el docker-compose, despliegamos los container mencionados en el yaml file:</p>
-
-<pre class="lang:zsh decode:true ">docker-compose up -d</pre>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-code" data-lang="code">docker-compose up -d</code></pre></div>
 <p>Si los containers se desplegaron sin inconvenientes, tendremos este output:</p>
 
-<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-44-17.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-873" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-44-17.png?resize=505%2C103&#038;ssl=1" alt="" width="505" height="103" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-44-17.png?w=505&ssl=1 505w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-44-17.png?resize=300%2C61&ssl=1 300w" sizes="(max-width: 505px) 100vw, 505px" data-recalc-dims="1" /></a></p>
+<p><img src="/images/traefik9.png" alt="" /></p>
 
 <p>Ahora, podemos hacer peticiones con curl a blog1.braybaut.com y blog2.braybaut.com y nos debe responder cada container.</p>
 
-<p><a href="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-47-00.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-876" src="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-47-00.png?resize=648%2C88&#038;ssl=1" alt="" width="648" height="88" srcset="https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-47-00.png?w=805&ssl=1 805w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-47-00.png?resize=300%2C41&ssl=1 300w, https://i1.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-47-00.png?resize=768%2C104&ssl=1 768w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+<p><img src="/images/traefik10.png" alt="" /></p>
 
 <p>Como observamos vemos que cada peticion  me responde con el ID de su respectivo container** 873c9508bef7   8f3c982a1949</p>
 
-<p>**</p>
-
-<h3 id="toc_1">**</h3>
-
-<p>Escalando nuestro **<strong>Micro servicio:</strong></p>
+<h3 id="escalando-nuestro-micro-servicio">Escalando nuestro Micro servicio:</h3>
 
 <p>Como mencione al inicio de esta publicación, traefik también es un <strong>load Balancer</strong> y maneja diferentes técnicas de balanceo, ya que estamos usando docker compose para este ejemplo, escalare un web server <strong>Machine1</strong>.</p>
-
-<pre class="lang:default decode:true ">docker-compose scale machine1=2</pre>
-
-<p><a href="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-52-13.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-877" src="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-52-13.png?resize=585%2C149&#038;ssl=1" alt="" width="585" height="149" srcset="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-52-13.png?w=585&ssl=1 585w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-52-13.png?resize=300%2C76&ssl=1 300w" sizes="(max-width: 585px) 100vw, 585px" data-recalc-dims="1" /></a></p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">docker-compose scale machine1=2&lt;/pre&gt;</code></pre></div>
+<p><img src="/images/traefik11.png" alt="" /></p>
 
 <p>Micro servicio escalado, ahora debemos tener dos containers de este micro servicio <strong>&#8220;machine1&#8221;</strong> en ejecución:</p>
 
-<p><a href="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-55-18.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-878" src="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-55-18.png?resize=648%2C75&#038;ssl=1" alt="" width="648" height="75" srcset="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-55-18.png?w=1217&ssl=1 1217w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-55-18.png?resize=300%2C35&ssl=1 300w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-55-18.png?resize=768%2C88&ssl=1 768w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-16-55-18.png?resize=1024%2C118&ssl=1 1024w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+<p><img src="/images/traefik12.png" alt="" /></p>
 
 <p>Ahora, como nuestro traefik esta balanceando el trafico de este servicio <strong>machine1 </strong>por medio del domain <strong>blog1.braybaut.com </strong>al volver a realizar una petición por curl nos debe responder cada contenedor:</p>
 
-<p><a href="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-03-49.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-879" src="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-03-49.png?resize=648%2C107&#038;ssl=1" alt="" width="648" height="107" srcset="https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-03-49.png?w=665&ssl=1 665w, https://i2.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-03-49.png?resize=300%2C50&ssl=1 300w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+<p><img src="/images/traefik13.png" alt="" /></p>
 
 <p>Como observamos, por cada petición a <strong>blog1.braybaut.com</strong> nos va a responder un container diferente:  <strong>cebaede35153  cad89564505e  </strong> Con esto, logramos un load balancer automático cuando necesitemos hacer scaling de nuestros micro servicios.</p>
 
@@ -242,7 +223,7 @@ machine2:
 
 <p>&#8220;Podemos acceder a este Dashboard por el puerto 8080&#8221;</p>
 
-<p><a href="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-09-46.png?ssl=1" target="_blank"><img class="aligncenter size-full wp-image-880" src="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-09-46.png?resize=648%2C321&#038;ssl=1" alt="" width="648" height="321" srcset="https://i0.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-09-46.png?w=1302&ssl=1 1302w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-09-46.png?resize=300%2C148&ssl=1 300w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-09-46.png?resize=768%2C380&ssl=1 768w, https://i0.wp.com/braybaut.com/wp-content/uploads/2017/10/Screenshot-from-2017-10-25-17-09-46.png?resize=1024%2C506&ssl=1 1024w" sizes="(max-width: 648px) 100vw, 648px" data-recalc-dims="1" /></a></p>
+<p><img src="/images/traefik13.png" alt="" /></p>
 
 <p>Próximamente escribiré como usar traefik usando Amazon ECS  y Docker Swarm como Backend.</p>
 
@@ -251,34 +232,59 @@ machine2:
 <p><a href="https://traefik.io/" target="_blank">https://traefik.io/</a></p>
 
 <p><a href="https://docs.traefik.io/" target="_blank">https://docs.traefik.io/</a></p>
-
-<p>&nbsp;</p>
             </div>
         </article>
 
         <hr />
 
+                    <div id="comments" class="thin">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "braybaut" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+</div>
         <div class="post-info">
   				<p>
-  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://practical-colden-971ce7.netlify.com/tags/devops">DevOps</a></span><span class="tag"><a href="https://practical-colden-971ce7.netlify.com/tags/docker">Docker</a></span><span class="tag"><a href="https://practical-colden-971ce7.netlify.com/tags/docker-compose">docker-compose</a></span><span class="tag"><a href="https://practical-colden-971ce7.netlify.com/tags/dockercompose">DockerCompose</a></span><span class="tag"><a href="https://practical-colden-971ce7.netlify.com/tags/load-balancer">Load Balancer</a></span><span class="tag"><a href="https://practical-colden-971ce7.netlify.com/tags/microservicios">MicroServicios</a></span><span class="tag"><a href="https://practical-colden-971ce7.netlify.com/tags/reverse-proxy">Reverse-Proxy</a></span><span class="tag"><a href="https://practical-colden-971ce7.netlify.com/tags/traefik">Traefik</a></span>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="/tags/devops">DevOps</a></span><span class="tag"><a href="/tags/docker">Docker</a></span><span class="tag"><a href="/tags/docker-compose">docker-compose</a></span><span class="tag"><a href="/tags/dockercompose">DockerCompose</a></span><span class="tag"><a href="/tags/load-balancer">Load Balancer</a></span><span class="tag"><a href="/tags/microservicios">MicroServicios</a></span><span class="tag"><a href="/tags/reverse-proxy">Reverse-Proxy</a></span><span class="tag"><a href="/tags/traefik">Traefik</a></span>
   				</p>
   			</div>
 
-        
+                     
     </main>
 
             </div>
 
             
-                <footer class="footer">
+                
+
+
+<footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
             <span>&copy; 2019</span>
             
-                <span><a href="https://practical-colden-971ce7.netlify.com/">Braybaut</a></span>
+                <span><a href="">Braybaut</a></span>
             
             <span></span>
-            <span> <a href="https://practical-colden-971ce7.netlify.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            <span> <a href="posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
         </div>
     </div>
     <div class="footer__inner">
@@ -301,8 +307,15 @@ machine2:
 
 
 
-
-<script type="text/javascript" src="https://practical-colden-971ce7.netlify.com/js/bundle.4b80fbbfab88198dcef181b034822e60a3e68b1c128d1dc05392a32943a18ec2f866fbcd9ce31dcf84134397161647ad605ea5c25ecf12e5fcf9d28b47e64bb5.js" integrity="sha512-S4D7v6uIGY3O8YGwNIIuYKPmixwSjR3AU5KjKUOhjsL4ZvvNnOMdz4QTQ5cWFketYF6lwl7PEuX8&#43;dKLR&#43;ZLtQ=="></script>
+<script type="text/javascript" src="/js/bundle.dd80b4936d9208f7384932ce622316900942c58cd138dd354b6a863e212c7fd1c951c7c3e5b83585da6297165e02ddfddbe523bbb46478a41628469263b7f000.js" integrity="sha512-3YC0k22SCPc4STLOYiMWkAlCxYzRON01S2qGPiEsf9HJUcfD5bg1hdpilxZeAt392&#43;Uju7RkeKQWKEaSY7fwAA=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-69725711-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 
 
