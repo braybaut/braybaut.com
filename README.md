@@ -2,5 +2,5 @@
 
 # Braybaut blog static files 
 
-My Static files blog generated with gohugo and deployed to gohugo
+My Static files blog generated with gohugo and deployed to netlify
 
