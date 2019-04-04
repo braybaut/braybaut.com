@@ -128,17 +128,17 @@ Una solución es abrir el puerto 22 e ingresar por ssh, pero no es la gracia tra
             <div class="content">
                 
     <main class="post">
-
         <div class="post-info">
             
             </p>
         </div>
-
+        
+        
         <article>
+
             <h2 class="post-title"><a href="/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/">Docker: Ingresar al bash de un contenedor iniciado | Script</a></h2>
 
             
-
             <div class="post-content">
                 <p><img src="/images/docker.png" alt="" /></p>
 
@@ -179,51 +179,42 @@ docker ps -a | grep Up |  awk <span style="color:#ed9d13">&#39; { print $1,&#34;
 <p>Lo ideal es dejar el script en <strong>/usr/local/bin/</strong> para que podamos llamarlo desde cualquier ubicación en nuestra consola.</p>
 
 <p>Eso es todo algo sencillo que realmente nos facilitara la vida.</p>
+
             </div>
+
         </article>
 
         <hr />
 
-                  <div id="comments" class="thin"><div id="disqus_thread"></div>
-<script>
-
-
-
-
-
-(function() { 
-    var d = document, s = d.createElement('script');
-    s.src = 'https://braybaut.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div> 
         <div class="post-info">
   				<p>
   					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="/tags/bash">bash</a></span><span class="tag"><a href="/tags/container">container</a></span><span class="tag"><a href="/tags/docker">Docker</a></span><span class="tag"><a href="/tags/github">github</a></span><span class="tag"><a href="/tags/linux">linux</a></span><span class="tag"><a href="/tags/script">script</a></span><span class="tag"><a href="/tags/tutoriales">tutoriales</a></span>
   				</p>
   			</div>
 
-                     
+
+                    <div id="comments" class="thin">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "braybaut" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
     </main>
 
             </div>

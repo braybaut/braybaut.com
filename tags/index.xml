@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Braybaut</title>
-    <link>/tags.html</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,92 +12,92 @@
     
     
     <item>
-      <title>Amazon</title>
-      <link>/tags/amazon.html</link>
-      <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
-      
-      <guid>/tags/amazon.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Autentificación</title>
-      <link>/tags/autentificaci%C3%B3n.html</link>
-      <pubDate>Tue, 19 Jan 2016 01:43:11 +0000</pubDate>
-      
-      <guid>/tags/autentificaci%C3%B3n.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Aws</title>
-      <link>/tags/aws.html</link>
+      <link>/tags/aws/</link>
       <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
       
-      <guid>/tags/aws.html</guid>
+      <guid>/tags/aws/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bash</title>
-      <link>/tags/bash.html</link>
+      <link>/tags/bash/</link>
       <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
       
-      <guid>/tags/bash.html</guid>
+      <guid>/tags/bash/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Container</title>
-      <link>/tags/container.html</link>
+      <link>/tags/container/</link>
       <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
       
-      <guid>/tags/container.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Contenedor De Datos</title>
-      <link>/tags/contenedor-de-datos.html</link>
-      <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
-      
-      <guid>/tags/contenedor-de-datos.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Contenedores</title>
-      <link>/tags/contenedores.html</link>
-      <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
-      
-      <guid>/tags/contenedores.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Crm</title>
-      <link>/tags/crm.html</link>
-      <pubDate>Tue, 19 Jan 2016 01:43:11 +0000</pubDate>
-      
-      <guid>/tags/crm.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data Container</title>
-      <link>/tags/data-container.html</link>
-      <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
-      
-      <guid>/tags/data-container.html</guid>
+      <guid>/tags/container/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Devops</title>
-      <link>/tags/devops.html</link>
+      <link>/tags/devops/</link>
       <pubDate>Wed, 25 Oct 2017 22:25:26 +0000</pubDate>
       
-      <guid>/tags/devops.html</guid>
+      <guid>/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>/tags/docker/</link>
+      <pubDate>Sun, 03 Feb 2019 21:44:10 +0000</pubDate>
+      
+      <guid>/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker Compose</title>
+      <link>/tags/docker-compose/</link>
+      <pubDate>Wed, 25 Oct 2017 22:25:26 +0000</pubDate>
+      
+      <guid>/tags/docker-compose/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dockercompose</title>
+      <link>/tags/dockercompose/</link>
+      <pubDate>Wed, 25 Oct 2017 22:25:26 +0000</pubDate>
+      
+      <guid>/tags/dockercompose/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dockerswarm</title>
+      <link>/tags/dockerswarm/</link>
+      <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
+      
+      <guid>/tags/dockerswarm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gcp</title>
+      <link>/tags/gcp/</link>
+      <pubDate>Sun, 03 Feb 2019 21:44:10 +0000</pubDate>
+      
+      <guid>/tags/gcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>/tags/github/</link>
+      <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
+      
+      <guid>/tags/github/</guid>
       <description></description>
     </item>
     

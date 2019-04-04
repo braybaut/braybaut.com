@@ -2,57 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutoriales on Braybaut</title>
-    <link>/tags/tutoriales.html</link>
+    <link>/tags/tutoriales/</link>
     <description>Recent content in Tutoriales on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Dec 2017 01:20:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Jan 2016 04:40:50 +0000</lastBuildDate>
     
 	<atom:link href="/tags/tutoriales/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Utilizando Traefik como Dynamic Reverse Proxy en Docker Swarm sobre  AWS</title>
-      <link>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws.html</link>
-      <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
-      
-      <guid>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws.html</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;/images/traefik.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Traefik es una herramienta muy potente gracias a que soporta varios providers como backend, en este caso usaremos traefik para que nos sirva como &lt;strong&gt;Dynamic Reverse Proxy&lt;/strong&gt; sobre un cluster de &lt;strong&gt;Docker Swarm&lt;/strong&gt; en &lt;strong&gt;Amazon Web Services&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;componentes&#34;&gt;Componentes:&lt;/h3&gt;
-
-&lt;h4 id=&#34;3-instancias-1-manager-y-2-worker&#34;&gt;3 Instancias (1 Manager  y 2 worker):&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;Manager: &lt;/strong&gt;Esta instancia sera la que controlara todo el cluster, en ella desplegaremos traefik y los servicios que no son worker, esta instancia estará sobre una subnet , la cual llamaremos &lt;strong&gt;&amp;#8220;subnet frontend&amp;#8221; &lt;/strong&gt;y tendrá su respectivo Secure Group&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Worker: &lt;/strong&gt;las instancias llamadas workers son dichas instancias donde correran nuestros servicios desplegados en AWS, sin tener en cuenta los servicios de &amp;#8220;management&amp;#8221; que podemos desplegar en la subnet de frontend, aquí desplegaremos los servicios que necesitemos como un web server, un micro servicio, etc, estas dos instancias estarán sobre otra subnet, la cual la llamaremos &lt;strong&gt;&amp;#8220;subnet backend&amp;#8221;&lt;/strong&gt; y tendrá su respectivo Secure Group&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Autentificación LDAP Vtiger CRM 6</title>
-      <link>/posts/autentificaci%C3%B3n-ldap-vtiger-crm-6.html</link>
-      <pubDate>Tue, 19 Jan 2016 01:43:11 +0000</pubDate>
-      
-      <guid>/posts/autentificaci%C3%B3n-ldap-vtiger-crm-6.html</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;/images/vtiger1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Vtiger es un CRM de código abierto muy potente que trata de acercarse  a grandes crms como salesforce y SugarCRM, pero en esta ocasión veremos como autentificarlo hacia LDAP.&lt;/p&gt;
-
-&lt;p&gt;Con un gran compañero de la compañía &lt;a href=&#34;https://twitter.com/Gabo_fdc?s=09&#34; target=&#34;_blank&#34;&gt;Gabo&lt;/a&gt;, logramos hacer la autentificación continuación describo los pasos para lograrla.&lt;/p&gt;
-
-&lt;p&gt;Para lograr la autentificación debemos usar los archivos de autentificación de Vtiger de 5.x,  estos archivos los encuentran en github.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/braybaut/ldap-vtiger&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/braybaut/ldap-vtiger&#34; target=&#34;_blank&#34;&gt;https://github.com/braybaut/ldap-vtiger&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Docker: Ingresar al bash de un contenedor iniciado | Script</title>
-      <link>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script.html</link>
+      <link>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</link>
       <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
       
-      <guid>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script.html</guid>
+      <guid>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/docker.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ultimamente he trabajado mucho con docker y en el maravilloso recorrido que he tenido con docker se me presento un problema gigante,  inicio el contenedor con su servicio pero por X o Y motivo quiero ingresar al bash y el &amp;#8220;docker attach&amp;#8221; no funciona porque el docker no lo inicie con /bin/bash&lt;/p&gt;

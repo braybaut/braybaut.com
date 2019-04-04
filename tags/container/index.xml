@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Container on Braybaut</title>
-    <link>/tags/container.html</link>
+    <link>/tags/container/</link>
     <description>Recent content in Container on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Howto: como crear un contenedor de datos en docker</title>
-      <link>/posts/howto-como-crear-un-contenedor-de-datos-en-docker.html</link>
+      <link>/posts/howto-como-crear-un-contenedor-de-datos-en-docker/</link>
       <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
       
-      <guid>/posts/howto-como-crear-un-contenedor-de-datos-en-docker.html</guid>
+      <guid>/posts/howto-como-crear-un-contenedor-de-datos-en-docker/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/docker.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;los contenedores no son persistentes en sus datos al ser ejecutados, esto quiere decir que al terminar una ejecución de un contenedor este pierde sus datos.&lt;/p&gt;
@@ -28,10 +28,10 @@
     
     <item>
       <title>Docker: Ingresar al bash de un contenedor iniciado | Script</title>
-      <link>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script.html</link>
+      <link>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</link>
       <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
       
-      <guid>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script.html</guid>
+      <guid>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/docker.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ultimamente he trabajado mucho con docker y en el maravilloso recorrido que he tenido con docker se me presento un problema gigante,  inicio el contenedor con su servicio pero por X o Y motivo quiero ingresar al bash y el &amp;#8220;docker attach&amp;#8221; no funciona porque el docker no lo inicie con /bin/bash&lt;/p&gt;

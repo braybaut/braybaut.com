@@ -61,7 +61,7 @@ Este contenedor solo guardara la información que se requiere sea persistente, n
 
 
 
-<meta itemprop="keywords" content="container,contenedor de datos,contenedores,data container,Docker,persistencia,volume container," />
+<meta itemprop="keywords" content="container,Docker," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Howto: como crear un contenedor de datos en docker"/>
 <meta name="twitter:description" content="
@@ -74,8 +74,6 @@ Este contenedor solo guardara la información que se requiere sea persistente, n
 
 
 
-<meta property="article:section" content="Docker" />
-<meta property="article:section" content="TUTORIALES" />
 
 <meta property="article:published_time" content="2016-01-13 17:40:11 &#43;0000 &#43;0000" />
 
@@ -133,17 +131,17 @@ Este contenedor solo guardara la información que se requiere sea persistente, n
             <div class="content">
                 
     <main class="post">
-
         <div class="post-info">
             
             </p>
         </div>
-
+        
+        
         <article>
+
             <h2 class="post-title"><a href="/posts/howto-como-crear-un-contenedor-de-datos-en-docker/">Howto: como crear un contenedor de datos en docker</a></h2>
 
             
-
             <div class="post-content">
                 <p><img src="/images/docker.png" alt="" /></p>
 
@@ -164,51 +162,42 @@ Este contenedor solo guardara la información que se requiere sea persistente, n
 <p>Con el comando anterior iniciamos un contenedor usando los volumenes del contenedor <strong>&#8220;data-apache&#8221;</strong> de esta manera así borremos el contenedor <strong>&#8220;apache&#8221;</strong> los datos se conservaran  y solo tenemos que iniciar otro contenedor indicando el contenedor de datos.</p>
 
 <p>Mas información <a href="https://docs.docker.com/engine/userguide/dockervolumes/" target="_blank">aqui</a>.</p>
+
             </div>
+
         </article>
 
         <hr />
 
-                  <div id="comments" class="thin"><div id="disqus_thread"></div>
-<script>
-
-
-
-
-
-(function() { 
-    var d = document, s = d.createElement('script');
-    s.src = 'https://braybaut.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div> 
         <div class="post-info">
   				<p>
-  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="/tags/container">container</a></span><span class="tag"><a href="/tags/contenedor-de-datos">contenedor de datos</a></span><span class="tag"><a href="/tags/contenedores">contenedores</a></span><span class="tag"><a href="/tags/data-container">data container</a></span><span class="tag"><a href="/tags/docker">Docker</a></span><span class="tag"><a href="/tags/persistencia">persistencia</a></span><span class="tag"><a href="/tags/volume-container">volume container</a></span>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="/tags/container">container</a></span><span class="tag"><a href="/tags/docker">Docker</a></span>
   				</p>
   			</div>
 
-                     
+
+                    <div id="comments" class="thin">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "braybaut" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
     </main>
 
             </div>

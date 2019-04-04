@@ -2,21 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker on Braybaut</title>
-    <link>/tags/docker.html</link>
+    <link>/tags/docker/</link>
     <description>Recent content in Docker on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Dec 2017 01:20:18 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Feb 2019 21:44:10 +0000</lastBuildDate>
     
 	<atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Creando un cluster de kubernetes en GCP con terraform</title>
+      <link>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</link>
+      <pubDate>Sun, 03 Feb 2019 21:44:10 +0000</pubDate>
+      
+      <guid>/posts/creando-un-cluster-de-kubernetes-en-gcp-con-terraform/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/images/terra-gcp-kubernetes2.png&#34; alt=&#34;Kubernetes&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Terraform, es una de las herramientas mas potentes de hashicorp y hoy en día es usada por grandes compañías para mantener infraestructura en la nube.&lt;/p&gt;
+
+&lt;p&gt;Terraform destaca porque podemos trabajar con múltiples providers al mismo tiempo, ¿ que quiere decir esto ? que le podemos decir a terraform que cuando se cree una nueva instancia en GCP al mismo tiempo  genere un registro DNS en route53 en AWS, esto de una manera muy sencilla.&lt;/p&gt;
+
+&lt;p&gt;Pero hoy no vamos a hablar de AWS, hoy vamos a hablar de GCP, una nube muy poderosa que tiene características muy interesantes para tener en cuenta y en este caso, construiremos un cluster de Kubernetes en GCP usando terraform.&lt;/p&gt;
+
+&lt;h3 id=&#34;conectandonos-a-google-cloud-platform&#34;&gt;Conectandonos a Google Cloud platform:&lt;/h3&gt;
+
+&lt;p&gt;Para conectarnos a GCP solo necesitamos determinar:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Credentials&lt;/strong&gt; : En este caso tenemos que generar un account service y usar el archivo json que se genera con los permisos necesarios&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Project&lt;/strong&gt;  : Determinamos el proyecto en GCP en el cual vamos a trabajar&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;region&lt;/strong&gt; : Determinamos la región por el cual vamos a trabajar.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Despues de determinar los valores mencionados anteriormente, los seteamos en el siguiente archivo.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Utilizando Traefik como Dynamic Reverse Proxy en Docker Swarm sobre  AWS</title>
-      <link>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws.html</link>
+      <link>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws/</link>
       <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
       
-      <guid>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws.html</guid>
+      <guid>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/traefik.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Traefik es una herramienta muy potente gracias a que soporta varios providers como backend, en este caso usaremos traefik para que nos sirva como &lt;strong&gt;Dynamic Reverse Proxy&lt;/strong&gt; sobre un cluster de &lt;strong&gt;Docker Swarm&lt;/strong&gt; en &lt;strong&gt;Amazon Web Services&lt;/strong&gt;.&lt;/p&gt;
@@ -32,10 +61,10 @@
     
     <item>
       <title>Traefik: Load Balancer y Reverse Proxy para Docker</title>
-      <link>/posts/traefik-load-balancer-y-reverse-proxy-para-docker.html</link>
+      <link>/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</link>
       <pubDate>Wed, 25 Oct 2017 22:25:26 +0000</pubDate>
       
-      <guid>/posts/traefik-load-balancer-y-reverse-proxy-para-docker.html</guid>
+      <guid>/posts/traefik-load-balancer-y-reverse-proxy-para-docker/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/traefik.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Cuando trabajamos con docker en ambientes productivos, la mayoría de casos usamos tecnologías para orquestar y poder ofrecer alta disponibilidad sobre nuestros micro servicios, debido a esto, nosotros corremos multiples aplicaciones sobre un mismo host que haga parte de nuestro stack de orquestación. Para que estas aplicaciones puedan ser consumidas sin necesidad de exponer un puerto, necesitamos un reverse proxy para poder consumir estos servicios desde un único puerto.&lt;/p&gt;
@@ -45,10 +74,10 @@
     
     <item>
       <title>Howto: Instalando Rocket.Chat en Docker</title>
-      <link>/posts/howto-instalando-rocket.chat-en-docker.html</link>
+      <link>/posts/howto-instalando-rocket.chat-en-docker/</link>
       <pubDate>Tue, 07 Mar 2017 06:54:30 +0000</pubDate>
       
-      <guid>/posts/howto-instalando-rocket.chat-en-docker.html</guid>
+      <guid>/posts/howto-instalando-rocket.chat-en-docker/</guid>
       <description>&lt;p&gt;&lt;center&gt;&lt;img src=&#34;/images/rocketchat1.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Rocket.chat para mi es una de las mejores plataformas de chat &lt;strong&gt;OpenSource&lt;/strong&gt; que existen, es muy flexible a la hora de adaptarlo y lo mejor, tiene cliente para toda las plataformas.&lt;/p&gt;
@@ -71,10 +100,10 @@ systemcl enable docker&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     
     <item>
       <title>Howto: como crear un contenedor de datos en docker</title>
-      <link>/posts/howto-como-crear-un-contenedor-de-datos-en-docker.html</link>
+      <link>/posts/howto-como-crear-un-contenedor-de-datos-en-docker/</link>
       <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
       
-      <guid>/posts/howto-como-crear-un-contenedor-de-datos-en-docker.html</guid>
+      <guid>/posts/howto-como-crear-un-contenedor-de-datos-en-docker/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/docker.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;los contenedores no son persistentes en sus datos al ser ejecutados, esto quiere decir que al terminar una ejecución de un contenedor este pierde sus datos.&lt;/p&gt;
@@ -86,10 +115,10 @@ systemcl enable docker&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     
     <item>
       <title>Docker: Ingresar al bash de un contenedor iniciado | Script</title>
-      <link>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script.html</link>
+      <link>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</link>
       <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
       
-      <guid>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script.html</guid>
+      <guid>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/docker.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ultimamente he trabajado mucho con docker y en el maravilloso recorrido que he tenido con docker se me presento un problema gigante,  inicio el contenedor con su servicio pero por X o Y motivo quiero ingresar al bash y el &amp;#8220;docker attach&amp;#8221; no funciona porque el docker no lo inicie con /bin/bash&lt;/p&gt;
