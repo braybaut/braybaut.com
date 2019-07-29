@@ -6,10 +6,21 @@
     <description>Recent content on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Mar 2019 17:12:48 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jul 2019 16:58:24 -0500</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Continuous Integration for Golang Applications with Terraform, Codebuilds and ECR</title>
+      <link>/posts/continuous-integration-for-golang-applications-with-terraform-codebuilds-and-ecr/</link>
+      <pubDate>Fri, 26 Jul 2019 16:58:24 -0500</pubDate>
+      
+      <guid>/posts/continuous-integration-for-golang-applications-with-terraform-codebuilds-and-ecr/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/images/Gopher-aws.png&#34; alt=&#34;Gopher&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I wrote this post for sharing, how we can do continuous integration for Golang APIs with some tools. In this post I&amp;rsquo;m going to use terraform for making a codebuild resource, Code build to build the Golang API and generate a docker image and  ECR for keeping the docker image.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Posts</title>
@@ -160,19 +171,6 @@ systemcl enable docker&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 &lt;p&gt;Existen varias practicas para realizar la persistencia de los datos, en esta ocasión usaremos un contenedor de datos ( data container) para hacer la persistencia.&lt;/p&gt;
 
 &lt;p&gt;Este contenedor solo guardara la información que se requiere sea persistente, no es necesario que este iniciado ya que  lo podemos compartir sin necesidad  de que este ejecutado.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Docker: Ingresar al bash de un contenedor iniciado | Script</title>
-      <link>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</link>
-      <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
-      
-      <guid>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;/images/docker.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ultimamente he trabajado mucho con docker y en el maravilloso recorrido que he tenido con docker se me presento un problema gigante,  inicio el contenedor con su servicio pero por X o Y motivo quiero ingresar al bash y el &amp;#8220;docker attach&amp;#8221; no funciona porque el docker no lo inicie con /bin/bash&lt;/p&gt;
-
-&lt;p&gt;Una solución es abrir el puerto 22 e ingresar por ssh, pero no es la gracia trabajar de esta manera ya que estamos con container. Navegando por la red encontré un comando un poco largo para poder ingresar al bash del container y un compañero de la compañía donde trabajo también me paso uno parecido, pero me pareció algo fastidioso usar un comando largo para ingresar al bash entonces me tome la tarea de crear un script para que me facilite esta tarea, se los mostrare:&lt;/p&gt;</description>
     </item>
     
   </channel>

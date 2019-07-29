@@ -6,10 +6,21 @@
     <description>Recent content in Devops on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Oct 2017 22:25:26 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jul 2019 16:58:24 -0500</lastBuildDate>
     
 	<atom:link href="/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Continuous Integration for Golang Applications with Terraform, Codebuilds and ECR</title>
+      <link>/posts/continuous-integration-for-golang-applications-with-terraform-codebuilds-and-ecr/</link>
+      <pubDate>Fri, 26 Jul 2019 16:58:24 -0500</pubDate>
+      
+      <guid>/posts/continuous-integration-for-golang-applications-with-terraform-codebuilds-and-ecr/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/images/Gopher-aws.png&#34; alt=&#34;Gopher&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I wrote this post for sharing, how we can do continuous integration for Golang APIs with some tools. In this post I&amp;rsquo;m going to use terraform for making a codebuild resource, Code build to build the Golang API and generate a docker image and  ECR for keeping the docker image.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Traefik: Load Balancer y Reverse Proxy para Docker</title>

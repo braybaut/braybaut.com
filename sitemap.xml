@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/continuous-integration-for-golang-applications-with-terraform-codebuilds-and-ecr/</loc>
+    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/archive/</loc>
     <lastmod>2019-03-24T17:12:48-05:00</lastmod>
   </url>
@@ -59,7 +64,7 @@
   
   <url>
     <loc>/tags/aws/</loc>
-    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -71,7 +76,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-03-24T17:12:48-05:00</lastmod>
+    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -83,7 +88,7 @@
   
   <url>
     <loc>/tags/devops/</loc>
-    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
+    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -131,7 +136,7 @@
   
   <url>
     <loc>/tags/golang/</loc>
-    <lastmod>2019-02-10T21:52:53+00:00</lastmod>
+    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -173,7 +178,7 @@
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2019-02-10T21:52:53+00:00</lastmod>
+    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -191,13 +196,13 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/terraform/</loc>
-    <lastmod>2019-02-03T21:44:10+00:00</lastmod>
+    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
     <priority>0</priority>
   </url>
   
