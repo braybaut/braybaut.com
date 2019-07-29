@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author"
-    content="Braybaut /content/img/me3.jpg ">
+    content="braybaut">
 <meta name="description"
     content="I wrote this post for sharing, how we can do continuous integration for Golang APIs with some tools. In this post I&amp;rsquo;m going to use terraform for making a codebuild resource, Code build to build the Golang API and generate a docker image and ECR for keeping the docker image.
 " />
@@ -141,7 +141,7 @@ I wrote this post for sharing, how we can do continuous integration for Golang A
 
 <p><img src="/images/workflow.png" alt="" /></p>
 
-<p>The continuous integration workflow is very easy to understand, every time a new tag is created the webhook will start the job, Codebuild will compile the Golang API and will generate the docker image, then will run a docker push to AWS ECR,</p>
+<p>The continuous integration workflow is very easy to understand, every time a new tag is created the webhook will start the job, Codebuild will compile the Golang API and will generate the docker image, then will run a docker push to AWS ECR.</p>
 
 <p>For this exercise, I pushed the code at  <a href="https://github.com/braybaut/Golang-API" target="_blank">https://github.com/braybaut/Golang-API</a>
 This repository has the Golang API, Terraform files to deploy the AWS resources and buildspec to generate the steps</p>

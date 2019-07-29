@@ -26,7 +26,7 @@
 
 <p><img src="/images/workflow.png" alt="" /></p>
 
-<p>The continuous integration workflow is very easy to understand, every time a new tag is created the webhook will start the job, Codebuild will compile the Golang API and will generate the docker image, then will run a docker push to AWS ECR,</p>
+<p>The continuous integration workflow is very easy to understand, every time a new tag is created the webhook will start the job, Codebuild will compile the Golang API and will generate the docker image, then will run a docker push to AWS ECR.</p>
 
 <p>For this exercise, I pushed the code at  <a href="https://github.com/braybaut/Golang-API" target="_blank">https://github.com/braybaut/Golang-API</a>
 This repository has the Golang API, Terraform files to deploy the AWS resources and buildspec to generate the steps</p>
