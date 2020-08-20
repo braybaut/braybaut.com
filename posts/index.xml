@@ -366,6 +366,20 @@ variable <span style="color:#ed9d13">&#34;AWS_ACCOUNT_ID&#34;</span> {
         </item>
         
         <item>
+            <title>Construyendo Un cluster de Kubernetes en AWS EKS Con Terraform</title>
+            <link>/posts/construyendo-un-cluster-de-kubernetes-en-aws-eks-con-terraform/</link>
+            <pubDate>Fri, 05 Apr 2019 09:03:17 -0500</pubDate>
+            
+            <guid>/posts/construyendo-un-cluster-de-kubernetes-en-aws-eks-con-terraform/</guid>
+            <description>Kubernetes sin duda es uno de los mejores containers orquestation que tenemos en el mercado y hoy en dia, muchos vendors ofrecen Kubernetes como servicio, AWS no se ha quedado atras y en junio del año pasado, anuncio Elastic Kubernetes Services.
+El cluster que desplegaremos, se compone de los siguientes resources:</description>
+            <content type="html"><![CDATA[<p><img src="/images/Terra-EKS.png" alt=""></p>
+<p>Kubernetes sin duda es uno de los mejores containers orquestation que tenemos en el mercado y hoy en dia, muchos vendors ofrecen Kubernetes como servicio, AWS no se ha quedado atras y en junio del año pasado, anuncio Elastic Kubernetes Services.</p>
+<p>El cluster que desplegaremos, se compone de los siguientes resources:</p>
+]]></content>
+        </item>
+        
+        <item>
             <title>Parseando JSON con Golang y las naves de spaceX</title>
             <link>/posts/parseando-json-con-golang-y-las-naves-de-spacex/</link>
             <pubDate>Sun, 10 Feb 2019 21:52:53 +0000</pubDate>
