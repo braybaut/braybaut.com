@@ -14,9 +14,10 @@
             <pubDate>Thu, 06 Aug 2020 12:51:50 -0500</pubDate>
             
             <guid>/posts/integrate-terraform-language-server-protocol-with-vim/</guid>
-            <description>We write large-scale infrastructure with terraform. We spend hours creating modules, writing resources, developing infrastructure. To feel more comfortable, surely we need a langserver in our editor. I&amp;rsquo;ll show how to integrate a terraform langserver in vim - making it a Swiss Army Knife.
-The Language Server protocol is used between a tool (the client) and a language smartness provider (the server) to integrate features. Like auto complete, go to definition, find all references and alike into the tool.</description>
-            <content type="html"><![CDATA[<p><img src="/images/vim.png" alt=""></p>
+            <description>&lt;p&gt;&lt;img src=&#34;/images/vim.png&#34; alt=&#34;VIM&#34;&gt;&lt;/p&gt;
+&lt;p&gt;We write large-scale infrastructure with terraform. We spend hours creating modules, writing resources, developing infrastructure. To feel more comfortable, surely we need a langserver in our editor. I&amp;rsquo;ll show how to integrate a terraform langserver in vim - making it a Swiss Army Knife.&lt;/p&gt;
+&lt;p&gt;The Language Server protocol is used between a tool (the client) and a language smartness provider (the server) to integrate features. Like auto complete, go to definition, find all references and alike into the tool. This post explains how to integrate &lt;strong&gt;terraform-lsp&lt;/strong&gt; on vim.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p><img src="/images/vim.png" alt="VIM"></p>
 <p>We write large-scale infrastructure with terraform. We spend hours creating modules, writing resources, developing infrastructure. To feel more comfortable, surely we need a langserver in our editor. I&rsquo;ll show how to integrate a terraform langserver in vim - making it a Swiss Army Knife.</p>
 <p>The Language Server protocol is used between a tool (the client) and a language smartness provider (the server) to integrate features. Like auto complete, go to definition, find all references and alike into the tool. This post explains how to integrate <strong>terraform-lsp</strong> on vim.</p>
 <h3 id="requirements">Requirements</h3>
@@ -79,8 +80,7 @@ Plug <span style="color:#ed9d13">&#39;neoclide/coc.nvim&#39;</span>, {<span styl
 <p><a href="https://github.com/juliosueiras/terraform-lsp">Terraform-lsp</a><br>
 <a href="https://www.terraform.io/">Terraform</a><br>
 <a href="https://langserver.org/">langserver.org</a><br>
-<a href="https://github.com/neoclide/coc.nvim">coc-nvim</a></p>
-]]></content>
+<a href="https://github.com/neoclide/coc.nvim">coc-nvim</a></p>]]></content>
         </item>
         
         <item>
@@ -362,20 +362,6 @@ variable <span style="color:#ed9d13">&#34;AWS_ACCOUNT_ID&#34;</span> {
 <p>Our Continuous integration workflow finish there, we can see that the docker image tag is the same to the tag set as release at github:</p>
 <p><img src="/images/testing-webhook.png" alt=""></p>
 <p>This was a little example that how we can create an  easy continuous integration for Golang APIs with Codebuild, GitHub and Terraform, In the next post I will write how can create a continuous delivery workflow with CodeDeploy and Fargate and other post joining both workflows to make a pipeline with continuous integration and delivery workflow.</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Construyendo Un cluster de Kubernetes en AWS EKS Con Terraform</title>
-            <link>/posts/construyendo-un-cluster-de-kubernetes-en-aws-eks-con-terraform/</link>
-            <pubDate>Fri, 05 Apr 2019 09:03:17 -0500</pubDate>
-            
-            <guid>/posts/construyendo-un-cluster-de-kubernetes-en-aws-eks-con-terraform/</guid>
-            <description>Kubernetes sin duda es uno de los mejores containers orquestation que tenemos en el mercado y hoy en dia, muchos vendors ofrecen Kubernetes como servicio, AWS no se ha quedado atras y en junio del año pasado, anuncio Elastic Kubernetes Services.
-El cluster que desplegaremos, se compone de los siguientes resources:</description>
-            <content type="html"><![CDATA[<p><img src="/images/Terra-EKS.png" alt=""></p>
-<p>Kubernetes sin duda es uno de los mejores containers orquestation que tenemos en el mercado y hoy en dia, muchos vendors ofrecen Kubernetes como servicio, AWS no se ha quedado atras y en junio del año pasado, anuncio Elastic Kubernetes Services.</p>
-<p>El cluster que desplegaremos, se compone de los siguientes resources:</p>
 ]]></content>
         </item>
         

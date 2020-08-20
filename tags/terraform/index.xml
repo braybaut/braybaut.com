@@ -17,8 +17,9 @@
       <pubDate>Thu, 06 Aug 2020 12:51:50 -0500</pubDate>
       
       <guid>/posts/integrate-terraform-language-server-protocol-with-vim/</guid>
-      <description>We write large-scale infrastructure with terraform. We spend hours creating modules, writing resources, developing infrastructure. To feel more comfortable, surely we need a langserver in our editor. I&amp;rsquo;ll show how to integrate a terraform langserver in vim - making it a Swiss Army Knife.
-The Language Server protocol is used between a tool (the client) and a language smartness provider (the server) to integrate features. Like auto complete, go to definition, find all references and alike into the tool.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;/images/vim.png&#34; alt=&#34;VIM&#34;&gt;&lt;/p&gt;
+&lt;p&gt;We write large-scale infrastructure with terraform. We spend hours creating modules, writing resources, developing infrastructure. To feel more comfortable, surely we need a langserver in our editor. I&amp;rsquo;ll show how to integrate a terraform langserver in vim - making it a Swiss Army Knife.&lt;/p&gt;
+&lt;p&gt;The Language Server protocol is used between a tool (the client) and a language smartness provider (the server) to integrate features. Like auto complete, go to definition, find all references and alike into the tool. This post explains how to integrate &lt;strong&gt;terraform-lsp&lt;/strong&gt; on vim.&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -8,7 +8,8 @@
     content="Braybaut /content/img/me.jpeg ">
 <meta name="description"
     content="We write large-scale infrastructure with terraform. We spend hours creating modules, writing resources, developing infrastructure. To feel more comfortable, surely we need a langserver in our editor. I&amp;rsquo;ll show how to integrate a terraform langserver in vim - making it a Swiss Army Knife.
-The Language Server protocol is used between a tool (the client) and a language smartness provider (the server) to integrate features. Like auto complete, go to definition, find all references and alike into the tool." />
+The Language Server protocol is used between a tool (the client) and a language smartness provider (the server) to integrate features. Like auto complete, go to definition, find all references and alike into the tool. This post explains how to integrate terraform-lsp on vim.
+" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="/posts/integrate-terraform-language-server-protocol-with-vim/" />
@@ -43,8 +44,9 @@ The Language Server protocol is used between a tool (the client) and a language 
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Integrate Terraform Language Server Protocol With vim">
-<meta itemprop="description" content="We write large-scale infrastructure with terraform. We spend hours creating modules, writing resources, developing infrastructure. To feel more comfortable, surely we need a langserver in our editor. I&rsquo;ll show how to integrate a terraform langserver in vim - making it a Swiss Army Knife.
-The Language Server protocol is used between a tool (the client) and a language smartness provider (the server) to integrate features. Like auto complete, go to definition, find all references and alike into the tool.">
+<meta itemprop="description" content="
+We write large-scale infrastructure with terraform. We spend hours creating modules, writing resources, developing infrastructure. To feel more comfortable, surely we need a langserver in our editor. I&rsquo;ll show how to integrate a terraform langserver in vim - making it a Swiss Army Knife.
+The Language Server protocol is used between a tool (the client) and a language smartness provider (the server) to integrate features. Like auto complete, go to definition, find all references and alike into the tool. This post explains how to integrate terraform-lsp on vim.">
 <meta itemprop="datePublished" content="2020-08-06T12:51:50-05:00" />
 <meta itemprop="dateModified" content="2020-08-06T12:51:50-05:00" />
 <meta itemprop="wordCount" content="276">
@@ -54,8 +56,9 @@ The Language Server protocol is used between a tool (the client) and a language 
 <meta itemprop="keywords" content="vim,terraform,terraform-lsp,lang servers,hashicorp," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Integrate Terraform Language Server Protocol With vim"/>
-<meta name="twitter:description" content="We write large-scale infrastructure with terraform. We spend hours creating modules, writing resources, developing infrastructure. To feel more comfortable, surely we need a langserver in our editor. I&rsquo;ll show how to integrate a terraform langserver in vim - making it a Swiss Army Knife.
-The Language Server protocol is used between a tool (the client) and a language smartness provider (the server) to integrate features. Like auto complete, go to definition, find all references and alike into the tool."/>
+<meta name="twitter:description" content="
+We write large-scale infrastructure with terraform. We spend hours creating modules, writing resources, developing infrastructure. To feel more comfortable, surely we need a langserver in our editor. I&rsquo;ll show how to integrate a terraform langserver in vim - making it a Swiss Army Knife.
+The Language Server protocol is used between a tool (the client) and a language smartness provider (the server) to integrate features. Like auto complete, go to definition, find all references and alike into the tool. This post explains how to integrate terraform-lsp on vim."/>
 
 
 
@@ -128,7 +131,7 @@ The Language Server protocol is used between a tool (the client) and a language 
 
             
             <div class="post-content">
-                <p><img src="/images/vim.png" alt=""></p>
+                <p><img src="/images/vim.png" alt="VIM"></p>
 <p>We write large-scale infrastructure with terraform. We spend hours creating modules, writing resources, developing infrastructure. To feel more comfortable, surely we need a langserver in our editor. I&rsquo;ll show how to integrate a terraform langserver in vim - making it a Swiss Army Knife.</p>
 <p>The Language Server protocol is used between a tool (the client) and a language smartness provider (the server) to integrate features. Like auto complete, go to definition, find all references and alike into the tool. This post explains how to integrate <strong>terraform-lsp</strong> on vim.</p>
 <h3 id="requirements">Requirements</h3>
@@ -192,7 +195,6 @@ Plug <span style="color:#ed9d13">&#39;neoclide/coc.nvim&#39;</span>, {<span styl
 <a href="https://www.terraform.io/">Terraform</a><br>
 <a href="https://langserver.org/">langserver.org</a><br>
 <a href="https://github.com/neoclide/coc.nvim">coc-nvim</a></p>
-
 
             </div>
 

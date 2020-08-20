@@ -17,8 +17,9 @@
       <pubDate>Thu, 06 Aug 2020 12:51:50 -0500</pubDate>
       
       <guid>/posts/integrate-terraform-language-server-protocol-with-vim/</guid>
-      <description>We write large-scale infrastructure with terraform. We spend hours creating modules, writing resources, developing infrastructure. To feel more comfortable, surely we need a langserver in our editor. I&amp;rsquo;ll show how to integrate a terraform langserver in vim - making it a Swiss Army Knife.
-The Language Server protocol is used between a tool (the client) and a language smartness provider (the server) to integrate features. Like auto complete, go to definition, find all references and alike into the tool.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;/images/vim.png&#34; alt=&#34;VIM&#34;&gt;&lt;/p&gt;
+&lt;p&gt;We write large-scale infrastructure with terraform. We spend hours creating modules, writing resources, developing infrastructure. To feel more comfortable, surely we need a langserver in our editor. I&amp;rsquo;ll show how to integrate a terraform langserver in vim - making it a Swiss Army Knife.&lt;/p&gt;
+&lt;p&gt;The Language Server protocol is used between a tool (the client) and a language smartness provider (the server) to integrate features. Like auto complete, go to definition, find all references and alike into the tool. This post explains how to integrate &lt;strong&gt;terraform-lsp&lt;/strong&gt; on vim.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,16 +30,6 @@ The Language Server protocol is used between a tool (the client) and a language 
       <guid>/posts/continuous-integration-for-golang-applications-with-terraform-codebuilds-and-ecr/</guid>
       <description>I wrote this post for sharing, how we can do continuous integration for Golang APIs with some tools. In this post I&amp;rsquo;m going to use terraform for making a codebuild resource, Code build to build the Golang API and generate a docker image and ECR for keeping the docker image.
 The workflow: The continuous integration workflow is very easy to understand, every time a new tag is created the webhook will start the job, Codebuild will compile the Golang API and will generate the docker image, then will run a docker push to AWS ECR,</description>
-    </item>
-    
-    <item>
-      <title>Construyendo Un cluster de Kubernetes en AWS EKS Con Terraform</title>
-      <link>/posts/construyendo-un-cluster-de-kubernetes-en-aws-eks-con-terraform/</link>
-      <pubDate>Fri, 05 Apr 2019 09:03:17 -0500</pubDate>
-      
-      <guid>/posts/construyendo-un-cluster-de-kubernetes-en-aws-eks-con-terraform/</guid>
-      <description>Kubernetes sin duda es uno de los mejores containers orquestation que tenemos en el mercado y hoy en dia, muchos vendors ofrecen Kubernetes como servicio, AWS no se ha quedado atras y en junio del año pasado, anuncio Elastic Kubernetes Services.
-El cluster que desplegaremos, se compone de los siguientes resources:</description>
     </item>
     
     <item>
@@ -136,6 +127,19 @@ I’m also Container and OpenSource Enthusiast, I really enjoy writing about any
 
 systemcl enable docker
 &lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Autentificación LDAP Vtiger CRM 6</title>
+      <link>/posts/autentificaci%C3%B3n-ldap-vtiger-crm-6/</link>
+      <pubDate>Tue, 19 Jan 2016 01:43:11 +0000</pubDate>
+      
+      <guid>/posts/autentificaci%C3%B3n-ldap-vtiger-crm-6/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/images/vtiger1.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Vtiger es un CRM de código abierto muy potente que trata de acercarse  a grandes crms como salesforce y SugarCRM, pero en esta ocasión veremos como autentificarlo hacia LDAP.&lt;/p&gt;
+&lt;p&gt;Con un gran compañero de la compañía &lt;a href=&#34;https://twitter.com/Gabo_fdc?s=09&#34;&gt;Gabo&lt;/a&gt;, logramos hacer la autentificación continuación describo los pasos para lograrla.&lt;/p&gt;
+&lt;p&gt;Para lograr la autentificación debemos usar los archivos de autentificación de Vtiger de 5.x,  estos archivos los encuentran en github.&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;https://github.com/braybaut/ldap-vtiger&#34;&gt;https://github.com/braybaut/ldap-vtiger&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
