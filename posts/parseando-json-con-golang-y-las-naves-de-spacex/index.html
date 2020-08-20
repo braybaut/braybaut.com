@@ -29,7 +29,7 @@ Soy admirador total de Elon musk y de todas sus compañías, una de ellas es spa
     type="text/css">
 
 
-<link rel="stylesheet" href="/scss/main.min.2cb2cfcb2d25c14d702e06c24f9c05a189f6cbc9ef31f0a235fd739b411a5a1b.css">
+<link rel="stylesheet" href="/scss/main.min.68f52971e4ebd9aabb93e630af3dc92016c7dcfedd1f0e652a2911deab4e560f.css">
 
 
 
@@ -43,18 +43,13 @@ Soy admirador total de Elon musk y de todas sus compañías, una de ellas es spa
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="theme-color" content="#252627">
-<meta itemprop="name" content="Parseando JSON con Golang y las naves de spaceX">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="Parseando JSON con Golang y las naves de spaceX">
 <meta itemprop="description" content="
-
 Golang se ha convertido en uno de mis lenguajes favoritos y hoy escribiré de como podemos usar go para poder consumir la API de spaceX y obtener información de las naves lanzadas al espacio
-
 Soy admirador total de Elon musk y de todas sus compañías, una de ellas es spaceX, una compañía dedicada al transporte aeroespacial y hoy por medio de Golang vamos a obtener información de su ultima nave lanzada al espacio.">
-
-
-<meta itemprop="datePublished" content="2019-02-10T21:52:53&#43;00:00" />
-<meta itemprop="dateModified" content="2019-02-10T21:52:53&#43;00:00" />
-<meta itemprop="wordCount" content="906">
+<meta itemprop="datePublished" content="2019-02-10T21:52:53+00:00" />
+<meta itemprop="dateModified" content="2019-02-10T21:52:53+00:00" />
+<meta itemprop="wordCount" content="912">
 
 
 
@@ -62,9 +57,7 @@ Soy admirador total de Elon musk y de todas sus compañías, una de ellas es spa
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Parseando JSON con Golang y las naves de spaceX"/>
 <meta name="twitter:description" content="
-
 Golang se ha convertido en uno de mis lenguajes favoritos y hoy escribiré de como podemos usar go para poder consumir la API de spaceX y obtener información de las naves lanzadas al espacio
-
 Soy admirador total de Elon musk y de todas sus compañías, una de ellas es spaceX, una compañía dedicada al transporte aeroespacial y hoy por medio de Golang vamos a obtener información de su ultima nave lanzada al espacio."/>
 
 
@@ -139,15 +132,12 @@ Soy admirador total de Elon musk y de todas sus compañías, una de ellas es spa
 
             
             <div class="post-content">
-                <p><img src="/images/maxresdefault.jpg" alt="Golang" /></p>
-
+                <p><img src="/images/maxresdefault.jpg" alt="Golang"></p>
 <p>Golang se ha convertido en uno de mis lenguajes favoritos y hoy escribiré de como podemos usar go para poder consumir la API de spaceX y obtener información de las naves lanzadas al espacio</p>
-
-<p>Soy admirador total de <a href="https://en.wikipedia.org/wiki/Elon_Musk" target="_blank">Elon musk</a> y de todas sus compañías, una de ellas es <a href="https://www.spacex.com/" target="_blank">spaceX</a>, una compañía dedicada al transporte aeroespacial y hoy por medio de Golang vamos a obtener información de su ultima nave lanzada al espacio.</p>
-
+<p>Soy admirador total de <a href="https://en.wikipedia.org/wiki/Elon_Musk">Elon musk</a> y de todas sus compañías, una de ellas es <a href="https://www.spacex.com/">spaceX</a>, una compañía dedicada al transporte aeroespacial y hoy por medio de Golang vamos a obtener información de su ultima nave lanzada al espacio.</p>
 <p>SpaceX provee una API para obtener toda la información de las naves lanzadas al espacio:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">curl -x https://api.spacexdata.com/v3/launches/latest | jq .</code></pre></div>
-<p>Con esta API podemos obtener los siguientes datos:</p>
+<pre><code class="language-console" data-lang="console">curl -x https://api.spacexdata.com/v3/launches/latest | jq .
+</code></pre><p>Con esta API podemos obtener los siguientes datos:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#6ab825;font-weight:bold">&#34;flight_number&#34;</span>: <span style="color:#3677a9">74</span>,
   <span style="color:#6ab825;font-weight:bold">&#34;mission_name&#34;</span>: <span style="color:#ed9d13">&#34;Iridium NEXT Mission 8&#34;</span>,
@@ -276,30 +266,23 @@ Soy admirador total de Elon musk y de todas sus compañías, una de ellas es spa
   <span style="color:#6ab825;font-weight:bold">&#34;static_fire_date_utc&#34;</span>: <span style="color:#ed9d13">&#34;2019-01-06T13:51:00.000Z&#34;</span>,
   <span style="color:#6ab825;font-weight:bold">&#34;static_fire_date_unix&#34;</span>: <span style="color:#3677a9">1546782660</span>,
   <span style="color:#6ab825;font-weight:bold">&#34;timeline&#34;</span>: <span style="color:#6ab825;font-weight:bold">null</span>
-}</code></pre></div>
-<p>Pero no queremos toda la información que nos da el API, solo queremos saber, estos tres valores: Number Flight, mission Name y description. para esto, usaremos Go y consumiremos la API.</p>
-
+}
+</code></pre></div><p>Pero no queremos toda la información que nos da el API, solo queremos saber, estos tres valores: Number Flight, mission Name y description. para esto, usaremos Go y consumiremos la API.</p>
 <h3 id="pre-requisitos"><strong>Pre-requisitos</strong></h3>
-
 <ul>
-<li>Instalar Go desde <a href="https://golang.org/dl/" target="_blank">https://golang.org/dl/</a></li>
-<li>Chequear la instalación de Go con <strong>go version&nbsp;</strong>//&nbsp;Yo&nbsp;estoy&nbsp;utilizando&nbsp;la&nbsp;version&nbsp;1.9.1</li>
+<li>Instalar Go desde <a href="https://golang.org/dl/">https://golang.org/dl/</a></li>
+<li>Chequear la instalación de Go con <strong>go version </strong>// Yo estoy utilizando la version 1.9.1</li>
 <li>Para este caso utilizare librerías estándares de Go, ya que tiene los componentes de HTTP y JSON necesarios.</li>
-<li>Pueden utilizar el editor de texto que quieran, yo utilizo vim con el plugin <a href="https://github.com/fatih/vim-go" target="_blank">go-vim</a></li>
+<li>Pueden utilizar el editor de texto que quieran, yo utilizo vim con el plugin <a href="https://github.com/fatih/vim-go">go-vim</a></li>
 </ul>
-
-<p class="has-medium-font-size">
-  <strong>Comencemos:</strong>
-</p>
-
+<!-- raw HTML omitted -->
 <p>creamos un archivo llamado <strong>spaceX.go y</strong> escribimos las lineas básicas de nuestro archivo:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">package</span> main
 
 <span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {
 
-}</code></pre></div>
-<p>podemos ejecutar nuestro archivo como <strong>go run spaceX.go</strong> o <strong>go build ./spaceX.go</strong></p>
-
+}
+</code></pre></div><p>podemos ejecutar nuestro archivo como <strong>go run spaceX.go</strong> o <strong>go build ./spaceX.go</strong></p>
 <p>Ahora crearemos el request hacia la API y parsearemos el output para tener los valores que necesitamos:, para eso necesitamos los siguientes librerías</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">import</span> (
 <span style="color:#ed9d13">&#34;encoding/json&#34;</span>
@@ -308,14 +291,14 @@ Soy admirador total de Elon musk y de todas sus compañías, una de ellas es spa
 <span style="color:#ed9d13">&#34;log&#34;</span>
 <span style="color:#ed9d13">&#34;net/http&#34;</span>
 <span style="color:#ed9d13">&#34;time&#34;</span>
-)</code></pre></div>
-<p>Tambien necesitamos escribir una estructura donde se extraera el texto del JSON, el nombre de las propiedades de la estructura deben iniciar con una letra mayúscula, para que puedan ser referenciadas como publicas</p>
+)
+</code></pre></div><p>Tambien necesitamos escribir una estructura donde se extraera el texto del JSON, el nombre de las propiedades de la estructura deben iniciar con una letra mayúscula, para que puedan ser referenciadas como publicas</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">type</span> ship <span style="color:#6ab825;font-weight:bold">struct</span> {
      Flight_number <span style="color:#6ab825;font-weight:bold">int</span>    <span style="color:#ed9d13">`json:&#34;flight_number&#34;`</span>
      Mission_name  <span style="color:#6ab825;font-weight:bold">string</span> <span style="color:#ed9d13">`json:&#34;mission_name&#34;`</span>
      Details       <span style="color:#6ab825;font-weight:bold">string</span> <span style="color:#ed9d13">`json:&#34;details&#34;`</span>
- }</code></pre></div>
-<p>Realizamos el request y leemos la data con <strong>ioutil.ReadAll</strong></p>
+ }
+</code></pre></div><p>Realizamos el request y leemos la data con <strong>ioutil.ReadAll</strong></p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">     url := <span style="color:#ed9d13">&#34;https://api.spacexdata.com/v3/launches/latest&#34;</span>
      spaceX := http.Client{
          Timeout: time.Second * <span style="color:#3677a9">2</span>,
@@ -334,18 +317,19 @@ Soy admirador total de Elon musk y de todas sus compañías, una de ellas es spa
      body, readErr := ioutil.<span style="color:#447fcf">ReadAll</span>(res.Body)
      <span style="color:#6ab825;font-weight:bold">if</span> readErr != <span style="color:#6ab825;font-weight:bold">nil</span> {
          log.<span style="color:#447fcf">Fatal</span>(readErr)
-     }</code></pre></div>
-<p>Instanciamos ship1 con base a la estructura ship que escribimos anteriormente, posteriormente usamos json.Unmarshal para encodear la data y almacenarla en el objeto que instanciamos</p>
+     }
+</code></pre></div><p>Instanciamos ship1 con base a la estructura ship que escribimos anteriormente, posteriormente usamos json.Unmarshal para encodear la data y almacenarla en el objeto que instanciamos</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">&lt;pre class=<span style="color:#ed9d13">&#34;wp-block-code&#34;</span>&gt;&lt;code&gt;     ship1 := ship{}
      jsonErr := json.<span style="color:#447fcf">Unmarshal</span>(body, &amp;ship1)
      <span style="color:#6ab825;font-weight:bold">if</span> jsonErr != <span style="color:#6ab825;font-weight:bold">nil</span> {
          log.<span style="color:#447fcf">Fatal</span>(jsonErr)
-     }</code></pre></div>
-<p>Por ultimo el resultado final que queremos mostrar:</p>
+     }
+
+</code></pre></div><p>Por ultimo el resultado final que queremos mostrar:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;Flight Number: &#34;</span>, ship1.Flight_number)
 fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;Mission Name: &#34;</span>, ship1.Mission_name)
-fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;Details: &#34;</span>, ship1.Details)</code></pre></div>
-<p>Nuestro código debe quedar algo asi:</p>
+fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;Details: &#34;</span>, ship1.Details)
+</code></pre></div><p>Nuestro código debe quedar algo asi:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">package</span> main
 
  <span style="color:#6ab825;font-weight:bold">import</span> (
@@ -392,16 +376,15 @@ fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;
      fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;Flight Number: &#34;</span>, ship1.Flight_number)
      fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;Mission Name: &#34;</span>, ship1.Mission_name)
      fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;Details: &#34;</span>, ship1.Details)
- }</code></pre></div>
-<p>Guardamos y ejecutamos y debemos obtener un output como este:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-code" data-lang="code">Flight Number:  74
+ }
+</code></pre></div><p>Guardamos y ejecutamos y debemos obtener un output como este:</p>
+<pre><code class="language-code" data-lang="code">Flight Number:  74
 Mission Name:  Iridium NEXT Mission 8
-Details:  SpaceX&#39;s first flight of 2019 will be the eighth and final launch of its planned Iridium flights. Delivering 10 satellites to low earth orbit, this brings the total up to 75 and completes the Iridium NEXT constellation. This mission launches from SLC-4E at Vandenberg AFB. The booster is expected to land on JRTI.</code></pre></div>
-<p>Con esto, logramos escribir con Go un HTTP Client que realiza un Request para consumir la API de spaceX y obtener un poco de información de la ultima nave lanzada al espacio.</p>
+Details:  SpaceX's first flight of 2019 will be the eighth and final launch of its planned Iridium flights. Delivering 10 satellites to low earth orbit, this brings the total up to 75 and completes the Iridium NEXT constellation. This mission launches from SLC-4E at Vandenberg AFB. The booster is expected to land on JRTI.
 
+</code></pre><p>Con esto, logramos escribir con Go un HTTP Client que realiza un Request para consumir la API de spaceX y obtener un poco de información de la ultima nave lanzada al espacio.</p>
 <p>Mas información</p>
-
-<p><a href="https://golang.org/doc/" target="_blank">https://golang.org/doc/</a></p>
+<p><a href="https://golang.org/doc/">https://golang.org/doc/</a></p>
 
             </div>
 
@@ -449,7 +432,7 @@ Details:  SpaceX&#39;s first flight of 2019 will be the eighth and final launch 
 <footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2019</span>
+            <span>&copy; 2020</span>
             
                 <span><a href="">Braybaut</a></span>
             
@@ -477,7 +460,7 @@ Details:  SpaceX&#39;s first flight of 2019 will be the eighth and final launch 
 
 
 
-<script type="text/javascript" src="/js/bundle.dd80b4936d9208f7384932ce622316900942c58cd138dd354b6a863e212c7fd1c951c7c3e5b83585da6297165e02ddfddbe523bbb46478a41628469263b7f000.js" integrity="sha512-3YC0k22SCPc4STLOYiMWkAlCxYzRON01S2qGPiEsf9HJUcfD5bg1hdpilxZeAt392&#43;Uju7RkeKQWKEaSY7fwAA=="></script>
+<script type="text/javascript" src="/js/bundle.7c1b69a274216adf96a8777b43114bf0d163ca44637d7b5acd3d29f1a71c64ae72f42ae83247967d11a3a5ee6fb7f501c1350e1e5931a23902f24da1c8bdf719.js" integrity="sha512-fBtponQhat&#43;WqHd7QxFL8NFjykRjfXtazT0p8accZK5y9CroMkeWfRGjpe5vt/UBwTUOHlkxojkC8k2hyL33GQ=="></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

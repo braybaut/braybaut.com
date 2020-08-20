@@ -5,10 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author"
-    content="braybaut">
+    content="Braybaut /content/img/me.jpeg ">
 <meta name="description"
     content="I wrote this post for sharing, how we can do continuous integration for Golang APIs with some tools. In this post I&amp;rsquo;m going to use terraform for making a codebuild resource, Code build to build the Golang API and generate a docker image and ECR for keeping the docker image.
-" />
+The workflow: The continuous integration workflow is very easy to understand, every time a new tag is created the webhook will start the job, Codebuild will compile the Golang API and will generate the docker image, then will run a docker push to AWS ECR," />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="/posts/continuous-integration-for-golang-applications-with-terraform-codebuilds-and-ecr/" />
@@ -28,7 +28,7 @@
     type="text/css">
 
 
-<link rel="stylesheet" href="/scss/main.min.2cb2cfcb2d25c14d702e06c24f9c05a189f6cbc9ef31f0a235fd739b411a5a1b.css">
+<link rel="stylesheet" href="/scss/main.min.68f52971e4ebd9aabb93e630af3dc92016c7dcfedd1f0e652a2911deab4e560f.css">
 
 
 
@@ -42,25 +42,20 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="theme-color" content="#252627">
-<meta itemprop="name" content="Continuous Integration for Golang Applications with Terraform, Codebuilds and ECR">
-<meta itemprop="description" content="
-
-I wrote this post for sharing, how we can do continuous integration for Golang APIs with some tools. In this post I&rsquo;m going to use terraform for making a codebuild resource, Code build to build the Golang API and generate a docker image and  ECR for keeping the docker image.">
-
-
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="Continuous Integration for Golang Applications with Terraform, Codebuilds and ECR">
+<meta itemprop="description" content="I wrote this post for sharing, how we can do continuous integration for Golang APIs with some tools. In this post I&rsquo;m going to use terraform for making a codebuild resource, Code build to build the Golang API and generate a docker image and ECR for keeping the docker image.
+The workflow: The continuous integration workflow is very easy to understand, every time a new tag is created the webhook will start the job, Codebuild will compile the Golang API and will generate the docker image, then will run a docker push to AWS ECR,">
 <meta itemprop="datePublished" content="2019-07-26T16:58:24-05:00" />
 <meta itemprop="dateModified" content="2019-07-26T16:58:24-05:00" />
-<meta itemprop="wordCount" content="1096">
+<meta itemprop="wordCount" content="1106">
 
 
 
 <meta itemprop="keywords" content="Golang,DevOps,Terraform,AWS," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Continuous Integration for Golang Applications with Terraform, Codebuilds and ECR"/>
-<meta name="twitter:description" content="
-
-I wrote this post for sharing, how we can do continuous integration for Golang APIs with some tools. In this post I&rsquo;m going to use terraform for making a codebuild resource, Code build to build the Golang API and generate a docker image and  ECR for keeping the docker image."/>
+<meta name="twitter:description" content="I wrote this post for sharing, how we can do continuous integration for Golang APIs with some tools. In this post I&rsquo;m going to use terraform for making a codebuild resource, Code build to build the Golang API and generate a docker image and ECR for keeping the docker image.
+The workflow: The continuous integration workflow is very easy to understand, every time a new tag is created the webhook will start the job, Codebuild will compile the Golang API and will generate the docker image, then will run a docker push to AWS ECR,"/>
 
 
 
@@ -133,21 +128,14 @@ I wrote this post for sharing, how we can do continuous integration for Golang A
 
             
             <div class="post-content">
-                <p><img src="/images/Gopher-aws.png" alt="Gopher" /></p>
-
+                <p><img src="/images/Gopher-aws.png" alt=""></p>
 <p>I wrote this post for sharing, how we can do continuous integration for Golang APIs with some tools. In this post I&rsquo;m going to use terraform for making a codebuild resource, Code build to build the Golang API and generate a docker image and  ECR for keeping the docker image.</p>
-
 <h3 id="the-workflow"><strong>The workflow:</strong></h3>
-
-<p><img src="/images/workflow.png" alt="" /></p>
-
-<p>The continuous integration workflow is very easy to understand, every time a new tag is created the webhook will start the job, Codebuild will compile the Golang API and will generate the docker image, then will run a docker push to AWS ECR.</p>
-
-<p>For this exercise, I pushed the code at  <a href="https://github.com/braybaut/Golang-API" target="_blank">https://github.com/braybaut/Golang-API</a>
+<p><img src="/images/workflow.png" alt=""></p>
+<p>The continuous integration workflow is very easy to understand, every time a new tag is created the webhook will start the job, Codebuild will compile the Golang API and will generate the docker image, then will run a docker push to AWS ECR,</p>
+<p>For this exercise, I pushed the code at  <a href="https://github.com/braybaut/Golang-API">https://github.com/braybaut/Golang-API</a>
 This repository has the Golang API, Terraform files to deploy the AWS resources and buildspec to generate the steps</p>
-
-<p>This code can be consulted at Github: <a href="https://github.com/braybaut/Golang-API" target="_blank">https://github.com/braybaut/Golang-API</a></p>
-
+<p>This code can be consulted at Github: <a href="https://github.com/braybaut/Golang-API">https://github.com/braybaut/Golang-API</a></p>
 <pre><code>├── books.go
 ├── config
 │   ├── aws.tf
@@ -163,11 +151,10 @@ This repository has the Golang API, Terraform files to deploy the AWS resources 
 ├── router.go
 └── routes.go
 </code></pre>
-
 <p>The Golang Application is a minimal API that just show a little information of some books information that I&rsquo;ve read:</p>
-
 <p>Routes:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">init</span>() {
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+<span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">init</span>() {
 	routes = Routes{
 		Route{
 			<span style="color:#ed9d13">&#34;Index&#34;</span>,
@@ -199,13 +186,14 @@ This repository has the Golang API, Terraform files to deploy the AWS resources 
 			GetPaths,
 		},
 	}
-}</code></pre></div>
-<p>I won&rsquo;t talk much about the Golang code if you want to know more about the code, you can see the code at GitHub (I can write a post about golang in the future).</p>
+}
 
+
+</code></pre></div><p>I won&rsquo;t talk much about the Golang code if you want to know more about the code, you can see the code at GitHub (I can write a post about golang in the future).</p>
 <p>In orchestration Environment where many microservices run (for example golang) we need to pack our microservices, yes&hellip; the Golang binary can be our artifact but in this scenario, the real artifact is the Docker images that keep the Golang binary. For this case codebuild must compile the source code and generate the docker image, I wrote this buildspec.yml that run a docker build and docker do magic!!</p>
-
 <p><strong>Dockerfile:</strong></p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">FROM golang:alpine AS  builder 
+<pre><code class="language-console" data-lang="console">
+FROM golang:alpine AS  builder 
 
 RUN apk update &amp;&amp; apk add --no-cache git
 
@@ -221,72 +209,67 @@ COPY --from=builder /app/library /
 
 EXPOSE 8080
 
-ENTRYPOINT [&#34;/library&#34;]</code></pre></div>
-<p>The Dockerfile generates the Golang binary (library) y run this like entry point, also use the feature (multistage build) where we can make more optimized images (less size, fewer layers, etc)</p>
+ENTRYPOINT [&quot;/library&quot;]
 
+</code></pre><p>The Dockerfile generates the Golang binary (library) y run this like entry point, also use the feature (multistage build) where we can make more optimized images (less size, fewer layers, etc)</p>
 <p>Codebuild will handle  the process of generating the docker image, for this, we can define the instruction (phases)  with a yml file ( <strong>buildspec.yml</strong>)</p>
-
 <p>The buildspec.yml must run these steps:</p>
-
 <ul>
 <li>login to ECR</li>
 <li>Docker build  and tag the docker image</li>
 <li>Docker push to ECR</li>
 </ul>
-
 <p><strong>buildspec.yml</strong></p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">version:<span style="color:#666"> </span><span style="color:#3677a9">0.2</span><span style="color:#666">
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#6ab825;font-weight:bold">version</span>:<span style="color:#666"> </span><span style="color:#3677a9">0.2</span><span style="color:#666">
 </span><span style="color:#666">
-</span><span style="color:#666"></span>git-credential-helper:<span style="color:#666"> </span>yes<span style="color:#666">
+</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">git-credential-helper</span>:<span style="color:#666"> </span>yes<span style="color:#666">
 </span><span style="color:#666">
-</span><span style="color:#666"></span>phases:<span style="color:#666">
-</span><span style="color:#666">    </span>install:<span style="color:#666">
-</span><span style="color:#666">        </span>runtime-versions:<span style="color:#666">
-</span><span style="color:#666">            </span>docker:<span style="color:#666"> </span><span style="color:#3677a9">18</span><span style="color:#666">
-</span><span style="color:#666">    </span>pre_build:<span style="color:#666">
-</span><span style="color:#666">        </span>commands:<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>echo<span style="color:#666"> </span><span style="color:#ed9d13">&#34;loggin to AWS ECR&#34;</span><span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>$(aws<span style="color:#666"> </span>ecr<span style="color:#666"> </span>get-login<span style="color:#666"> </span>--no-include-email<span style="color:#666"> </span>--region<span style="color:#666"> </span>$AWS_DEFAULT_REGION)<span style="color:#666">
+</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">phases</span>:<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">install</span>:<span style="color:#666">
+</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">runtime-versions</span>:<span style="color:#666">
+</span><span style="color:#666">            </span><span style="color:#6ab825;font-weight:bold">docker</span>:<span style="color:#666"> </span><span style="color:#3677a9">18</span><span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">pre_build</span>:<span style="color:#666">
+</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">commands</span>:<span style="color:#666">
+</span><span style="color:#666">            </span>- echo<span style="color:#666"> </span><span style="color:#ed9d13">&#34;loggin to AWS ECR&#34;</span><span style="color:#666">
+</span><span style="color:#666">            </span>- $(aws<span style="color:#666"> </span>ecr<span style="color:#666"> </span>get-login<span style="color:#666"> </span>--no-include-email<span style="color:#666"> </span>--region<span style="color:#666"> </span>$AWS_DEFAULT_REGION)<span style="color:#666">
 </span><span style="color:#666">
-</span><span style="color:#666">    </span>build:<span style="color:#666">
-</span><span style="color:#666">        </span>commands:<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>echo<span style="color:#666"> </span><span style="color:#ed9d13">&#34;Getting Tag..&#34;</span><span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span><span style="color:#ed9d13">|
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">build</span>:<span style="color:#666">
+</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">commands</span>:<span style="color:#666">
+</span><span style="color:#666">            </span>- echo<span style="color:#666"> </span><span style="color:#ed9d13">&#34;Getting Tag..&#34;</span><span style="color:#666">
+</span><span style="color:#666">            </span>- <span style="color:#ed9d13">|
 </span><span style="color:#ed9d13">              if [ -z $CODEBUILD_WEBHOOK_TRIGGER ]; then  </span><span style="color:#666">
 </span><span style="color:#666">                </span>export<span style="color:#666"> </span>IMAGE_TAG=$CODEBUILD_SOURCE_VERSION<span style="color:#666">
 </span><span style="color:#666">              </span>else<span style="color:#666"> 
 </span><span style="color:#666">                </span>export<span style="color:#666"> </span>IMAGE_TAG=$(echo<span style="color:#666"> </span>$CODEBUILD_WEBHOOK_TRIGGER<span style="color:#666"> </span>|<span style="color:#666"> </span>cut<span style="color:#666"> </span>-d<span style="color:#666"> </span><span style="color:#ed9d13">&#34;/&#34;</span><span style="color:#666"> </span>-f2)<span style="color:#666">
 </span><span style="color:#666">                </span>fi<span style="color:#666"> 
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>echo<span style="color:#666"> </span><span style="color:#ed9d13">&#34;verify tag..&#34;</span><span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>echo<span style="color:#666"> </span>$IMAGE_TAG<span style="color:#666"> 
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>echo<span style="color:#666"> </span><span style="color:#ed9d13">&#34;Building the docker image..&#34;</span><span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>docker<span style="color:#666"> </span>build<span style="color:#666"> </span>-t<span style="color:#666"> </span>$IMAGE_REPO_NAME:$IMAGE_TAG<span style="color:#666"> </span>.<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>docker<span style="color:#666"> </span>tag<span style="color:#666"> </span>$IMAGE_REPO_NAME:$IMAGE_TAG<span style="color:#666"> </span>$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG<span style="color:#666"> 
-</span><span style="color:#666">    </span>post_build:<span style="color:#666">
-</span><span style="color:#666">        </span>commands:<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>echo<span style="color:#666"> </span><span style="color:#ed9d13">&#34;Pushing Docker image&#34;</span><span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>docker<span style="color:#666"> </span>push<span style="color:#666"> </span>$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG<span style="color:#666"> </span></code></pre></div>
-<h3 id="how-determinate-the-tag"><strong>How determinate the tag?</strong></h3>
-
+</span><span style="color:#666">            </span>- echo<span style="color:#666"> </span><span style="color:#ed9d13">&#34;verify tag..&#34;</span><span style="color:#666">
+</span><span style="color:#666">            </span>- echo<span style="color:#666"> </span>$IMAGE_TAG<span style="color:#666"> 
+</span><span style="color:#666">            </span>- echo<span style="color:#666"> </span><span style="color:#ed9d13">&#34;Building the docker image..&#34;</span><span style="color:#666">
+</span><span style="color:#666">            </span>- docker<span style="color:#666"> </span>build<span style="color:#666"> </span>-t<span style="color:#666"> </span>$IMAGE_REPO_NAME:$IMAGE_TAG<span style="color:#666"> </span>.<span style="color:#666">
+</span><span style="color:#666">            </span>- docker<span style="color:#666"> </span>tag<span style="color:#666"> </span>$IMAGE_REPO_NAME:$IMAGE_TAG<span style="color:#666"> </span>$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG<span style="color:#666"> 
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">post_build</span>:<span style="color:#666">
+</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">commands</span>:<span style="color:#666">
+</span><span style="color:#666">            </span>- echo<span style="color:#666"> </span><span style="color:#ed9d13">&#34;Pushing Docker image&#34;</span><span style="color:#666">
+</span><span style="color:#666">            </span>- docker<span style="color:#666"> </span>push<span style="color:#666"> </span>$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG<span style="color:#666"> 
+</span></code></pre></div><h3 id="how-determinate-the-tag"><strong>How determinate the tag?</strong></h3>
 <p>Our pipeline can start manually or automatically, if start manually we can set the repository tag to build, this tag is keeping an environment variable <strong>CODEBUILD_SOURCE_VERSION,</strong> but if start automatically the value is keeping in <strong>CODEBUILD_WEBHOOK_TRIGGER</strong> to know this, the build stage has a conditional to get the correct tag</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6ab825;font-weight:bold">if</span> [ -z <span style="color:#40ffff">$CODEBUILD_WEBHOOK_TRIGGER</span> ]; <span style="color:#6ab825;font-weight:bold">then</span>  
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+<span style="color:#6ab825;font-weight:bold">if</span> [ -z <span style="color:#40ffff">$CODEBUILD_WEBHOOK_TRIGGER</span> ]; <span style="color:#6ab825;font-weight:bold">then</span>  
    <span style="color:#24909d">export</span> <span style="color:#40ffff">IMAGE_TAG</span>=<span style="color:#40ffff">$CODEBUILD_SOURCE_VERSION</span>
 <span style="color:#6ab825;font-weight:bold">else</span> 
    <span style="color:#24909d">export</span> <span style="color:#40ffff">IMAGE_TAG</span>=<span style="color:#6ab825;font-weight:bold">$(</span><span style="color:#24909d">echo</span> <span style="color:#40ffff">$CODEBUILD_WEBHOOK_TRIGGER</span> | cut -d <span style="color:#ed9d13">&#34;/&#34;</span> -f2<span style="color:#6ab825;font-weight:bold">)</span>
-<span style="color:#6ab825;font-weight:bold">fi</span> </code></pre></div>
-<p>We have the golang code and  dockerfile to build the docker image and buildspec.yml, now we need the terraform file to deploy codebuild and ECR.</p>
-
+<span style="color:#6ab825;font-weight:bold">fi</span> 
+</code></pre></div><p>We have the golang code and  dockerfile to build the docker image and buildspec.yml, now we need the terraform file to deploy codebuild and ECR.</p>
 <h3 id="deploying-codebuild"><strong>Deploying Codebuild:</strong></h3>
-
 <p>For this point, we have some terraform files, for example:</p>
-
 <p><strong>terraform.tfvars:</strong>  Set the needed variables for example AWS_ACCOUNT_ID</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#40ffff">AWS_ACCOUNT_ID</span>=
 <span style="color:#40ffff">AWS_REGION</span>=<span style="color:#ed9d13">&#34;us-east-1&#34;</span>
 <span style="color:#40ffff">IMAGE_REPO_NAME</span>=<span style="color:#ed9d13">&#34;library-api&#34;</span>
-<span style="color:#40ffff">URL_REPO</span>=<span style="color:#ed9d13">&#34;https://github.com/braybaut/Golang-API.git&#34;</span></code></pre></div>
-<p><strong>variables.tf:</strong>  make the variables with terraform.tfvars values</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">variable <span style="color:#ed9d13">&#34;URL_REPO&#34;</span> {
+<span style="color:#40ffff">URL_REPO</span>=<span style="color:#ed9d13">&#34;https://github.com/braybaut/Golang-API.git&#34;</span>
+</code></pre></div><p><strong>variables.tf:</strong>  make the variables with terraform.tfvars values</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+variable <span style="color:#ed9d13">&#34;URL_REPO&#34;</span> {
   <span style="color:#24909d">type</span> = string
 
 }
@@ -301,13 +284,12 @@ variable <span style="color:#ed9d13">&#34;IMAGE_REPO_NAME&#34;</span> {
 
 variable <span style="color:#ed9d13">&#34;AWS_ACCOUNT_ID&#34;</span> {
   <span style="color:#24909d">type</span> = string
-}</code></pre></div>
-<p><strong>aws.tf:</strong> Set the provider to use</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">provider &#34;aws&#34; {
-  region = &#34;${var.AWS_REGION}&#34;
-}</code></pre></div>
-<p><strong>codebuild.tf:</strong> policies, roles, codebuild, ECR to create</p>
-
+}
+</code></pre></div><p><strong>aws.tf:</strong> Set the provider to use</p>
+<pre><code class="language-console" data-lang="console">provider &quot;aws&quot; {
+  region = &quot;${var.AWS_REGION}&quot;
+}
+</code></pre><p><strong>codebuild.tf:</strong> policies, roles, codebuild, ECR to create</p>
 <p>This file has S3, ECR, policies, role, and other definitions that are needed to this workflow, but I just paste the codebuild resources, this definition only set some environment variables needed to Buildspec, set the log-stream configuration and define the source</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">resource <span style="color:#ed9d13">&#34;aws_codebuild_project&#34;</span> <span style="color:#ed9d13">&#34;library-build&#34;</span> {
   <span style="color:#40ffff">name</span> = <span style="color:#ed9d13">&#34;library-build&#34;</span>
@@ -366,9 +348,8 @@ variable <span style="color:#ed9d13">&#34;AWS_ACCOUNT_ID&#34;</span> {
     <span style="color:#40ffff">buildspec</span> = <span style="color:#ed9d13">&#34;</span><span style="color:#ed9d13">${</span><span style="color:#40ffff">file</span>(<span style="color:#ed9d13">&#34;buildspec.yml&#34;</span>)<span style="color:#ed9d13">}</span><span style="color:#ed9d13">&#34;</span>
   }
  
-}</code></pre></div>
-<h3 id="enabling-webhook"><strong>Enabling webhook:</strong></h3>
-
+}
+</code></pre></div><h3 id="enabling-webhook"><strong>Enabling webhook:</strong></h3>
 <p>This definition will create a webhook to start the job, this webhook has filters that exclude everything that meets the &ldquo;^refs/heads/.<em>&rdquo; pattern ( new commits, new branches, etc ) and the hook will trigger when the pattern &ldquo;^refs/tags/.</em>&rdquo; is met ( create new tags )</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">resource <span style="color:#ed9d13">&#34;aws_codebuild_webhook&#34;</span> <span style="color:#ed9d13">&#34;library-webhook&#34;</span> {
   <span style="color:#40ffff">project_name</span> = <span style="color:#ed9d13">&#34;</span><span style="color:#ed9d13">${</span><span style="color:#40ffff">aws_codebuild_project</span>.library-build.name<span style="color:#ed9d13">}</span><span style="color:#ed9d13">&#34;</span>
@@ -391,11 +372,9 @@ variable <span style="color:#ed9d13">&#34;AWS_ACCOUNT_ID&#34;</span> {
 
 
   }
-}</code></pre></div>
-<p>Now that we have all files to make the pipeline, we need to deploy all resources, to Deploy terraform files is needed set the AWS keys as environment variables, then run <strong>terraform init and terraform apply commands:</strong></p>
-
+}
+</code></pre></div><p>Now that we have all files to make the pipeline, we need to deploy all resources, to Deploy terraform files is needed set the AWS keys as environment variables, then run <strong>terraform init and terraform apply commands:</strong></p>
 <p>Terraform will create 7 resources, if the creation process was good, we can see these resources created:</p>
-
 <pre><code>    aws_codebuild_project.library-build
     aws_codebuild_webhook.library-webhook
     aws_ecr_repository.library-ecr
@@ -403,41 +382,24 @@ variable <span style="color:#ed9d13">&#34;AWS_ACCOUNT_ID&#34;</span> {
     aws_iam_role_policy.ecr-policy
     aws_iam_role_policy.s3-policy
     aws_s3_bucket.library-build
-</code></pre>
-
-<p>we can see the new Codebuild project  and the ECR created</p>
-
+</code></pre><p>we can see the new Codebuild project  and the ECR created</p>
 <p><strong>Codebuild project:</strong></p>
-
-<p><img src="/images/codebuild.png" alt="" /></p>
-
+<p><img src="/images/codebuild.png" alt=""></p>
 <p><strong>ECR</strong></p>
-
-<p><img src="/images/ecr.png" alt="" /></p>
-
+<p><img src="/images/ecr.png" alt=""></p>
 <p>The resources is created, we can test the webhook create a new tag from github:</p>
-
 <p>we create a new release:</p>
-
-<p><img src="/images/release.png" alt="" /></p>
-
+<p><img src="/images/release.png" alt=""></p>
 <p>Verify that the build is running:</p>
-
-<p><img src="/images/library-build.png" alt="" /></p>
-
+<p><img src="/images/library-build.png" alt=""></p>
 <p>The build was started, also we can see the logs</p>
-
-<p><img src="/images/library-build-result.png" alt="" /></p>
-
+<p><img src="/images/library-build-result.png" alt=""></p>
 <p>When the job finished, we can see the new docker image at ECR</p>
-
-<p><img src="/images/ecr-library.png" alt="" /></p>
-
+<p><img src="/images/ecr-library.png" alt=""></p>
 <p>Our Continuous integration workflow finish there, we can see that the docker image tag is the same to the tag set as release at github:</p>
-
-<p><img src="/images/testing-webhook.png" alt="" /></p>
-
+<p><img src="/images/testing-webhook.png" alt=""></p>
 <p>This was a little example that how we can create an  easy continuous integration for Golang APIs with Codebuild, GitHub and Terraform, In the next post I will write how can create a continuous delivery workflow with CodeDeploy and Fargate and other post joining both workflows to make a pipeline with continuous integration and delivery workflow.</p>
+
 
             </div>
 
@@ -485,7 +447,7 @@ variable <span style="color:#ed9d13">&#34;AWS_ACCOUNT_ID&#34;</span> {
 <footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2019</span>
+            <span>&copy; 2020</span>
             
                 <span><a href="">Braybaut</a></span>
             
@@ -513,7 +475,7 @@ variable <span style="color:#ed9d13">&#34;AWS_ACCOUNT_ID&#34;</span> {
 
 
 
-<script type="text/javascript" src="/js/bundle.dd80b4936d9208f7384932ce622316900942c58cd138dd354b6a863e212c7fd1c951c7c3e5b83585da6297165e02ddfddbe523bbb46478a41628469263b7f000.js" integrity="sha512-3YC0k22SCPc4STLOYiMWkAlCxYzRON01S2qGPiEsf9HJUcfD5bg1hdpilxZeAt392&#43;Uju7RkeKQWKEaSY7fwAA=="></script>
+<script type="text/javascript" src="/js/bundle.7c1b69a274216adf96a8777b43114bf0d163ca44637d7b5acd3d29f1a71c64ae72f42ae83247967d11a3a5ee6fb7f501c1350e1e5931a23902f24da1c8bdf719.js" integrity="sha512-fBtponQhat&#43;WqHd7QxFL8NFjykRjfXtazT0p8accZK5y9CroMkeWfRGjpe5vt/UBwTUOHlkxojkC8k2hyL33GQ=="></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

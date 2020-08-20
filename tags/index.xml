@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Braybaut</title>
@@ -6,13 +6,58 @@
     <description>Recent content in Tags on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Jul 2019 16:58:24 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2020 12:51:50 -0500</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Aws</title>
+      <title>hashicorp</title>
+      <link>/tags/hashicorp/</link>
+      <pubDate>Thu, 06 Aug 2020 12:51:50 -0500</pubDate>
+      
+      <guid>/tags/hashicorp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lang servers</title>
+      <link>/tags/lang-servers/</link>
+      <pubDate>Thu, 06 Aug 2020 12:51:50 -0500</pubDate>
+      
+      <guid>/tags/lang-servers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terraform</title>
+      <link>/tags/terraform/</link>
+      <pubDate>Thu, 06 Aug 2020 12:51:50 -0500</pubDate>
+      
+      <guid>/tags/terraform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terraform-lsp</title>
+      <link>/tags/terraform-lsp/</link>
+      <pubDate>Thu, 06 Aug 2020 12:51:50 -0500</pubDate>
+      
+      <guid>/tags/terraform-lsp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>/tags/vim/</link>
+      <pubDate>Thu, 06 Aug 2020 12:51:50 -0500</pubDate>
+      
+      <guid>/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS</title>
       <link>/tags/aws/</link>
       <pubDate>Fri, 26 Jul 2019 16:58:24 -0500</pubDate>
       
@@ -21,25 +66,7 @@
     </item>
     
     <item>
-      <title>Bash</title>
-      <link>/tags/bash/</link>
-      <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
-      
-      <guid>/tags/bash/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Container</title>
-      <link>/tags/container/</link>
-      <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
-      
-      <guid>/tags/container/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Devops</title>
+      <title>DevOps</title>
       <link>/tags/devops/</link>
       <pubDate>Fri, 26 Jul 2019 16:58:24 -0500</pubDate>
       
@@ -48,56 +75,29 @@
     </item>
     
     <item>
-      <title>Docker</title>
-      <link>/tags/docker/</link>
-      <pubDate>Sun, 03 Feb 2019 21:44:10 +0000</pubDate>
+      <title>Golang</title>
+      <link>/tags/golang/</link>
+      <pubDate>Fri, 26 Jul 2019 16:58:24 -0500</pubDate>
       
-      <guid>/tags/docker/</guid>
+      <guid>/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Docker Compose</title>
-      <link>/tags/docker-compose/</link>
-      <pubDate>Wed, 25 Oct 2017 22:25:26 +0000</pubDate>
+      <title>go</title>
+      <link>/tags/go/</link>
+      <pubDate>Sun, 10 Feb 2019 21:52:53 +0000</pubDate>
       
-      <guid>/tags/docker-compose/</guid>
+      <guid>/tags/go/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Dockercompose</title>
-      <link>/tags/dockercompose/</link>
-      <pubDate>Wed, 25 Oct 2017 22:25:26 +0000</pubDate>
+      <title>Json</title>
+      <link>/tags/json/</link>
+      <pubDate>Sun, 10 Feb 2019 21:52:53 +0000</pubDate>
       
-      <guid>/tags/dockercompose/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dockerswarm</title>
-      <link>/tags/dockerswarm/</link>
-      <pubDate>Fri, 22 Dec 2017 01:20:18 +0000</pubDate>
-      
-      <guid>/tags/dockerswarm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gcp</title>
-      <link>/tags/gcp/</link>
-      <pubDate>Sun, 03 Feb 2019 21:44:10 +0000</pubDate>
-      
-      <guid>/tags/gcp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Github</title>
-      <link>/tags/github/</link>
-      <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
-      
-      <guid>/tags/github/</guid>
+      <guid>/tags/json/</guid>
       <description></description>
     </item>
     

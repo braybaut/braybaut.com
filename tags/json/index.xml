@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Json on Braybaut</title>
@@ -17,11 +17,9 @@
       <pubDate>Sun, 10 Feb 2019 21:52:53 +0000</pubDate>
       
       <guid>/posts/parseando-json-con-golang-y-las-naves-de-spacex/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;/images/maxresdefault.jpg&#34; alt=&#34;Golang&#34; /&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;img src=&#34;/images/maxresdefault.jpg&#34; alt=&#34;Golang&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Golang se ha convertido en uno de mis lenguajes favoritos y hoy escribiré de como podemos usar go para poder consumir la API de spaceX y obtener información de las naves lanzadas al espacio&lt;/p&gt;
-
-&lt;p&gt;Soy admirador total de &lt;a href=&#34;https://en.wikipedia.org/wiki/Elon_Musk&#34; target=&#34;_blank&#34;&gt;Elon musk&lt;/a&gt; y de todas sus compañías, una de ellas es &lt;a href=&#34;https://www.spacex.com/&#34; target=&#34;_blank&#34;&gt;spaceX&lt;/a&gt;, una compañía dedicada al transporte aeroespacial y hoy por medio de Golang vamos a obtener información de su ultima nave lanzada al espacio.&lt;/p&gt;</description>
+&lt;p&gt;Soy admirador total de &lt;a href=&#34;https://en.wikipedia.org/wiki/Elon_Musk&#34;&gt;Elon musk&lt;/a&gt; y de todas sus compañías, una de ellas es &lt;a href=&#34;https://www.spacex.com/&#34;&gt;spaceX&lt;/a&gt;, una compañía dedicada al transporte aeroespacial y hoy por medio de Golang vamos a obtener información de su ultima nave lanzada al espacio.&lt;/p&gt;</description>
     </item>
     
   </channel>

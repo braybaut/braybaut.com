@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Container on Braybaut</title>
+    <title>container on Braybaut</title>
     <link>/tags/container/</link>
-    <description>Recent content in Container on Braybaut</description>
+    <description>Recent content in container on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 13 Jan 2016 17:40:11 +0000</lastBuildDate>
@@ -17,12 +17,9 @@
       <pubDate>Wed, 13 Jan 2016 17:40:11 +0000</pubDate>
       
       <guid>/posts/howto-como-crear-un-contenedor-de-datos-en-docker/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;/images/docker.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;img src=&#34;/images/docker.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;los contenedores no son persistentes en sus datos al ser ejecutados, esto quiere decir que al terminar una ejecución de un contenedor este pierde sus datos.&lt;/p&gt;
-
 &lt;p&gt;Existen varias practicas para realizar la persistencia de los datos, en esta ocasión usaremos un contenedor de datos ( data container) para hacer la persistencia.&lt;/p&gt;
-
 &lt;p&gt;Este contenedor solo guardara la información que se requiere sea persistente, no es necesario que este iniciado ya que  lo podemos compartir sin necesidad  de que este ejecutado.&lt;/p&gt;</description>
     </item>
     
@@ -32,10 +29,8 @@
       <pubDate>Tue, 12 Jan 2016 04:40:50 +0000</pubDate>
       
       <guid>/posts/docker-ingresar-al-bash-de-un-contenedor-iniciado-script/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;/images/docker.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ultimamente he trabajado mucho con docker y en el maravilloso recorrido que he tenido con docker se me presento un problema gigante,  inicio el contenedor con su servicio pero por X o Y motivo quiero ingresar al bash y el &amp;#8220;docker attach&amp;#8221; no funciona porque el docker no lo inicie con /bin/bash&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;img src=&#34;/images/docker.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ultimamente he trabajado mucho con docker y en el maravilloso recorrido que he tenido con docker se me presento un problema gigante,  inicio el contenedor con su servicio pero por X o Y motivo quiero ingresar al bash y el “docker attach” no funciona porque el docker no lo inicie con /bin/bash&lt;/p&gt;
 &lt;p&gt;Una solución es abrir el puerto 22 e ingresar por ssh, pero no es la gracia trabajar de esta manera ya que estamos con container. Navegando por la red encontré un comando un poco largo para poder ingresar al bash del container y un compañero de la compañía donde trabajo también me paso uno parecido, pero me pareció algo fastidioso usar un comando largo para ingresar al bash entonces me tome la tarea de crear un script para que me facilite esta tarea, se los mostrare:&lt;/p&gt;</description>
     </item>
     

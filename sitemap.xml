@@ -1,9 +1,69 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/</loc>
+    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/hashicorp/</loc>
+    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/integrate-terraform-language-server-protocol-with-vim/</loc>
+    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/lang-servers/</loc>
+    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/terraform/</loc>
+    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/terraform-lsp/</loc>
+    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/vim/</loc>
+    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/aws/</loc>
+    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/continuous-integration-for-golang-applications-with-terraform-codebuilds-and-ecr/</loc>
+    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/devops/</loc>
+    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/golang/</loc>
     <lastmod>2019-07-26T16:58:24-05:00</lastmod>
   </url>
   
@@ -18,6 +78,16 @@
   </url>
   
   <url>
+    <loc>/tags/go/</loc>
+    <lastmod>2019-02-10T21:52:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/json/</loc>
+    <lastmod>2019-02-10T21:52:53+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/parseando-json-con-golang-y-las-naves-de-spacex/</loc>
     <lastmod>2019-02-10T21:52:53+00:00</lastmod>
   </url>
@@ -28,8 +98,63 @@
   </url>
   
   <url>
+    <loc>/tags/docker/</loc>
+    <lastmod>2019-02-03T21:44:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/gcp/</loc>
+    <lastmod>2019-02-03T21:44:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/kubernetes/</loc>
+    <lastmod>2019-02-03T21:44:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/dockerswarm/</loc>
+    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/traefik/</loc>
+    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/utilizando-traefik-como-dynamic-reverse-proxy-en-docker-swarm-sobre-aws/</loc>
     <lastmod>2017-12-22T01:20:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/docker-compose/</loc>
+    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/dockercompose/</loc>
+    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/load-balancer/</loc>
+    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/microservicios/</loc>
+    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/reverse-proxy/</loc>
+    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
   </url>
   
   <url>
@@ -48,8 +173,28 @@
   </url>
   
   <url>
+    <loc>/tags/ldap/</loc>
+    <lastmod>2016-01-19T01:43:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/vtiger/</loc>
+    <lastmod>2016-01-19T01:43:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/container/</loc>
+    <lastmod>2016-01-13T17:40:11+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/howto-como-crear-un-contenedor-de-datos-en-docker/</loc>
     <lastmod>2016-01-13T17:40:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/bash/</loc>
+    <lastmod>2016-01-12T04:40:50+00:00</lastmod>
   </url>
   
   <url>
@@ -58,170 +203,23 @@
   </url>
   
   <url>
-    <loc>/posts/introducci%C3%B3n-vpn-full-mesh-con-tinc-y-configuraci%C3%B3n-en-raspberry-pi/</loc>
-    <lastmod>2014-03-24T06:18:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/aws/</loc>
-    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/bash/</loc>
-    <lastmod>2016-01-12T04:40:50+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/container/</loc>
-    <lastmod>2016-01-13T17:40:11+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/devops/</loc>
-    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/docker/</loc>
-    <lastmod>2019-02-03T21:44:10+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/docker-compose/</loc>
-    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/dockercompose/</loc>
-    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/dockerswarm/</loc>
-    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/gcp/</loc>
-    <lastmod>2019-02-03T21:44:10+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/github/</loc>
     <lastmod>2016-01-12T04:40:50+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/go/</loc>
-    <lastmod>2019-02-10T21:52:53+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/golang/</loc>
-    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/json/</loc>
-    <lastmod>2019-02-10T21:52:53+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/kubernetes/</loc>
-    <lastmod>2019-02-03T21:44:10+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/ldap/</loc>
-    <lastmod>2016-01-19T01:43:11+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/linux/</loc>
-    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/load-balancer/</loc>
-    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/microservicios/</loc>
-    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/reverse-proxy/</loc>
-    <lastmod>2017-10-25T22:25:26+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/script/</loc>
     <lastmod>2016-01-12T04:40:50+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/terraform/</loc>
-    <lastmod>2019-07-26T16:58:24-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/traefik/</loc>
-    <lastmod>2017-12-22T01:20:18+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/tutoriales/</loc>
     <lastmod>2016-01-12T04:40:50+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/vtiger/</loc>
-    <lastmod>2016-01-19T01:43:11+00:00</lastmod>
-    <priority>0</priority>
+    <loc>/posts/introducci%C3%B3n-vpn-full-mesh-con-tinc-y-configuraci%C3%B3n-en-raspberry-pi/</loc>
+    <lastmod>2014-03-24T06:18:00+00:00</lastmod>
   </url>
   
 </urlset>
