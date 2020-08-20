@@ -137,14 +137,6 @@
                         I wrote this post for sharing, how we can do continuous integration for Golang APIs with some tools. In this post I&rsquo;m going to use terraform for making a codebuild resource, Code build to build the Golang API and generate a docker image and ECR for keeping the docker image.
 The workflow: The continuous integration workflow is very easy to understand, every time a new tag is created the webhook will start the job, Codebuild will compile the Golang API and will generate the docker image, then will run a docker push to AWS ECR,
                         <li class="post-item">
-                            <a href="/posts/construyendo-un-cluster-de-kubernetes-en-aws-eks-con-terraform/">
-                                <h2>Construyendo Un cluster de Kubernetes en AWS EKS Con Terraform</h2>
-                                <span class="post-day">Apr 5</span>
-                            </a>
-                        </li>
-                        Kubernetes sin duda es uno de los mejores containers orquestation que tenemos en el mercado y hoy en dia, muchos vendors ofrecen Kubernetes como servicio, AWS no se ha quedado atras y en junio del año pasado, anuncio Elastic Kubernetes Services.
-El cluster que desplegaremos, se compone de los siguientes resources:
-                        <li class="post-item">
                             <a href="/posts/parseando-json-con-golang-y-las-naves-de-spacex/">
                                 <h2>Parseando JSON con Golang y las naves de spaceX</h2>
                                 <span class="post-day">Feb 10</span>
