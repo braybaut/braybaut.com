@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Braybaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Aug 2020 12:51:50 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2020 12:51:50 -0500</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>hashicorp</title>
       <link>/tags/hashicorp/</link>
-      <pubDate>Thu, 06 Aug 2020 12:51:50 -0500</pubDate>
+      <pubDate>Thu, 20 Aug 2020 12:51:50 -0500</pubDate>
       
       <guid>/tags/hashicorp/</guid>
       <description></description>
@@ -23,7 +23,7 @@
     <item>
       <title>lang servers</title>
       <link>/tags/lang-servers/</link>
-      <pubDate>Thu, 06 Aug 2020 12:51:50 -0500</pubDate>
+      <pubDate>Thu, 20 Aug 2020 12:51:50 -0500</pubDate>
       
       <guid>/tags/lang-servers/</guid>
       <description></description>
@@ -32,7 +32,7 @@
     <item>
       <title>Terraform</title>
       <link>/tags/terraform/</link>
-      <pubDate>Thu, 06 Aug 2020 12:51:50 -0500</pubDate>
+      <pubDate>Thu, 20 Aug 2020 12:51:50 -0500</pubDate>
       
       <guid>/tags/terraform/</guid>
       <description></description>
@@ -41,7 +41,7 @@
     <item>
       <title>terraform-lsp</title>
       <link>/tags/terraform-lsp/</link>
-      <pubDate>Thu, 06 Aug 2020 12:51:50 -0500</pubDate>
+      <pubDate>Thu, 20 Aug 2020 12:51:50 -0500</pubDate>
       
       <guid>/tags/terraform-lsp/</guid>
       <description></description>
@@ -50,7 +50,7 @@
     <item>
       <title>vim</title>
       <link>/tags/vim/</link>
-      <pubDate>Thu, 06 Aug 2020 12:51:50 -0500</pubDate>
+      <pubDate>Thu, 20 Aug 2020 12:51:50 -0500</pubDate>
       
       <guid>/tags/vim/</guid>
       <description></description>

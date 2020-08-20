@@ -4,47 +4,47 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+    <lastmod>2020-08-20T12:51:50-05:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/hashicorp/</loc>
-    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+    <lastmod>2020-08-20T12:51:50-05:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/integrate-terraform-language-server-protocol-with-vim/</loc>
-    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+    <lastmod>2020-08-20T12:51:50-05:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/lang-servers/</loc>
-    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+    <lastmod>2020-08-20T12:51:50-05:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+    <lastmod>2020-08-20T12:51:50-05:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+    <lastmod>2020-08-20T12:51:50-05:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/terraform/</loc>
-    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+    <lastmod>2020-08-20T12:51:50-05:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/terraform-lsp/</loc>
-    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+    <lastmod>2020-08-20T12:51:50-05:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/vim/</loc>
-    <lastmod>2020-08-06T12:51:50-05:00</lastmod>
+    <lastmod>2020-08-20T12:51:50-05:00</lastmod>
   </url>
   
   <url>
@@ -65,11 +65,6 @@
   <url>
     <loc>/tags/golang/</loc>
     <lastmod>2019-07-26T16:58:24-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/construyendo-un-cluster-de-kubernetes-en-aws-eks-con-terraform/</loc>
-    <lastmod>2019-04-05T09:03:17-05:00</lastmod>
   </url>
   
   <url>

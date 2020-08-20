@@ -5,13 +5,13 @@
         <description>Recent content in Posts on Braybaut</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 06 Aug 2020 12:51:50 -0500</lastBuildDate>
+        <lastBuildDate>Thu, 20 Aug 2020 12:51:50 -0500</lastBuildDate>
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
             <title>Integrate Terraform Language Server Protocol With vim</title>
             <link>/posts/integrate-terraform-language-server-protocol-with-vim/</link>
-            <pubDate>Thu, 06 Aug 2020 12:51:50 -0500</pubDate>
+            <pubDate>Thu, 20 Aug 2020 12:51:50 -0500</pubDate>
             
             <guid>/posts/integrate-terraform-language-server-protocol-with-vim/</guid>
             <description>&lt;p&gt;&lt;img src=&#34;/images/vim.png&#34; alt=&#34;VIM&#34;&gt;&lt;/p&gt;
@@ -362,20 +362,6 @@ variable <span style="color:#ed9d13">&#34;AWS_ACCOUNT_ID&#34;</span> {
 <p>Our Continuous integration workflow finish there, we can see that the docker image tag is the same to the tag set as release at github:</p>
 <p><img src="/images/testing-webhook.png" alt=""></p>
 <p>This was a little example that how we can create an  easy continuous integration for Golang APIs with Codebuild, GitHub and Terraform, In the next post I will write how can create a continuous delivery workflow with CodeDeploy and Fargate and other post joining both workflows to make a pipeline with continuous integration and delivery workflow.</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Construyendo Un cluster de Kubernetes en AWS EKS Con Terraform</title>
-            <link>/posts/construyendo-un-cluster-de-kubernetes-en-aws-eks-con-terraform/</link>
-            <pubDate>Fri, 05 Apr 2019 09:03:17 -0500</pubDate>
-            
-            <guid>/posts/construyendo-un-cluster-de-kubernetes-en-aws-eks-con-terraform/</guid>
-            <description>Kubernetes sin duda es uno de los mejores containers orquestation que tenemos en el mercado y hoy en dia, muchos vendors ofrecen Kubernetes como servicio, AWS no se ha quedado atras y en junio del año pasado, anuncio Elastic Kubernetes Services.
-El cluster que desplegaremos, se compone de los siguientes resources:</description>
-            <content type="html"><![CDATA[<p><img src="/images/Terra-EKS.png" alt=""></p>
-<p>Kubernetes sin duda es uno de los mejores containers orquestation que tenemos en el mercado y hoy en dia, muchos vendors ofrecen Kubernetes como servicio, AWS no se ha quedado atras y en junio del año pasado, anuncio Elastic Kubernetes Services.</p>
-<p>El cluster que desplegaremos, se compone de los siguientes resources:</p>
 ]]></content>
         </item>
         
